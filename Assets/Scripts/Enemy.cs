@@ -13,7 +13,7 @@ public class Enemy : Character{
         switch (enemyType)
         {
             case EnemyType.Grunt:
-                setHealth(10);
+                initializeHealth(100);
                 break;
         }
     }

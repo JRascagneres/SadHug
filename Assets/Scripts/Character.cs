@@ -5,6 +5,7 @@ using UnityEngine;
 public class Character : MonoBehaviour{
 
     private int health;
+    private int maxHealth;
 
 	// Use this for initialization
 	void Start () {
@@ -21,9 +22,25 @@ public class Character : MonoBehaviour{
         this.health = health;
     }
 
+    public void setMaxHealth(int health)
+    {
+        this.maxHealth = health;
+    }
+
     public int getHealth()
     {
         return health;
+    }
+
+    public int getMaxHealth()
+    {
+        return maxHealth;
+    }
+
+    public void initializeHealth(int health)
+    {
+        setMaxHealth(health);
+        setHealth(health);
     }
 
     public int takeDamage(int damageAmount)

@@ -18,7 +18,7 @@ public class CombatMode {
         this.enemies = enemies;
         this.playerHealth = playerHealth;
         this.enemyHealth = enemyHealth;
-        //combatCanvas.SetActive(true);
+        combatCanvas.SetActive(true);
         updateHealthInfo();
 
         GameObject newGO = new GameObject("mytext");
@@ -31,10 +31,9 @@ public class CombatMode {
         myText.useGUILayout = true;
         myText.font = Resources.GetBuiltinResource(typeof(Font), "Arial.ttf") as Font;
 
-        
-
         startCombat();
     }
+
 
     void startCombat()
     {
@@ -64,28 +63,13 @@ public class CombatMode {
 
     void updateHealthInfo()
     {
-        string playerText = "";
-        for (int i = 0; i < players.Count; i++) {
-            string health = players[i].getHealth().ToString();
-            if(health == "0")
-            {
-                health = "DEAD";
-            }
-            playerText += "Health: " + health;
-        }
-        playerHealth.text = playerText;
+        Image playerHealthBar = GameObject.FindGameObjectWithTag("Player Health Bar").GetComponent<Image>() as Image;
+        playerHealthBar.fillAmount = (float)players[0].getHealth() / (float)players[0].getMaxHealth();
+        playerHealth.text = players[0].getHealth().ToString() + "/" + players[0].getMaxHealth().ToString();
 
-        string enemyText = "";
-        for (int i = 0; i < enemies.Count; i++)
-        {
-            string health = enemies[i].getHealth().ToString();
-            if (health == "0")
-            {
-                health = "DEAD";
-            }
-            enemyText += "Health: " + health + "\n";
-        }
-        enemyHealth.text = enemyText;
+        Image enemyHealthBar = GameObject.FindGameObjectWithTag("Enemy Health Bar").GetComponent<Image>() as Image;
+        enemyHealthBar.fillAmount = (float)enemies[0].getHealth() / (float)enemies[0].getMaxHealth();
+        enemyHealth.text = enemies[0].getHealth().ToString() + "/" + enemies[0].getMaxHealth().ToString();
     }
 
 

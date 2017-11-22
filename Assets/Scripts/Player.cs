@@ -18,23 +18,23 @@ public class Player : Character {
         switch (playerType)
         {
             case PlayerType.CompSci:
-                setHealth(125);
+                initializeHealth(120);
                 abilityList.Add(abilities.getAbility(Abilities.AbilityEnum.fiveDamage));
                 abilityList.Add(abilities.getAbility(Abilities.AbilityEnum.fiveDamage));
                 abilityList.Add(abilities.getAbility(Abilities.AbilityEnum.fiveDamage));
                 abilityList.Add(abilities.getAbility(Abilities.AbilityEnum.fiveDamage));
                 break;
             case PlayerType.Chem:
-                setHealth(150);
+                initializeHealth(150);
                 break;
             case PlayerType.Sport:
-                setHealth(250);
+                initializeHealth(250);
                 break;
             case PlayerType.Physc:
-                setHealth(175);
+                initializeHealth(175);
                 break;
             case PlayerType.Music:
-                setHealth(100);
+                initializeHealth(100);
                 break;
         }
     }
