@@ -14,13 +14,15 @@ public class CombatMode {
 
     public CombatMode(List<Player> players, List<Enemy> enemies, Text playerHealth, Text enemyHealth)
     {
+
+        //@Michael put camera change to combat mode in this method
         this.players = players;
         this.enemies = enemies;
         this.playerHealth = playerHealth;
         this.enemyHealth = enemyHealth;
-        combatCanvas.SetActive(true);
         updateHealthInfo();
 
+        //Test to dynamically add text
         GameObject newGO = new GameObject("mytext");
         newGO.SetActive(true);
         newGO.transform.SetParent(combatCanvas.transform);
