@@ -7,6 +7,11 @@ TagManager:
   - CombatCanvas
   - Enemy Health Bar
   - Player Health Bar
+  - GameManager
+  - Players
+  - Enemies
+  - Player Health
+  - Enemy Health
   layers:
   - Default
   - TransparentFX

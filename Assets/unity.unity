@@ -309,7 +309,7 @@ GameObject:
   - component: {fileID: 231935282}
   m_Layer: 5
   m_Name: Enemy Health
-  m_TagString: Untagged
+  m_TagString: Enemy Health
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -321,7 +321,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 231935280}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 234.74524, y: -150.6874, z: 0}
+  m_LocalPosition: {x: 234.78644, y: -150.75493, z: 0}
   m_LocalScale: {x: 1.0000002, y: 1.0000002, z: 1.0000002}
   m_Children: []
   m_Father: {fileID: 1558714623}
@@ -473,7 +473,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1558714623}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -672,7 +672,7 @@ GameObject:
   - component: {fileID: 1014066397}
   m_Layer: 0
   m_Name: SpriteGoose
-  m_TagString: Untagged
+  m_TagString: Enemies
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -792,7 +792,7 @@ Transform:
   - {fileID: 1343801041}
   - {fileID: 1294573978}
   m_Father: {fileID: 1558714623}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1028445301
 GameObject:
@@ -822,7 +822,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1558714623}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1164,7 +1164,7 @@ GameObject:
   - component: {fileID: 1367961764}
   m_Layer: 5
   m_Name: Player Health
-  m_TagString: Untagged
+  m_TagString: Player Health
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1176,11 +1176,11 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1367961762}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 234.28525, y: -111.99737, z: 0}
+  m_LocalPosition: {x: 234.32645, y: -112.06492, z: 0}
   m_LocalScale: {x: 1.0000004, y: 1.0000004, z: 1.0000004}
   m_Children: []
   m_Father: {fileID: 1558714623}
-  m_RootOrder: 1
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.47427613, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.56753993}
@@ -1377,15 +1377,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1515420887}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a91c24e6da504247930e73a4242eeb4, type: 3}
+  m_Script: {fileID: 11500000, guid: b18911477e664af4f9d0c2ee77e63dc3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerHealth: {fileID: 1367961764}
-  enemyHealth: {fileID: 231935282}
-  players:
-  - {fileID: 1656189512}
-  enemies:
-  - {fileID: 1014066397}
+  gameManager: {fileID: 1621829494244502, guid: 0e37b759f448ee241a178af7c5bda9f5,
+    type: 2}
 --- !u!1 &1541680636
 GameObject:
   m_ObjectHideFlags: 0
@@ -1543,14 +1539,14 @@ RectTransform:
   m_GameObject: {fileID: 1558714619}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -207.00002, y: 30, z: 90}
-  m_LocalScale: {x: 18.588766, y: 18.588766, z: 18.588766}
+  m_LocalScale: {x: 18.706045, y: 18.706045, z: 18.706045}
   m_Children:
   - {fileID: 668346104}
-  - {fileID: 1367961763}
   - {fileID: 1027878850}
   - {fileID: 427129491}
   - {fileID: 1028445302}
   - {fileID: 1973769155}
+  - {fileID: 1367961763}
   - {fileID: 207244453}
   - {fileID: 1299315397}
   - {fileID: 823951015}
@@ -1575,7 +1571,7 @@ GameObject:
   - component: {fileID: 1656189512}
   m_Layer: 0
   m_Name: SpriteScratchCat
-  m_TagString: Untagged
+  m_TagString: Players
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1979,7 +1975,7 @@ RectTransform:
   m_LocalScale: {x: 1.0000002, y: 1.0000002, z: 1.0000002}
   m_Children: []
   m_Father: {fileID: 1558714623}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}

@@ -18,7 +18,7 @@ public class CombatButtonHandler : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        gameManager = Camera.allCameras[0].GetComponent<GameManager>();
+        gameManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>() as GameManager;
 
         Button combatButtonOne = combatOne.GetComponent<Button>();
         combatButtonOne.onClick.AddListener(combatOneAction);
