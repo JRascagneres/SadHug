@@ -6,8 +6,6 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour {
 
     public static GameManager instance = null;
-    private Text playerHealth;
-    private Text enemyHealth;
     private List<Player> players = new List<Player>();
     private List<Enemy> enemies = new List<Enemy>();
 
@@ -42,10 +40,9 @@ public class GameManager : MonoBehaviour {
             players.Add(playerGameObject.GetComponent<Player>() as Player);
         }
 
-        playerHealth = GameObject.FindGameObjectWithTag("Player Health").GetComponent<Text>() as Text;
-        enemyHealth = GameObject.FindGameObjectWithTag("Enemy Health").GetComponent<Text>() as Text;
+        
 
-        combatMode = new CombatMode(players, enemies, playerHealth, enemyHealth);
+        combatMode = new CombatMode(players, enemies);
 	}
 	
 	// Update is called once per frame

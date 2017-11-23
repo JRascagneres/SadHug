@@ -12,6 +12,8 @@ TagManager:
   - Enemies
   - Player Health
   - Enemy Health
+  - Player AP
+  - Player AP Bar
   layers:
   - Default
   - TransparentFX

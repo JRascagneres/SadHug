@@ -8,8 +8,8 @@ public class Player : Character {
 
     public PlayerType playerType;
 
-    private static int maxAP = 10;
-    private int currentAP = maxAP;
+    private int maxAP = 10;
+    private int currentAP = 10;
     
     public List<Ability> abilityList = new List<Ability>();
     private Abilities abilities = new Abilities();
@@ -46,6 +46,17 @@ public class Player : Character {
 
     public int getCurrentAP()
     {
+        return this.currentAP;
+    }
+
+    public int getMaxAP()
+    {
+        return this.maxAP;
+    }
+
+    public int useAP(int AP)
+    {
+        currentAP -= AP;
         return this.currentAP;
     }
 
