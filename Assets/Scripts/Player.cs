@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,14 +7,14 @@ public class Player : Character {
 
     public enum PlayerType {CompSci, Chem, Sport, Physc, Music};
 
-    public PlayerType playerType;
+    //public PlayerType playerType;
 
     private int maxAP = 10;
     private int currentAP = 10;
     
     public List<Ability> abilityList = new List<Ability>();
     private Abilities abilities = new Abilities();
-    public Player()
+    public Player(PlayerType playerType)
     {
         switch (playerType)
         {

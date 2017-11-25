@@ -22,6 +22,7 @@ public class CombatMode {
         enemyHealth = GameObject.FindGameObjectWithTag("Enemy Health").GetComponent<Text>() as Text;
         playerAP = GameObject.FindGameObjectWithTag("Player AP").GetComponent<Text>() as Text;
         updateStatsInfo();
+        updateSprite();
 
         //Test to dynamically add text
         //GameObject newGO = new GameObject("mytext");
@@ -78,6 +79,14 @@ public class CombatMode {
         Image playerAPBar = GameObject.FindGameObjectWithTag("Player AP Bar").GetComponent<Image>() as Image;
         playerAPBar.fillAmount = (float)players[0].getCurrentAP() / (float)players[0].getMaxAP();
         playerAP.text = players[0].getCurrentAP().ToString() + "/" + players[0].getMaxAP().ToString();
+    }
+
+    void updateSprite()
+    {
+        Sprite sprite = enemies[0].getSprite();
+        SpriteRenderer enemyPlaceHolder = GameObject.FindGameObjectWithTag("Enemy Placeholder").GetComponent<SpriteRenderer>();
+       enemyPlaceHolder.sprite = sprite;
+        Debug.Log(sprite);
     }
 
 

@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -23,30 +24,18 @@ public class GameManager : MonoBehaviour {
     // Use this for initialization
     void Start () {
 
-        //@Michael if you add a new camera thingy go into CombatMode and in the initiate thing make sure the camera moves to where combat is
-        //Initialise CombatMode
-
-        GameObject[] enemiesGameObject = GameObject.FindGameObjectsWithTag("Enemies");
-
-        foreach (GameObject enemyGameObject in enemiesGameObject)
+        string[] playerTypes = Enum.GetNames(typeof(Player.PlayerType));
+        foreach(String player in playerTypes)
         {
-            enemies.Add(enemyGameObject.GetComponent<Enemy>() as Enemy);
+            Player.PlayerType playerType =  (Player.PlayerType)Enum.Parse(typeof(Player.PlayerType), player);
+            Player playerObj = new Player(playerType);
+            players.Add(playerObj);
         }
 
-        GameObject[] playersGameObject = GameObject.FindGameObjectsWithTag("Players");
-
-        foreach (GameObject playerGameObject in playersGameObject)
-        {
-            players.Add(playerGameObject.GetComponent<Player>() as Player);
-        }
+        enemies.Add(new Enemy(Enemy.EnemyType.TestBoi));
 
         combatMode = new CombatMode(players, enemies);
        
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
 	}
 
     public CombatMode getCombatMode()

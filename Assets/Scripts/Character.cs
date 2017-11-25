@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Character : MonoBehaviour{
+public class Character{
 
     private int health;
     private int maxHealth;
+    private Sprite sprite;
 
 	// Use this for initialization
 	void Start () {
@@ -35,6 +36,16 @@ public class Character : MonoBehaviour{
     public int getMaxHealth()
     {
         return maxHealth;
+    }
+
+    public void setSprite(Sprite sprite)
+    {
+        this.sprite = sprite;
+    }
+
+    public Sprite getSprite()
+    {
+        return this.sprite;
     }
 
     public void initializeHealth(int health)
