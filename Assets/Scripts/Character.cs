@@ -48,4 +48,10 @@ public class Character : MonoBehaviour{
         health -= damageAmount;
         return health;
     }
+
+    public int doHeal(int healAmount)
+    {
+        health += healAmount;
+        return health;
+    }
 }

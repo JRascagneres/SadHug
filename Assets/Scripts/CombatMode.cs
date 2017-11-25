@@ -59,6 +59,7 @@ public class CombatMode {
         if (enemies[0].getHealth() != 0)
         {
             doDamage(players[0], 5);
+            updateStatsInfo();
             turnState = 0;
         }
     }
@@ -89,43 +90,79 @@ public class CombatMode {
         }
     }
 
-    public void updateAP(Player player, int AP)
+    public void doHeal(Character character, int healAmount)
     {
-        int currentAP = player.useAP(AP);
+        character.doHeal(healAmount);
     }
 
-    public void useAbility(Player player, Enemy enemy, int abilityIndex)
+    public bool updateAP(Player player, int AP)
+    {
+        int beforeAP = player.getCurrentAP();
+        int currentAP = player.useAP(AP);
+        if (currentAP < 0)
+        {
+            player.setCurrentAP(beforeAP);
+            return false;
+        }
+        return true;
+    }
+
+    public bool useAbility(Player player, Enemy enemy, int abilityIndex)
     {
         Ability ability = player.getAbilities()[abilityIndex];
-        doDamage(enemy, ability.damage);
-        updateAP(player, ability.apCost);
+        bool success = updateAP(player, ability.apCost);
+        if (success)
+        {
+            Ability.abilityTypes abilityType = ability.abilityType;
+            switch (abilityType)
+            {
+                case (Ability.abilityTypes.numberDamage):
+                    doDamage(enemy, ability.effectMagnitude);
+                    break;
+                case (Ability.abilityTypes.numberHeal):
+                    doHeal(player, ability.effectMagnitude);
+                    break;
+                case (Ability.abilityTypes.percentCurrentDamage):
+                    doDamage(enemy, enemy.getHealth() * ability.effectMagnitude / 100);
+                    break;
+                case (Ability.abilityTypes.percentTotalDamage):
+                    doDamage(enemy, enemy.getMaxHealth() * ability.effectMagnitude / 100);
+                    break;
+            }
+        }
         updateStatsInfo();
+        return success;
+        
     }
 
     public void attackButton(int attackButtonNumber)
     {
         if (turnState == 0)
         {
+            bool success = false;
             switch (attackButtonNumber)
             {
                 case (1):
-                    useAbility(players[0], enemies[0], 0);
+                    success = useAbility(players[0], enemies[0], 0);
                     break;
                 case (2):
-                    useAbility(players[0], enemies[0], 1);
+                    success = useAbility(players[0], enemies[0], 1);
                     break;
                 case (3):
-                    useAbility(players[0], enemies[0], 2);
+                    success = useAbility(players[0], enemies[0], 2);
                     break;
                 case (4):
-                    useAbility(players[0], enemies[0], 3);
+                    success = useAbility(players[0], enemies[0], 3);
                     break;
                 default:
                     Debug.Log("BUG");
                     break;
             }
-            turnState = 1;
-            turnCheck();
+            if (success)
+            {
+                turnState = 1;
+                turnCheck();
+            }
         }
     }
 

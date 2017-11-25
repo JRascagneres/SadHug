@@ -40,9 +40,8 @@ public class GameManager : MonoBehaviour {
             players.Add(playerGameObject.GetComponent<Player>() as Player);
         }
 
-        
-
         combatMode = new CombatMode(players, enemies);
+       
 	}
 	
 	// Update is called once per frame

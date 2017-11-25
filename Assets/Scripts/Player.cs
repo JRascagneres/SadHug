@@ -20,9 +20,9 @@ public class Player : Character {
             case PlayerType.CompSci:
                 initializeHealth(120);
                 abilityList.Add(abilities.getAbility(Abilities.AbilityEnum.fiveDamage));
-                abilityList.Add(abilities.getAbility(Abilities.AbilityEnum.fiveDamage));
-                abilityList.Add(abilities.getAbility(Abilities.AbilityEnum.fiveDamage));
-                abilityList.Add(abilities.getAbility(Abilities.AbilityEnum.fiveDamage));
+                abilityList.Add(abilities.getAbility(Abilities.AbilityEnum.tenPercentCurrent));
+                abilityList.Add(abilities.getAbility(Abilities.AbilityEnum.tenPercentTotal));
+                abilityList.Add(abilities.getAbility(Abilities.AbilityEnum.tenHeal));
                 break;
             case PlayerType.Chem:
                 initializeHealth(150);
