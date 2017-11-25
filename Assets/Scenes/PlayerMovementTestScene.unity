@@ -140,10 +140,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7c25cc6f639f1949acf07b2ac3f013a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  northSprite: {fileID: 21300000, guid: 3afb032d0180a4a4d84aecfbedd0af99, type: 3}
-  eastSprite: {fileID: 21300096, guid: 3afb032d0180a4a4d84aecfbedd0af99, type: 3}
-  southSprite: {fileID: 21300034, guid: 3afb032d0180a4a4d84aecfbedd0af99, type: 3}
-  westSprite: {fileID: 21300064, guid: 3afb032d0180a4a4d84aecfbedd0af99, type: 3}
+  upSprite: {fileID: 21300000, guid: 3afb032d0180a4a4d84aecfbedd0af99, type: 3}
+  rightSprite: {fileID: 21300096, guid: 3afb032d0180a4a4d84aecfbedd0af99, type: 3}
+  downSprite: {fileID: 21300034, guid: 3afb032d0180a4a4d84aecfbedd0af99, type: 3}
+  leftSprite: {fileID: 21300064, guid: 3afb032d0180a4a4d84aecfbedd0af99, type: 3}
   walkSpeed: 3
   isAllowedToMove: 1
 --- !u!212 &164655558

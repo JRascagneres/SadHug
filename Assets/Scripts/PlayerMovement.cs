@@ -11,10 +11,10 @@ public class PlayerMovement : MonoBehaviour {
     Vector3 endPos;
     float t;
 
-    public Sprite northSprite;
-    public Sprite eastSprite;
-    public Sprite southSprite;
-    public Sprite westSprite;
+    public Sprite upSprite;
+    public Sprite rightSprite;
+    public Sprite downSprite;
+    public Sprite leftSprite;
 
     public float walkSpeed = 3;
 
@@ -42,34 +42,34 @@ public class PlayerMovement : MonoBehaviour {
             {
                 if (input.x < 0)
                 {
-                    currentDir = Direction.West;
+                    currentDir = Direction.left;
                 }
                 if (input.x > 0)
                 {
-                    currentDir = Direction.East;
+                    currentDir = Direction.right;
                 }
                 if(input.y< 0)
                 {
-                    currentDir = Direction.South;
+                    currentDir = Direction.down;
                 }
                 if (input.y > 0)
                 {
-                    currentDir = Direction.North;
+                    currentDir = Direction.up;
                 }
 
                 switch (currentDir)
                 {
-                    case Direction.North:
-                        gameObject.GetComponent<SpriteRenderer>().sprite = northSprite;
+                    case Direction.up:
+                        gameObject.GetComponent<SpriteRenderer>().sprite = upSprite;
                         break;
-                    case Direction.East:
-                        gameObject.GetComponent<SpriteRenderer>().sprite = eastSprite;
+                    case Direction.right:
+                        gameObject.GetComponent<SpriteRenderer>().sprite = rightSprite;
                         break;
-                    case Direction.South:
-                        gameObject.GetComponent<SpriteRenderer>().sprite = southSprite;
+                    case Direction.down:
+                        gameObject.GetComponent<SpriteRenderer>().sprite = downSprite;
                         break;
-                    case Direction.West:
-                        gameObject.GetComponent<SpriteRenderer>().sprite = westSprite;
+                    case Direction.left:
+                        gameObject.GetComponent<SpriteRenderer>().sprite = leftSprite;
                         break;
                 }
                 StartCoroutine(move(transform));
@@ -98,8 +98,8 @@ public class PlayerMovement : MonoBehaviour {
 
 enum Direction
 {
-    North,
-    East,
-    South, 
-    West,
+    up,
+    right,
+    down, 
+    left,
 }
