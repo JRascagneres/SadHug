@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour {
-
+   
     Direction currentDir;
     Vector2 input;
     bool isMoving = false;
