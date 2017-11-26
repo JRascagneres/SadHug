@@ -84,9 +84,14 @@ public class CombatMode {
     void updateSprite()
     {
         Sprite sprite = enemies[0].getSprite();
-        SpriteRenderer enemyPlaceHolder = GameObject.FindGameObjectWithTag("Enemy Placeholder").GetComponent<SpriteRenderer>();
-       enemyPlaceHolder.sprite = sprite;
-        Debug.Log(sprite);
+        GameObject enemyPlaceHolderObj = GameObject.FindGameObjectWithTag("Enemy Placeholder");
+        SpriteRenderer enemyPlaceHolder = enemyPlaceHolderObj.GetComponent<SpriteRenderer>();
+        float pixelsPerUnit = enemyPlaceHolder.sprite.pixelsPerUnit;
+        enemyPlaceHolder.sprite = sprite;
+        float newPixelsPerUnit = enemyPlaceHolder.sprite.pixelsPerUnit;
+
+        float pixelRatio = pixelsPerUnit / newPixelsPerUnit;
+        enemyPlaceHolder.transform.localScale = new Vector2(enemyPlaceHolder.transform.localScale.x * pixelRatio, enemyPlaceHolder.transform.localScale.y * pixelRatio);
     }
 
 
