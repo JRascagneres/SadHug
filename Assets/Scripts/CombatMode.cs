@@ -83,15 +83,25 @@ public class CombatMode {
 
     void updateSprite()
     {
-        Sprite sprite = enemies[0].getSprite();
+        Sprite playerSprite = enemies[0].getSprite();
         GameObject enemyPlaceHolderObj = GameObject.FindGameObjectWithTag("Enemy Placeholder");
         SpriteRenderer enemyPlaceHolder = enemyPlaceHolderObj.GetComponent<SpriteRenderer>();
         float pixelsPerUnit = enemyPlaceHolder.sprite.pixelsPerUnit;
-        enemyPlaceHolder.sprite = sprite;
+        enemyPlaceHolder.sprite = playerSprite;
         float newPixelsPerUnit = enemyPlaceHolder.sprite.pixelsPerUnit;
 
         float pixelRatio = pixelsPerUnit / newPixelsPerUnit;
         enemyPlaceHolder.transform.localScale = new Vector2(enemyPlaceHolder.transform.localScale.x * pixelRatio, enemyPlaceHolder.transform.localScale.y * pixelRatio);
+
+        Sprite enemySprite = players[0].getSprite();
+        GameObject playerPlaceHolderObj = GameObject.FindGameObjectWithTag("Player Placeholder");
+        SpriteRenderer playerPlaceHolder = playerPlaceHolderObj.GetComponent<SpriteRenderer>();
+        pixelsPerUnit = playerPlaceHolder.sprite.pixelsPerUnit;
+        playerPlaceHolder.sprite = enemySprite;
+        newPixelsPerUnit = playerPlaceHolder.sprite.pixelsPerUnit;
+
+        pixelRatio = pixelsPerUnit / newPixelsPerUnit;
+        playerPlaceHolder.transform.localScale = new Vector2(playerPlaceHolder.transform.localScale.x * pixelRatio, playerPlaceHolder.transform.localScale.y * pixelRatio);
     }
 
 

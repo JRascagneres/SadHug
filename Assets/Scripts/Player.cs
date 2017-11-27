@@ -24,6 +24,7 @@ public class Player : Character {
                 abilityList.Add(abilities.getAbility(Abilities.AbilityEnum.tenPercentCurrent));
                 abilityList.Add(abilities.getAbility(Abilities.AbilityEnum.tenPercentTotal));
                 abilityList.Add(abilities.getAbility(Abilities.AbilityEnum.tenHeal));
+                setSprite(Resources.LoadAll<Sprite>("Sprites/CharExample/Char")[24] as Sprite);
                 break;
             case PlayerType.Chem:
                 initializeHealth(150);

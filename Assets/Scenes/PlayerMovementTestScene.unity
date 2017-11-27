@@ -368,6 +368,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15d2ed366517b05469d2cbcec3304598, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  smoothTimeX: 0.05
-  smoothTimeY: 0.05
-  player: {fileID: 0}
+  smoothTimeX: 0
+  smoothTimeY: 0
+  player: {fileID: 164655555}
