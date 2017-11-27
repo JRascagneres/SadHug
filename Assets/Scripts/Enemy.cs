@@ -13,11 +13,11 @@ public class Enemy : Character{
         {
             case EnemyType.Grunt:
                 initializeHealth(100);
-                setSprite(Resources.LoadAll<Sprite>("Sprites/CharExample/Char")[88] as Sprite);
+                setSprite(Resources.Load<Sprite>("Sprites/CharacterSprites/enemyone") as Sprite);
                 break;
             case EnemyType.TestBoi:
                 initializeHealth(1000);
-                setSprite(Resources.LoadAll<Sprite>("Sprites/CharExample/Char")[88] as Sprite);
+                setSprite(Resources.Load<Sprite>("Sprites/CharacterSprites/enemyone") as Sprite);
                 break;
         }
     }

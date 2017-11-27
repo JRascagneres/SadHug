@@ -35,8 +35,7 @@ public class GameManager : MonoBehaviour {
         enemies.Add(new Enemy(Enemy.EnemyType.TestBoi));
 
         combatMode = new CombatMode(players, enemies);
-       
-	}
+    }
 
     public CombatMode getCombatMode()
     {

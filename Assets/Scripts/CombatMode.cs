@@ -7,6 +7,7 @@ public class CombatMode {
 
     private List<Player> players;
     private List<Enemy> enemies;
+    private int playerIndex;
     private Text playerHealth;
     private Text enemyHealth;
     private Text playerAP;
@@ -15,7 +16,7 @@ public class CombatMode {
     
     public CombatMode(List<Player> players, List<Enemy> enemies)
     {
-        //@Michael put camera change to combat mode in this method
+        playerIndex = 0;
         this.players = players;
         this.enemies = enemies;
         playerHealth = GameObject.FindGameObjectWithTag("Player Health").GetComponent<Text>() as Text;
@@ -34,7 +35,6 @@ public class CombatMode {
         //myText.fontSize = 10;
         //myText.useGUILayout = true;
         //myText.font = Resources.GetBuiltinResource(typeof(Font), "Arial.ttf") as Font;
-
         startCombat();
     }
 
@@ -59,7 +59,7 @@ public class CombatMode {
     {
         if (enemies[0].getHealth() != 0)
         {
-            doDamage(players[0], 5);
+            doDamage(players[playerIndex], 5);
             updateStatsInfo();
             turnState = 0;
         }
@@ -69,16 +69,16 @@ public class CombatMode {
     void updateStatsInfo()
     {
         Image playerHealthBar = GameObject.FindGameObjectWithTag("Player Health Bar").GetComponent<Image>() as Image;
-        playerHealthBar.fillAmount = (float)players[0].getHealth() / (float)players[0].getMaxHealth();
-        playerHealth.text = players[0].getHealth().ToString() + "/" + players[0].getMaxHealth().ToString();
+        playerHealthBar.fillAmount = (float)players[playerIndex].getHealth() / (float)players[playerIndex].getMaxHealth();
+        playerHealth.text = players[playerIndex].getHealth().ToString() + "/" + players[playerIndex].getMaxHealth().ToString();
 
         Image enemyHealthBar = GameObject.FindGameObjectWithTag("Enemy Health Bar").GetComponent<Image>() as Image;
         enemyHealthBar.fillAmount = (float)enemies[0].getHealth() / (float)enemies[0].getMaxHealth();
         enemyHealth.text = enemies[0].getHealth().ToString() + "/" + enemies[0].getMaxHealth().ToString();
 
         Image playerAPBar = GameObject.FindGameObjectWithTag("Player AP Bar").GetComponent<Image>() as Image;
-        playerAPBar.fillAmount = (float)players[0].getCurrentAP() / (float)players[0].getMaxAP();
-        playerAP.text = players[0].getCurrentAP().ToString() + "/" + players[0].getMaxAP().ToString();
+        playerAPBar.fillAmount = (float)players[playerIndex].getCurrentAP() / (float)players[playerIndex].getMaxAP();
+        playerAP.text = players[playerIndex].getCurrentAP().ToString() + "/" + players[playerIndex].getMaxAP().ToString();
     }
 
     void updateSprite()
@@ -93,12 +93,11 @@ public class CombatMode {
         float pixelRatio = pixelsPerUnit / newPixelsPerUnit;
         enemyPlaceHolder.transform.localScale = new Vector2(enemyPlaceHolder.transform.localScale.x * pixelRatio, enemyPlaceHolder.transform.localScale.y * pixelRatio);
 
-        Sprite enemySprite = players[0].getSprite();
+        Sprite enemySprite = players[playerIndex].getSprite();
         GameObject playerPlaceHolderObj = GameObject.FindGameObjectWithTag("Player Placeholder");
         SpriteRenderer playerPlaceHolder = playerPlaceHolderObj.GetComponent<SpriteRenderer>();
         pixelsPerUnit = playerPlaceHolder.sprite.pixelsPerUnit;
         playerPlaceHolder.sprite = enemySprite;
-        newPixelsPerUnit = playerPlaceHolder.sprite.pixelsPerUnit;
 
         pixelRatio = pixelsPerUnit / newPixelsPerUnit;
         playerPlaceHolder.transform.localScale = new Vector2(playerPlaceHolder.transform.localScale.x * pixelRatio, playerPlaceHolder.transform.localScale.y * pixelRatio);
@@ -167,16 +166,16 @@ public class CombatMode {
             switch (attackButtonNumber)
             {
                 case (1):
-                    success = useAbility(players[0], enemies[0], 0);
+                    success = useAbility(players[playerIndex], enemies[0], 0);
                     break;
                 case (2):
-                    success = useAbility(players[0], enemies[0], 1);
+                    success = useAbility(players[playerIndex], enemies[0], 1);
                     break;
                 case (3):
-                    success = useAbility(players[0], enemies[0], 2);
+                    success = useAbility(players[playerIndex], enemies[0], 2);
                     break;
                 case (4):
-                    success = useAbility(players[0], enemies[0], 3);
+                    success = useAbility(players[playerIndex], enemies[0], 3);
                     break;
                 default:
                     Debug.Log("BUG");
@@ -192,8 +191,15 @@ public class CombatMode {
 
     public List<Ability> getPlayerAbilities()
     {
-        return players[0].getAbilities();
+        return players[playerIndex].getAbilities();
     }
 
+    public void switchPlayer()
+    {
+        GameObject.FindGameObjectWithTag("CombatPlayerSwapCanvas").GetComponent<Canvas>().sortingOrder = 3;
+        playerIndex++;
+        updateStatsInfo();
+        updateSprite();
+    }
     
 }

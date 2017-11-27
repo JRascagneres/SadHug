@@ -10,6 +10,7 @@ public class CombatButtonHandler : MonoBehaviour {
     public Button combatTwo;
     public Button combatThree;
     public Button combatFour;
+    public Button switchPlayer;
 
     private bool started = false;
 
@@ -28,18 +29,21 @@ public class CombatButtonHandler : MonoBehaviour {
         combatButtonThree.onClick.AddListener(combatThreeAction);
         Button combatButtonFour = combatFour.GetComponent<Button>();
         combatButtonFour.onClick.AddListener(combatFourAction);
+
+        Button switchPlayerButton = switchPlayer.GetComponent<Button>();
+        switchPlayerButton.onClick.AddListener(switchPlayerAction);
     }
 	
 	// Update is called once per frame
 	void Update () {
         if (started == false)
         {
-            firstStartSetup();
+            updateButtons();
             started = true;
         }
     }
 
-    void firstStartSetup()
+    void updateButtons()
     {
         List<Ability> abilityList = gameManager.getCombatMode().getPlayerAbilities();
         combatOne.GetComponentInChildren<Text>().text = abilityList[0].name;
@@ -70,5 +74,12 @@ public class CombatButtonHandler : MonoBehaviour {
     {
         combatMode = gameManager.getCombatMode();
         combatMode.attackButton(4);
+    }
+
+    void switchPlayerAction()
+    {
+        combatMode = gameManager.getCombatMode();
+        combatMode.switchPlayer();
+        updateButtons();
     }
 }

@@ -16,6 +16,7 @@ TagManager:
   - Player AP Bar
   - Player Placeholder
   - Enemy Placeholder
+  - CombatPlayerSwapCanvas
   layers:
   - Default
   - TransparentFX
@@ -50,6 +51,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Front
+    uniqueID: 1261576201
+    locked: 0
   - name: Background
     uniqueID: 1131165159
     locked: 0
