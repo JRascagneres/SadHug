@@ -43,7 +43,7 @@ public class CombatButtonHandler : MonoBehaviour {
         }
     }
 
-    void updateButtons()
+    public void updateButtons()
     {
         List<Ability> abilityList = gameManager.getCombatMode().getPlayerAbilities();
         combatOne.GetComponentInChildren<Text>().text = abilityList[0].name;
@@ -79,7 +79,6 @@ public class CombatButtonHandler : MonoBehaviour {
     void switchPlayerAction()
     {
         combatMode = gameManager.getCombatMode();
-        combatMode.switchPlayer();
-        updateButtons();
+        combatMode.switchPlayerMenu();
     }
 }

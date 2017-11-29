@@ -194,12 +194,28 @@ public class CombatMode {
         return players[playerIndex].getAbilities();
     }
 
-    public void switchPlayer()
+    public void switchPlayerMenu()
     {
         GameObject.FindGameObjectWithTag("CombatPlayerSwapCanvas").GetComponent<Canvas>().sortingOrder = 3;
-        playerIndex++;
+    }
+
+    public void switchPlayer(int index)
+    {
+        playerIndex = index - 1;
         updateStatsInfo();
         updateSprite();
+        updateButtons();
+    }
+
+    public void updateButtons()
+    {
+        List<Ability> abilityList = getPlayerAbilities();
+        GameObject buttonsParent = GameObject.FindGameObjectWithTag("CombatButtons");
+        Button[] combatbuttonsObj = buttonsParent.GetComponentsInChildren<Button>();
+        combatbuttonsObj[0].GetComponentInChildren<Text>().text = abilityList[0].name;
+        combatbuttonsObj[1].GetComponentInChildren<Text>().text = abilityList[1].name;
+        combatbuttonsObj[2].GetComponentInChildren<Text>().text = abilityList[2].name;
+        combatbuttonsObj[3].GetComponentInChildren<Text>().text = abilityList[3].name;
     }
     
 }
