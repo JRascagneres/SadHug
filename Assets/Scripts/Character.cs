@@ -7,6 +7,8 @@ public class Character{
     private int health;
     private int maxHealth;
     private Sprite sprite;
+    private bool tickingDamage = false;
+    private int tickingDamagePerTurn;
 
 	// Use this for initialization
 	void Start () {
@@ -63,6 +65,38 @@ public class Character{
     public int doHeal(int healAmount)
     {
         health += healAmount;
+        if(health > maxHealth)
+        {
+            health = maxHealth;
+        }
         return health;
+    }
+
+    public void setTickingDamage(bool tickingDamage)
+    {
+        this.tickingDamage = tickingDamage;
+    }
+
+    public bool getTickingDamage()
+    {
+        return tickingDamage;
+    }
+
+    public void setTickingDamagePerTurn(int tickingDamagePerTurn)
+    {
+        this.tickingDamagePerTurn = tickingDamagePerTurn;
+    }
+
+    public int getTickingDamagePerTurn()
+    {
+        return tickingDamagePerTurn;
+    }
+
+    public void takeTickingDamage()
+    {
+        if (tickingDamage)
+        {
+            takeDamage(tickingDamagePerTurn);
+        }
     }
 }

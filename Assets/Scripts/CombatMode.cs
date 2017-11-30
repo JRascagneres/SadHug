@@ -13,6 +13,8 @@ public class CombatMode {
     private Text playerAP;
     private int turnState;
     private GameObject combatCanvas = GameObject.FindGameObjectWithTag("CombatCanvas");
+    private bool enemyStunned = false;
+    private bool playerStunned = false;
     
     public CombatMode(List<Player> players, List<Enemy> enemies)
     {
@@ -61,7 +63,18 @@ public class CombatMode {
         {
             doDamage(players[playerIndex], 5);
             updateStatsInfo();
-            turnState = 0;
+            enemies[0].takeTickingDamage();
+            updateStatsInfo();
+            if (playerStunned)
+            {
+                playerStunned = false;
+                turnState = 1;
+                turnCheck();
+            }
+            else
+            {
+                turnState = 0;
+            }
         }
     }
 
@@ -151,6 +164,26 @@ public class CombatMode {
                 case (Ability.abilityTypes.percentTotalDamage):
                     doDamage(enemy, enemy.getMaxHealth() * ability.effectMagnitude / 100);
                     break;
+                case (Ability.abilityTypes.groupNumberHeal):
+                    for(int i = 0; i < players.Count; i++)
+                    {
+                        players[i].doHeal(ability.effectMagnitude);
+                    }
+                    break;
+                case (Ability.abilityTypes.enemyStun):
+                    enemyStunned = true;
+                    break;
+                case (Ability.abilityTypes.playerStun):
+                    playerStunned = true;
+                    break;
+                case (Ability.abilityTypes.enemyTickingDamage):
+                    enemies[0].setTickingDamage(true);
+                    enemies[0].setTickingDamagePerTurn(ability.effectMagnitude);
+                    break;
+                case (Ability.abilityTypes.playerTickingDamage):
+                    players[playerIndex].setTickingDamage(true);
+                    players[playerIndex].setTickingDamagePerTurn(ability.effectMagnitude);
+                    break;
             }
         }
         updateStatsInfo();
@@ -183,8 +216,18 @@ public class CombatMode {
             }
             if (success)
             {
-                turnState = 1;
-                turnCheck();
+                players[playerIndex].takeTickingDamage();
+                updateStatsInfo();
+                if (enemyStunned)
+                {
+                    enemyStunned = false;
+                    turnState = 0;
+                }
+                else
+                {
+                    turnState = 1;
+                    turnCheck();
+                }
             }
         }
     }

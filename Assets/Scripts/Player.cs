@@ -29,13 +29,17 @@ public class Player : Character {
             case PlayerType.Chem:
                 initializeHealth(150);
                 abilityList.Add(abilities.getAbility(Abilities.AbilityEnum.fiveDamage));
-                abilityList.Add(abilities.getAbility(Abilities.AbilityEnum.fiveDamage));
-                abilityList.Add(abilities.getAbility(Abilities.AbilityEnum.fiveDamage));
-                abilityList.Add(abilities.getAbility(Abilities.AbilityEnum.fiveDamage));
+                abilityList.Add(abilities.getAbility(Abilities.AbilityEnum.groupHealTen));
+                abilityList.Add(abilities.getAbility(Abilities.AbilityEnum.poisenTenEnemy));
+                abilityList.Add(abilities.getAbility(Abilities.AbilityEnum.poisenTenPlayer));
                 setSprite(Resources.Load<Sprite>("Sprites/CharacterSprites/playertwo") as Sprite);
                 break;
             case PlayerType.Sport:
                 initializeHealth(250);
+                abilityList.Add(abilities.getAbility(Abilities.AbilityEnum.singleStunEnemy));
+                abilityList.Add(abilities.getAbility(Abilities.AbilityEnum.singleStunPlayer));
+                abilityList.Add(abilities.getAbility(Abilities.AbilityEnum.fiveDamage));
+                abilityList.Add(abilities.getAbility(Abilities.AbilityEnum.poisenTenPlayer));
                 setSprite(Resources.Load<Sprite>("Sprites/CharacterSprites/playerthree") as Sprite);
                 break;
             case PlayerType.Physc:
