@@ -79,6 +79,6 @@ public class CombatButtonHandler : MonoBehaviour {
     void switchPlayerAction()
     {
         combatMode = gameManager.getCombatMode();
-        combatMode.switchPlayerMenu();
+        combatMode.swapPlayerCanvas(true);
     }
 }

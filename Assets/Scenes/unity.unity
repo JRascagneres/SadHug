@@ -321,7 +321,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 231935280}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 361.7565, y: -237.17834, z: 0}
+  m_LocalPosition: {x: 361.75656, y: -237.17834, z: 0}
   m_LocalScale: {x: 1.0000002, y: 1.0000002, z: 1.0000002}
   m_Children: []
   m_Father: {fileID: 1558714623}
@@ -329,7 +329,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.47427613, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.56753993}
-  m_AnchoredPosition: {x: 372.05014, y: -254.07}
+  m_AnchoredPosition: {x: 372.05017, y: -254.06999}
   m_SizeDelta: {x: 57.508, y: -9.7383}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &231935282
@@ -599,7 +599,7 @@ GameObject:
   - component: {fileID: 619882241}
   - component: {fileID: 619882240}
   m_Layer: 0
-  m_Name: Canvas
+  m_Name: Switch Player Canvas
   m_TagString: CombatPlayerSwapCanvas
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -660,7 +660,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: -5
+  m_SortingOrder: 3
   m_TargetDisplay: 0
 --- !u!224 &619882243
 RectTransform:
@@ -1911,7 +1911,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1367961762}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 361.7565, y: -188.71841, z: 0}
+  m_LocalPosition: {x: 361.75656, y: -188.7184, z: 0}
   m_LocalScale: {x: 1.0000004, y: 1.0000004, z: 1.0000004}
   m_Children: []
   m_Father: {fileID: 1558714623}
@@ -1919,7 +1919,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.47427613, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.56753993}
-  m_AnchoredPosition: {x: 372.05014, y: -205.61005}
+  m_AnchoredPosition: {x: 372.05017, y: -205.61003}
   m_SizeDelta: {x: 57.508, y: -9.7233}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1367961764

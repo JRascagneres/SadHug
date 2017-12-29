@@ -44,10 +44,18 @@ public class Player : Character {
                 break;
             case PlayerType.Physc:
                 initializeHealth(175);
+                abilityList.Add(abilities.getAbility(Abilities.AbilityEnum.singleStunEnemy));
+                abilityList.Add(abilities.getAbility(Abilities.AbilityEnum.singleStunPlayer));
+                abilityList.Add(abilities.getAbility(Abilities.AbilityEnum.fiveDamage));
+                abilityList.Add(abilities.getAbility(Abilities.AbilityEnum.fiveDamage));
                 setSprite(Resources.Load<Sprite>("Sprites/CharacterSprites/playerfour") as Sprite);
                 break;
             case PlayerType.Music:
                 initializeHealth(100);
+                abilityList.Add(abilities.getAbility(Abilities.AbilityEnum.singleStunEnemy));
+                abilityList.Add(abilities.getAbility(Abilities.AbilityEnum.singleStunPlayer));
+                abilityList.Add(abilities.getAbility(Abilities.AbilityEnum.fiveDamage));
+                abilityList.Add(abilities.getAbility(Abilities.AbilityEnum.fiveDamage));
                 setSprite(Resources.Load<Sprite>("Sprites/CharacterSprites/playerfive") as Sprite);
                 break;
         }

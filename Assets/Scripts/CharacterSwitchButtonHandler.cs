@@ -72,6 +72,6 @@ public class CharacterSwitchButtonHandler : MonoBehaviour {
 
     void closeMenu()
     {
-        GameObject.FindGameObjectWithTag("CombatPlayerSwapCanvas").GetComponent<Canvas>().sortingOrder = -5;
+        combatMode.swapPlayerCanvas(false);
     }
 }

@@ -15,9 +15,12 @@ public class CombatMode {
     private GameObject combatCanvas = GameObject.FindGameObjectWithTag("CombatCanvas");
     private bool enemyStunned = false;
     private bool playerStunned = false;
+    private GameObject playerSwitchCanvas;
     
     public CombatMode(List<Player> players, List<Enemy> enemies)
     {
+        playerSwitchCanvas = GameObject.FindGameObjectWithTag("CombatPlayerSwapCanvas");
+        playerSwitchCanvas.SetActive(false);
         playerIndex = 0;
         this.players = players;
         this.enemies = enemies;
@@ -96,21 +99,21 @@ public class CombatMode {
 
     void updateSprite()
     {
-        Sprite playerSprite = enemies[0].getSprite();
+        Sprite enemySprite = enemies[0].getSprite();
         GameObject enemyPlaceHolderObj = GameObject.FindGameObjectWithTag("Enemy Placeholder");
         SpriteRenderer enemyPlaceHolder = enemyPlaceHolderObj.GetComponent<SpriteRenderer>();
         float pixelsPerUnit = enemyPlaceHolder.sprite.pixelsPerUnit;
-        enemyPlaceHolder.sprite = playerSprite;
+        enemyPlaceHolder.sprite = enemySprite;
         float newPixelsPerUnit = enemyPlaceHolder.sprite.pixelsPerUnit;
 
         float pixelRatio = pixelsPerUnit / newPixelsPerUnit;
         enemyPlaceHolder.transform.localScale = new Vector2(enemyPlaceHolder.transform.localScale.x * pixelRatio, enemyPlaceHolder.transform.localScale.y * pixelRatio);
 
-        Sprite enemySprite = players[playerIndex].getSprite();
+        Sprite playerSprite = players[playerIndex].getSprite();
         GameObject playerPlaceHolderObj = GameObject.FindGameObjectWithTag("Player Placeholder");
         SpriteRenderer playerPlaceHolder = playerPlaceHolderObj.GetComponent<SpriteRenderer>();
         pixelsPerUnit = playerPlaceHolder.sprite.pixelsPerUnit;
-        playerPlaceHolder.sprite = enemySprite;
+        playerPlaceHolder.sprite = playerSprite;
 
         pixelRatio = pixelsPerUnit / newPixelsPerUnit;
         playerPlaceHolder.transform.localScale = new Vector2(playerPlaceHolder.transform.localScale.x * pixelRatio, playerPlaceHolder.transform.localScale.y * pixelRatio);
@@ -237,9 +240,9 @@ public class CombatMode {
         return players[playerIndex].getAbilities();
     }
 
-    public void switchPlayerMenu()
+    public void swapPlayerCanvas(bool active)
     {
-        GameObject.FindGameObjectWithTag("CombatPlayerSwapCanvas").GetComponent<Canvas>().sortingOrder = 3;
+        playerSwitchCanvas.SetActive(active);
     }
 
     public void switchPlayer(int index)
