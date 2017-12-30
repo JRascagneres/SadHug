@@ -5,28 +5,41 @@ using UnityEngine.UI;
 
 public class CombatMode {
 
+    // --- Initial Setup Parameters To Be Accessed Globally ---
     private List<Player> players;
     private List<Enemy> enemies;
     private int playerIndex;
     private Text playerHealth;
     private Text enemyHealth;
     private Text playerAP;
-    private int turnState;
-    private GameObject combatCanvas = GameObject.FindGameObjectWithTag("CombatCanvas");
+    private bool playerTurn;
+    private GameObject combatCanvas; 
     private bool enemyStunned = false;
     private bool playerStunned = false;
     private GameObject playerSwitchCanvas;
     
     public CombatMode(List<Player> players, List<Enemy> enemies)
     {
+        //Set reference to the player swapping view and then hide
         playerSwitchCanvas = GameObject.FindGameObjectWithTag("CombatPlayerSwapCanvas");
         playerSwitchCanvas.SetActive(false);
+
+        //Set reference to combatmode canvas
+        combatCanvas = GameObject.FindGameObjectWithTag("CombatCanvas");
+
+        // TODO
         playerIndex = 0;
+
+        //Sets reference to the players and enemies in the battle
         this.players = players;
         this.enemies = enemies;
+
+        //Sets reference to player health, enemy health and player abilty point bars
         playerHealth = GameObject.FindGameObjectWithTag("Player Health").GetComponent<Text>() as Text;
         enemyHealth = GameObject.FindGameObjectWithTag("Enemy Health").GetComponent<Text>() as Text;
         playerAP = GameObject.FindGameObjectWithTag("Player AP").GetComponent<Text>() as Text;
+
+        //Sets stats and sprites
         updateStatsInfo();
         updateSprite();
 
@@ -40,20 +53,22 @@ public class CombatMode {
         //myText.fontSize = 10;
         //myText.useGUILayout = true;
         //myText.font = Resources.GetBuiltinResource(typeof(Font), "Arial.ttf") as Font;
+
+        //Initialise turns
         startCombat();
     }
 
-
+    //Starts the turns with player having first turn
     void startCombat()
     {
-        turnState = 0;
+        playerTurn = true;
     }
 
     void turnCheck()
     {
-        switch (turnState)
+        switch (playerTurn)
         {
-            case (1):
+            case (false):
                 enemyAttack();
                 break;
 
@@ -71,12 +86,12 @@ public class CombatMode {
             if (playerStunned)
             {
                 playerStunned = false;
-                turnState = 1;
+                playerTurn = false;
                 turnCheck();
             }
             else
             {
-                turnState = 0;
+                playerTurn = true;
             }
         }
     }
@@ -148,6 +163,11 @@ public class CombatMode {
 
     public bool useAbility(Player player, Enemy enemy, int abilityIndex)
     {
+        if (player.getHealth() == 0)
+        {
+            return false;
+        }
+
         Ability ability = player.getAbilities()[abilityIndex];
         bool success = updateAP(player, ability.apCost);
         if (success)
@@ -196,7 +216,7 @@ public class CombatMode {
 
     public void attackButton(int attackButtonNumber)
     {
-        if (turnState == 0)
+        if (playerTurn)
         {
             bool success = false;
             switch (attackButtonNumber)
@@ -224,11 +244,11 @@ public class CombatMode {
                 if (enemyStunned)
                 {
                     enemyStunned = false;
-                    turnState = 0;
+                    playerTurn = true;
                 }
                 else
                 {
-                    turnState = 1;
+                    playerTurn = false;
                     turnCheck();
                 }
             }

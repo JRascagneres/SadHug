@@ -15,7 +15,7 @@ public class Abilities
         switch (abEnum)
         {
             case AbilityEnum.fiveDamage:
-                return new Ability("Five Damage", Ability.abilityTypes.numberDamage, "Does five damage", 1, 5, false, false);
+                return new Ability("Basic Attack", Ability.abilityTypes.numberDamage, "Does five damage", 0, 5, false, false);
             case AbilityEnum.tenHeal:
                 return new Ability("Ten Heal", Ability.abilityTypes.numberHeal, "Heals 10", 3, 10, false, false);
             case AbilityEnum.tenPercentCurrent:
