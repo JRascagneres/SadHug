@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -17,7 +18,10 @@ public class CombatMode {
     private bool enemyStunned = false;
     private bool playerStunned = false;
     private GameObject playerSwitchCanvas;
-    
+    private GameObject playerPlaceHolderObj;
+    private Animator animator;
+
+
     public CombatMode(List<Player> players, List<Enemy> enemies)
     {
         //Set reference to the player swapping view and then hide
@@ -38,6 +42,10 @@ public class CombatMode {
         playerHealth = GameObject.FindGameObjectWithTag("Player Health").GetComponent<Text>() as Text;
         enemyHealth = GameObject.FindGameObjectWithTag("Enemy Health").GetComponent<Text>() as Text;
         playerAP = GameObject.FindGameObjectWithTag("Player AP").GetComponent<Text>() as Text;
+
+        //Sets playerSprite and sprite animator
+        playerPlaceHolderObj = GameObject.FindGameObjectWithTag("Player Placeholder");
+        animator = playerPlaceHolderObj.GetComponent<Animator>();
 
         //Sets stats and sprites
         updateStatsInfo();
@@ -64,6 +72,7 @@ public class CombatMode {
         playerTurn = true;
     }
 
+    //Checks who's turn, if enemys turn run the attack command
     void turnCheck()
     {
         switch (playerTurn)
@@ -75,6 +84,7 @@ public class CombatMode {
         }
     }
 
+    //Method ran when an enemy attacks
     void enemyAttack()
     {
         if (enemies[0].getHealth() != 0)
@@ -125,15 +135,24 @@ public class CombatMode {
         enemyPlaceHolder.transform.localScale = new Vector2(enemyPlaceHolder.transform.localScale.x * pixelRatio, enemyPlaceHolder.transform.localScale.y * pixelRatio);
 
         Sprite playerSprite = players[playerIndex].getSprite();
-        GameObject playerPlaceHolderObj = GameObject.FindGameObjectWithTag("Player Placeholder");
+        playerPlaceHolderObj = GameObject.FindGameObjectWithTag("Player Placeholder");
         SpriteRenderer playerPlaceHolder = playerPlaceHolderObj.GetComponent<SpriteRenderer>();
         pixelsPerUnit = playerPlaceHolder.sprite.pixelsPerUnit;
         playerPlaceHolder.sprite = playerSprite;
 
         pixelRatio = pixelsPerUnit / newPixelsPerUnit;
         playerPlaceHolder.transform.localScale = new Vector2(playerPlaceHolder.transform.localScale.x * pixelRatio, playerPlaceHolder.transform.localScale.y * pixelRatio);
+        
+        AnimatorOverrideController animatorOverrideController = new AnimatorOverrideController(animator.runtimeAnimatorController);
+        animator.runtimeAnimatorController = animatorOverrideController;
+        animatorOverrideController["PlayerOneIdle"] = players[playerIndex].getIdleAnimation();
+        animatorOverrideController["PlayerOneCast"] = players[playerIndex].getCastAnimation();
     }
 
+    void playAnim()
+    {
+        animator.SetTrigger("Cast");
+    }
 
     public void doDamage(Character character, int damageAmount)
     {
@@ -173,6 +192,7 @@ public class CombatMode {
         if (success)
         {
             Ability.abilityTypes abilityType = ability.abilityType;
+            playAnim();
             switch (abilityType)
             {
                 case (Ability.abilityTypes.numberDamage):
@@ -216,7 +236,7 @@ public class CombatMode {
 
     public void attackButton(int attackButtonNumber)
     {
-        if (playerTurn)
+        if (playerTurn && animator.GetCurrentAnimatorStateInfo(0).IsName("Idle"))
         {
             bool success = false;
             switch (attackButtonNumber)
