@@ -146,8 +146,7 @@ public class CombatMode {
         AnimatorOverrideController animatorOverrideController = new AnimatorOverrideController(animator.runtimeAnimatorController);
         animator.runtimeAnimatorController = animatorOverrideController;
         animatorOverrideController["PlayerOneIdle"] = players[playerIndex].getIdleAnimation();
-        animatorOverrideController["PlayerOneAnimation"] = players[playerIndex].getCastAnimation();
-
+        animatorOverrideController["PlayerOneCast"] = players[playerIndex].getCastAnimation();
     }
 
     void playAnim()

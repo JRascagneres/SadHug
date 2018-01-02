@@ -26,7 +26,7 @@ public class Player : Character {
                 abilityList.Add(abilities.getAbility(Abilities.AbilityEnum.tenHeal));
                 setSprite(Resources.Load<Sprite>("Sprites/CharacterSprites/playerone") as Sprite);
                 setIdleAnimation(Resources.Load<AnimationClip>("Sprites/CharacterSprites/Animations/PlayerOneIdle"));
-                setCastAnimation(Resources.Load<AnimationClip>("Sprites/CharacterSprites/Animations/PlayerOneAnimation"));
+                setCastAnimation(Resources.Load<AnimationClip>("Sprites/CharacterSprites/Animations/PlayerOneCast"));
                 break;
             case PlayerType.Chem:
                 initializeHealth(150);
@@ -36,7 +36,7 @@ public class Player : Character {
                 abilityList.Add(abilities.getAbility(Abilities.AbilityEnum.poisenTenPlayer));
                 setSprite(Resources.Load<Sprite>("Sprites/CharacterSprites/playertwo") as Sprite);
                 setIdleAnimation(Resources.Load<AnimationClip>("Sprites/CharacterSprites/Animations/PlayerTwoIdle"));
-                setCastAnimation(Resources.Load<AnimationClip>("Sprites/CharacterSprites/Animations/PlayerTwoAnimation"));
+                setCastAnimation(Resources.Load<AnimationClip>("Sprites/CharacterSprites/Animations/PlayerTwoCast"));
                 break;
             case PlayerType.Sport:
                 initializeHealth(250);
