@@ -9,6 +9,8 @@ public class Character{
     private Sprite sprite;
     private bool tickingDamage = false;
     private int tickingDamagePerTurn;
+    private AnimationClip idleAnimation;
+    private AnimationClip castAnimation;
 
 	// Use this for initialization
 	void Start () {
@@ -48,6 +50,26 @@ public class Character{
     public Sprite getSprite()
     {
         return this.sprite;
+    }
+
+    public void setIdleAnimation(AnimationClip animation)
+    {
+        this.idleAnimation = animation;
+    }
+
+    public AnimationClip getIdleAnimation()
+    {
+        return this.idleAnimation;
+    }
+
+    public void setCastAnimation(AnimationClip animation)
+    {
+        this.castAnimation = animation;
+    }
+
+    public AnimationClip getCastAnimation()
+    {
+        return this.castAnimation;
     }
 
     public void initializeHealth(int health)
