@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <tileset name="interior" tilewidth="32" tileheight="32" tilecount="256" columns="16">
- <image source="C:/Users/Luca/Downloads/LPC_house_interior/interior.png" width="512" height="512"/>
+ <image source="../Textures/interior.png" width="512" height="512"/>
  <tile id="61">
   <animation>
    <frame tileid="11" duration="100"/>

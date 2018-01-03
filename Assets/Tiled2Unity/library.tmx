@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.0" tiledversion="1.0.3" orientation="orthogonal" renderorder="right-down" width="35" height="25" tilewidth="32" tileheight="32" nextobjectid="1">
- <tileset firstgid="1" source="E:/Luca/Documents/house_inside.tsx"/>
- <tileset firstgid="225" source="E:/Luca/Documents/build_atlas.tsx"/>
- <tileset firstgid="1249" source="E:/Luca/Documents/inside_B.tsx"/>
- <tileset firstgid="1505" source="E:/Luca/Documents/animated_clock.tsx"/>
- <tileset firstgid="1514" source="E:/Luca/Documents/collision.tsx"/>
+ <tileset firstgid="1" source="tmx files/house_inside.tsx"/>
+ <tileset firstgid="225" source="tmx files/build_atlas.tsx"/>
+ <tileset firstgid="1249" source="tmx files/inside_B.tsx"/>
+ <tileset firstgid="1505" source="tmx files/animated_clock.tsx"/>
+ <tileset firstgid="1514" source="tmx files/collision.tsx"/>
  <layer name="Ground" width="35" height="25">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
