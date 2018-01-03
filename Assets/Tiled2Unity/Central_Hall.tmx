@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.0" tiledversion="1.0.3" orientation="orthogonal" renderorder="right-down" width="30" height="30" tilewidth="32" tileheight="32" nextobjectid="1">
- <tileset firstgid="1" source="E:/Luca/Documents/base_out_atlas.tsx"/>
- <tileset firstgid="1025" source="E:/Luca/Documents/terrain_atlas.tsx"/>
- <tileset firstgid="2049" source="E:/Luca/Documents/obj_misk_atlas.tsx"/>
- <tileset firstgid="3073" source="E:/Luca/Documents/house_inside.tsx"/>
- <tileset firstgid="3297" source="E:/Luca/Documents/build_atlas.tsx"/>
- <tileset firstgid="4321" source="E:/Luca/Documents/collision.tsx"/>
+ <tileset firstgid="1" source="tmx files/base_out_atlas.tsx"/>
+ <tileset firstgid="1025" source="tmx files/terrain_atlas.tsx"/>
+ <tileset firstgid="2049" source="tmx files/obj_misk_atlas.tsx"/>
+ <tileset firstgid="3073" source="tmx files/house_inside.tsx"/>
+ <tileset firstgid="3297" source="tmx files/build_atlas.tsx"/>
+ <tileset firstgid="4321" source="tmx files/collision.tsx"/>
  <layer name="Ground" width="30" height="30">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,

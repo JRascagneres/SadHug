@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <tileset name="atlas map" tilewidth="32" tileheight="32" tilecount="1024" columns="32">
- <image source="C:/Users/Luca/Documents/GitHub/SadHug/Assets/Tiled2Unity/Tilesets/terrain_atlas.png" width="1024" height="1024"/>
+ <image source="../Textures/terrain_atlas.png" width="1024" height="1024"/>
  <terraintypes>
   <terrain name="Sand Water" tile="387"/>
   <terrain name="Sand" tile="385"/>
