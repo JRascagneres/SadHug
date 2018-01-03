@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Character{
 
+    //Information about characters
     private int health;
     private int maxHealth;
     private Sprite sprite;
@@ -12,16 +13,7 @@ public class Character{
     private AnimationClip idleAnimation;
     private AnimationClip castAnimation;
 
-	// Use this for initialization
-	void Start () {
-        
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
-
+    //Just getters and setters for the character information
     public void setHealth(int health)
     {
         this.health = health;
@@ -72,28 +64,6 @@ public class Character{
         return this.castAnimation;
     }
 
-    public void initializeHealth(int health)
-    {
-        setMaxHealth(health);
-        setHealth(health);
-    }
-
-    public int takeDamage(int damageAmount)
-    {
-        health -= damageAmount;
-        return health;
-    }
-
-    public int doHeal(int healAmount)
-    {
-        health += healAmount;
-        if(health > maxHealth)
-        {
-            health = maxHealth;
-        }
-        return health;
-    }
-
     public void setTickingDamage(bool tickingDamage)
     {
         this.tickingDamage = tickingDamage;
@@ -114,6 +84,32 @@ public class Character{
         return tickingDamagePerTurn;
     }
 
+    //Ran when character created - Sets maxHealth and then the health to the maxHealth
+    public void initializeHealth(int health)
+    {
+        setMaxHealth(health);
+        setHealth(health);
+    }
+
+    //Reduces health of character by parameter amount
+    public int takeDamage(int damageAmount)
+    {
+        health -= damageAmount;
+        return health;
+    }
+
+    //Increases health of character by parameter amount ensuring it maxes out
+    public int doHeal(int healAmount)
+    {
+        health += healAmount;
+        if(health > maxHealth)
+        {
+            health = maxHealth;
+        }
+        return health;
+    }
+
+    //Takes ticking damage by set amount if ticking damage is true -- Ticking damage is like a poisen effect
     public void takeTickingDamage()
     {
         if (tickingDamage)

@@ -6,12 +6,14 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour {
 
+    //Variables initialised
     public static GameManager instance = null;
     private List<Player> players = new List<Player>();
     private List<Enemy> enemies = new List<Enemy>();
 
     CombatMode combatMode;
 
+    //Ensures that only one instance of GameManager exists and that it can be addressed uses GameManager.instance();
     private void Awake()
     {
         if (instance == null)
@@ -21,7 +23,7 @@ public class GameManager : MonoBehaviour {
         DontDestroyOnLoad(this);
     }
 
-    // Use this for initialization
+    //Loops through all players and creates one of each and puts into players list
     void Start () {
 
         string[] playerTypes = Enum.GetNames(typeof(Player.PlayerType));
@@ -37,6 +39,7 @@ public class GameManager : MonoBehaviour {
         combatMode = new CombatMode(players, enemies);
     }
 
+    //Returns current combatmode
     public CombatMode getCombatMode()
     {
         return combatMode;

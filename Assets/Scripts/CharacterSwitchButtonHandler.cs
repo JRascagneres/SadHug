@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class CharacterSwitchButtonHandler : MonoBehaviour {
 
+    //All buttons on the character switch screen
     public Button characterOneBtn;
     public Button characterTwoBtn;
     public Button characterThreeBtn;
@@ -12,11 +13,13 @@ public class CharacterSwitchButtonHandler : MonoBehaviour {
     public Button characterFiveBtn;
     public Button goBack;
 
+    //Global reference required for these classes
     GameManager gameManager;
     CombatMode combatMode;
 
     // Use this for initialization
     void Start () {
+        //All button and gamemanager references set to ingame objects
         characterOneBtn = characterOneBtn.GetComponent<Button>();
         characterOneBtn.onClick.AddListener(characterOneSwitch);
         characterTwoBtn = characterTwoBtn.GetComponent<Button>();
@@ -33,6 +36,7 @@ public class CharacterSwitchButtonHandler : MonoBehaviour {
         gameManager = GameManager.instance;
     }
 	
+    //Ran when buttons clicked passed index of player to switch to
 	void characterOneSwitch()
     {
         switchPlayer(1);
@@ -58,6 +62,7 @@ public class CharacterSwitchButtonHandler : MonoBehaviour {
         switchPlayer(5);
     }
 
+    //Switches current combat player which is set in combatmode
     void switchPlayer (int index)
     {
         combatMode = gameManager.getCombatMode();
@@ -65,11 +70,13 @@ public class CharacterSwitchButtonHandler : MonoBehaviour {
         closeMenu();
     }
 
+    //Calls closeMenu() when close button pressed
     void goBackButton()
     {
         closeMenu();
     }
 
+    //Close menu which is set in combatmode
     void closeMenu()
     {
         combatMode.swapPlayerCanvas(false);

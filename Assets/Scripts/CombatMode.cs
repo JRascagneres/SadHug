@@ -51,17 +51,6 @@ public class CombatMode {
         updateStatsInfo();
         updateSprite();
 
-        //Test to dynamically add text
-        //GameObject newGO = new GameObject("mytext");
-        //newGO.SetActive(true);
-        //newGO.transform.SetParent(combatCanvas.transform);
-        //Text myText = newGO.AddComponent<Text>();
-        //myText.transform.localScale = new Vector2(1, 1);
-        //myText.text = "XxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxS";
-        //myText.fontSize = 10;
-        //myText.useGUILayout = true;
-        //myText.font = Resources.GetBuiltinResource(typeof(Font), "Arial.ttf") as Font;
-
         //Initialise turns
         startCombat();
     }
@@ -106,7 +95,7 @@ public class CombatMode {
         }
     }
 
-
+    //Updates UI bars -- Player Health, Enemy Health and Player AP
     void updateStatsInfo()
     {
         Image playerHealthBar = GameObject.FindGameObjectWithTag("Player Health Bar").GetComponent<Image>() as Image;
@@ -122,6 +111,7 @@ public class CombatMode {
         playerAP.text = players[playerIndex].getCurrentAP().ToString() + "/" + players[playerIndex].getMaxAP().ToString();
     }
 
+    //Updates animations depending on which player & enemy has been chosen
     void updateSprite()
     {
         Sprite enemySprite = enemies[0].getSprite();
@@ -149,11 +139,13 @@ public class CombatMode {
         animatorOverrideController["PlayerOneCast"] = players[playerIndex].getCastAnimation();
     }
 
+    //Plays attach animation
     void playAnim()
     {
         animator.SetTrigger("Cast");
     }
 
+    //Takes character and damageAmount and damages the character by that amount - Lower bound set to 0 health
     public void doDamage(Character character, int damageAmount)
     {
         int newHealth = character.takeDamage(damageAmount);
@@ -163,11 +155,13 @@ public class CombatMode {
         }
     }
 
+    //Takes character and healtAmount and heals the character by that amount
     public void doHeal(Character character, int healAmount)
     {
         character.doHeal(healAmount);
     }
 
+    //Updates AP of player and returns true or false, depending on whether the character has enough AP
     public bool updateAP(Player player, int AP)
     {
         int beforeAP = player.getCurrentAP();
@@ -180,17 +174,25 @@ public class CombatMode {
         return true;
     }
 
+    //Uses an ability - Pass player, enemy, and index of ability
     public bool useAbility(Player player, Enemy enemy, int abilityIndex)
     {
+        //If player has no health no action can be performed so nothing happens
         if (player.getHealth() == 0)
         {
             return false;
         }
 
+        //Get ability being used
         Ability ability = player.getAbilities()[abilityIndex];
+
+        //Check if player has enough AP
         bool success = updateAP(player, ability.apCost);
+
+        //If enough AP
         if (success)
         {
+            //For each ability type this tells the program what to do
             Ability.abilityTypes abilityType = ability.abilityType;
             playAnim();
             switch (abilityType)
@@ -231,13 +233,15 @@ public class CombatMode {
         }
         updateStatsInfo();
         return success;
-        
     }
 
+    //Runs attack depending on which button is pressed
     public void attackButton(int attackButtonNumber)
     {
+        //Only perform action on button press if its the players turn and animation is finished
         if (playerTurn && animator.GetCurrentAnimatorStateInfo(0).IsName("Idle"))
         {
+            //Uses ability depending on button press -- success is whether the ability was able to be ran
             bool success = false;
             switch (attackButtonNumber)
             {
@@ -257,10 +261,17 @@ public class CombatMode {
                     Debug.Log("BUG");
                     break;
             }
+
+            //if ability was able to be ran
             if (success)
             {
+                //Do player ticking damage at end of turn
                 players[playerIndex].takeTickingDamage();
+
+                //Update stats bars
                 updateStatsInfo();
+
+                //If enemy is stunned jump back to player turn otherwise give enemy a turn
                 if (enemyStunned)
                 {
                     enemyStunned = false;
@@ -275,16 +286,19 @@ public class CombatMode {
         }
     }
 
+    //Get player abilities of current player
     public List<Ability> getPlayerAbilities()
     {
         return players[playerIndex].getAbilities();
     }
 
+    //Opens swap player canvas
     public void swapPlayerCanvas(bool active)
     {
         playerSwitchCanvas.SetActive(active);
     }
 
+    //Switch player when function is ran, takes player index as an parameter
     public void switchPlayer(int index)
     {
         playerIndex = index - 1;
@@ -293,6 +307,7 @@ public class CombatMode {
         updateButtons();
     }
 
+    //Update button text to ability names
     public void updateButtons()
     {
         List<Ability> abilityList = getPlayerAbilities();

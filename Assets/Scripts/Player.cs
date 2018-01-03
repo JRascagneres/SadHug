@@ -5,15 +5,18 @@ using UnityEngine;
 
 public class Player : Character {
 
+    //Player types saved in enums
     public enum PlayerType {CompSci, Chem, Sport, Physc, Music};
 
-    //public PlayerType playerType;
-
+    //Initialised with 10 AP per character
     private int maxAP = 10;
     private int currentAP = 10;
     
+    //Initialises variables
     public List<Ability> abilityList = new List<Ability>();
     private Abilities abilities = new Abilities();
+
+    //Switches through all player types and depending on which player was chosen it sets the corresponding information for each player.
     public Player(PlayerType playerType)
     {
         switch (playerType)
@@ -65,6 +68,7 @@ public class Player : Character {
         }
     }
 
+    //Getters and setters for player information
     public void setCurrentAP(int newAP)
     {
         this.currentAP = newAP;
