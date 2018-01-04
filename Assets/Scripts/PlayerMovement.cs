@@ -16,7 +16,7 @@ public class PlayerMovement : MonoBehaviour {
     public Sprite downSprite;
     public Sprite leftSprite;
 
-    public float walkSpeed = 3;
+    public float walkSpeed = 1000;
 
     public bool isAllowedToMove = true;
 
