@@ -6,7 +6,7 @@ using UnityEngine;
 public class Player : Character {
 
     //Player types saved in enums
-    public enum PlayerType {CompSci, Chem, Sport, Physc, Music};
+    public enum PlayerType {CompSci, Physc, Music, Chem, Sport};
 
     //Initialised with 10 AP per character
     private int maxAP = 10;
@@ -31,7 +31,7 @@ public class Player : Character {
                 setIdleAnimation(Resources.Load<AnimationClip>("Sprites/CharacterSprites/Animations/PlayerOneIdle"));
                 setCastAnimation(Resources.Load<AnimationClip>("Sprites/CharacterSprites/Animations/PlayerOneCast"));
                 break;
-            case PlayerType.Chem:
+            case PlayerType.Physc:
                 initializeHealth(150);
                 abilityList.Add(abilities.getAbility(Abilities.AbilityEnum.fiveDamage));
                 abilityList.Add(abilities.getAbility(Abilities.AbilityEnum.groupHealTen));
@@ -41,15 +41,17 @@ public class Player : Character {
                 setIdleAnimation(Resources.Load<AnimationClip>("Sprites/CharacterSprites/Animations/PlayerTwoIdle"));
                 setCastAnimation(Resources.Load<AnimationClip>("Sprites/CharacterSprites/Animations/PlayerTwoCast"));
                 break;
-            case PlayerType.Sport:
+            case PlayerType.Music:
                 initializeHealth(250);
                 abilityList.Add(abilities.getAbility(Abilities.AbilityEnum.singleStunEnemy));
                 abilityList.Add(abilities.getAbility(Abilities.AbilityEnum.singleStunPlayer));
                 abilityList.Add(abilities.getAbility(Abilities.AbilityEnum.fiveDamage));
                 abilityList.Add(abilities.getAbility(Abilities.AbilityEnum.poisenTenPlayer));
                 setSprite(Resources.Load<Sprite>("Sprites/CharacterSprites/playerthree") as Sprite);
+                setIdleAnimation(Resources.Load<AnimationClip>("Sprites/CharacterSprites/Animations/PlayerThreeIdle"));
+                setCastAnimation(Resources.Load<AnimationClip>("Sprites/CharacterSprites/Animations/PlayerThreeCast"));
                 break;
-            case PlayerType.Physc:
+            case PlayerType.Chem:
                 initializeHealth(175);
                 abilityList.Add(abilities.getAbility(Abilities.AbilityEnum.singleStunEnemy));
                 abilityList.Add(abilities.getAbility(Abilities.AbilityEnum.singleStunPlayer));
@@ -57,13 +59,15 @@ public class Player : Character {
                 abilityList.Add(abilities.getAbility(Abilities.AbilityEnum.fiveDamage));
                 setSprite(Resources.Load<Sprite>("Sprites/CharacterSprites/playerfour") as Sprite);
                 break;
-            case PlayerType.Music:
+            case PlayerType.Sport:
                 initializeHealth(100);
                 abilityList.Add(abilities.getAbility(Abilities.AbilityEnum.singleStunEnemy));
                 abilityList.Add(abilities.getAbility(Abilities.AbilityEnum.singleStunPlayer));
                 abilityList.Add(abilities.getAbility(Abilities.AbilityEnum.fiveDamage));
                 abilityList.Add(abilities.getAbility(Abilities.AbilityEnum.fiveDamage));
                 setSprite(Resources.Load<Sprite>("Sprites/CharacterSprites/playerfive") as Sprite);
+                setIdleAnimation(Resources.Load<AnimationClip>("Sprites/CharacterSprites/Animations/PlayerFiveIdle"));
+                setCastAnimation(Resources.Load<AnimationClip>("Sprites/CharacterSprites/Animations/PlayerFiveCast"));
                 break;
         }
     }

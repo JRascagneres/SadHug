@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Threading;
 using UnityEngine;
@@ -124,18 +125,10 @@ public class CombatMode {
         float pixelRatio = pixelsPerUnit / newPixelsPerUnit;
         enemyPlaceHolder.transform.localScale = new Vector2(enemyPlaceHolder.transform.localScale.x * pixelRatio, enemyPlaceHolder.transform.localScale.y * pixelRatio);
 
-        Sprite playerSprite = players[playerIndex].getSprite();
-        playerPlaceHolderObj = GameObject.FindGameObjectWithTag("Player Placeholder");
-        SpriteRenderer playerPlaceHolder = playerPlaceHolderObj.GetComponent<SpriteRenderer>();
-        pixelsPerUnit = playerPlaceHolder.sprite.pixelsPerUnit;
-        playerPlaceHolder.sprite = playerSprite;
-
-        pixelRatio = pixelsPerUnit / newPixelsPerUnit;
-        playerPlaceHolder.transform.localScale = new Vector2(playerPlaceHolder.transform.localScale.x * pixelRatio, playerPlaceHolder.transform.localScale.y * pixelRatio);
-        
         AnimatorOverrideController animatorOverrideController = new AnimatorOverrideController(animator.runtimeAnimatorController);
         animator.runtimeAnimatorController = animatorOverrideController;
         animatorOverrideController["PlayerOneIdle"] = players[playerIndex].getIdleAnimation();
+        Debug.Log(players[playerIndex].getIdleAnimation().ToString());
         animatorOverrideController["PlayerOneCast"] = players[playerIndex].getCastAnimation();
     }
 
