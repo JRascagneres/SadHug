@@ -128,7 +128,6 @@ public class CombatMode {
         AnimatorOverrideController animatorOverrideController = new AnimatorOverrideController(animator.runtimeAnimatorController);
         animator.runtimeAnimatorController = animatorOverrideController;
         animatorOverrideController["PlayerOneIdle"] = players[playerIndex].getIdleAnimation();
-        Debug.Log(players[playerIndex].getIdleAnimation().ToString());
         animatorOverrideController["PlayerOneCast"] = players[playerIndex].getCastAnimation();
     }
 

@@ -58,6 +58,8 @@ public class Player : Character {
                 abilityList.Add(abilities.getAbility(Abilities.AbilityEnum.fiveDamage));
                 abilityList.Add(abilities.getAbility(Abilities.AbilityEnum.fiveDamage));
                 setSprite(Resources.Load<Sprite>("Sprites/CharacterSprites/playerfour") as Sprite);
+                setIdleAnimation(Resources.Load<AnimationClip>("Sprites/CharacterSprites/Animations/PlayerFourIdle"));
+                setCastAnimation(Resources.Load<AnimationClip>("Sprites/CharacterSprites/Animations/PlayerFourCast"));
                 break;
             case PlayerType.Sport:
                 initializeHealth(100);
