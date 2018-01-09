@@ -34,7 +34,13 @@ public class GameManager : MonoBehaviour {
             players.Add(playerObj);
         }
 
-        enemies.Add(new Enemy(Enemy.EnemyType.TestBoi));
+        string[] enemyTypes = Enum.GetNames(typeof(Enemy.EnemyType));
+        foreach (String enemy in enemyTypes)
+        {
+            Enemy.EnemyType enemyType = (Enemy.EnemyType)Enum.Parse(typeof(Enemy.EnemyType), enemy);
+            Enemy enemyObj = new Enemy(enemyType);
+            enemies.Add(enemyObj);
+        }
 
         combatMode = new CombatMode(players, enemies);
     }

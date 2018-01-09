@@ -11,6 +11,7 @@ public class CombatMode {
     private List<Player> players;
     private List<Enemy> enemies;
     private int playerIndex;
+    private int enemyIndex;
     private Text playerHealth;
     private Text enemyHealth;
     private Text playerAP;
@@ -20,7 +21,10 @@ public class CombatMode {
     private bool playerStunned = false;
     private GameObject playerSwitchCanvas;
     private GameObject playerPlaceHolderObj;
-    private Animator animator;
+    private GameObject enemyPlaceHolderObj;
+    private Animator playerAnimator;
+    private Animator enemyAnimator;
+    private AnimationEvent evt;
 
 
     public CombatMode(List<Player> players, List<Enemy> enemies)
@@ -32,8 +36,9 @@ public class CombatMode {
         //Set reference to combatmode canvas
         combatCanvas = GameObject.FindGameObjectWithTag("CombatCanvas");
 
-        // TODO
+        //Sets player and enemy index
         playerIndex = 0;
+        enemyIndex = 1;
 
         //Sets reference to the players and enemies in the battle
         this.players = players;
@@ -44,9 +49,13 @@ public class CombatMode {
         enemyHealth = GameObject.FindGameObjectWithTag("Enemy Health").GetComponent<Text>() as Text;
         playerAP = GameObject.FindGameObjectWithTag("Player AP").GetComponent<Text>() as Text;
 
-        //Sets playerSprite and sprite animator
+        //Sets playerSprite and sprite playerAnimator
         playerPlaceHolderObj = GameObject.FindGameObjectWithTag("Player Placeholder");
-        animator = playerPlaceHolderObj.GetComponent<Animator>();
+        playerAnimator = playerPlaceHolderObj.GetComponent<Animator>();
+
+        //Sets enemyAnimator
+        enemyPlaceHolderObj = GameObject.FindGameObjectWithTag("Enemy Placeholder");
+        enemyAnimator = enemyPlaceHolderObj.GetComponent<Animator>();
 
         //Sets stats and sprites
         updateStatsInfo();
@@ -55,6 +64,7 @@ public class CombatMode {
         //Initialise turns
         startCombat();
     }
+
 
     //Starts the turns with player having first turn
     void startCombat()
@@ -77,11 +87,12 @@ public class CombatMode {
     //Method ran when an enemy attacks
     void enemyAttack()
     {
-        if (enemies[0].getHealth() != 0)
+        if (enemies[enemyIndex].getHealth() != 0)
         {
             doDamage(players[playerIndex], 5);
+            playerEnemyCastAnimation();
             updateStatsInfo();
-            enemies[0].takeTickingDamage();
+            enemies[enemyIndex].takeTickingDamage();
             updateStatsInfo();
             if (playerStunned)
             {
@@ -104,8 +115,8 @@ public class CombatMode {
         playerHealth.text = players[playerIndex].getHealth().ToString() + "/" + players[playerIndex].getMaxHealth().ToString();
 
         Image enemyHealthBar = GameObject.FindGameObjectWithTag("Enemy Health Bar").GetComponent<Image>() as Image;
-        enemyHealthBar.fillAmount = (float)enemies[0].getHealth() / (float)enemies[0].getMaxHealth();
-        enemyHealth.text = enemies[0].getHealth().ToString() + "/" + enemies[0].getMaxHealth().ToString();
+        enemyHealthBar.fillAmount = (float)enemies[enemyIndex].getHealth() / (float)enemies[enemyIndex].getMaxHealth();
+        enemyHealth.text = enemies[enemyIndex].getHealth().ToString() + "/" + enemies[enemyIndex].getMaxHealth().ToString();
 
         Image playerAPBar = GameObject.FindGameObjectWithTag("Player AP Bar").GetComponent<Image>() as Image;
         playerAPBar.fillAmount = (float)players[playerIndex].getCurrentAP() / (float)players[playerIndex].getMaxAP();
@@ -115,26 +126,35 @@ public class CombatMode {
     //Updates animations depending on which player & enemy has been chosen
     void updateSprite()
     {
-        Sprite enemySprite = enemies[0].getSprite();
-        GameObject enemyPlaceHolderObj = GameObject.FindGameObjectWithTag("Enemy Placeholder");
-        SpriteRenderer enemyPlaceHolder = enemyPlaceHolderObj.GetComponent<SpriteRenderer>();
-        float pixelsPerUnit = enemyPlaceHolder.sprite.pixelsPerUnit;
-        enemyPlaceHolder.sprite = enemySprite;
-        float newPixelsPerUnit = enemyPlaceHolder.sprite.pixelsPerUnit;
+        AnimatorOverrideController playerAnimatorOverrideController = new AnimatorOverrideController(playerAnimator.runtimeAnimatorController);
+        playerAnimator.runtimeAnimatorController = playerAnimatorOverrideController;
+        playerAnimatorOverrideController["PlayerOneIdle"] = players[playerIndex].getIdleAnimation();
+        playerAnimatorOverrideController["PlayerOneCast"] = players[playerIndex].getCastAnimation();
+        playerAnimatorOverrideController["PlayerOneDeath"] = players[playerIndex].getDeathAnimation();
 
-        float pixelRatio = pixelsPerUnit / newPixelsPerUnit;
-        enemyPlaceHolder.transform.localScale = new Vector2(enemyPlaceHolder.transform.localScale.x * pixelRatio, enemyPlaceHolder.transform.localScale.y * pixelRatio);
-
-        AnimatorOverrideController animatorOverrideController = new AnimatorOverrideController(animator.runtimeAnimatorController);
-        animator.runtimeAnimatorController = animatorOverrideController;
-        animatorOverrideController["PlayerOneIdle"] = players[playerIndex].getIdleAnimation();
-        animatorOverrideController["PlayerOneCast"] = players[playerIndex].getCastAnimation();
+        AnimatorOverrideController enemyAnimatorOverrideController = new AnimatorOverrideController(enemyAnimator.runtimeAnimatorController);
+        enemyAnimator.runtimeAnimatorController = enemyAnimatorOverrideController;
+        enemyAnimatorOverrideController["EnemyOneIdle"] = enemies[enemyIndex].getIdleAnimation();
+        enemyAnimatorOverrideController["EnemyOneCast"] = enemies[enemyIndex].getCastAnimation();
+        enemyAnimatorOverrideController["EnemyOneDeath"] = enemies[enemyIndex].getDeathAnimation();
     }
 
-    //Plays attach animation
-    void playAnim()
+    //Plays player attack animation
+    void playPlayerCastAnimation()
     {
-        animator.SetTrigger("Cast");
+        playerAnimator.SetTrigger("Cast");
+    }
+
+    //Plays enemy attack animation
+    void playerEnemyCastAnimation()
+    {
+        enemyAnimator.SetTrigger("Cast");
+    }
+
+    //Plays enemy death animation
+    void playEnemyDeathAnimation()
+    {
+        enemyAnimator.SetTrigger("Dead");
     }
 
     //Takes character and damageAmount and damages the character by that amount - Lower bound set to 0 health
@@ -144,6 +164,14 @@ public class CombatMode {
         if(newHealth <= 0)
         {
             character.setHealth(0);
+            if(character is Enemy)
+            {
+                playEnemyDeathAnimation();
+            }
+            else
+            {
+                //Player DEATH
+            }
         }
     }
 
@@ -186,7 +214,7 @@ public class CombatMode {
         {
             //For each ability type this tells the program what to do
             Ability.abilityTypes abilityType = ability.abilityType;
-            playAnim();
+            playPlayerCastAnimation();
             switch (abilityType)
             {
                 case (Ability.abilityTypes.numberDamage):
@@ -214,8 +242,8 @@ public class CombatMode {
                     playerStunned = true;
                     break;
                 case (Ability.abilityTypes.enemyTickingDamage):
-                    enemies[0].setTickingDamage(true);
-                    enemies[0].setTickingDamagePerTurn(ability.effectMagnitude);
+                    enemies[enemyIndex].setTickingDamage(true);
+                    enemies[enemyIndex].setTickingDamagePerTurn(ability.effectMagnitude);
                     break;
                 case (Ability.abilityTypes.playerTickingDamage):
                     players[playerIndex].setTickingDamage(true);
@@ -231,23 +259,23 @@ public class CombatMode {
     public void attackButton(int attackButtonNumber)
     {
         //Only perform action on button press if its the players turn and animation is finished
-        if (playerTurn && animator.GetCurrentAnimatorStateInfo(0).IsName("Idle"))
+        if (playerTurn)
         {
             //Uses ability depending on button press -- success is whether the ability was able to be ran
             bool success = false;
             switch (attackButtonNumber)
             {
                 case (1):
-                    success = useAbility(players[playerIndex], enemies[0], 0);
+                    success = useAbility(players[playerIndex], enemies[enemyIndex], 0);
                     break;
                 case (2):
-                    success = useAbility(players[playerIndex], enemies[0], 1);
+                    success = useAbility(players[playerIndex], enemies[enemyIndex], 1);
                     break;
                 case (3):
-                    success = useAbility(players[playerIndex], enemies[0], 2);
+                    success = useAbility(players[playerIndex], enemies[enemyIndex], 2);
                     break;
                 case (4):
-                    success = useAbility(players[playerIndex], enemies[0], 3);
+                    success = useAbility(players[playerIndex], enemies[enemyIndex], 3);
                     break;
                 default:
                     Debug.Log("BUG");

@@ -1,22 +1,22 @@
 fileFormatVersion: 2
-guid: 80a0acf4e34876542a65bed7b9adbc59
-timeCreated: 1515524189
+guid: 85451d2afc0ccfb40affe1ad53e05f2d
+timeCreated: 1515524203
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: enemyone_0
-    21300002: enemyone_1
-    21300004: enemyone_2
-    21300006: enemyone_3
-    21300008: enemyone_4
-    21300010: enemyone_5
-    21300012: enemyone_6
-    21300014: enemyone_7
-    21300016: enemyone_8
-    21300018: enemyone_9
-    21300020: enemyone_10
-    21300022: enemyone_11
-    21300024: enemyone_12
+    21300000: enemytwo_0
+    21300002: enemytwo_1
+    21300004: enemytwo_2
+    21300006: enemytwo_3
+    21300008: enemytwo_4
+    21300010: enemytwo_5
+    21300012: enemytwo_6
+    21300014: enemytwo_7
+    21300016: enemytwo_8
+    21300018: enemytwo_9
+    21300020: enemytwo_10
+    21300022: enemytwo_11
+    21300024: enemytwo_12
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -91,7 +91,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: enemyone_0
+      name: enemytwo_0
       rect:
         serializedVersion: 2
         x: 0
@@ -105,7 +105,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: enemyone_1
+      name: enemytwo_1
       rect:
         serializedVersion: 2
         x: 600
@@ -119,7 +119,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: enemyone_2
+      name: enemytwo_2
       rect:
         serializedVersion: 2
         x: 1200
@@ -133,7 +133,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: enemyone_3
+      name: enemytwo_3
       rect:
         serializedVersion: 2
         x: 1800
@@ -147,7 +147,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: enemyone_4
+      name: enemytwo_4
       rect:
         serializedVersion: 2
         x: 2400
@@ -161,7 +161,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: enemyone_5
+      name: enemytwo_5
       rect:
         serializedVersion: 2
         x: 3000
@@ -175,7 +175,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: enemyone_6
+      name: enemytwo_6
       rect:
         serializedVersion: 2
         x: 3600
@@ -189,7 +189,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: enemyone_7
+      name: enemytwo_7
       rect:
         serializedVersion: 2
         x: 4200
@@ -203,7 +203,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: enemyone_8
+      name: enemytwo_8
       rect:
         serializedVersion: 2
         x: 4800
@@ -217,7 +217,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: enemyone_9
+      name: enemytwo_9
       rect:
         serializedVersion: 2
         x: 5400
@@ -231,7 +231,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: enemyone_10
+      name: enemytwo_10
       rect:
         serializedVersion: 2
         x: 6000
@@ -245,7 +245,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: enemyone_11
+      name: enemytwo_11
       rect:
         serializedVersion: 2
         x: 6600
@@ -259,7 +259,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: enemyone_12
+      name: enemytwo_12
       rect:
         serializedVersion: 2
         x: 7200

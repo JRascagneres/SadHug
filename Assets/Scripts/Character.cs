@@ -12,6 +12,8 @@ public class Character{
     private int tickingDamagePerTurn;
     private AnimationClip idleAnimation;
     private AnimationClip castAnimation;
+    private AnimationClip deathAnimation;
+    private AnimationClip deadAnimation;
 
     //Just getters and setters for the character information
     public void setHealth(int health)
@@ -62,6 +64,26 @@ public class Character{
     public AnimationClip getCastAnimation()
     {
         return this.castAnimation;
+    }
+
+    public void setDeathAnimation(AnimationClip animation)
+    {
+        this.deathAnimation = animation;
+    }
+
+    public AnimationClip getDeathAnimation()
+    {
+        return this.deathAnimation;
+    }
+
+    public void setDeadAnimation(AnimationClip animation)
+    {
+        this.deadAnimation = animation;
+    }
+
+    public AnimationClip getDeadAnimation()
+    {
+        return this.deadAnimation;
     }
 
     public void setTickingDamage(bool tickingDamage)

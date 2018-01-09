@@ -1,22 +1,15 @@
 fileFormatVersion: 2
-guid: 80a0acf4e34876542a65bed7b9adbc59
-timeCreated: 1515524189
+guid: 76fe657ce78c61049bd2dacaa3fe493f
+timeCreated: 1515534681
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: enemyone_0
-    21300002: enemyone_1
-    21300004: enemyone_2
-    21300006: enemyone_3
-    21300008: enemyone_4
-    21300010: enemyone_5
-    21300012: enemyone_6
-    21300014: enemyone_7
-    21300016: enemyone_8
-    21300018: enemyone_9
-    21300020: enemyone_10
-    21300022: enemyone_11
-    21300024: enemyone_12
+    21300000: enemytwodeath_0
+    21300002: enemytwodeath_1
+    21300004: enemytwodeath_2
+    21300006: enemytwodeath_3
+    21300008: enemytwodeath_4
+    21300010: enemytwodeath_5
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -70,7 +63,7 @@ TextureImporter:
   textureFormatSet: 0
   platformSettings:
   - buildTarget: DefaultTexturePlatform
-    maxTextureSize: 8192
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -79,7 +72,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
   - buildTarget: Standalone
-    maxTextureSize: 8192
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -91,7 +84,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: enemyone_0
+      name: enemytwodeath_0
       rect:
         serializedVersion: 2
         x: 0
@@ -105,7 +98,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: enemyone_1
+      name: enemytwodeath_1
       rect:
         serializedVersion: 2
         x: 600
@@ -119,7 +112,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: enemyone_2
+      name: enemytwodeath_2
       rect:
         serializedVersion: 2
         x: 1200
@@ -133,7 +126,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: enemyone_3
+      name: enemytwodeath_3
       rect:
         serializedVersion: 2
         x: 1800
@@ -147,7 +140,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: enemyone_4
+      name: enemytwodeath_4
       rect:
         serializedVersion: 2
         x: 2400
@@ -161,108 +154,10 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: enemyone_5
+      name: enemytwodeath_5
       rect:
         serializedVersion: 2
         x: 3000
-        y: 0
-        width: 600
-        height: 600
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: enemyone_6
-      rect:
-        serializedVersion: 2
-        x: 3600
-        y: 0
-        width: 600
-        height: 600
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: enemyone_7
-      rect:
-        serializedVersion: 2
-        x: 4200
-        y: 0
-        width: 600
-        height: 600
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: enemyone_8
-      rect:
-        serializedVersion: 2
-        x: 4800
-        y: 0
-        width: 600
-        height: 600
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: enemyone_9
-      rect:
-        serializedVersion: 2
-        x: 5400
-        y: 0
-        width: 600
-        height: 600
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: enemyone_10
-      rect:
-        serializedVersion: 2
-        x: 6000
-        y: 0
-        width: 600
-        height: 600
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: enemyone_11
-      rect:
-        serializedVersion: 2
-        x: 6600
-        y: 0
-        width: 600
-        height: 600
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: enemyone_12
-      rect:
-        serializedVersion: 2
-        x: 7200
         y: 0
         width: 600
         height: 600
