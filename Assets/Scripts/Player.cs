@@ -22,7 +22,7 @@ public class Player : Character {
         switch (playerType)
         {
             case PlayerType.CompSci:
-                initializeHealth(120);
+                initializeHealth(10);
                 abilityList.Add(abilities.getAbility(Abilities.AbilityEnum.oneHundredDamage));
                 abilityList.Add(abilities.getAbility(Abilities.AbilityEnum.tenPercentCurrent));
                 abilityList.Add(abilities.getAbility(Abilities.AbilityEnum.tenPercentTotal));
@@ -30,6 +30,8 @@ public class Player : Character {
                 setSprite(Resources.Load<Sprite>("Sprites/CharacterSprites/playerone") as Sprite);
                 setIdleAnimation(Resources.Load<AnimationClip>("Sprites/CharacterSprites/Animations/PlayerOneIdle"));
                 setCastAnimation(Resources.Load<AnimationClip>("Sprites/CharacterSprites/Animations/PlayerOneCast"));
+                setDeadAnimation(Resources.Load<AnimationClip>("Sprites/CharacterSprites/Animations/PlayerOneDead"));
+                setDeathAnimation(Resources.Load<AnimationClip>("Sprites/CharacterSprites/Animations/PlayerOneDeath"));
                 break;
             case PlayerType.Physc:
                 initializeHealth(150);
@@ -40,6 +42,8 @@ public class Player : Character {
                 setSprite(Resources.Load<Sprite>("Sprites/CharacterSprites/playertwo") as Sprite);
                 setIdleAnimation(Resources.Load<AnimationClip>("Sprites/CharacterSprites/Animations/PlayerTwoIdle"));
                 setCastAnimation(Resources.Load<AnimationClip>("Sprites/CharacterSprites/Animations/PlayerTwoCast"));
+                setDeadAnimation(Resources.Load<AnimationClip>("Sprites/CharacterSprites/Animations/PlayerTwoDead"));
+                setDeathAnimation(Resources.Load<AnimationClip>("Sprites/CharacterSprites/Animations/PlayerTwoDeath"));
                 break;
             case PlayerType.Music:
                 initializeHealth(250);
@@ -50,6 +54,8 @@ public class Player : Character {
                 setSprite(Resources.Load<Sprite>("Sprites/CharacterSprites/playerthree") as Sprite);
                 setIdleAnimation(Resources.Load<AnimationClip>("Sprites/CharacterSprites/Animations/PlayerThreeIdle"));
                 setCastAnimation(Resources.Load<AnimationClip>("Sprites/CharacterSprites/Animations/PlayerThreeCast"));
+                setDeadAnimation(Resources.Load<AnimationClip>("Sprites/CharacterSprites/Animations/PlayerThreeDead"));
+                setDeathAnimation(Resources.Load<AnimationClip>("Sprites/CharacterSprites/Animations/PlayerThreeDeath"));
                 break;
             case PlayerType.Chem:
                 initializeHealth(175);
@@ -60,6 +66,8 @@ public class Player : Character {
                 setSprite(Resources.Load<Sprite>("Sprites/CharacterSprites/playerfour") as Sprite);
                 setIdleAnimation(Resources.Load<AnimationClip>("Sprites/CharacterSprites/Animations/PlayerFourIdle"));
                 setCastAnimation(Resources.Load<AnimationClip>("Sprites/CharacterSprites/Animations/PlayerFourCast"));
+                setDeadAnimation(Resources.Load<AnimationClip>("Sprites/CharacterSprites/Animations/PlayerFourDead"));
+                setDeathAnimation(Resources.Load<AnimationClip>("Sprites/CharacterSprites/Animations/PlayerFourDeath"));
                 break;
             case PlayerType.Sport:
                 initializeHealth(100);
@@ -70,6 +78,8 @@ public class Player : Character {
                 setSprite(Resources.Load<Sprite>("Sprites/CharacterSprites/playerfive") as Sprite);
                 setIdleAnimation(Resources.Load<AnimationClip>("Sprites/CharacterSprites/Animations/PlayerFiveIdle"));
                 setCastAnimation(Resources.Load<AnimationClip>("Sprites/CharacterSprites/Animations/PlayerFiveCast"));
+                setDeadAnimation(Resources.Load<AnimationClip>("Sprites/CharacterSprites/Animations/PlayerFiveDead"));
+                setDeathAnimation(Resources.Load<AnimationClip>("Sprites/CharacterSprites/Animations/PlayerFiveDeath"));
                 break;
         }
     }

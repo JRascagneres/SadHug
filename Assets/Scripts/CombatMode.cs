@@ -131,18 +131,26 @@ public class CombatMode {
         playerAnimatorOverrideController["PlayerOneIdle"] = players[playerIndex].getIdleAnimation();
         playerAnimatorOverrideController["PlayerOneCast"] = players[playerIndex].getCastAnimation();
         playerAnimatorOverrideController["PlayerOneDeath"] = players[playerIndex].getDeathAnimation();
+        playerAnimatorOverrideController["PlayerOneDead"] = players[playerIndex].getDeadAnimation();
 
         AnimatorOverrideController enemyAnimatorOverrideController = new AnimatorOverrideController(enemyAnimator.runtimeAnimatorController);
         enemyAnimator.runtimeAnimatorController = enemyAnimatorOverrideController;
         enemyAnimatorOverrideController["EnemyOneIdle"] = enemies[enemyIndex].getIdleAnimation();
         enemyAnimatorOverrideController["EnemyOneCast"] = enemies[enemyIndex].getCastAnimation();
         enemyAnimatorOverrideController["EnemyOneDeath"] = enemies[enemyIndex].getDeathAnimation();
+        enemyAnimatorOverrideController["EnemyOneDead"] = enemies[enemyIndex].getDeadAnimation();
     }
 
     //Plays player attack animation
     void playPlayerCastAnimation()
     {
         playerAnimator.SetTrigger("Cast");
+    }
+
+    //Plays player death animation
+    void playPlayerDeathAnimation()
+    {
+        playerAnimator.SetTrigger("Death");
     }
 
     //Plays enemy attack animation
@@ -154,7 +162,31 @@ public class CombatMode {
     //Plays enemy death animation
     void playEnemyDeathAnimation()
     {
+        enemyAnimator.SetTrigger("Death");
+    }
+
+    //Sets enemy state to dead
+    void playEnemyDeadAnimation()
+    {
         enemyAnimator.SetTrigger("Dead");
+    }
+
+    //Sets player state to dead
+    void playPlayerDeadAnimation()
+    {
+        playerAnimator.SetTrigger("Dead");
+    }
+
+    //Reset player state to Idle
+    void resetPlayerAnimator()
+    {
+        playerAnimator.SetTrigger("UnDead");
+    }
+
+    //Reset enemy state to Idle
+    void resetEnemyAnimator()
+    {
+        enemyAnimator.SetTrigger("UnDead");
     }
 
     //Takes character and damageAmount and damages the character by that amount - Lower bound set to 0 health
@@ -170,7 +202,7 @@ public class CombatMode {
             }
             else
             {
-                //Player DEATH
+                playPlayerDeathAnimation();
             }
         }
     }
@@ -325,6 +357,28 @@ public class CombatMode {
         updateStatsInfo();
         updateSprite();
         updateButtons();
+
+        Player player = players[playerIndex];
+        Enemy enemy = enemies[enemyIndex];
+
+        if (player.getHealth() == 0)
+        {
+            playPlayerDeadAnimation();
+        }
+        else
+        {
+            resetPlayerAnimator();
+        }
+
+        if (enemy.getHealth() == 0)
+        {
+            playEnemyDeadAnimation();
+        }
+        else
+        {
+            resetEnemyAnimator();
+        }
+
     }
 
     //Update button text to ability names
