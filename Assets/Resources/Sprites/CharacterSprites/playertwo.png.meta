@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 9460fdb53fcace5448eec84d2b24b11d
-timeCreated: 1514855229
+timeCreated: 1515453442
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -11,6 +11,12 @@ TextureImporter:
     21300008: playertwo_4
     21300010: playertwo_5
     21300012: playertwo_6
+    21300014: playertwo_7
+    21300016: playertwo_8
+    21300018: playertwo_9
+    21300020: playertwo_10
+    21300022: playertwo_11
+    21300024: playertwo_12
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -173,6 +179,90 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 3600
+        y: 0
+        width: 600
+        height: 600
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: playertwo_7
+      rect:
+        serializedVersion: 2
+        x: 4200
+        y: 0
+        width: 600
+        height: 600
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: playertwo_8
+      rect:
+        serializedVersion: 2
+        x: 4800
+        y: 0
+        width: 600
+        height: 600
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: playertwo_9
+      rect:
+        serializedVersion: 2
+        x: 5400
+        y: 0
+        width: 600
+        height: 600
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: playertwo_10
+      rect:
+        serializedVersion: 2
+        x: 6000
+        y: 0
+        width: 600
+        height: 600
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: playertwo_11
+      rect:
+        serializedVersion: 2
+        x: 6600
+        y: 0
+        width: 600
+        height: 600
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: playertwo_12
+      rect:
+        serializedVersion: 2
+        x: 7200
         y: 0
         width: 600
         height: 600

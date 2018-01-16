@@ -5,15 +5,16 @@ using System.Text;
 
 public class Abilities
 {
-    public enum AbilityEnum {fiveDamage, tenHeal, tenPercentCurrent, tenPercentTotal, groupHealTen, singleStunEnemy, singleStunPlayer, poisenTenEnemy, poisenTenPlayer};
+    //Abilities are referred to with these enums
+    public enum AbilityEnum {oneHundredDamage, fiveDamage, tenHeal, tenPercentCurrent, tenPercentTotal, groupHealTen, singleStunEnemy, singleStunPlayer, poisenTenEnemy, poisenTenPlayer};
 
-    public Abilities() {
-            
-    }
-
+    //This gets the ability types and information inside of character class
     public Ability getAbility(AbilityEnum abEnum){
         switch (abEnum)
         {
+            //Links the enum values to individual Abilities
+            case AbilityEnum.oneHundredDamage:
+                return new Ability("One Hundred Damage", Ability.abilityTypes.numberDamage, "One hundred damage", 0, 100, false, false);
             case AbilityEnum.fiveDamage:
                 return new Ability("Basic Attack", Ability.abilityTypes.numberDamage, "Does five damage", 0, 5, false, false);
             case AbilityEnum.tenHeal:

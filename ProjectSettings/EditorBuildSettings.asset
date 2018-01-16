@@ -6,20 +6,32 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/WorldMap.unity
+    guid: 4b97c4cabbd150448a553ea1ff0ed62e
+  - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: 1b7da9a96264999459da9446742abf9b
   - enabled: 1
     path: Assets/Scenes/unity.unity
     guid: a0aa1d9e9d826b6489c9971fe2b31445
   - enabled: 1
-    path: Assets/Scenes/PlayerMovementTestScene.unity
+    path: Assets/Scenes/CentralHall.unity
     guid: 9e18973e17b49c74d87a6e27ca2efb10
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Scenes/Library.unity
+    guid: 376fe8fdff3e6d748a479fdfaae512d4
+  - enabled: 1
+    path: Assets/Scenes/UniPath.unity
+    guid: b6cece45d6962134f90bbfcaef7a9971
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Scenes/ComputerScience.unity
+    guid: 0d73f197d05d6704184de4b469697869
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000

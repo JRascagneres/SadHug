@@ -6,20 +6,24 @@ using UnityEngine.UI;
 
 public class CombatButtonHandler : MonoBehaviour {
 
+    //All buttons on the combat screen
     public Button combatOne;
     public Button combatTwo;
     public Button combatThree;
     public Button combatFour;
     public Button switchPlayer;
 
+    //Bool checking if combatmode started initialised as bool
     private bool started = false;
 
+    //Global reference required for these classes
     GameManager gameManager;
     CombatMode combatMode;
 
-    // Use this for initialization
     void Start () {
+        //All button and gamemanager references set to ingame objects
         gameManager = GameManager.instance;
+        combatMode = gameManager.getCombatMode();
 
         Button combatButtonOne = combatOne.GetComponent<Button>();
         combatButtonOne.onClick.AddListener(combatOneAction);
@@ -35,6 +39,7 @@ public class CombatButtonHandler : MonoBehaviour {
     }
 	
 	// Update is called once per frame
+    //Checks if buttons have been initialised if not update the move text on the buttons and set started to true (been initialised)
 	void Update () {
         if (started == false)
         {
@@ -43,42 +48,41 @@ public class CombatButtonHandler : MonoBehaviour {
         }
     }
 
+    //Updates button text to their ability names
     public void updateButtons()
     {
-        List<Ability> abilityList = gameManager.getCombatMode().getPlayerAbilities();
+        combatMode = gameManager.getCombatMode();
+        List<Ability> abilityList = combatMode.getPlayerAbilities();
         combatOne.GetComponentInChildren<Text>().text = abilityList[0].name;
         combatTwo.GetComponentInChildren<Text>().text = abilityList[1].name;
         combatThree.GetComponentInChildren<Text>().text = abilityList[2].name;
         combatFour.GetComponentInChildren<Text>().text = abilityList[3].name;
     }
 
+    //Methods called when buttons pressed (Tells combatmode which button has been pressed)
     void combatOneAction()
     {
-        combatMode = gameManager.getCombatMode();
         combatMode.attackButton(1);
     }
 
     void combatTwoAction()
     {
-        combatMode = gameManager.getCombatMode();
         combatMode.attackButton(2);
     }
 
     void combatThreeAction()
     {
-        combatMode = gameManager.getCombatMode();
         combatMode.attackButton(3);
     }
 
     void combatFourAction()
     {
-        combatMode = gameManager.getCombatMode();
         combatMode.attackButton(4);
     }
 
+    //This one opens swap page when swap button pressed
     void switchPlayerAction()
     {
-        combatMode = gameManager.getCombatMode();
         combatMode.swapPlayerCanvas(true);
     }
 }

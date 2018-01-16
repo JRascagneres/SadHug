@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class Ability {
 
+    //List of ability type enums - Different categories of abilities
     public enum abilityTypes { numberDamage, numberHeal, percentTotalDamage, percentCurrentDamage, groupNumberHeal, enemyStun, enemyTickingDamage, playerTickingDamage, playerStun };
+
+    //Parameters for abilities
     public string name;
     public string description;
     public abilityTypes abilityType;
@@ -13,6 +16,7 @@ public class Ability {
     public bool stun;
     public bool tickingDamage;
 
+    //When ability is created it takes its information and saves it to the class
     public Ability(string name, abilityTypes abilityType, string description, int apCost, int effectMagnitude, bool stun, bool tickingDamage)
     {
         this.name = name;

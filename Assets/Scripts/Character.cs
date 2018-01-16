@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Character{
 
+    //Information about characters
     private int health;
     private int maxHealth;
     private Sprite sprite;
@@ -11,17 +12,10 @@ public class Character{
     private int tickingDamagePerTurn;
     private AnimationClip idleAnimation;
     private AnimationClip castAnimation;
+    private AnimationClip deathAnimation;
+    private AnimationClip deadAnimation;
 
-	// Use this for initialization
-	void Start () {
-        
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
-
+    //Just getters and setters for the character information
     public void setHealth(int health)
     {
         this.health = health;
@@ -72,26 +66,24 @@ public class Character{
         return this.castAnimation;
     }
 
-    public void initializeHealth(int health)
+    public void setDeathAnimation(AnimationClip animation)
     {
-        setMaxHealth(health);
-        setHealth(health);
+        this.deathAnimation = animation;
     }
 
-    public int takeDamage(int damageAmount)
+    public AnimationClip getDeathAnimation()
     {
-        health -= damageAmount;
-        return health;
+        return this.deathAnimation;
     }
 
-    public int doHeal(int healAmount)
+    public void setDeadAnimation(AnimationClip animation)
     {
-        health += healAmount;
-        if(health > maxHealth)
-        {
-            health = maxHealth;
-        }
-        return health;
+        this.deadAnimation = animation;
+    }
+
+    public AnimationClip getDeadAnimation()
+    {
+        return this.deadAnimation;
     }
 
     public void setTickingDamage(bool tickingDamage)
@@ -114,6 +106,32 @@ public class Character{
         return tickingDamagePerTurn;
     }
 
+    //Ran when character created - Sets maxHealth and then the health to the maxHealth
+    public void initializeHealth(int health)
+    {
+        setMaxHealth(health);
+        setHealth(health);
+    }
+
+    //Reduces health of character by parameter amount
+    public int takeDamage(int damageAmount)
+    {
+        health -= damageAmount;
+        return health;
+    }
+
+    //Increases health of character by parameter amount ensuring it maxes out
+    public int doHeal(int healAmount)
+    {
+        health += healAmount;
+        if(health > maxHealth)
+        {
+            health = maxHealth;
+        }
+        return health;
+    }
+
+    //Takes ticking damage by set amount if ticking damage is true -- Ticking damage is like a poisen effect
     public void takeTickingDamage()
     {
         if (tickingDamage)
