@@ -17,21 +17,24 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/CentralHall.unity
     guid: 9e18973e17b49c74d87a6e27ca2efb10
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Scenes/MarketSquare.unity
+    guid: d5f813c50979583439d40c8d983f67ea
   - enabled: 1
     path: Assets/Scenes/Library.unity
     guid: 376fe8fdff3e6d748a479fdfaae512d4
   - enabled: 1
     path: Assets/Scenes/UniPath.unity
     guid: b6cece45d6962134f90bbfcaef7a9971
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/ComputerScience.unity
     guid: 0d73f197d05d6704184de4b469697869
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
