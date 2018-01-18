@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour {
@@ -42,7 +43,15 @@ public class GameManager : MonoBehaviour {
             enemies.Add(enemyObj);
         }
 
-        combatMode = new CombatMode(players, enemies);
+        
+    }
+
+    public void makeCombatMode(int enemyIndex, String prevScene)
+    {
+        Enemy enemy = enemies[enemyIndex];
+        List<Enemy> Nenemies = new List<Enemy>();
+        Nenemies.Add(enemy);
+        combatMode = new CombatMode(players, Nenemies, prevScene);
     }
 
     //Returns current combatmode

@@ -34,7 +34,7 @@ public class Player : Character {
                 setDeathAnimation(Resources.Load<AnimationClip>("Sprites/CharacterSprites/Animations/PlayerOneDeath"));
                 break;
             case PlayerType.Physc:
-                initializeHealth(150);
+                initializeHealth(10);
                 abilityList.Add(abilities.getAbility(Abilities.AbilityEnum.fiveDamage));
                 abilityList.Add(abilities.getAbility(Abilities.AbilityEnum.groupHealTen));
                 abilityList.Add(abilities.getAbility(Abilities.AbilityEnum.poisenTenEnemy));
@@ -46,7 +46,7 @@ public class Player : Character {
                 setDeathAnimation(Resources.Load<AnimationClip>("Sprites/CharacterSprites/Animations/PlayerTwoDeath"));
                 break;
             case PlayerType.Music:
-                initializeHealth(250);
+                initializeHealth(10);
                 abilityList.Add(abilities.getAbility(Abilities.AbilityEnum.singleStunEnemy));
                 abilityList.Add(abilities.getAbility(Abilities.AbilityEnum.singleStunPlayer));
                 abilityList.Add(abilities.getAbility(Abilities.AbilityEnum.fiveDamage));
@@ -58,7 +58,7 @@ public class Player : Character {
                 setDeathAnimation(Resources.Load<AnimationClip>("Sprites/CharacterSprites/Animations/PlayerThreeDeath"));
                 break;
             case PlayerType.Chem:
-                initializeHealth(175);
+                initializeHealth(10);
                 abilityList.Add(abilities.getAbility(Abilities.AbilityEnum.singleStunEnemy));
                 abilityList.Add(abilities.getAbility(Abilities.AbilityEnum.singleStunPlayer));
                 abilityList.Add(abilities.getAbility(Abilities.AbilityEnum.fiveDamage));
@@ -70,7 +70,7 @@ public class Player : Character {
                 setDeathAnimation(Resources.Load<AnimationClip>("Sprites/CharacterSprites/Animations/PlayerFourDeath"));
                 break;
             case PlayerType.Sport:
-                initializeHealth(100);
+                initializeHealth(10);
                 abilityList.Add(abilities.getAbility(Abilities.AbilityEnum.singleStunEnemy));
                 abilityList.Add(abilities.getAbility(Abilities.AbilityEnum.singleStunPlayer));
                 abilityList.Add(abilities.getAbility(Abilities.AbilityEnum.fiveDamage));

@@ -79,6 +79,7 @@ public class CharacterSwitchButtonHandler : MonoBehaviour {
     //Close menu which is set in combatmode
     void closeMenu()
     {
+        combatMode = gameManager.getCombatMode();
         combatMode.swapPlayerCanvas(false);
     }
 }

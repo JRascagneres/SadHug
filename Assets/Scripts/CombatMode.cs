@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Threading;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class CombatMode {
@@ -10,6 +11,7 @@ public class CombatMode {
     // --- Initial Setup Parameters To Be Accessed Globally ---
     private List<Player> players;
     private List<Enemy> enemies;
+    private String prevScene;
     private int playerIndex;
     private int enemyIndex;
     private Text playerHealth;
@@ -27,7 +29,15 @@ public class CombatMode {
     private AnimationEvent evt;
 
 
-    public CombatMode(List<Player> players, List<Enemy> enemies)
+    public CombatMode(List<Player> players, List<Enemy> enemies, String prevScene)
+    {
+        //Sets reference to the players and enemies in the battle
+        this.players = players;
+        this.enemies = enemies;
+        this.prevScene = prevScene;
+    }
+
+    public void switchScene()
     {
         //Set reference to the player swapping view and then hide
         playerSwitchCanvas = GameObject.FindGameObjectWithTag("CombatPlayerSwapCanvas");
@@ -38,11 +48,7 @@ public class CombatMode {
 
         //Sets player and enemy index
         playerIndex = 0;
-        enemyIndex = 1;
-
-        //Sets reference to the players and enemies in the battle
-        this.players = players;
-        this.enemies = enemies;
+        enemyIndex = 0;
 
         //Sets reference to player health, enemy health and player abilty point bars
         playerHealth = GameObject.FindGameObjectWithTag("Player Health").GetComponent<Text>() as Text;
@@ -64,7 +70,6 @@ public class CombatMode {
         //Initialise turns
         startCombat();
     }
-
 
     //Starts the turns with player having first turn
     void startCombat()
@@ -199,10 +204,24 @@ public class CombatMode {
             if(character is Enemy)
             {
                 playEnemyDeathAnimation();
+                SceneManager.LoadScene(prevScene);
             }
             else
             {
                 playPlayerDeathAnimation();
+                bool allDead = true;
+                foreach (var player in players)
+                {
+                    if (player.getHealth() != 0)
+                    {
+                        allDead = false;
+                    }
+                }
+
+                if (allDead)
+                {
+                    SceneManager.LoadScene(prevScene);
+                }
             }
         }
     }
