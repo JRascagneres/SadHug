@@ -5,8 +5,8 @@ using UnityEngine;
 public class EnemyAI : MonoBehaviour
 {
     public float walkSpeed = 1.0f;      // Walkspeed
-    public float wallLeft = 0.0f;       // Define wallLeft
-    public float wallRight = 5.0f;      // Define wallRight
+    public float wallLeft = 0.0f;       // How far the enemy can go to left
+    public float wallRight = 5.0f;      // How far enemy can go right
     float walkingDirection = 1.0f;
     Vector2 walkAmount;
     float originalX; // Original float value
@@ -22,6 +22,7 @@ public class EnemyAI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Transforms the enemy between the bounds
         walkAmount.x = walkingDirection * walkSpeed * Time.deltaTime;
         if (walkingDirection > 0.0f && transform.position.x >= originalX + wallRight)
         {

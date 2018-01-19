@@ -18,6 +18,10 @@ TagManager:
   - Enemy Placeholder
   - CombatPlayerSwapCanvas
   - CombatButtons
+  - ChemPlayer
+  - MusicPlayer
+  - PsyPlayer
+  - SportPlayer
   layers:
   - Default
   - TransparentFX
