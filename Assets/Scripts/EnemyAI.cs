@@ -4,35 +4,28 @@ using UnityEngine;
 
 public class EnemyAI : MonoBehaviour
 {
-    public float walkSpeed = 1.0f;      // Walkspeed
-    public float wallLeft = 0.0f;       // How far the enemy can go to left
-    public float wallRight = 5.0f;      // How far enemy can go right
-    float walkingDirection = 1.0f;
-    Vector2 walkAmount;
-    float originalX; // Original float value
+    private Vector3 MovingDirection = Vector3.up;
+    //limits between the enemy will move from
+    public float Uplimit = 3.0F;
+    public float Downlimit = -3.0F;
+    //speed that enemy moves at
+    public float MovementSpeed = 2.0F;
 
-
-    void Start()
-    {
-        this.originalX = this.transform.position.x;
-        wallLeft = transform.position.x - 2.5f;
-        wallRight = transform.position.x + 2.5f;
-    }
-
-    // Update is called once per frame
     void Update()
     {
-        //Transforms the enemy between the bounds
-        walkAmount.x = walkingDirection * walkSpeed * Time.deltaTime;
-        if (walkingDirection > 0.0f && transform.position.x >= originalX + wallRight)
+        //Transforms enemy between the positions
+        gameObject.transform.Translate(MovingDirection * Time.deltaTime * MovementSpeed);
+
+        //Checks if reaches limit then changes direction appropriately
+        if (gameObject.transform.position.y > Uplimit)
         {
-            walkingDirection = -1.0f;
+            MovingDirection = Vector3.down;
         }
-        else if (walkingDirection < 0.0f && transform.position.x <= originalX - wallLeft)
+        //Checks if reaches limit then changes direction appropriately
+        else if (gameObject.transform.position.y < Downlimit)
         {
-            walkingDirection = 1.0f;
+            MovingDirection = Vector3.up;
         }
-        transform.Translate(walkAmount);
     }
 }
 
