@@ -6,11 +6,13 @@ using UnityEngine.SceneManagement;
 
 public class CombatTrigger : MonoBehaviour {
 
-    // Use this for initialization
+    
     public void OnTriggerEnter2D(Collider2D col)
     {
+        //Checks if collison is with MainPlayer
         if(col.gameObject.name == "MainPlayer")
         {
+            //Test if MainPlayer collides with EnemyOne or EnemyTwo
             String enemyName = gameObject.name;
             int enemyIndex = 1;
             if (enemyName == "EnemyOne")
@@ -20,6 +22,7 @@ public class CombatTrigger : MonoBehaviour {
             {
                 enemyIndex = 1;
             }
+            //Loads combat mode and switches scene to combat scene
             GameManager.instance.makeCombatMode(enemyIndex, SceneManager.GetActiveScene().name);
             SceneManager.LoadScene("unity");
         }
