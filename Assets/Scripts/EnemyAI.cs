@@ -4,30 +4,34 @@ using UnityEngine;
 
 public class EnemyAI : MonoBehaviour
 {
-    //Speed enemy follows at 
-    public float speed;
+    public float walkSpeed = 1.0f;      // Walkspeed
+    public float wallLeft = 0.0f;       // Define wallLeft
+    public float wallRight = 5.0f;      // Define wallRight
+    float walkingDirection = 1.0f;
+    Vector2 walkAmount;
+    float originalX; // Original float value
 
-    //How far before the enemy stops chasing
-    public float displacement;
 
-    private Transform target;
-
-    // Use this for initialization
     void Start()
     {
-        //Assigns the object with tag "Player" to the object
-        target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+        this.originalX = this.transform.position.x;
+        wallLeft = transform.position.x - 2.5f;
+        wallRight = transform.position.x + 2.5f;
     }
 
     // Update is called once per frame
     void Update()
     {
-        //If enemy is further away than displacement value transforms to target location at the speed chosen
-        if (Vector2.Distance(transform.position, target.position) > displacement)
+        walkAmount.x = walkingDirection * walkSpeed * Time.deltaTime;
+        if (walkingDirection > 0.0f && transform.position.x >= originalX + wallRight)
         {
-            transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
+            walkingDirection = -1.0f;
         }
-
-
+        else if (walkingDirection < 0.0f && transform.position.x <= originalX - wallLeft)
+        {
+            walkingDirection = 1.0f;
+        }
+        transform.Translate(walkAmount);
     }
 }
+
