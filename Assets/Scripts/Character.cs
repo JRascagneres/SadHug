@@ -130,13 +130,4 @@ public class Character{
         }
         return health;
     }
-
-    //Takes ticking damage by set amount if ticking damage is true -- Ticking damage is like a poisen effect
-    public void takeTickingDamage()
-    {
-        if (tickingDamage)
-        {
-            takeDamage(tickingDamagePerTurn);
-        }
-    }
 }
