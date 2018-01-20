@@ -13,20 +13,20 @@ public class Enemy : Character{
         switch (enemyType)
         {
             case EnemyType.Grunt:
-                initializeHealth(250);
-                setSprite(Resources.Load<Sprite>("Sprites/CharacterSprites/enemyone") as Sprite);
-                setIdleAnimation(Resources.Load<AnimationClip>("Sprites/CharacterSprites/Animations/EnemyOneIdle"));
-                setCastAnimation(Resources.Load<AnimationClip>("Sprites/CharacterSprites/Animations/EnemyOneCast"));
-                setDeathAnimation(Resources.Load<AnimationClip>("Sprites/CharacterSprites/Animations/EnemyOneDeath"));
-                setDeadAnimation(Resources.Load<AnimationClip>("Sprites/CharacterSprites/Animations/EnemyOneDead"));
+                InitializeHealth(250);
+                SetSprite(Resources.Load<Sprite>("Sprites/CharacterSprites/enemyone") as Sprite);
+                SetIdleAnimation(Resources.Load<AnimationClip>("Sprites/CharacterSprites/Animations/EnemyOneIdle"));
+                SetCastAnimation(Resources.Load<AnimationClip>("Sprites/CharacterSprites/Animations/EnemyOneCast"));
+                SetDeathAnimation(Resources.Load<AnimationClip>("Sprites/CharacterSprites/Animations/EnemyOneDeath"));
+                SetDeadAnimation(Resources.Load<AnimationClip>("Sprites/CharacterSprites/Animations/EnemyOneDead"));
                 break;
             case EnemyType.Grunt2:
-                initializeHealth(250);
-                setSprite(Resources.Load<Sprite>("Sprites/CharacterSprites/enemytwo") as Sprite);
-                setIdleAnimation(Resources.Load<AnimationClip>("Sprites/CharacterSprites/Animations/EnemyTwoIdle"));
-                setCastAnimation(Resources.Load<AnimationClip>("Sprites/CharacterSprites/Animations/EnemyTwoCast"));
-                setDeathAnimation(Resources.Load<AnimationClip>("Sprites/CharacterSprites/Animations/EnemyTwoDeath"));
-                setDeadAnimation(Resources.Load<AnimationClip>("Sprites/CharacterSprites/Animations/EnemyTwoDead"));
+                InitializeHealth(250);
+                SetSprite(Resources.Load<Sprite>("Sprites/CharacterSprites/enemytwo") as Sprite);
+                SetIdleAnimation(Resources.Load<AnimationClip>("Sprites/CharacterSprites/Animations/EnemyTwoIdle"));
+                SetCastAnimation(Resources.Load<AnimationClip>("Sprites/CharacterSprites/Animations/EnemyTwoCast"));
+                SetDeathAnimation(Resources.Load<AnimationClip>("Sprites/CharacterSprites/Animations/EnemyTwoDeath"));
+                SetDeadAnimation(Resources.Load<AnimationClip>("Sprites/CharacterSprites/Animations/EnemyTwoDead"));
                 break;
         }
     }

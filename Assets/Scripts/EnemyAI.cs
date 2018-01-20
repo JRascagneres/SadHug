@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyAI : MonoBehaviour
 {
-    private Vector3 MovingDirection = Vector3.up;
+    private Vector3 _movingDirection = Vector3.up;
     //limits between the enemy will move from
     public float Uplimit = 3.0F;
     public float Downlimit = -3.0F;
@@ -14,17 +14,17 @@ public class EnemyAI : MonoBehaviour
     void Update()
     {
         //Transforms enemy between the positions
-        gameObject.transform.Translate(MovingDirection * Time.deltaTime * MovementSpeed);
+        gameObject.transform.Translate(_movingDirection * Time.deltaTime * MovementSpeed);
 
         //Checks if reaches limit then changes direction appropriately
         if (gameObject.transform.position.y > Uplimit)
         {
-            MovingDirection = Vector3.down;
+            _movingDirection = Vector3.down;
         }
         //Checks if reaches limit then changes direction appropriately
         else if (gameObject.transform.position.y < Downlimit)
         {
-            MovingDirection = Vector3.up;
+            _movingDirection = Vector3.up;
         }
     }
 }

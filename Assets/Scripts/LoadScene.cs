@@ -6,8 +6,8 @@ using UnityEngine.SceneManagement;
 public class LoadScene : MonoBehaviour {
 
     //loads scene with the scene name as an arguement
-	public void SceneLoader(string SceneName)
+	public void SceneLoader(string sceneName)
     {
-        SceneManager.LoadScene(SceneName);
+        SceneManager.LoadScene(sceneName);
     }
 }

@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class Loader : MonoBehaviour {
 
-    public GameObject gameManager;
+    public GameObject GameManager;
 
     //Created game manager instance on load (attach to any object in scene -- Usually camera)
     private void Awake()
     {
-        if (GameManager.instance == null)
-            Instantiate(gameManager);
+        if (global::GameManager.Instance == null)
+            Instantiate(GameManager);
     }
 }

@@ -9,12 +9,12 @@ public class Player : Character {
     public enum PlayerType {CompSci, Physc, Music, Chem, Sport};
 
     //Initialised with 10 AP per character
-    private int maxAP = 10;
-    private int currentAP = 10;
+    private int _maxAp = 10;
+    private int _currentAp = 10;
     
     //Initialises variables
-    public List<Ability> abilityList = new List<Ability>();
-    private Abilities abilities = new Abilities();
+    public List<Ability> AbilityList = new List<Ability>();
+    private Abilities _abilities = new Abilities();
 
     //Switches through all player types and depending on which player was chosen it sets the corresponding information for each player.
     public Player(PlayerType playerType)
@@ -22,102 +22,102 @@ public class Player : Character {
         switch (playerType)
         {
             case PlayerType.CompSci:
-                initializeHealth(125);
-                abilityList.Add(abilities.getAbility(Abilities.AbilityEnum.complain));
-                abilityList.Add(abilities.getAbility(Abilities.AbilityEnum.changingVariables));
-                abilityList.Add(abilities.getAbility(Abilities.AbilityEnum.enterTheMatrix));
-                abilityList.Add(abilities.getAbility(Abilities.AbilityEnum.basicAttack));
-                setSprite(Resources.Load<Sprite>("Sprites/CharacterSprites/playerone") as Sprite);
-                setIdleAnimation(Resources.Load<AnimationClip>("Sprites/CharacterSprites/Animations/PlayerOneIdle"));
-                setCastAnimation(Resources.Load<AnimationClip>("Sprites/CharacterSprites/Animations/PlayerOneCast"));
-                setDeadAnimation(Resources.Load<AnimationClip>("Sprites/CharacterSprites/Animations/PlayerOneDead"));
-                setDeathAnimation(Resources.Load<AnimationClip>("Sprites/CharacterSprites/Animations/PlayerOneDeath"));
+                InitializeHealth(125);
+                AbilityList.Add(_abilities.GetAbility(Abilities.AbilityEnum.Complain));
+                AbilityList.Add(_abilities.GetAbility(Abilities.AbilityEnum.ChangingVariables));
+                AbilityList.Add(_abilities.GetAbility(Abilities.AbilityEnum.EnterTheMatrix));
+                AbilityList.Add(_abilities.GetAbility(Abilities.AbilityEnum.BasicAttack));
+                SetSprite(Resources.Load<Sprite>("Sprites/CharacterSprites/playerone") as Sprite);
+                SetIdleAnimation(Resources.Load<AnimationClip>("Sprites/CharacterSprites/Animations/PlayerOneIdle"));
+                SetCastAnimation(Resources.Load<AnimationClip>("Sprites/CharacterSprites/Animations/PlayerOneCast"));
+                SetDeadAnimation(Resources.Load<AnimationClip>("Sprites/CharacterSprites/Animations/PlayerOneDead"));
+                SetDeathAnimation(Resources.Load<AnimationClip>("Sprites/CharacterSprites/Animations/PlayerOneDeath"));
                 break;
             case PlayerType.Physc:
-                initializeHealth(175);
-                abilityList.Add(abilities.getAbility(Abilities.AbilityEnum.reversePsychology));
-                abilityList.Add(abilities.getAbility(Abilities.AbilityEnum.therapy));
-                abilityList.Add(abilities.getAbility(Abilities.AbilityEnum.readingWeak));
-                abilityList.Add(abilities.getAbility(Abilities.AbilityEnum.basicAttack));
-                setSprite(Resources.Load<Sprite>("Sprites/CharacterSprites/playertwo") as Sprite);
-                setIdleAnimation(Resources.Load<AnimationClip>("Sprites/CharacterSprites/Animations/PlayerTwoIdle"));
-                setCastAnimation(Resources.Load<AnimationClip>("Sprites/CharacterSprites/Animations/PlayerTwoCast"));
-                setDeadAnimation(Resources.Load<AnimationClip>("Sprites/CharacterSprites/Animations/PlayerTwoDead"));
-                setDeathAnimation(Resources.Load<AnimationClip>("Sprites/CharacterSprites/Animations/PlayerTwoDeath"));
+                InitializeHealth(175);
+                AbilityList.Add(_abilities.GetAbility(Abilities.AbilityEnum.ReversePsychology));
+                AbilityList.Add(_abilities.GetAbility(Abilities.AbilityEnum.Therapy));
+                AbilityList.Add(_abilities.GetAbility(Abilities.AbilityEnum.ReadingWeak));
+                AbilityList.Add(_abilities.GetAbility(Abilities.AbilityEnum.BasicAttack));
+                SetSprite(Resources.Load<Sprite>("Sprites/CharacterSprites/playertwo") as Sprite);
+                SetIdleAnimation(Resources.Load<AnimationClip>("Sprites/CharacterSprites/Animations/PlayerTwoIdle"));
+                SetCastAnimation(Resources.Load<AnimationClip>("Sprites/CharacterSprites/Animations/PlayerTwoCast"));
+                SetDeadAnimation(Resources.Load<AnimationClip>("Sprites/CharacterSprites/Animations/PlayerTwoDead"));
+                SetDeathAnimation(Resources.Load<AnimationClip>("Sprites/CharacterSprites/Animations/PlayerTwoDeath"));
                 break;
             case PlayerType.Music:
-                initializeHealth(100);
-                abilityList.Add(abilities.getAbility(Abilities.AbilityEnum.dischord));
-                abilityList.Add(abilities.getAbility(Abilities.AbilityEnum.harmony));
-                abilityList.Add(abilities.getAbility(Abilities.AbilityEnum.hearingDamage));
-                abilityList.Add(abilities.getAbility(Abilities.AbilityEnum.basicAttack));
-                setSprite(Resources.Load<Sprite>("Sprites/CharacterSprites/playerthree") as Sprite);
-                setIdleAnimation(Resources.Load<AnimationClip>("Sprites/CharacterSprites/Animations/PlayerThreeIdle"));
-                setCastAnimation(Resources.Load<AnimationClip>("Sprites/CharacterSprites/Animations/PlayerThreeCast"));
-                setDeadAnimation(Resources.Load<AnimationClip>("Sprites/CharacterSprites/Animations/PlayerThreeDead"));
-                setDeathAnimation(Resources.Load<AnimationClip>("Sprites/CharacterSprites/Animations/PlayerThreeDeath"));
+                InitializeHealth(100);
+                AbilityList.Add(_abilities.GetAbility(Abilities.AbilityEnum.Dischord));
+                AbilityList.Add(_abilities.GetAbility(Abilities.AbilityEnum.Harmony));
+                AbilityList.Add(_abilities.GetAbility(Abilities.AbilityEnum.HearingDamage));
+                AbilityList.Add(_abilities.GetAbility(Abilities.AbilityEnum.BasicAttack));
+                SetSprite(Resources.Load<Sprite>("Sprites/CharacterSprites/playerthree") as Sprite);
+                SetIdleAnimation(Resources.Load<AnimationClip>("Sprites/CharacterSprites/Animations/PlayerThreeIdle"));
+                SetCastAnimation(Resources.Load<AnimationClip>("Sprites/CharacterSprites/Animations/PlayerThreeCast"));
+                SetDeadAnimation(Resources.Load<AnimationClip>("Sprites/CharacterSprites/Animations/PlayerThreeDead"));
+                SetDeathAnimation(Resources.Load<AnimationClip>("Sprites/CharacterSprites/Animations/PlayerThreeDeath"));
                 break;
             case PlayerType.Chem:
-                initializeHealth(150);
-                abilityList.Add(abilities.getAbility(Abilities.AbilityEnum.chemicalSpill));
-                abilityList.Add(abilities.getAbility(Abilities.AbilityEnum.noxiousGas));
-                abilityList.Add(abilities.getAbility(Abilities.AbilityEnum.explosiveReagents));
-                abilityList.Add(abilities.getAbility(Abilities.AbilityEnum.basicAttack));
-                setSprite(Resources.Load<Sprite>("Sprites/CharacterSprites/playerfour") as Sprite);
-                setIdleAnimation(Resources.Load<AnimationClip>("Sprites/CharacterSprites/Animations/PlayerFourIdle"));
-                setCastAnimation(Resources.Load<AnimationClip>("Sprites/CharacterSprites/Animations/PlayerFourCast"));
-                setDeadAnimation(Resources.Load<AnimationClip>("Sprites/CharacterSprites/Animations/PlayerFourDead"));
-                setDeathAnimation(Resources.Load<AnimationClip>("Sprites/CharacterSprites/Animations/PlayerFourDeath"));
+                InitializeHealth(150);
+                AbilityList.Add(_abilities.GetAbility(Abilities.AbilityEnum.ChemicalSpill));
+                AbilityList.Add(_abilities.GetAbility(Abilities.AbilityEnum.NoxiousGas));
+                AbilityList.Add(_abilities.GetAbility(Abilities.AbilityEnum.ExplosiveReagents));
+                AbilityList.Add(_abilities.GetAbility(Abilities.AbilityEnum.BasicAttack));
+                SetSprite(Resources.Load<Sprite>("Sprites/CharacterSprites/playerfour") as Sprite);
+                SetIdleAnimation(Resources.Load<AnimationClip>("Sprites/CharacterSprites/Animations/PlayerFourIdle"));
+                SetCastAnimation(Resources.Load<AnimationClip>("Sprites/CharacterSprites/Animations/PlayerFourCast"));
+                SetDeadAnimation(Resources.Load<AnimationClip>("Sprites/CharacterSprites/Animations/PlayerFourDead"));
+                SetDeathAnimation(Resources.Load<AnimationClip>("Sprites/CharacterSprites/Animations/PlayerFourDeath"));
                 break;
             case PlayerType.Sport:
-                initializeHealth(250);
-                abilityList.Add(abilities.getAbility(Abilities.AbilityEnum.pepTalk));
-                abilityList.Add(abilities.getAbility(Abilities.AbilityEnum.hockeyClub));
-                abilityList.Add(abilities.getAbility(Abilities.AbilityEnum.rko));
-                abilityList.Add(abilities.getAbility(Abilities.AbilityEnum.basicAttack));
-                setSprite(Resources.Load<Sprite>("Sprites/CharacterSprites/playerfive") as Sprite);
-                setIdleAnimation(Resources.Load<AnimationClip>("Sprites/CharacterSprites/Animations/PlayerFiveIdle"));
-                setCastAnimation(Resources.Load<AnimationClip>("Sprites/CharacterSprites/Animations/PlayerFiveCast"));
-                setDeadAnimation(Resources.Load<AnimationClip>("Sprites/CharacterSprites/Animations/PlayerFiveDead"));
-                setDeathAnimation(Resources.Load<AnimationClip>("Sprites/CharacterSprites/Animations/PlayerFiveDeath"));
+                InitializeHealth(250);
+                AbilityList.Add(_abilities.GetAbility(Abilities.AbilityEnum.PepTalk));
+                AbilityList.Add(_abilities.GetAbility(Abilities.AbilityEnum.HockeyClub));
+                AbilityList.Add(_abilities.GetAbility(Abilities.AbilityEnum.Rko));
+                AbilityList.Add(_abilities.GetAbility(Abilities.AbilityEnum.BasicAttack));
+                SetSprite(Resources.Load<Sprite>("Sprites/CharacterSprites/playerfive") as Sprite);
+                SetIdleAnimation(Resources.Load<AnimationClip>("Sprites/CharacterSprites/Animations/PlayerFiveIdle"));
+                SetCastAnimation(Resources.Load<AnimationClip>("Sprites/CharacterSprites/Animations/PlayerFiveCast"));
+                SetDeadAnimation(Resources.Load<AnimationClip>("Sprites/CharacterSprites/Animations/PlayerFiveDead"));
+                SetDeathAnimation(Resources.Load<AnimationClip>("Sprites/CharacterSprites/Animations/PlayerFiveDeath"));
                 break;
         }
     }
 
     //Getters and setters for player information
-    public void setCurrentAP(int newAP)
+    public void SetCurrentAp(int newAp)
     {
-        this.currentAP = newAP;
+        this._currentAp = newAp;
     }
 
-    public void giveAP(int AP)
+    public void GiveAp(int ap)
     {
-        this.currentAP = this.currentAP + AP;
-        if (this.currentAP > this.maxAP)
+        this._currentAp = this._currentAp + ap;
+        if (this._currentAp > this._maxAp)
         {
-            this.currentAP = this.maxAP;
+            this._currentAp = this._maxAp;
         }
     }
 
-    public int getCurrentAP()
+    public int GetCurrentAp()
     {
-        return this.currentAP;
+        return this._currentAp;
     }
 
-    public int getMaxAP()
+    public int GetMaxAp()
     {
-        return this.maxAP;
+        return this._maxAp;
     }
 
-    public int useAP(int AP)
+    public int UseAp(int ap)
     {
-        currentAP -= AP;
-        return this.currentAP;
+        _currentAp -= ap;
+        return this._currentAp;
     }
 
-    public List<Ability> getAbilities()
+    public List<Ability> GetAbilities()
     {
-        return abilityList;
+        return AbilityList;
     }
     
 }

@@ -5,129 +5,129 @@ using UnityEngine;
 public class Character{
 
     //Information about characters
-    private int health;
-    private int maxHealth;
-    private Sprite sprite;
-    private bool tickingDamage = false;
-    private int tickingDamagePerTurn;
-    private AnimationClip idleAnimation;
-    private AnimationClip castAnimation;
-    private AnimationClip deathAnimation;
-    private AnimationClip deadAnimation;
+    private int _health;
+    private int _maxHealth;
+    private Sprite _sprite;
+    private bool _tickingDamage = false;
+    private int _tickingDamagePerTurn;
+    private AnimationClip _idleAnimation;
+    private AnimationClip _castAnimation;
+    private AnimationClip _deathAnimation;
+    private AnimationClip _deadAnimation;
 
     //Just getters and setters for the character information
-    public void setHealth(int health)
+    public void SetHealth(int health)
     {
-        this.health = health;
+        this._health = health;
     }
 
-    public void setMaxHealth(int health)
+    public void SetMaxHealth(int health)
     {
-        this.maxHealth = health;
+        this._maxHealth = health;
     }
 
-    public int getHealth()
+    public int GetHealth()
     {
-        return health;
+        return _health;
     }
 
-    public int getMaxHealth()
+    public int GetMaxHealth()
     {
-        return maxHealth;
+        return _maxHealth;
     }
 
-    public void setSprite(Sprite sprite)
+    public void SetSprite(Sprite sprite)
     {
-        this.sprite = sprite;
+        this._sprite = sprite;
     }
 
-    public Sprite getSprite()
+    public Sprite GetSprite()
     {
-        return this.sprite;
+        return this._sprite;
     }
 
-    public void setIdleAnimation(AnimationClip animation)
+    public void SetIdleAnimation(AnimationClip animation)
     {
-        this.idleAnimation = animation;
+        this._idleAnimation = animation;
     }
 
-    public AnimationClip getIdleAnimation()
+    public AnimationClip GetIdleAnimation()
     {
-        return this.idleAnimation;
+        return this._idleAnimation;
     }
 
-    public void setCastAnimation(AnimationClip animation)
+    public void SetCastAnimation(AnimationClip animation)
     {
-        this.castAnimation = animation;
+        this._castAnimation = animation;
     }
 
-    public AnimationClip getCastAnimation()
+    public AnimationClip GetCastAnimation()
     {
-        return this.castAnimation;
+        return this._castAnimation;
     }
 
-    public void setDeathAnimation(AnimationClip animation)
+    public void SetDeathAnimation(AnimationClip animation)
     {
-        this.deathAnimation = animation;
+        this._deathAnimation = animation;
     }
 
-    public AnimationClip getDeathAnimation()
+    public AnimationClip GetDeathAnimation()
     {
-        return this.deathAnimation;
+        return this._deathAnimation;
     }
 
-    public void setDeadAnimation(AnimationClip animation)
+    public void SetDeadAnimation(AnimationClip animation)
     {
-        this.deadAnimation = animation;
+        this._deadAnimation = animation;
     }
 
-    public AnimationClip getDeadAnimation()
+    public AnimationClip GetDeadAnimation()
     {
-        return this.deadAnimation;
+        return this._deadAnimation;
     }
 
-    public void setTickingDamage(bool tickingDamage)
+    public void SetTickingDamage(bool tickingDamage)
     {
-        this.tickingDamage = tickingDamage;
+        this._tickingDamage = tickingDamage;
     }
 
-    public bool getTickingDamage()
+    public bool GetTickingDamage()
     {
-        return tickingDamage;
+        return _tickingDamage;
     }
 
-    public void setTickingDamagePerTurn(int tickingDamagePerTurn)
+    public void SetTickingDamagePerTurn(int tickingDamagePerTurn)
     {
-        this.tickingDamagePerTurn = tickingDamagePerTurn;
+        this._tickingDamagePerTurn = tickingDamagePerTurn;
     }
 
-    public int getTickingDamagePerTurn()
+    public int GetTickingDamagePerTurn()
     {
-        return tickingDamagePerTurn;
+        return _tickingDamagePerTurn;
     }
 
     //Ran when character created - Sets maxHealth and then the health to the maxHealth
-    public void initializeHealth(int health)
+    public void InitializeHealth(int health)
     {
-        setMaxHealth(health);
-        setHealth(health);
+        SetMaxHealth(health);
+        SetHealth(health);
     }
 
     //Reduces health of character by parameter amount
-    public int takeDamage(int damageAmount)
+    public int TakeDamage(int damageAmount)
     {
-        health -= damageAmount;
-        return health;
+        _health -= damageAmount;
+        return _health;
     }
 
     //Increases health of character by parameter amount ensuring it maxes out
-    public int doHeal(int healAmount)
+    public int DoHeal(int healAmount)
     {
-        health += healAmount;
-        if(health > maxHealth)
+        _health += healAmount;
+        if(_health > _maxHealth)
         {
-            health = maxHealth;
+            _health = _maxHealth;
         }
-        return health;
+        return _health;
     }
 }

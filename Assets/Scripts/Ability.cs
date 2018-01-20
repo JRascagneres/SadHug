@@ -5,27 +5,27 @@ using UnityEngine;
 public class Ability {
 
     //List of ability type enums - Different categories of abilities
-    public enum abilityTypes { numberDamage, numberHeal, percentMaxHeal, percentTotalDamage, percentCurrentDamage, groupNumberHeal, groupAPIncrease, enemyStun, enemyTickingDamage, playerTickingDamage, playerStun, randomAttack };
+    public enum AbilityTypes { NumberDamage, NumberHeal, PercentMaxHeal, PercentTotalDamage, PercentCurrentDamage, GroupNumberHeal, GroupApIncrease, EnemyStun, EnemyTickingDamage, PlayerTickingDamage, PlayerStun, RandomAttack };
 
     //Parameters for abilities
-    public string name;
-    public string description;
-    public abilityTypes abilityType;
-    public int apCost;
-    public int effectMagnitude;
-    public bool stun;
-    public bool tickingDamage;
+    public string Name;
+    public string Description;
+    public AbilityTypes AbilityType;
+    public int ApCost;
+    public int EffectMagnitude;
+    public bool Stun;
+    public bool TickingDamage;
 
     //When ability is created it takes its information and saves it to the class
-    public Ability(string name, abilityTypes abilityType, string description, int apCost, int effectMagnitude, bool stun, bool tickingDamage)
+    public Ability(string name, AbilityTypes abilityType, string description, int apCost, int effectMagnitude, bool stun, bool tickingDamage)
     {
-        this.name = name;
-        this.abilityType = abilityType;
-        this.description = description;
-        this.apCost = apCost;
-        this.effectMagnitude = effectMagnitude;
-        this.stun = stun;
-        this.tickingDamage = tickingDamage;
+        this.Name = name;
+        this.AbilityType = abilityType;
+        this.Description = description;
+        this.ApCost = apCost;
+        this.EffectMagnitude = effectMagnitude;
+        this.Stun = stun;
+        this.TickingDamage = tickingDamage;
     }
 
 }

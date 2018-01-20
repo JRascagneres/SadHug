@@ -5,51 +5,51 @@ using UnityEngine;
 
 public class AudioPlayer : MonoBehaviour
 {
-    AudioSource m_MyAudioSource;
+    AudioSource _mMyAudioSource;
 
     //Play the music
-    bool m_Play;
+    bool _mPlay;
     //Detect when you use the toggle, ensures music isn’t played multiple times
-    bool m_ToggleChange;
+    bool _mToggleChange;
 
     void Start()
     {
         //Fetch the AudioSource from the GameObject
-        m_MyAudioSource = GetComponent<AudioSource>();
+        _mMyAudioSource = GetComponent<AudioSource>();
         //Ensure the toggle is set to true for the music to play at start-up
-        m_Play = true;
+        _mPlay = true;
     }
 
     void Update()
     {
         //Check to see if you just set the toggle to positive
-        if (m_Play == true && m_ToggleChange == true)
+        if (_mPlay == true && _mToggleChange == true)
         {
             //Play the audio you attach to the AudioSource component
-            m_MyAudioSource.Play();
+            _mMyAudioSource.Play();
             //Ensure audio doesn’t play more than once
-            m_ToggleChange = false;
+            _mToggleChange = false;
         }
         //Check if you just set the toggle to false
-        if (m_Play == false && m_ToggleChange == true)
+        if (_mPlay == false && _mToggleChange == true)
         {
             //Stop the audio
-            m_MyAudioSource.Stop();
+            _mMyAudioSource.Stop();
             //Ensure audio doesn’t play more than once
-            m_ToggleChange = false;
+            _mToggleChange = false;
         }
     }
 
     void OnGUI()
     {
         //Switch this toggle to activate and deactivate the parent GameObject
-        m_Play = GUI.Toggle(new Rect(10, 10, 100, 30), m_Play, "Play Music");
+        _mPlay = GUI.Toggle(new Rect(10, 10, 100, 30), _mPlay, "Play Music");
 
         //Detect if there is a change with the toggle
         if (GUI.changed)
         {
             //Change to true to show that there was just a change in the toggle state
-            m_ToggleChange = true;
+            _mToggleChange = true;
         }
     }
 }

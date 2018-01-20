@@ -127,12 +127,12 @@ Prefab:
     - target: {fileID: 224486206676276366, guid: 6fcf6101073691c4dae600e1dfcba037,
         type: 2}
       propertyPath: m_LocalPosition.x
-      value: 263
+      value: 254.5
       objectReference: {fileID: 0}
     - target: {fileID: 224486206676276366, guid: 6fcf6101073691c4dae600e1dfcba037,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 164.5
+      value: 159
       objectReference: {fileID: 0}
     - target: {fileID: 224486206676276366, guid: 6fcf6101073691c4dae600e1dfcba037,
         type: 2}
@@ -347,6 +347,11 @@ Prefab:
         type: 2}
       propertyPath: m_SortingOrder
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114948360219370980, guid: 7a2e32caf75c6e44bafe3b9cb8d5381b,
+        type: 2}
+      propertyPath: MoveSpeed
+      value: 150
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7a2e32caf75c6e44bafe3b9cb8d5381b, type: 2}
@@ -657,12 +662,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15d2ed366517b05469d2cbcec3304598, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  smoothTimeX: 0
-  smoothTimeY: 0
-  player: {fileID: 0}
-  bounds: 0
-  minCameraPos: {x: -212, y: -143, z: -10}
-  maxCameraPos: {x: 175, y: 146, z: -10}
+  SmoothTimeX: 0
+  SmoothTimeY: 0
+  Player: {fileID: 0}
+  Bounds: 0
+  MinCameraPos: {x: 0, y: 0, z: 0}
+  MaxCameraPos: {x: 0, y: 0, z: 0}
 --- !u!114 &1445298468
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -674,7 +679,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b18911477e664af4f9d0c2ee77e63dc3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameManager: {fileID: 1621829494244502, guid: 0e37b759f448ee241a178af7c5bda9f5,
+  GameManager: {fileID: 1621829494244502, guid: 0e37b759f448ee241a178af7c5bda9f5,
     type: 2}
 --- !u!1 &1640076270
 GameObject:

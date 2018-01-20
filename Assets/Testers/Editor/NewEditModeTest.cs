@@ -12,7 +12,7 @@ public class NewEditModeTest {
 	{
 	    Player player = new Player(Player.PlayerType.CompSci);
 	    
-        Assert.IsInstanceOf<int>(player.getHealth());
+        Assert.IsInstanceOf<int>(player.GetHealth());
 		yield return null;
 	}
 
@@ -21,7 +21,7 @@ public class NewEditModeTest {
     {
         Player player = new Player(Player.PlayerType.CompSci);
 
-        Assert.IsInstanceOf<int>(player.getMaxHealth());
+        Assert.IsInstanceOf<int>(player.GetMaxHealth());
         yield return null;
     }
 
@@ -29,9 +29,9 @@ public class NewEditModeTest {
     public IEnumerator CharacterTakesDamage()
     {
         Player player = new Player(Player.PlayerType.CompSci);
-        int startHealth = player.getHealth();
-        player.takeDamage(5);
-        int endHealth = player.getHealth();
+        int startHealth = player.GetHealth();
+        player.TakeDamage(5);
+        int endHealth = player.GetHealth();
 
         Assert.True(startHealth == endHealth + 5);
         yield return null;
@@ -41,9 +41,9 @@ public class NewEditModeTest {
     public IEnumerator CharacterDoesNotHealWhenFullHealth()
     {
         Player player = new Player(Player.PlayerType.CompSci);
-        int startHealth = player.getHealth();
-        player.doHeal(10);
-        int endHealth = player.getHealth();
+        int startHealth = player.GetHealth();
+        player.DoHeal(10);
+        int endHealth = player.GetHealth();
 
         Assert.True(startHealth == endHealth);
         yield return null;
@@ -53,10 +53,10 @@ public class NewEditModeTest {
     public IEnumerator CharacterDoesHeal()
     {
         Player player = new Player(Player.PlayerType.CompSci);
-        player.setHealth(5);
-        int startHealth = player.getHealth();
-        player.doHeal(5);
-        int endHealth = player.getHealth();
+        player.SetHealth(5);
+        int startHealth = player.GetHealth();
+        player.DoHeal(5);
+        int endHealth = player.GetHealth();
 
         Assert.True(startHealth + 5 == endHealth);
         yield return null;
@@ -67,8 +67,8 @@ public class NewEditModeTest {
     {
         Player player = new Player(Player.PlayerType.CompSci);
 
-        Assert.IsInstanceOf<List<Ability>>(player.getAbilities());
-        Assert.True(player.getAbilities().Count == 4);
+        Assert.IsInstanceOf<List<Ability>>(player.GetAbilities());
+        Assert.True(player.GetAbilities().Count == 4);
 
         yield return null;
     }
@@ -78,7 +78,7 @@ public class NewEditModeTest {
     {
         Player player = new Player(Player.PlayerType.CompSci);
 
-        foreach (var ability in player.getAbilities())
+        foreach (var ability in player.GetAbilities())
         {
             Assert.True(ability is Ability);
         }
@@ -91,51 +91,51 @@ public class NewEditModeTest {
     public IEnumerator CharacterInitializeHealth()
     {
         Player player = new Player(Player.PlayerType.CompSci);
-        player.initializeHealth(20);
+        player.InitializeHealth(20);
 
-        Assert.True(player.getHealth() == 20 && player.getMaxHealth() == 20);
+        Assert.True(player.GetHealth() == 20 && player.GetMaxHealth() == 20);
 
         yield return null;
     }
 
     [UnityTest]
-    public IEnumerator PlayerHasAPAsInt()
+    public IEnumerator PlayerHasApAsInt()
     {
         Player player = new Player(Player.PlayerType.CompSci);
 
-        Assert.IsInstanceOf<int>(player.getCurrentAP());
+        Assert.IsInstanceOf<int>(player.GetCurrentAp());
         yield return null;
     }
 
     [UnityTest]
-    public IEnumerator PlayerHasMaxAPAsInt()
+    public IEnumerator PlayerHasMaxApAsInt()
     {
         Player player = new Player(Player.PlayerType.CompSci);
 
-        Assert.IsInstanceOf<int>(player.getMaxAP());
+        Assert.IsInstanceOf<int>(player.GetMaxAp());
         yield return null;
     }
 
     [UnityTest]
-    public IEnumerator PlayerSetsAP()
+    public IEnumerator PlayerSetsAp()
     {
         Player player = new Player(Player.PlayerType.CompSci);
 
-        player.setCurrentAP(5);
-        Assert.True(player.getCurrentAP() == 5);
+        player.SetCurrentAp(5);
+        Assert.True(player.GetCurrentAp() == 5);
         yield return null;
     }
 
     [UnityTest]
-    public IEnumerator PlayerUseAP()
+    public IEnumerator PlayerUseAp()
     {
         Player player = new Player(Player.PlayerType.CompSci);
 
-        int startAP = player.getCurrentAP();
-        player.useAP(5);
-        int endAP = player.getCurrentAP();
+        int startAp = player.GetCurrentAp();
+        player.UseAp(5);
+        int endAp = player.GetCurrentAp();
 
-       Assert.True(startAP == endAP + 5);
+       Assert.True(startAp == endAp + 5);
         yield return null;
     }
 
@@ -143,9 +143,9 @@ public class NewEditModeTest {
     public IEnumerator CharacterSetTickingDamage()
     {
         Player player = new Player(Player.PlayerType.CompSci);
-        player.setTickingDamage(true);
+        player.SetTickingDamage(true);
 
-        Assert.True(player.getTickingDamage());
+        Assert.True(player.GetTickingDamage());
         yield return null;
     }
 
@@ -153,9 +153,9 @@ public class NewEditModeTest {
     public IEnumerator CharacterTakeTickingDamage()
     {
         Player player = new Player(Player.PlayerType.CompSci);
-        player.setTickingDamagePerTurn(10);
+        player.SetTickingDamagePerTurn(10);
 
-        Assert.True(player.getTickingDamagePerTurn() == 10);
+        Assert.True(player.GetTickingDamagePerTurn() == 10);
         yield return null;
     }
 

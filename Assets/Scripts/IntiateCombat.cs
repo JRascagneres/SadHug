@@ -4,14 +4,9 @@ using UnityEngine;
 
 public class IntiateCombat : MonoBehaviour {
 
-	// Use this for initialization
+	// Called when combat mode starts
 	void Start () {
 
-        GameManager.instance.getCombatMode().switchScene();
+        GameManager.Instance.GetCombatMode().SwitchScene();
     }
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 }

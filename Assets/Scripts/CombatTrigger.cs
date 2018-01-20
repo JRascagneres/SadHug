@@ -23,8 +23,8 @@ public class CombatTrigger : MonoBehaviour {
                 enemyIndex = 1;
             }
             //Loads combat mode and switches scene to combat scene
-            GameManager.instance.makeCombatMode(enemyIndex, SceneManager.GetActiveScene().name);
-            SceneManager.LoadScene("unity");
+            GameManager.Instance.MakeCombatMode(enemyIndex, SceneManager.GetActiveScene().name);
+            
         }
     }
 }

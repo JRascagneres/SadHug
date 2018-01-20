@@ -6,80 +6,80 @@ using UnityEngine.UI;
 public class CharacterSwitchButtonHandler : MonoBehaviour {
 
     //All buttons on the character switch screen
-    public Button characterOneBtn;
-    public Button characterTwoBtn;
-    public Button characterThreeBtn;
-    public Button characterFourBtn;
-    public Button characterFiveBtn;
-    public Button goBack;
+    public Button CharacterOneBtn;
+    public Button CharacterTwoBtn;
+    public Button CharacterThreeBtn;
+    public Button CharacterFourBtn;
+    public Button CharacterFiveBtn;
+    public Button GoBack;
 
     //Global reference required for these classes
-    GameManager gameManager;
-    CombatMode combatMode;
+    GameManager _gameManager;
+    CombatMode _combatMode;
 
     // Use this for initialization
     void Start () {
         //All button and gamemanager references set to ingame objects
-        characterOneBtn = characterOneBtn.GetComponent<Button>();
-        characterOneBtn.onClick.AddListener(characterOneSwitch);
-        characterTwoBtn = characterTwoBtn.GetComponent<Button>();
-        characterTwoBtn.onClick.AddListener(characterTwoSwitch);
-        characterThreeBtn = characterThreeBtn.GetComponent<Button>();
-        characterThreeBtn.onClick.AddListener(characterThreeSwitch);
-        characterFourBtn = characterFourBtn.GetComponent<Button>();
-        characterFourBtn.onClick.AddListener(characterFourSwitch);
-        characterFiveBtn = characterFiveBtn.GetComponent<Button>();
-        characterFiveBtn.onClick.AddListener(characterFiveSwitch);
-        goBack = goBack.GetComponent<Button>();
-        goBack.onClick.AddListener(goBackButton);
+        CharacterOneBtn = CharacterOneBtn.GetComponent<Button>();
+        CharacterOneBtn.onClick.AddListener(CharacterOneSwitch);
+        CharacterTwoBtn = CharacterTwoBtn.GetComponent<Button>();
+        CharacterTwoBtn.onClick.AddListener(CharacterTwoSwitch);
+        CharacterThreeBtn = CharacterThreeBtn.GetComponent<Button>();
+        CharacterThreeBtn.onClick.AddListener(CharacterThreeSwitch);
+        CharacterFourBtn = CharacterFourBtn.GetComponent<Button>();
+        CharacterFourBtn.onClick.AddListener(CharacterFourSwitch);
+        CharacterFiveBtn = CharacterFiveBtn.GetComponent<Button>();
+        CharacterFiveBtn.onClick.AddListener(CharacterFiveSwitch);
+        GoBack = GoBack.GetComponent<Button>();
+        GoBack.onClick.AddListener(GoBackButton);
 
-        gameManager = GameManager.instance;
+        _gameManager = GameManager.Instance;
     }
 	
     //Ran when buttons clicked passed index of player to switch to
-	void characterOneSwitch()
+	void CharacterOneSwitch()
     {
-        switchPlayer(1);
+        SwitchPlayer(1);
     }
 
-    void characterTwoSwitch()
+    void CharacterTwoSwitch()
     {
-        switchPlayer(2);
+        SwitchPlayer(2);
     }
 
-    void characterThreeSwitch()
+    void CharacterThreeSwitch()
     {
-        switchPlayer(3);
+        SwitchPlayer(3);
     }
 
-    void characterFourSwitch()
+    void CharacterFourSwitch()
     {
-        switchPlayer(4);
+        SwitchPlayer(4);
     }
 
-    void characterFiveSwitch()
+    void CharacterFiveSwitch()
     {
-        switchPlayer(5);
+        SwitchPlayer(5);
     }
 
     //Switches current combat player which is set in combatmode
-    void switchPlayer (int index)
+    void SwitchPlayer (int index)
     {
-        combatMode = gameManager.getCombatMode();
-        combatMode.switchPlayer(index);
-        closeMenu();
+        _combatMode = _gameManager.GetCombatMode();
+        _combatMode.SwitchPlayer(index);
+        CloseMenu();
     }
 
     //Calls closeMenu() when close button pressed
-    void goBackButton()
+    void GoBackButton()
     {
-        closeMenu();
+        CloseMenu();
     }
 
     //Close menu which is set in combatmode
-    void closeMenu()
+    void CloseMenu()
     {
-        combatMode = gameManager.getCombatMode();
-        combatMode.swapPlayerCanvas(false);
+        _combatMode = _gameManager.GetCombatMode();
+        _combatMode.SwapPlayerCanvas(false);
     }
 }

@@ -9,213 +9,214 @@ using UnityEngine.UI;
 public class CombatMode {
 
     // --- Initial Setup Parameters To Be Accessed Globally ---
-    private List<Player> players;
-    private List<Enemy> enemies;
-    private String prevScene;
-    private int playerIndex;
-    private int enemyIndex;
-    private Text playerHealth;
-    private Text enemyHealth;
-    private Text playerAP;
-    private bool playerTurn;
-    private GameObject combatCanvas; 
-    private bool enemyStunned = false;
-    private bool playerStunned = false;
-    private GameObject playerSwitchCanvas;
-    private GameObject playerPlaceHolderObj;
-    private GameObject enemyPlaceHolderObj;
-    private Animator playerAnimator;
-    private Animator enemyAnimator;
-    private AnimationEvent evt;
+    private List<Player> _players;
+    private List<Enemy> _enemies;
+    private String _prevScene;
+    private int _playerIndex;
+    private int _enemyIndex;
+    private Text _playerHealth;
+    private Text _enemyHealth;
+    private Text _playerAp;
+    private bool _playerTurn;
+    private GameObject _combatCanvas; 
+    private bool _enemyStunned = false;
+    private bool _playerStunned = false;
+    private GameObject _playerSwitchCanvas;
+    private GameObject _playerPlaceHolderObj;
+    private GameObject _enemyPlaceHolderObj;
+    private Animator _playerAnimator;
+    private Animator _enemyAnimator;
+    private AnimationEvent _evt;
 
 
     public CombatMode(List<Player> players, List<Enemy> enemies, String prevScene)
     {
         //Sets reference to the players and enemies in the battle
-        this.players = players;
-        this.enemies = enemies;
-        this.prevScene = prevScene;
+        this._players = players;
+        this._enemies = enemies;
+        this._prevScene = prevScene;
     }
 
-    public void switchScene()
+    //Called when combatmode is started - Ensures the objects are only looked for in the scene once fully initialised
+    public void SwitchScene()
     {
         //Set reference to the player swapping view and then hide
-        playerSwitchCanvas = GameObject.FindGameObjectWithTag("CombatPlayerSwapCanvas");
-        playerSwitchCanvas.SetActive(false);
+        _playerSwitchCanvas = GameObject.FindGameObjectWithTag("CombatPlayerSwapCanvas");
+        _playerSwitchCanvas.SetActive(false);
 
         //Set reference to combatmode canvas
-        combatCanvas = GameObject.FindGameObjectWithTag("CombatCanvas");
+        _combatCanvas = GameObject.FindGameObjectWithTag("CombatCanvas");
 
         //Sets player and enemy index
-        playerIndex = 0;
-        enemyIndex = 0;
+        _playerIndex = 0;
+        _enemyIndex = 0;
 
         //Sets reference to player health, enemy health and player abilty point bars
-        playerHealth = GameObject.FindGameObjectWithTag("Player Health").GetComponent<Text>() as Text;
-        enemyHealth = GameObject.FindGameObjectWithTag("Enemy Health").GetComponent<Text>() as Text;
-        playerAP = GameObject.FindGameObjectWithTag("Player AP").GetComponent<Text>() as Text;
+        _playerHealth = GameObject.FindGameObjectWithTag("Player Health").GetComponent<Text>() as Text;
+        _enemyHealth = GameObject.FindGameObjectWithTag("Enemy Health").GetComponent<Text>() as Text;
+        _playerAp = GameObject.FindGameObjectWithTag("Player AP").GetComponent<Text>() as Text;
 
         //Sets playerSprite and sprite playerAnimator
-        playerPlaceHolderObj = GameObject.FindGameObjectWithTag("Player Placeholder");
-        playerAnimator = playerPlaceHolderObj.GetComponent<Animator>();
+        _playerPlaceHolderObj = GameObject.FindGameObjectWithTag("Player Placeholder");
+        _playerAnimator = _playerPlaceHolderObj.GetComponent<Animator>();
 
         //Sets enemyAnimator
-        enemyPlaceHolderObj = GameObject.FindGameObjectWithTag("Enemy Placeholder");
-        enemyAnimator = enemyPlaceHolderObj.GetComponent<Animator>();
+        _enemyPlaceHolderObj = GameObject.FindGameObjectWithTag("Enemy Placeholder");
+        _enemyAnimator = _enemyPlaceHolderObj.GetComponent<Animator>();
 
         //Sets stats and sprites
-        updateStatsInfo();
-        updateSprite();
+        UpdateStatsInfo();
+        UpdateSprite();
 
         //Initialise turns
-        startCombat();
+        StartCombat();
     }
 
     //Starts the turns with player having first turn
-    void startCombat()
+    void StartCombat()
     {
-        playerTurn = true;
+        _playerTurn = true;
     }
 
     //Checks who's turn, if enemys turn run the attack command
-    void turnCheck()
+    void TurnCheck()
     {
-        switch (playerTurn)
+        switch (_playerTurn)
         {
             case (false):
-                enemyAttack();
+                EnemyAttack();
                 break;
 
         }
     }
 
     //Method ran when an enemy attacks
-    void enemyAttack()
+    void EnemyAttack()
     {
-        if (enemies[enemyIndex].getHealth() != 0)
+        if (_enemies[_enemyIndex].GetHealth() != 0)
         {
-            doDamage(players[playerIndex], 25);
-            playerEnemyCastAnimation();
-            updateStatsInfo();
-            if (enemies[enemyIndex].getTickingDamage()) { 
-                doDamage(enemies[enemyIndex], enemies[enemyIndex].getTickingDamagePerTurn());
+            DoDamage(_players[_playerIndex], 25);
+            PlayerEnemyCastAnimation();
+            UpdateStatsInfo();
+            if (_enemies[_enemyIndex].GetTickingDamage()) { 
+                DoDamage(_enemies[_enemyIndex], _enemies[_enemyIndex].GetTickingDamagePerTurn());
             }
 
-        updateStatsInfo();
-            if (playerStunned)
+        UpdateStatsInfo();
+            if (_playerStunned)
             {
-                playerStunned = false;
-                playerTurn = false;
-                turnCheck();
+                _playerStunned = false;
+                _playerTurn = false;
+                TurnCheck();
             }
             else
             {
-                playerTurn = true;
+                _playerTurn = true;
             }
         }
     }
 
     //Updates UI bars -- Player Health, Enemy Health and Player AP
-    void updateStatsInfo()
+    void UpdateStatsInfo()
     {
         Image playerHealthBar = GameObject.FindGameObjectWithTag("Player Health Bar").GetComponent<Image>() as Image;
-        playerHealthBar.fillAmount = (float)players[playerIndex].getHealth() / (float)players[playerIndex].getMaxHealth();
-        playerHealth.text = players[playerIndex].getHealth().ToString() + "/" + players[playerIndex].getMaxHealth().ToString();
+        playerHealthBar.fillAmount = (float)_players[_playerIndex].GetHealth() / (float)_players[_playerIndex].GetMaxHealth();
+        _playerHealth.text = _players[_playerIndex].GetHealth().ToString() + "/" + _players[_playerIndex].GetMaxHealth().ToString();
 
         Image enemyHealthBar = GameObject.FindGameObjectWithTag("Enemy Health Bar").GetComponent<Image>() as Image;
-        enemyHealthBar.fillAmount = (float)enemies[enemyIndex].getHealth() / (float)enemies[enemyIndex].getMaxHealth();
-        enemyHealth.text = enemies[enemyIndex].getHealth().ToString() + "/" + enemies[enemyIndex].getMaxHealth().ToString();
+        enemyHealthBar.fillAmount = (float)_enemies[_enemyIndex].GetHealth() / (float)_enemies[_enemyIndex].GetMaxHealth();
+        _enemyHealth.text = _enemies[_enemyIndex].GetHealth().ToString() + "/" + _enemies[_enemyIndex].GetMaxHealth().ToString();
 
-        Image playerAPBar = GameObject.FindGameObjectWithTag("Player AP Bar").GetComponent<Image>() as Image;
-        playerAPBar.fillAmount = (float)players[playerIndex].getCurrentAP() / (float)players[playerIndex].getMaxAP();
-        playerAP.text = players[playerIndex].getCurrentAP().ToString() + "/" + players[playerIndex].getMaxAP().ToString();
+        Image playerApBar = GameObject.FindGameObjectWithTag("Player AP Bar").GetComponent<Image>() as Image;
+        playerApBar.fillAmount = (float)_players[_playerIndex].GetCurrentAp() / (float)_players[_playerIndex].GetMaxAp();
+        _playerAp.text = _players[_playerIndex].GetCurrentAp().ToString() + "/" + _players[_playerIndex].GetMaxAp().ToString();
     }
 
     //Updates animations depending on which player & enemy has been chosen
-    void updateSprite()
+    void UpdateSprite()
     {
-        AnimatorOverrideController playerAnimatorOverrideController = new AnimatorOverrideController(playerAnimator.runtimeAnimatorController);
-        playerAnimator.runtimeAnimatorController = playerAnimatorOverrideController;
-        playerAnimatorOverrideController["PlayerOneIdle"] = players[playerIndex].getIdleAnimation();
-        playerAnimatorOverrideController["PlayerOneCast"] = players[playerIndex].getCastAnimation();
-        playerAnimatorOverrideController["PlayerOneDeath"] = players[playerIndex].getDeathAnimation();
-        playerAnimatorOverrideController["PlayerOneDead"] = players[playerIndex].getDeadAnimation();
+        AnimatorOverrideController playerAnimatorOverrideController = new AnimatorOverrideController(_playerAnimator.runtimeAnimatorController);
+        _playerAnimator.runtimeAnimatorController = playerAnimatorOverrideController;
+        playerAnimatorOverrideController["PlayerOneIdle"] = _players[_playerIndex].GetIdleAnimation();
+        playerAnimatorOverrideController["PlayerOneCast"] = _players[_playerIndex].GetCastAnimation();
+        playerAnimatorOverrideController["PlayerOneDeath"] = _players[_playerIndex].GetDeathAnimation();
+        playerAnimatorOverrideController["PlayerOneDead"] = _players[_playerIndex].GetDeadAnimation();
 
-        AnimatorOverrideController enemyAnimatorOverrideController = new AnimatorOverrideController(enemyAnimator.runtimeAnimatorController);
-        enemyAnimator.runtimeAnimatorController = enemyAnimatorOverrideController;
-        enemyAnimatorOverrideController["EnemyOneIdle"] = enemies[enemyIndex].getIdleAnimation();
-        enemyAnimatorOverrideController["EnemyOneCast"] = enemies[enemyIndex].getCastAnimation();
-        enemyAnimatorOverrideController["EnemyOneDeath"] = enemies[enemyIndex].getDeathAnimation();
-        enemyAnimatorOverrideController["EnemyOneDead"] = enemies[enemyIndex].getDeadAnimation();
+        AnimatorOverrideController enemyAnimatorOverrideController = new AnimatorOverrideController(_enemyAnimator.runtimeAnimatorController);
+        _enemyAnimator.runtimeAnimatorController = enemyAnimatorOverrideController;
+        enemyAnimatorOverrideController["EnemyOneIdle"] = _enemies[_enemyIndex].GetIdleAnimation();
+        enemyAnimatorOverrideController["EnemyOneCast"] = _enemies[_enemyIndex].GetCastAnimation();
+        enemyAnimatorOverrideController["EnemyOneDeath"] = _enemies[_enemyIndex].GetDeathAnimation();
+        enemyAnimatorOverrideController["EnemyOneDead"] = _enemies[_enemyIndex].GetDeadAnimation();
     }
 
     //Plays player attack animation
-    void playPlayerCastAnimation()
+    void PlayPlayerCastAnimation()
     {
-        playerAnimator.SetTrigger("Cast");
+        _playerAnimator.SetTrigger("Cast");
     }
 
     //Plays player death animation
-    void playPlayerDeathAnimation()
+    void PlayPlayerDeathAnimation()
     {
-        playerAnimator.SetTrigger("Death");
+        _playerAnimator.SetTrigger("Death");
     }
 
     //Plays enemy attack animation
-    void playerEnemyCastAnimation()
+    void PlayerEnemyCastAnimation()
     {
-        enemyAnimator.SetTrigger("Cast");
+        _enemyAnimator.SetTrigger("Cast");
     }
 
     //Plays enemy death animation
-    void playEnemyDeathAnimation()
+    void PlayEnemyDeathAnimation()
     {
-        enemyAnimator.SetTrigger("Death");
+        _enemyAnimator.SetTrigger("Death");
     }
 
     //Sets enemy state to dead
-    void playEnemyDeadAnimation()
+    void PlayEnemyDeadAnimation()
     {
-        enemyAnimator.SetTrigger("Dead");
+        _enemyAnimator.SetTrigger("Dead");
     }
 
     //Sets player state to dead
-    void playPlayerDeadAnimation()
+    void PlayPlayerDeadAnimation()
     {
-        playerAnimator.SetTrigger("Dead");
+        _playerAnimator.SetTrigger("Dead");
     }
 
     //Reset player state to Idle
-    void resetPlayerAnimator()
+    void ResetPlayerAnimator()
     {
-        playerAnimator.SetTrigger("UnDead");
+        _playerAnimator.SetTrigger("UnDead");
     }
 
     //Reset enemy state to Idle
-    void resetEnemyAnimator()
+    void ResetEnemyAnimator()
     {
-        enemyAnimator.SetTrigger("UnDead");
+        _enemyAnimator.SetTrigger("UnDead");
     }
 
     //Takes character and damageAmount and damages the character by that amount - Lower bound set to 0 health
-    public void doDamage(Character character, int damageAmount)
+    public void DoDamage(Character character, int damageAmount)
     {
-        int newHealth = character.takeDamage(damageAmount);
+        int newHealth = character.TakeDamage(damageAmount);
         if(newHealth <= 0)
         {
-            character.setHealth(0);
+            character.SetHealth(0);
             if(character is Enemy)
             {
-                playEnemyDeathAnimation();
-                SceneManager.LoadScene(prevScene);
+                PlayEnemyDeathAnimation();
+                SceneManager.LoadScene(_prevScene);
             }
             else
             {
-                playPlayerDeathAnimation();
+                PlayPlayerDeathAnimation();
                 bool allDead = true;
-                foreach (var player in players)
+                foreach (var player in _players)
                 {
-                    if (player.getHealth() != 0)
+                    if (player.GetHealth() != 0)
                     {
                         allDead = false;
                     }
@@ -223,122 +224,122 @@ public class CombatMode {
 
                 if (allDead)
                 {
-                    SceneManager.LoadScene(prevScene);
+                    SceneManager.LoadScene(_prevScene);
                 }
             }
         }
     }
 
     //Takes character and healtAmount and heals the character by that amount
-    public void doHeal(Character character, int healAmount)
+    public void DoHeal(Character character, int healAmount)
     {
-        character.doHeal(healAmount);
+        character.DoHeal(healAmount);
     }
 
     //Updates AP of player and returns true or false, depending on whether the character has enough AP
-    public bool updateAP(Player player, int AP)
+    public bool UpdateAp(Player player, int ap)
     {
-        int beforeAP = player.getCurrentAP();
-        int currentAP = player.useAP(AP);
-        if (currentAP < 0)
+        int beforeAp = player.GetCurrentAp();
+        int currentAp = player.UseAp(ap);
+        if (currentAp < 0)
         {
-            player.setCurrentAP(beforeAP);
+            player.SetCurrentAp(beforeAp);
             return false;
         }
         return true;
     }
 
     //Uses an ability - Pass player, enemy, and index of ability
-    public bool useAbility(Player player, Enemy enemy, int abilityIndex)
+    public bool UseAbility(Player player, Enemy enemy, int abilityIndex)
     {
         //If player has no health no action can be performed so nothing happens
-        if (player.getHealth() == 0)
+        if (player.GetHealth() == 0)
         {
             return false;
         }
 
         //Get ability being used
-        Ability ability = player.getAbilities()[abilityIndex];
+        Ability ability = player.GetAbilities()[abilityIndex];
 
         //Check if player has enough AP
-        bool success = updateAP(player, ability.apCost);
+        bool success = UpdateAp(player, ability.ApCost);
 
         //If enough AP
         if (success)
         {
             //For each ability type this tells the program what to do
-            Ability.abilityTypes abilityType = ability.abilityType;
-            playPlayerCastAnimation();
+            Ability.AbilityTypes abilityType = ability.AbilityType;
+            PlayPlayerCastAnimation();
             switch (abilityType)
             {
-                case (Ability.abilityTypes.numberDamage):
-                    doDamage(enemy, ability.effectMagnitude);
+                case (Ability.AbilityTypes.NumberDamage):
+                    DoDamage(enemy, ability.EffectMagnitude);
                     break;
-                case (Ability.abilityTypes.numberHeal):
-                    doHeal(player, ability.effectMagnitude);
+                case (Ability.AbilityTypes.NumberHeal):
+                    DoHeal(player, ability.EffectMagnitude);
                     break;
-                case (Ability.abilityTypes.percentMaxHeal):
-                    doHeal(player, player.getMaxHealth() * ability.effectMagnitude / 100);
+                case (Ability.AbilityTypes.PercentMaxHeal):
+                    DoHeal(player, player.GetMaxHealth() * ability.EffectMagnitude / 100);
                     break;
-                case (Ability.abilityTypes.percentCurrentDamage):
-                    doDamage(enemy, enemy.getHealth() * ability.effectMagnitude / 100);
+                case (Ability.AbilityTypes.PercentCurrentDamage):
+                    DoDamage(enemy, enemy.GetHealth() * ability.EffectMagnitude / 100);
                     break;
-                case (Ability.abilityTypes.percentTotalDamage):
-                    doDamage(enemy, enemy.getMaxHealth() * ability.effectMagnitude / 100);
+                case (Ability.AbilityTypes.PercentTotalDamage):
+                    DoDamage(enemy, enemy.GetMaxHealth() * ability.EffectMagnitude / 100);
                     break;
-                case (Ability.abilityTypes.groupNumberHeal):
-                    for(int i = 0; i < players.Count; i++)
+                case (Ability.AbilityTypes.GroupNumberHeal):
+                    for(int i = 0; i < _players.Count; i++)
                     {
-                        players[i].doHeal(ability.effectMagnitude);
+                        _players[i].DoHeal(ability.EffectMagnitude);
                     }
                     break;
-                case (Ability.abilityTypes.groupAPIncrease):
-                    for (int i = 0; i < players.Count; i++)
+                case (Ability.AbilityTypes.GroupApIncrease):
+                    for (int i = 0; i < _players.Count; i++)
                     {
-                        players[i].giveAP(ability.effectMagnitude);
+                        _players[i].GiveAp(ability.EffectMagnitude);
                     }
                     break;
-                case (Ability.abilityTypes.enemyStun):
-                    enemyStunned = true;
+                case (Ability.AbilityTypes.EnemyStun):
+                    _enemyStunned = true;
                     break;
-                case (Ability.abilityTypes.playerStun):
-                    playerStunned = true;
+                case (Ability.AbilityTypes.PlayerStun):
+                    _playerStunned = true;
                     break;
-                case (Ability.abilityTypes.enemyTickingDamage):
-                    enemies[enemyIndex].setTickingDamage(true);
-                    enemies[enemyIndex].setTickingDamagePerTurn(ability.effectMagnitude);
+                case (Ability.AbilityTypes.EnemyTickingDamage):
+                    _enemies[_enemyIndex].SetTickingDamage(true);
+                    _enemies[_enemyIndex].SetTickingDamagePerTurn(ability.EffectMagnitude);
                     break;
-                case (Ability.abilityTypes.playerTickingDamage):
-                    players[playerIndex].setTickingDamage(true);
-                    players[playerIndex].setTickingDamagePerTurn(ability.effectMagnitude);
+                case (Ability.AbilityTypes.PlayerTickingDamage):
+                    _players[_playerIndex].SetTickingDamage(true);
+                    _players[_playerIndex].SetTickingDamagePerTurn(ability.EffectMagnitude);
                     break;
             }
         }
-        updateStatsInfo();
+        UpdateStatsInfo();
         return success;
     }
 
     //Runs attack depending on which button is pressed
-    public void attackButton(int attackButtonNumber)
+    public void AttackButton(int attackButtonNumber)
     {
         //Only perform action on button press if its the players turn and animation is finished
-        if (playerTurn)
+        if (_playerTurn && _playerAnimator.GetCurrentAnimatorStateInfo(0).IsName("Idle"))
         {
             //Uses ability depending on button press -- success is whether the ability was able to be ran
             bool success = false;
             switch (attackButtonNumber)
             {
                 case (1):
-                    success = useAbility(players[playerIndex], enemies[enemyIndex], 0);
+                    success = UseAbility(_players[_playerIndex], _enemies[_enemyIndex], 0);
                     break;
                 case (2):
-                    success = useAbility(players[playerIndex], enemies[enemyIndex], 1);
+                    success = UseAbility(_players[_playerIndex], _enemies[_enemyIndex], 1);
                     break;
                 case (3):
-                    success = useAbility(players[playerIndex], enemies[enemyIndex], 2);
+                    success = UseAbility(_players[_playerIndex], _enemies[_enemyIndex], 2);
                     break;
                 case (4):
-                    success = useAbility(players[playerIndex], enemies[enemyIndex], 3);
+                    success = UseAbility(_players[_playerIndex], _enemies[_enemyIndex], 3);
                     break;
                 default:
                     Debug.Log("BUG");
@@ -349,82 +350,82 @@ public class CombatMode {
             if (success)
             {
                 //Do player ticking damage at end of turn
-                if (players[playerIndex].getTickingDamage())
+                if (_players[_playerIndex].GetTickingDamage())
                 {
-                    doDamage(players[playerIndex], players[playerIndex].getTickingDamagePerTurn());
+                    DoDamage(_players[_playerIndex], _players[_playerIndex].GetTickingDamagePerTurn());
                 }
 
                 //Update stats bars
-                updateStatsInfo();
+                UpdateStatsInfo();
 
                 //If enemy is stunned jump back to player turn otherwise give enemy a turn
-                if (enemyStunned)
+                if (_enemyStunned)
                 {
-                    enemyStunned = false;
-                    playerTurn = true;
+                    _enemyStunned = false;
+                    _playerTurn = true;
                 }
                 else
                 {
-                    playerTurn = false;
-                    turnCheck();
+                    _playerTurn = false;
+                    TurnCheck();
                 }
             }
         }
     }
 
     //Get player abilities of current player
-    public List<Ability> getPlayerAbilities()
+    public List<Ability> GetPlayerAbilities()
     {
-        return players[playerIndex].getAbilities();
+        return _players[_playerIndex].GetAbilities();
     }
 
     //Opens swap player canvas
-    public void swapPlayerCanvas(bool active)
+    public void SwapPlayerCanvas(bool active)
     {
-        playerSwitchCanvas.SetActive(active);
+        _playerSwitchCanvas.SetActive(active);
     }
 
     //Switch player when function is ran, takes player index as an parameter
-    public void switchPlayer(int index)
+    public void SwitchPlayer(int index)
     {
-        playerIndex = index - 1;
-        updateStatsInfo();
-        updateSprite();
-        updateButtons();
+        _playerIndex = index - 1;
+        UpdateStatsInfo();
+        UpdateSprite();
+        UpdateButtons();
 
-        Player player = players[playerIndex];
-        Enemy enemy = enemies[enemyIndex];
+        Player player = _players[_playerIndex];
+        Enemy enemy = _enemies[_enemyIndex];
 
-        if (player.getHealth() == 0)
+        if (player.GetHealth() == 0)
         {
-            playPlayerDeadAnimation();
+            PlayPlayerDeadAnimation();
         }
         else
         {
-            resetPlayerAnimator();
+            ResetPlayerAnimator();
         }
 
-        if (enemy.getHealth() == 0)
+        if (enemy.GetHealth() == 0)
         {
-            playEnemyDeadAnimation();
+            PlayEnemyDeadAnimation();
         }
         else
         {
-            resetEnemyAnimator();
+            ResetEnemyAnimator();
         }
 
     }
 
     //Update button text to ability names
-    public void updateButtons()
+    public void UpdateButtons()
     {
-        List<Ability> abilityList = getPlayerAbilities();
+        List<Ability> abilityList = GetPlayerAbilities();
         GameObject buttonsParent = GameObject.FindGameObjectWithTag("CombatButtons");
         Button[] combatbuttonsObj = buttonsParent.GetComponentsInChildren<Button>();
-        combatbuttonsObj[0].GetComponentInChildren<Text>().text = abilityList[0].name;
-        combatbuttonsObj[1].GetComponentInChildren<Text>().text = abilityList[1].name;
-        combatbuttonsObj[2].GetComponentInChildren<Text>().text = abilityList[2].name;
-        combatbuttonsObj[3].GetComponentInChildren<Text>().text = abilityList[3].name;
+        combatbuttonsObj[0].GetComponentInChildren<Text>().text = abilityList[0].Name;
+        combatbuttonsObj[1].GetComponentInChildren<Text>().text = abilityList[1].Name;
+        combatbuttonsObj[2].GetComponentInChildren<Text>().text = abilityList[2].Name;
+        combatbuttonsObj[3].GetComponentInChildren<Text>().text = abilityList[3].Name;
     }
     
 }
