@@ -422,10 +422,11 @@ public class CombatMode {
         List<Ability> abilityList = GetPlayerAbilities();
         GameObject buttonsParent = GameObject.FindGameObjectWithTag("CombatButtons");
         Button[] combatbuttonsObj = buttonsParent.GetComponentsInChildren<Button>();
-        combatbuttonsObj[0].GetComponentInChildren<Text>().text = abilityList[0].Name;
-        combatbuttonsObj[1].GetComponentInChildren<Text>().text = abilityList[1].Name;
-        combatbuttonsObj[2].GetComponentInChildren<Text>().text = abilityList[2].Name;
-        combatbuttonsObj[3].GetComponentInChildren<Text>().text = abilityList[3].Name;
+        for (int i = 0; i < 4; i++)
+        {
+            Ability CurrentAbility = abilityList[i];
+            combatbuttonsObj[i].GetComponentInChildren<Text>().text = CurrentAbility.Name + "  (" + CurrentAbility.ApCost + ")\n" + CurrentAbility.Description;
+        }
     }
     
 }

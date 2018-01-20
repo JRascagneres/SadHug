@@ -20,13 +20,13 @@ public class Abilities
             case AbilityEnum.ChangingVariables:
                 return new Ability("Changing Variables", Ability.AbilityTypes.PercentMaxHeal, "20% Max Heal", 2, 20, false, false);
             case AbilityEnum.EnterTheMatrix:
-                return new Ability("Enter The Matrix",Ability.AbilityTypes.PercentCurrentDamage, "30% of current enemy health", 3, 30, false, false);
+                return new Ability("Enter The Matrix",Ability.AbilityTypes.PercentCurrentDamage, "30% of current health", 3, 30, false, false);
             case AbilityEnum.ChemicalSpill:
                 return new Ability("Chemical Spill", Ability.AbilityTypes.NumberDamage, "Deals 15 damage to enemy", 1, 15, false, false);
             case AbilityEnum.NoxiousGas:
                 return new Ability("Noxious Gas", Ability.AbilityTypes.EnemyTickingDamage, "Poisen 10 damage per turn", 2, 10, false, true);
             case AbilityEnum.ExplosiveReagents:
-                return new Ability("Explosive Reagents", Ability.AbilityTypes.PercentCurrentDamage, "40% of current enemy health", 5, 40, false, false);
+                return new Ability("Explosive Reagents", Ability.AbilityTypes.PercentCurrentDamage, "40% of current health", 5, 40, false, false);
             case AbilityEnum.PepTalk:
                 return new Ability("Pep Talk", Ability.AbilityTypes.GroupApIncrease, "Give 1 AP to all allies", 1, 1, false, false);
             case AbilityEnum.HockeyClub:
@@ -38,7 +38,7 @@ public class Abilities
             case AbilityEnum.Therapy:
                 return new Ability("Therapy", Ability.AbilityTypes.GroupApIncrease, "Give 2 AP to all allies", 2, 2, false, false);
             case AbilityEnum.ReadingWeak:
-                return new Ability("Reading 'weak'", Ability.AbilityTypes.PercentCurrentDamage, "20% of current enemy health", 3, 20, false, false);
+                return new Ability("Reading 'weak'", Ability.AbilityTypes.PercentCurrentDamage, "20% of current health", 3, 20, false, false);
             case AbilityEnum.Dischord:
                 return new Ability("Dischord", Ability.AbilityTypes.EnemyStun, "Stun 1 turn", 2, 0, true, false);
             case AbilityEnum.Harmony:
