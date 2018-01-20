@@ -6,13 +6,13 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/WorldMap.unity
-    guid: 4b97c4cabbd150448a553ea1ff0ed62e
-  - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: 1b7da9a96264999459da9446742abf9b
   - enabled: 1
-    path: Assets/Scenes/unity.unity
+    path: Assets/Scenes/WorldMap.unity
+    guid: 4b97c4cabbd150448a553ea1ff0ed62e
+  - enabled: 1
+    path: Assets/Scenes/CombatMode.unity
     guid: a0aa1d9e9d826b6489c9971fe2b31445
   - enabled: 1
     path: Assets/Scenes/CentralHall.unity
