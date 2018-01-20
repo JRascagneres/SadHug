@@ -22,11 +22,11 @@ public class Player : Character {
         switch (playerType)
         {
             case PlayerType.CompSci:
-                initializeHealth(10);
-                abilityList.Add(abilities.getAbility(Abilities.AbilityEnum.oneHundredDamage));
-                abilityList.Add(abilities.getAbility(Abilities.AbilityEnum.tenPercentCurrent));
-                abilityList.Add(abilities.getAbility(Abilities.AbilityEnum.tenPercentTotal));
-                abilityList.Add(abilities.getAbility(Abilities.AbilityEnum.tenHeal));
+                initializeHealth(125);
+                abilityList.Add(abilities.getAbility(Abilities.AbilityEnum.complain));
+                abilityList.Add(abilities.getAbility(Abilities.AbilityEnum.changingVariables));
+                abilityList.Add(abilities.getAbility(Abilities.AbilityEnum.enterTheMatrix));
+                abilityList.Add(abilities.getAbility(Abilities.AbilityEnum.basicAttack));
                 setSprite(Resources.Load<Sprite>("Sprites/CharacterSprites/playerone") as Sprite);
                 setIdleAnimation(Resources.Load<AnimationClip>("Sprites/CharacterSprites/Animations/PlayerOneIdle"));
                 setCastAnimation(Resources.Load<AnimationClip>("Sprites/CharacterSprites/Animations/PlayerOneCast"));
@@ -34,11 +34,11 @@ public class Player : Character {
                 setDeathAnimation(Resources.Load<AnimationClip>("Sprites/CharacterSprites/Animations/PlayerOneDeath"));
                 break;
             case PlayerType.Physc:
-                initializeHealth(10);
-                abilityList.Add(abilities.getAbility(Abilities.AbilityEnum.fiveDamage));
-                abilityList.Add(abilities.getAbility(Abilities.AbilityEnum.groupHealTen));
-                abilityList.Add(abilities.getAbility(Abilities.AbilityEnum.poisenTenEnemy));
-                abilityList.Add(abilities.getAbility(Abilities.AbilityEnum.poisenTenPlayer));
+                initializeHealth(175);
+                abilityList.Add(abilities.getAbility(Abilities.AbilityEnum.reversePsychology));
+                abilityList.Add(abilities.getAbility(Abilities.AbilityEnum.therapy));
+                abilityList.Add(abilities.getAbility(Abilities.AbilityEnum.readingWeak));
+                abilityList.Add(abilities.getAbility(Abilities.AbilityEnum.basicAttack));
                 setSprite(Resources.Load<Sprite>("Sprites/CharacterSprites/playertwo") as Sprite);
                 setIdleAnimation(Resources.Load<AnimationClip>("Sprites/CharacterSprites/Animations/PlayerTwoIdle"));
                 setCastAnimation(Resources.Load<AnimationClip>("Sprites/CharacterSprites/Animations/PlayerTwoCast"));
@@ -46,11 +46,11 @@ public class Player : Character {
                 setDeathAnimation(Resources.Load<AnimationClip>("Sprites/CharacterSprites/Animations/PlayerTwoDeath"));
                 break;
             case PlayerType.Music:
-                initializeHealth(10);
-                abilityList.Add(abilities.getAbility(Abilities.AbilityEnum.singleStunEnemy));
-                abilityList.Add(abilities.getAbility(Abilities.AbilityEnum.singleStunPlayer));
-                abilityList.Add(abilities.getAbility(Abilities.AbilityEnum.fiveDamage));
-                abilityList.Add(abilities.getAbility(Abilities.AbilityEnum.poisenTenPlayer));
+                initializeHealth(100);
+                abilityList.Add(abilities.getAbility(Abilities.AbilityEnum.dischord));
+                abilityList.Add(abilities.getAbility(Abilities.AbilityEnum.harmony));
+                abilityList.Add(abilities.getAbility(Abilities.AbilityEnum.hearingDamage));
+                abilityList.Add(abilities.getAbility(Abilities.AbilityEnum.basicAttack));
                 setSprite(Resources.Load<Sprite>("Sprites/CharacterSprites/playerthree") as Sprite);
                 setIdleAnimation(Resources.Load<AnimationClip>("Sprites/CharacterSprites/Animations/PlayerThreeIdle"));
                 setCastAnimation(Resources.Load<AnimationClip>("Sprites/CharacterSprites/Animations/PlayerThreeCast"));
@@ -58,11 +58,11 @@ public class Player : Character {
                 setDeathAnimation(Resources.Load<AnimationClip>("Sprites/CharacterSprites/Animations/PlayerThreeDeath"));
                 break;
             case PlayerType.Chem:
-                initializeHealth(10);
-                abilityList.Add(abilities.getAbility(Abilities.AbilityEnum.singleStunEnemy));
-                abilityList.Add(abilities.getAbility(Abilities.AbilityEnum.singleStunPlayer));
-                abilityList.Add(abilities.getAbility(Abilities.AbilityEnum.fiveDamage));
-                abilityList.Add(abilities.getAbility(Abilities.AbilityEnum.fiveDamage));
+                initializeHealth(150);
+                abilityList.Add(abilities.getAbility(Abilities.AbilityEnum.chemicalSpill));
+                abilityList.Add(abilities.getAbility(Abilities.AbilityEnum.noxiousGas));
+                abilityList.Add(abilities.getAbility(Abilities.AbilityEnum.explosiveReagents));
+                abilityList.Add(abilities.getAbility(Abilities.AbilityEnum.basicAttack));
                 setSprite(Resources.Load<Sprite>("Sprites/CharacterSprites/playerfour") as Sprite);
                 setIdleAnimation(Resources.Load<AnimationClip>("Sprites/CharacterSprites/Animations/PlayerFourIdle"));
                 setCastAnimation(Resources.Load<AnimationClip>("Sprites/CharacterSprites/Animations/PlayerFourCast"));
@@ -70,11 +70,11 @@ public class Player : Character {
                 setDeathAnimation(Resources.Load<AnimationClip>("Sprites/CharacterSprites/Animations/PlayerFourDeath"));
                 break;
             case PlayerType.Sport:
-                initializeHealth(10);
-                abilityList.Add(abilities.getAbility(Abilities.AbilityEnum.singleStunEnemy));
-                abilityList.Add(abilities.getAbility(Abilities.AbilityEnum.singleStunPlayer));
-                abilityList.Add(abilities.getAbility(Abilities.AbilityEnum.fiveDamage));
-                abilityList.Add(abilities.getAbility(Abilities.AbilityEnum.fiveDamage));
+                initializeHealth(250);
+                abilityList.Add(abilities.getAbility(Abilities.AbilityEnum.pepTalk));
+                abilityList.Add(abilities.getAbility(Abilities.AbilityEnum.hockeyClub));
+                abilityList.Add(abilities.getAbility(Abilities.AbilityEnum.rko));
+                abilityList.Add(abilities.getAbility(Abilities.AbilityEnum.basicAttack));
                 setSprite(Resources.Load<Sprite>("Sprites/CharacterSprites/playerfive") as Sprite);
                 setIdleAnimation(Resources.Load<AnimationClip>("Sprites/CharacterSprites/Animations/PlayerFiveIdle"));
                 setCastAnimation(Resources.Load<AnimationClip>("Sprites/CharacterSprites/Animations/PlayerFiveCast"));
@@ -88,6 +88,15 @@ public class Player : Character {
     public void setCurrentAP(int newAP)
     {
         this.currentAP = newAP;
+    }
+
+    public void giveAP(int AP)
+    {
+        this.currentAP = this.currentAP + AP;
+        if (this.currentAP > this.maxAP)
+        {
+            this.currentAP = this.maxAP;
+        }
     }
 
     public int getCurrentAP()

@@ -5,7 +5,7 @@ using UnityEngine;
 public class Ability {
 
     //List of ability type enums - Different categories of abilities
-    public enum abilityTypes { numberDamage, numberHeal, percentTotalDamage, percentCurrentDamage, groupNumberHeal, enemyStun, enemyTickingDamage, playerTickingDamage, playerStun };
+    public enum abilityTypes { numberDamage, numberHeal, percentMaxHeal, percentTotalDamage, percentCurrentDamage, groupNumberHeal, groupAPIncrease, enemyStun, enemyTickingDamage, playerTickingDamage, playerStun, randomAttack };
 
     //Parameters for abilities
     public string name;

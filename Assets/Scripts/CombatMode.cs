@@ -94,11 +94,14 @@ public class CombatMode {
     {
         if (enemies[enemyIndex].getHealth() != 0)
         {
-            doDamage(players[playerIndex], 5);
+            doDamage(players[playerIndex], 25);
             playerEnemyCastAnimation();
             updateStatsInfo();
-            enemies[enemyIndex].takeTickingDamage();
-            updateStatsInfo();
+            if (enemies[enemyIndex].getTickingDamage()) { 
+                doDamage(enemies[enemyIndex], enemies[enemyIndex].getTickingDamagePerTurn());
+            }
+
+        updateStatsInfo();
             if (playerStunned)
             {
                 playerStunned = false;
@@ -274,6 +277,9 @@ public class CombatMode {
                 case (Ability.abilityTypes.numberHeal):
                     doHeal(player, ability.effectMagnitude);
                     break;
+                case (Ability.abilityTypes.percentMaxHeal):
+                    doHeal(player, player.getMaxHealth() * ability.effectMagnitude / 100);
+                    break;
                 case (Ability.abilityTypes.percentCurrentDamage):
                     doDamage(enemy, enemy.getHealth() * ability.effectMagnitude / 100);
                     break;
@@ -284,6 +290,12 @@ public class CombatMode {
                     for(int i = 0; i < players.Count; i++)
                     {
                         players[i].doHeal(ability.effectMagnitude);
+                    }
+                    break;
+                case (Ability.abilityTypes.groupAPIncrease):
+                    for (int i = 0; i < players.Count; i++)
+                    {
+                        players[i].giveAP(ability.effectMagnitude);
                     }
                     break;
                 case (Ability.abilityTypes.enemyStun):
@@ -337,7 +349,10 @@ public class CombatMode {
             if (success)
             {
                 //Do player ticking damage at end of turn
-                players[playerIndex].takeTickingDamage();
+                if (players[playerIndex].getTickingDamage())
+                {
+                    doDamage(players[playerIndex], players[playerIndex].getTickingDamagePerTurn());
+                }
 
                 //Update stats bars
                 updateStatsInfo();
