@@ -52,11 +52,7 @@ public class CombatButtonHandler : MonoBehaviour {
     public void UpdateButtons()
     {
         _combatMode = _gameManager.GetCombatMode();
-        List<Ability> abilityList = _combatMode.GetPlayerAbilities();
-        CombatOne.GetComponentInChildren<Text>().text = abilityList[0].Name;
-        CombatTwo.GetComponentInChildren<Text>().text = abilityList[1].Name;
-        CombatThree.GetComponentInChildren<Text>().text = abilityList[2].Name;
-        CombatFour.GetComponentInChildren<Text>().text = abilityList[3].Name;
+        _combatMode.UpdateButtons();
     }
 
     //Methods called when buttons pressed (Tells combatmode which button has been pressed)
