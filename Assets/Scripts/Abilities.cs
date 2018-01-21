@@ -16,15 +16,15 @@ public class Abilities
             case AbilityEnum.BasicAttack:
                 return new Ability("Basic Attack", Ability.AbilityTypes.NumberDamage, "5 damage", 0, 5, false, false);
             case AbilityEnum.Complain:
-                return new Ability("Complain", Ability.AbilityTypes.NumberDamage, "25 Damage", 2, 25, false, false);
+                return new Ability("Complain", Ability.AbilityTypes.NumberDamage, "25 damage", 2, 25, false, false);
             case AbilityEnum.ChangingVariables:
-                return new Ability("Changing Variables", Ability.AbilityTypes.PercentMaxHeal, "20% Max Heal", 2, 20, false, false);
+                return new Ability("Changing Variables", Ability.AbilityTypes.PercentMaxHeal, "20% max heal", 2, 20, false, false);
             case AbilityEnum.EnterTheMatrix:
                 return new Ability("Enter The Matrix",Ability.AbilityTypes.PercentCurrentDamage, "30% of current health", 3, 30, false, false);
             case AbilityEnum.ChemicalSpill:
                 return new Ability("Chemical Spill", Ability.AbilityTypes.NumberDamage, "Deals 15 damage to enemy", 1, 15, false, false);
             case AbilityEnum.NoxiousGas:
-                return new Ability("Noxious Gas", Ability.AbilityTypes.EnemyTickingDamage, "Poisen 10 damage per turn", 2, 10, false, true);
+                return new Ability("Noxious Gas", Ability.AbilityTypes.EnemyTickingDamage, "Poison 10 damage per turn", 2, 10, false, true);
             case AbilityEnum.ExplosiveReagents:
                 return new Ability("Explosive Reagents", Ability.AbilityTypes.PercentCurrentDamage, "40% of current health", 5, 40, false, false);
             case AbilityEnum.PepTalk:
@@ -32,7 +32,7 @@ public class Abilities
             case AbilityEnum.HockeyClub:
                 return new Ability("Hockey Club", Ability.AbilityTypes.EnemyStun, "Stun 1 turn", 2, 0, true, false);
             case AbilityEnum.Rko:
-                return new Ability("RKO", Ability.AbilityTypes.PercentTotalDamage, "20% map hp damage", 4, 20, false, false);
+                return new Ability("RKO", Ability.AbilityTypes.PercentTotalDamage, "20% max HP damage", 4, 20, false, false);
             case AbilityEnum.ReversePsychology:
                 return new Ability("Reverse Psychology", Ability.AbilityTypes.NumberDamage, "20 damage", 2, 20, false, false);
             case AbilityEnum.Therapy:

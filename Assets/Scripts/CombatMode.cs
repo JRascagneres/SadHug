@@ -302,16 +302,9 @@ public class CombatMode {
                 case (Ability.AbilityTypes.EnemyStun):
                     _enemyStunned = true;
                     break;
-                case (Ability.AbilityTypes.PlayerStun):
-                    _playerStunned = true;
-                    break;
                 case (Ability.AbilityTypes.EnemyTickingDamage):
                     _enemies[_enemyIndex].SetTickingDamage(true);
                     _enemies[_enemyIndex].SetTickingDamagePerTurn(ability.EffectMagnitude);
-                    break;
-                case (Ability.AbilityTypes.PlayerTickingDamage):
-                    _players[_playerIndex].SetTickingDamage(true);
-                    _players[_playerIndex].SetTickingDamagePerTurn(ability.EffectMagnitude);
                     break;
             }
         }
