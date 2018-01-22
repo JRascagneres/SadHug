@@ -5,6 +5,8 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
+//http://sadhug.rascagneres.co.uk/ass2/Game.zip -- Executable
+
 public class GameManager : MonoBehaviour {
 
     //Variables initialised
