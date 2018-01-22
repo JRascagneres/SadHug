@@ -24,11 +24,12 @@ public class GameManager : MonoBehaviour {
         DontDestroyOnLoad(this);
     }
 
-    //Loops through all players and creates one of each and puts into players list
+    //Ran when GameManagaer is created, initialises list of players and enemies
     void Start () {
         GenerateCharacters(); 
     }
 
+    //Loops through all players and enemies and creates one of each and puts into players list
     void GenerateCharacters()
     {
         _players = new List<Player>();
@@ -51,6 +52,7 @@ public class GameManager : MonoBehaviour {
         }
     }
 
+    //Starts combat mode and send parameters to start with
     public void MakeCombatMode(int enemyIndex, String prevScene)
     {
         GenerateCharacters();
