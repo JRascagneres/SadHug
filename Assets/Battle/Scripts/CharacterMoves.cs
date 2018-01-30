@@ -87,7 +87,7 @@ public abstract class SpecialMove : CharacterMove {
 /// </summary>
 public class StandardAttack : CharacterMove {
 
-	private int power;
+    public int power;
 
 	public StandardAttack(BattleManager manager, Character user, Character target) {
 		this.manager = manager;
@@ -132,8 +132,8 @@ public class SwitchPlayers : CharacterMove {
 /// </summary>
 public class MagicAttack : SpecialMove {
 
-	/// <summary>Defines the power of the attack</summary>
-	private int power;
+    /// <summary>Defines the power of the attack</summary>
+    public int power;
 
 	public MagicAttack (string text, string desc, int magic, int power) : base(text, desc, magic) {
 		this.power = power;
@@ -153,8 +153,8 @@ public class MagicAttack : SpecialMove {
 /// </summary>
 public class LowerDefence : SpecialMove {
 
-	/// <summary>The ratio to decrease the defence stat by</summary>
-	private float decrease;
+    /// <summary>The ratio to decrease the defence stat by</summary>
+    public float decrease;
 
 	public LowerDefence (string text, string desc, int magic, float decrease) : base(text, desc, magic) {
 		this.decrease = decrease;
@@ -173,10 +173,10 @@ public class LowerDefence : SpecialMove {
 /// </summary>
 public class LowerSpeed : SpecialMove {
 
-	/// <summary>
-	/// The ratio to decrease the target's speed by
-	/// </summary>
-	private float decrease;
+    /// <summary>
+    /// The ratio to decrease the target's speed by
+    /// </summary>
+    public float decrease;
 
 	public LowerSpeed (string text, string desc, int magic, float decrease) : base(text, desc, magic) {
 		this.decrease = decrease;
@@ -193,8 +193,8 @@ public class LowerSpeed : SpecialMove {
 /// <summary>Raise the target's attack stat</summary>
 public class RaiseAttack : SpecialMove {
 
-	/// <summary>The ratio to increase the attack by</summary>
-	private float increase;
+    /// <summary>The ratio to increase the attack by</summary>
+    public float increase;
 
 	public RaiseAttack (string text, string desc, int magic, float increase) : base(text, desc, magic) {
 		this.increase = increase;
@@ -212,7 +212,7 @@ public class RaiseAttack : SpecialMove {
 public class RaiseDefence : SpecialMove { 
 
 	/// <summary>The ratio to increase the defence by</summary>
-	private float increase;
+	public float increase;
 
 	public RaiseDefence (string text, string desc, int magic, float increase) : base(text, desc, magic) {
 		this.increase = increase;
@@ -229,8 +229,8 @@ public class RaiseDefence : SpecialMove {
 /// <summary>Increases the money reward of a battle</summary>
 public class IncreaseMoney : SpecialMove {
 
-	/// <summary>The ratio to increase the money reward by </summary>
-	private float increase;
+    /// <summary>The ratio to increase the money reward by </summary>
+    public float increase;
 
 	public IncreaseMoney(string text, string desc, int magic, float increase) : base(text, desc, magic) {
 		this.increase = increase;
@@ -247,8 +247,8 @@ public class IncreaseMoney : SpecialMove {
 /// <summary>Heal a target by a set amount of health points</summary>
 public class HealingSpell : SpecialMove {
 
-	/// <summary>The amount of health points to restore</summary>
-	private int increase;
+    /// <summary>The amount of health points to restore</summary>
+    public int increase;
 
 	public HealingSpell(string text, string desc, int magic, int increase) : base(text, desc, magic) {
 		this.increase = increase;

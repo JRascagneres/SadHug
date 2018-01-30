@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System.IO;
 
 /// <summary>
 /// Script to handle the main menu
@@ -83,10 +84,29 @@ public class MenuScript : MonoBehaviour {
 		SceneChanger.instance.loadLevel ("CS-Jail", new Vector2 (0, 0));
 	}
 
-	/// <summary>
-	/// Closes application
-	/// </summary>
-	public void ExitGame() {
+    public void loadGame(GameObject buttonObj)
+    {
+        if (!File.Exists(Application.persistentDataPath + "/saveFile.dat"))
+        {
+            buttonObj.GetComponent<Button>().interactable = false;
+        }
+        else
+        {
+            PlayerData.instance.data = new DataManager(null);
+            PlayerData.instance.data.Load();
+            GlobalFunctions.instance.currentLevel = 0;
+            GlobalFunctions.instance.objectsActive = new Dictionary<string, bool>();
+
+            SoundManager.instance.playSFX("interact");
+            player.SetActive(true);
+            SceneChanger.instance.loadLevel("CS-Jail", new Vector2(0, 0));
+        }
+    }
+
+    /// <summary>
+    /// Closes application
+    /// </summary>
+    public void ExitGame() {
 		Application.Quit ();
 	}
 
