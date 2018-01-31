@@ -176,7 +176,14 @@ public class DataManager {
                 }
                 storedData.players[i].special1 = getMoveFromPlayer(players[i].Special1);
                 storedData.players[i].special2 = getMoveFromPlayer(players[i].Special2);
-                //storedData.players[i].Image = players[i].Image;
+
+                if (players[i].Image != null)
+                {
+                    storedData.players[i].imageDims = new int[2];
+                    storedData.players[i].imageDims[0] = players[i].Image.width;
+                    storedData.players[i].imageDims[1] = players[i].Image.height;
+                    storedData.players[i].textureArray = players[i].Image.EncodeToPNG();
+                }
             }
         }
 
@@ -198,10 +205,201 @@ public class DataManager {
         storedData.locationData.playerLocationY = playerObject.transform.position.y;
 
         storedData.locationData.sceneName = SceneManager.GetActiveScene().name;
+        storedData.locationData.currentLevel = GlobalFunctions.instance.currentLevel;
+
+        foreach (KeyValuePair<string, bool> kvp in GlobalFunctions.instance.objectsActive)
+        {
+            storedData.objectsActive.Add(kvp.Key, kvp.Value);
+        }
 
         binaryFormatter.Serialize(file, storedData);
         Debug.Log("Saved");
         file.Close();
+    }
+
+    
+
+    public void Load()
+    {
+        BinaryFormatter binaryFormatter = new BinaryFormatter();
+        FileStream file = File.Open(Application.persistentDataPath + "/saveFile.dat", FileMode.Open);
+        StoredData storedData = (StoredData)binaryFormatter.Deserialize(file);
+
+        for(int i = 0; i < storedData.players.Length; i++)
+        {
+            StoredData.Player player = storedData.players[i];
+            if(player != null)
+            {
+                Texture2D image = new Texture2D(player.imageDims[0], player.imageDims[1]);
+                image.LoadImage(player.textureArray);
+                addPlayer(new Player(player.name, player.level, player.health, player.attack, player.defence, player.maximumMagic, player.magic, player.luck, player.speed, player.exp, null, getMoveFromStored(player.special1), getMoveFromStored(player.special2), image));
+            }
+        }
+
+        for(int i = 0; i < storedData.items.Length; i++)
+        {
+            StoredData.Item item = storedData.items[i];
+            if(item != null)
+            {
+                items[i].Name = storedData.items[i].name;
+                items[i].Desc = storedData.items[i].desc;
+            }
+        }
+
+        money = storedData.money;
+
+        GlobalFunctions.instance.currentLevel = storedData.locationData.currentLevel;
+
+        GlobalFunctions.instance.objectsActive = new Dictionary<string, bool>();
+        foreach(KeyValuePair<string, bool> kvt in storedData.objectsActive)
+        {
+            GlobalFunctions.instance.objectsActive.Add(kvt.Key, kvt.Value);
+        }
+
+        SceneChanger.instance.loadLevel(storedData.locationData.sceneName, new Vector2(storedData.locationData.playerLocationX, storedData.locationData.playerLocationY));
+
+
+        file.Close();
+
+    }
+
+    [Serializable]
+    public class StoredData
+    {
+
+        public int money;
+
+        [Serializable]
+        public class SpecialMove
+        {
+            public string text;
+            public string desc;
+            public int magic;
+        }
+
+        [Serializable]
+        public class MagicAttack : SpecialMove
+        {
+            public int power;
+        }
+
+        [Serializable]
+        public class LowerDefence : SpecialMove
+        {
+            public float decrease;
+        }
+
+        [Serializable]
+        public class LowerSpeed : SpecialMove
+        {
+            public float decrease;
+        }
+
+        [Serializable]
+        public class RaiseAttack : SpecialMove
+        {
+            public float increase;
+        }
+
+        [Serializable]
+        public class RaiseDefence : SpecialMove
+        {
+            public float increase;
+        }
+
+        [Serializable]
+        public class IncreaseMoney : SpecialMove
+        {
+            public float increase;
+        }
+
+        [Serializable]
+        public class HealingSpell : SpecialMove
+        {
+            public int increase;
+        }
+
+        [Serializable]
+        public class Item
+        {
+            public string name;
+            public string desc;
+        }
+
+        [Serializable]
+        public class Player
+        {
+            public string name;
+            public int level;
+            public int health;
+            public int attack;
+            public int defence;
+            public int maximumMagic;
+            public int magic;
+            public int luck;
+            public int speed;
+            public int exp;
+            public Item item;
+            public SpecialMove special1;
+            public SpecialMove special2;
+            public byte[] textureArray;
+            public int[] imageDims;
+        }
+
+        [Serializable]
+        public class LocationData
+        {
+            public string sceneName;
+            public float playerLocationX;
+            public float playerLocationY;
+            public int currentLevel;
+        }
+
+        public Player[] players = new Player[6];
+        public Item[] items = new Item[6];
+        public LocationData locationData = new LocationData();
+        public Dictionary<string, bool> objectsActive = new Dictionary<string, bool>();
+
+    }
+
+    public SpecialMove getMoveFromStored(StoredData.SpecialMove specialMove)
+    {
+        if(specialMove is StoredData.MagicAttack)
+        {
+            MagicAttack magicAttack = new MagicAttack(specialMove.text, specialMove.desc, specialMove.magic, ((StoredData.MagicAttack)specialMove).power);
+            return magicAttack;
+        }
+        else if(specialMove is StoredData.LowerDefence)
+        {
+            LowerDefence lowerDefence = new LowerDefence(specialMove.text, specialMove.desc, specialMove.magic, ((StoredData.LowerDefence)specialMove).decrease);
+            return lowerDefence;
+        }
+        else if(specialMove is StoredData.LowerSpeed)
+        {
+            LowerSpeed lowerSpeed = new LowerSpeed(specialMove.text, specialMove.desc, specialMove.magic, ((StoredData.LowerSpeed)specialMove).decrease);
+            return lowerSpeed;
+        }
+        else if(specialMove is StoredData.RaiseAttack)
+        {
+            RaiseAttack raiseAttack = new RaiseAttack(specialMove.text, specialMove.desc, specialMove.magic, ((StoredData.RaiseAttack)specialMove).increase);
+            return raiseAttack;
+        }
+        else if(specialMove is StoredData.RaiseDefence)
+        {
+            RaiseDefence raiseDefence = new RaiseDefence(specialMove.text, specialMove.desc, specialMove.magic, ((StoredData.RaiseDefence)specialMove).increase);
+            return raiseDefence;
+        }
+        else if(specialMove is StoredData.IncreaseMoney)
+        {
+            IncreaseMoney increaseMoney = new IncreaseMoney(specialMove.text, specialMove.desc, specialMove.magic, ((StoredData.IncreaseMoney)specialMove).increase);
+            return increaseMoney;
+        }
+        else if(specialMove is StoredData.HealingSpell)
+        {
+            HealingSpell healingSpell = new HealingSpell(specialMove.text, specialMove.desc, specialMove.magic, ((StoredData.HealingSpell)specialMove).increase);
+            return healingSpell;
+        }
+        return null;
     }
 
     public StoredData.SpecialMove getMoveFromPlayer(SpecialMove specialMove)
@@ -272,112 +470,6 @@ public class DataManager {
         return null;
     }
 
-    public void Load()
-    {
-        BinaryFormatter binaryFormatter = new BinaryFormatter();
-        FileStream file = File.Open(Application.persistentDataPath + "/saveFile.dat", FileMode.Open);
-        StoredData storedData = (StoredData)binaryFormatter.Deserialize(file);
-        Debug.Log(storedData.locationData.sceneName);
-        Debug.Log(storedData.locationData.playerLocationX);
-        Debug.Log(storedData.locationData.playerLocationY);
-        file.Close();
 
-    }
-
-    [Serializable]
-    public class StoredData
-    {
-
-        public int money;
-
-        [Serializable]
-        public class SpecialMove
-        {
-            public string text;
-            public string desc;
-            public int magic;
-        }
-
-        [Serializable]
-        public class MagicAttack : SpecialMove
-        {
-            public int power;
-        }
-
-        [Serializable]
-        public class LowerDefence : SpecialMove
-        {
-            public float decrease;
-        }
-
-        [Serializable]
-        public class LowerSpeed : SpecialMove
-        {
-            public float decrease;
-        }
-
-        [Serializable]
-        public class RaiseAttack : SpecialMove
-        {
-            public float increase;
-        }
-
-        [Serializable]
-        public class RaiseDefence : SpecialMove
-        {
-            public float increase;
-        }
-
-        [Serializable]
-        public class IncreaseMoney : SpecialMove
-        {
-            public float increase;
-        }
-
-        [Serializable]
-        public class HealingSpell : SpecialMove
-        {
-            public float increase;
-        }
-
-        [Serializable]
-        public class Item
-        {
-            public string name;
-            public string desc;
-        }
-
-        [Serializable]
-        public class Player
-        {
-            public string name;
-            public int level;
-            public int health;
-            public int attack;
-            public int defence;
-            public int maximumMagic;
-            public int magic;
-            public int luck;
-            public int speed;
-            public int exp;
-            public Item item;
-            public SpecialMove special1;
-            public SpecialMove special2;
-            //public Texture2D Image;
-        }
-
-        [Serializable]
-        public class LocationData
-        {
-            public string sceneName;
-            public float playerLocationX;
-            public float playerLocationY;
-        }
-
-        public Player[] players = new Player[6];
-        public Item[] items = new Item[6];
-        public LocationData locationData = new LocationData();
-
-    }
 
 }

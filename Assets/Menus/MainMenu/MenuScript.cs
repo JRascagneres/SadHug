@@ -94,12 +94,8 @@ public class MenuScript : MonoBehaviour {
         {
             PlayerData.instance.data = new DataManager(null);
             PlayerData.instance.data.Load();
-            GlobalFunctions.instance.currentLevel = 0;
-            GlobalFunctions.instance.objectsActive = new Dictionary<string, bool>();
-
             SoundManager.instance.playSFX("interact");
             player.SetActive(true);
-            SceneChanger.instance.loadLevel("CS-Jail", new Vector2(0, 0));
         }
     }
 
