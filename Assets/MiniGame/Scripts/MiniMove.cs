@@ -10,6 +10,7 @@ public class MiniMove : MonoBehaviour {
     private float xstart;
     private float ystart;
     private GameObject controller;
+    private int lives = 3;
 
     // Use this for initialization
     void Start () {
@@ -21,6 +22,12 @@ public class MiniMove : MonoBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate () {
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            controller.GetComponent<CarController>().Restart();
+            lives = 3;
+            transform.position = new Vector2(xstart, ystart);
+    }
         if (Input.GetKey(KeyCode.UpArrow))
         {
             move("Up");
@@ -48,6 +55,8 @@ public class MiniMove : MonoBehaviour {
 
     }
     public void move(string direction)
+
+
     {
         if (canMove)
         {
@@ -98,6 +107,14 @@ public class MiniMove : MonoBehaviour {
         Debug.Log("Hit" + (string)collision.tag);
         if (collision.tag=="Car")
         {
+            lives -= 1;
+            if (lives<=0)
+            {
+                controller.GetComponent<CarController>().Restart();
+                lives = 3;
+
+            }
+
             transform.position = new Vector2(xstart, ystart);
         }
     }

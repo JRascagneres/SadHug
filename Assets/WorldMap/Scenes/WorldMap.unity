@@ -349,8 +349,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f17759d8c0e6704cbc0d9ff507a876c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  newScene: WorldMap
-  newPosition: {x: -13, y: -7}
+  newScene: MiniGameR
+  newPosition: {x: 1000, y: 1000}
 --- !u!61 &506412736
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1169,8 +1169,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f17759d8c0e6704cbc0d9ff507a876c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  newScene: WorldMap
-  newPosition: {x: -46, y: -3}
+  newScene: MiniGame
+  newPosition: {x: 1000, y: 1000}
 --- !u!61 &1326552068
 BoxCollider2D:
   m_ObjectHideFlags: 0

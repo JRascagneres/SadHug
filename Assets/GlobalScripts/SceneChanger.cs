@@ -93,7 +93,8 @@ public class SceneChanger : MonoBehaviour {
 	/// Called by both loadLevel functions
 	/// <param name="newScene">The scene to load</param>
 	private void changeScene(string newScene) {
-		movementScript.setCanMove (false);
+        if(player)
+		    movementScript.setCanMove (false);
 		Initiate.Fade (newScene, Color.black, 3f);
 	}
 

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CarController : MonoBehaviour
 {
@@ -9,15 +10,25 @@ public class CarController : MonoBehaviour
     private float spd = 1f;
     private int level = 0;
 
+    private SceneChanger sceneChanger;
+    /// <summary>Sound effect to play when transitioning</summary>
+    private AudioClip SFX;
+
     // Use this for initialization
     void Start()
     {
-
+        sceneChanger = GameObject.Find("SceneChanger").GetComponent<SceneChanger>();
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
+        if(Input.GetKeyDown(KeyCode.P))
+        {
+            Debug.Log("LOAD CORRECT LEVEL");
+            SoundManager.instance.playSFX("transition");
+            sceneChanger.loadLevel("WorldMap", new Vector2(-46, -3));
+        }
 
         if (Mathf.Round(tick)/spd == Mathf.Round(10/spd))
         {
@@ -57,5 +68,27 @@ public class CarController : MonoBehaviour
             Spawners[i].GetComponent<CarSpawner>().Harder(amount);
         }
 
+        if (level>=3)
+        {
+            //load correct scene
+            Debug.Log("LOAD CORRECT LEVEL");
+            SoundManager.instance.playSFX("transition");
+            if(SceneManager.GetActiveScene().name=="MiniGame")
+                sceneChanger.loadLevel("WorldMap", new Vector2(-46,-3));
+            else
+                sceneChanger.loadLevel("WorldMap", new Vector2(-13, -7));
+
+        }
+
+    }
+
+    public void Restart()
+    {
+        level = 0;
+        spd = 1f;
+        for (int i = 0; i < Spawners.Length; i++)
+        {
+            Spawners[i].GetComponent<CarSpawner>().Restart();
+        }
     }
 }

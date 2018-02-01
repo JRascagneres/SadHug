@@ -34,4 +34,9 @@ public class CarSpawner : MonoBehaviour {
         }
     }
 
+    public void Restart()
+    {
+        carSpeeds = new float[] { 0.2f, 0.4f, 0.1f };
+    }
+
 }
