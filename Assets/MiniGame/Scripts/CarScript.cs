@@ -31,7 +31,12 @@ public class CarScript : MonoBehaviour {
     public void SetFacing(int val)
     {
         facing = val;
+        if (val == 1 && transform.localScale.x <= 0)
+            transform.localScale = new Vector2(transform.localScale.x * -1, transform.localScale.y);
+        else if (val == -1 && transform.localScale.x >= 0)
+            transform.localScale = new Vector2(transform.localScale.x * -1, transform.localScale.y);
     }
+    
 
     
 }
