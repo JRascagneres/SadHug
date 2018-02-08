@@ -37,7 +37,7 @@ public class DataManager {
 		players = new Player[6];
 		players [0] = initialPlayer;
 		items = new Item[6];
-		money = 0;
+		money =100;
 	}
 
 	public Player[] Players {

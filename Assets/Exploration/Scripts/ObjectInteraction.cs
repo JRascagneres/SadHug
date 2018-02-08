@@ -30,6 +30,9 @@ public class ObjectInteraction : MonoBehaviour {
 	[Header("If true, requires a BattleDescriptor component")]
 	public bool createBattle = false;
 
+    [Header("If true, requires a Vender component")]
+    public bool vender = false;
+
 	//Script References
 	private DialogueScript dManager;
 	private PlayerMovement movementScript;
@@ -67,7 +70,11 @@ public class ObjectInteraction : MonoBehaviour {
 			SoundManager.instance.playSFX ("interact");
 			dManager.showDialogue (dialogue, this);
 			movementScript.setCanMove (false);
-		}
+            if (vender)
+            {
+                gameObject.GetComponent<Vender>().setDraw(true);
+            }
+        }
 	}
 
 	/// <summary>
@@ -95,6 +102,10 @@ public class ObjectInteraction : MonoBehaviour {
 			GlobalFunctions.instance.objectsActive [id] = false;
 			gameObject.GetComponent<BattleDescriptor> ().createBattle ();
 		}
-	}
+        if (vender)
+        {
+            gameObject.GetComponent<Vender>().setDraw(false);
+        }
+    }
 			
 }
