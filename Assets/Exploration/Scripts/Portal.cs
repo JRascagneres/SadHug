@@ -26,7 +26,7 @@ public class Portal : MonoBehaviour {
 	/// <param name="other">The object this object has collided with. Functionality is activated when this
 	/// is the player</param>
 	void OnTriggerEnter2D (Collider2D other) {
-		if (other.gameObject.name == "Player") {
+		if (other.gameObject.name == "Player" || other.gameObject.name == "MiniPlayer") {
 			SoundManager.instance.playSFX ("transition");
 			sceneChanger.loadLevel (newScene, newPosition);
 		}

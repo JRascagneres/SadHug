@@ -41,7 +41,7 @@ public class GlobalFunctions : MonoBehaviour {
 	/// </summary>
 	public enum ItemTypes { None, Hammer, Trainers, RabbitFoot, MagicAmulet, Shield, Armour };
 	[System.NonSerialized]
-	public string[] levelOrder = new string[] { "CS", "TFTV", "RCH", "PHY", "LIB" };
+	public string[] levelOrder = new string[] { "CS", "TFTV", "RCH", "PHY", "LIB", "LAW", "CENHALL", "MUS", "BIO", "HESHALL" };
 
 	void Awake() {
 		if (instance == null) {

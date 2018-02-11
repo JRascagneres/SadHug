@@ -77,3 +77,18 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/MiniGame/MiniGameR.unity
     guid: 64a600bebfb9d1e4da0bd7bec208be4d
+  - enabled: 1
+    path: Assets/Exploration/Scenes/Ass3 Scenes/Biology.unity
+    guid: 5bcd6b312279c494aa4504654f7c29b0
+  - enabled: 1
+    path: Assets/Exploration/Scenes/Ass3 Scenes/Central-Hall.unity
+    guid: fdce12a3f975c4a77bc87fa21d113a20
+  - enabled: 1
+    path: Assets/Exploration/Scenes/Ass3 Scenes/Hes-Hall.unity
+    guid: 65d399ad21fce4783877f96e64391919
+  - enabled: 1
+    path: Assets/Exploration/Scenes/Ass3 Scenes/Law.unity
+    guid: ed8d10bec03254119b869f0ea88376c8
+  - enabled: 1
+    path: Assets/Exploration/Scenes/Ass3 Scenes/Music.unity
+    guid: 2ab298b7a9537434c8a312b5ae6396db

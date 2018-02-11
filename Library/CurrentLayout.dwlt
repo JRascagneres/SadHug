@@ -13,14 +13,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_PixelRect:
     serializedVersion: 2
-    x: 961
-    y: 51
-    width: 958
-    height: 988
+    x: 0
+    y: 43
+    width: 1920
+    height: 997
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 2}
-  m_MinSize: {x: 950, y: 521}
+  m_MinSize: {x: 950, y: 392}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -41,9 +41,9 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 958
-    height: 988
-  m_MinSize: {x: 950, y: 521}
+    width: 1920
+    height: 997
+  m_MinSize: {x: 950, y: 392}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &3
 MonoBehaviour:
@@ -61,7 +61,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 958
+    width: 1920
     height: 30
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
@@ -81,8 +81,8 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 968
-    width: 958
+    y: 977
+    width: 1920
     height: 20
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
@@ -103,12 +103,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 30
-    width: 958
-    height: 938
-  m_MinSize: {x: 581, y: 471}
-  m_MaxSize: {x: 14004, y: 14042}
+    width: 1920
+    height: 947
+  m_MinSize: {x: 583, y: 342}
+  m_MaxSize: {x: 12008, y: 8042}
   vertical: 1
-  controlID: 11
+  controlID: 118
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -127,12 +127,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 958
-    height: 938
-  m_MinSize: {x: 581, y: 471}
-  m_MaxSize: {x: 14004, y: 14042}
+    width: 1920
+    height: 947
+  m_MinSize: {x: 583, y: 342}
+  m_MaxSize: {x: 12008, y: 8042}
   vertical: 0
-  controlID: 12
+  controlID: 119
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -151,12 +151,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 681
-    height: 938
-  m_MinSize: {x: 304, y: 471}
-  m_MaxSize: {x: 10002, y: 14042}
+    width: 1464
+    height: 947
+  m_MinSize: {x: 306, y: 342}
+  m_MaxSize: {x: 8006, y: 8042}
   vertical: 1
-  controlID: 13
+  controlID: 120
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -175,12 +175,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 681
-    height: 505
-  m_MinSize: {x: 304, y: 200}
-  m_MaxSize: {x: 8004, y: 4021}
+    width: 1464
+    height: 510
+  m_MinSize: {x: 306, y: 221}
+  m_MaxSize: {x: 8006, y: 4021}
   vertical: 0
-  controlID: 14
+  controlID: 121
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -197,10 +197,10 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 252
-    height: 505
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+    width: 538
+    height: 510
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
@@ -220,10 +220,10 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 252
+    x: 538
     y: 0
-    width: 429
-    height: 505
+    width: 926
+    height: 510
   m_MinSize: {x: 104, y: 121}
   m_MaxSize: {x: 4004, y: 4021}
   m_ActualView: {fileID: 15}
@@ -248,18 +248,18 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 505
-    width: 681
-    height: 433
-  m_MinSize: {x: 232, y: 271}
-  m_MaxSize: {x: 10002, y: 10021}
-  m_ActualView: {fileID: 18}
+    y: 510
+    width: 1464
+    height: 437
+  m_MinSize: {x: 102, y: 121}
+  m_MaxSize: {x: 4002, y: 4021}
+  m_ActualView: {fileID: 19}
   m_Panes:
   - {fileID: 18}
   - {fileID: 17}
   - {fileID: 19}
-  m_Selected: 0
-  m_LastSelected: 2
+  m_Selected: 2
+  m_LastSelected: 0
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -274,10 +274,10 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 681
+    x: 1464
     y: 0
-    width: 277
-    height: 938
+    width: 456
+    height: 947
   m_MinSize: {x: 277, y: 71}
   m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 20}
@@ -310,10 +310,10 @@ MonoBehaviour:
   m_DepthBufferBits: 0
   m_Pos:
     serializedVersion: 2
-    x: 1215
-    y: 100
-    width: 425
-    height: 484
+    x: 540
+    y: 92
+    width: 922
+    height: 489
   m_PersistentViewDataDictionary: {fileID: 0}
   m_MaximizeOnPlay: 0
   m_Gizmos: 0
@@ -323,10 +323,10 @@ MonoBehaviour:
   m_ZoomArea:
     m_HRangeLocked: 0
     m_VRangeLocked: 0
-    m_HBaseRangeMin: -212.5
-    m_HBaseRangeMax: 212.5
-    m_VBaseRangeMin: -119.53125
-    m_VBaseRangeMax: 119.53125
+    m_HBaseRangeMin: -419.55557
+    m_HBaseRangeMax: 419.55557
+    m_VBaseRangeMin: -236
+    m_VBaseRangeMax: 236
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -343,25 +343,25 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 17
-      width: 425
-      height: 467
+      width: 922
+      height: 472
     m_Scale: {x: 1, y: 1}
-    m_Translation: {x: 212.5, y: 233.5}
+    m_Translation: {x: 461, y: 236}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -212.5
-      y: -233.5
-      width: 425
-      height: 467
+      x: -461
+      y: -236
+      width: 922
+      height: 472
     m_MinimalGUI: 1
   m_defaultScale: 1
   m_TargetTexture: {fileID: 0}
   m_CurrentColorSpace: 0
-  m_LastWindowPixelSize: {x: 425, y: 484}
+  m_LastWindowPixelSize: {x: 922, y: 489}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000100000100
@@ -387,30 +387,30 @@ MonoBehaviour:
   m_DepthBufferBits: 0
   m_Pos:
     serializedVersion: 2
-    x: 961
-    y: 100
-    width: 250
-    height: 484
+    x: 0
+    y: 92
+    width: 536
+    height: 489
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 4e330000
+    m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 3c84ffff26a5ffffeaa5ffff4eaaffff9efbffff00000000
+    m_ExpandedIDs: 9efbffff00000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: Character
-      m_OriginalName: Character
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: -21940
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 0
       m_ClientGUIView: {fileID: 9}
     m_SearchString: 
@@ -441,20 +441,20 @@ MonoBehaviour:
   m_DepthBufferBits: 0
   m_Pos:
     serializedVersion: 2
-    x: 1215
-    y: 100
-    width: 425
-    height: 484
+    x: 540
+    y: 92
+    width: 922
+    height: 489
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SceneLighting: 1
-  lastFramingTime: 340.30499446153846
+  lastFramingTime: 13252.908244929971
   m_2DMode: 1
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 36.469437, y: -6.610717, z: 0}
+    m_Target: {x: 607.79047, y: 242.92046, z: -9.571726}
     speed: 2
-    m_Value: {x: 36.469437, y: -6.610717, z: 0}
+    m_Value: {x: 607.79047, y: 242.92046, z: -9.571726}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -482,9 +482,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 2.992829
+    m_Target: 963.8864
     speed: 2
-    m_Value: 2.992829
+    m_Value: 963.8864
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -547,21 +547,21 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 602
-    width: 1531
+    width: 1462
     height: 416
   m_PersistentViewDataDictionary: {fileID: 0}
   m_ViewTransforms:
     m_KeySerializationHelper:
     - {fileID: 1107664555147047378, guid: 63008fd8d5480a649aaeda05cbd643f3, type: 2}
     m_ValueSerializationHelper:
-    - e00: 0.8567505
+    - e00: 0.81599504
       e01: 0
       e02: 0
-      e03: 268.3557
+      e03: 191.25494
       e10: 0
-      e11: 0.8567505
+      e11: 0.81599504
       e12: 0
-      e13: 118.23157
+      e13: 121.14042
       e20: 0
       e21: 0
       e22: 1
@@ -605,10 +605,10 @@ MonoBehaviour:
   m_DepthBufferBits: 0
   m_Pos:
     serializedVersion: 2
-    x: 961
-    y: 605
-    width: 679
-    height: 412
+    x: 0
+    y: 602
+    width: 1462
+    height: 416
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SearchFilter:
     m_NameFilter: 
@@ -622,19 +622,19 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Exploration/Scripts
+    - Assets/Menus
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Exploration/Scripts
+  - Assets/Menus
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: C:\Users\tsbaj\Documents\Coffee-more\Coffee-more
+  m_LastProjectPath: C:\Users\Toby\Documents\SEPRGame\Coffee-more
   m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 120}
-    m_SelectedIDs: 2e2c0000
-    m_LastClickedID: 11310
-    m_ExpandedIDs: 00000000182800002c28000072280000a4280000c6280000da28000092290000d62a0000f82a0000fe2b00002e2c00004c2d00009a2d0000f02d0000502e0000d02f0000ea2f0000083000003e3300004033000042330000443300004633000000ca9a3bffffff7f
+    scrollPos: {x: 0, y: 79}
+    m_SelectedIDs: 822e0000
+    m_LastClickedID: 11906
+    m_ExpandedIDs: 00000000182800002c2800007a280000b0280000d4280000e8280000a0290000ea2a00000c2b0000522b0000202c0000502c0000b42c0000742d0000c62d00001e2e0000822e0000083000002230000040300000d2310000d4310000d6310000d8310000da31000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -662,7 +662,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000182800002c28000072280000a4280000c6280000da28000092290000d62a0000f82a0000fe2b00002e2c00004c2d00009a2d0000f02d0000502e0000d02f0000ea2f0000083000003e33000040330000423300004433000046330000
+    m_ExpandedIDs: 00000000182800002c2800007a280000b0280000d4280000e8280000a0290000ea2a00000c2b0000522b0000202c0000502c0000b42c0000742d0000c62d00001e2e0000822e0000083000002230000040300000d2310000d4310000d6310000d8310000da310000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -689,8 +689,8 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 1
-    m_ExpandedInstanceIDs: c6230000ce280000682700007a270000543100004034fbffce2a0000bc290000d42a0000000000004c2c0000382a0000e83f0000542a0000ec330000
+    m_HadKeyboardFocusLastEvent: 0
+    m_ExpandedInstanceIDs: c6230000ce280000682700007a270000543100004034fbffce2a0000bc290000d42a0000000000004c2c0000382a0000e83f0000542a0000ec33000048280000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -740,9 +740,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 675
-    width: 1455
-    height: 479
+    y: 602
+    width: 1462
+    height: 416
   m_PersistentViewDataDictionary: {fileID: 0}
 --- !u!114 &20
 MonoBehaviour:
@@ -766,10 +766,10 @@ MonoBehaviour:
   m_DepthBufferBits: 0
   m_Pos:
     serializedVersion: 2
-    x: 1644
-    y: 100
-    width: 275
-    height: 917
+    x: 1466
+    y: 92
+    width: 454
+    height: 926
   m_PersistentViewDataDictionary: {fileID: 0}
   m_ScrollPosition: {x: 0, y: 0}
   m_InspectorMode: 0
@@ -799,10 +799,10 @@ MonoBehaviour:
   m_DepthBufferBits: 0
   m_Pos:
     serializedVersion: 2
-    x: 889
+    x: 1466
     y: 92
-    width: 477
-    height: 614
+    width: 454
+    height: 926
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TestTypeToolbarIndex: 0
   m_PlayModeTestListGUI:
@@ -811,21 +811,21 @@ MonoBehaviour:
     - id: "[Da\xE9mons_ York Edition][suite]"
       name: "Da\xE9mons_ York Edition"
       fullName: "Da\xE9mons_ York Edition"
-      resultStatus: 0
-      duration: 0
-      messages: 
+      resultStatus: 2
+      duration: 5.8537107
+      messages: One or more child tests had errors
       output: 
       stacktrace: 
       notRunnable: 0
       ignoredOrSkipped: 0
       description: 
       isSuite: 1
-    - id: '[C:/Users/tsbaj/Documents/Coffee-more/Coffee-more/Library/ScriptAssemblies/Assembly-CSharp.dll][suite]'
+    - id: '[C:/Users/Toby/Documents/SEPRGame/Coffee-more/Library/ScriptAssemblies/Assembly-CSharp.dll][suite]'
       name: Assembly-CSharp.dll
-      fullName: C:/Users/tsbaj/Documents/Coffee-more/Coffee-more/Library/ScriptAssemblies/Assembly-CSharp.dll
-      resultStatus: 0
-      duration: 0
-      messages: 
+      fullName: C:/Users/Toby/Documents/SEPRGame/Coffee-more/Library/ScriptAssemblies/Assembly-CSharp.dll
+      resultStatus: 2
+      duration: 5.775481
+      messages: One or more child tests had errors
       output: 
       stacktrace: 
       notRunnable: 0
@@ -835,9 +835,9 @@ MonoBehaviour:
     - id: '[Assembly-CSharp][BattleModeTest1][suite]'
       name: BattleModeTest1
       fullName: BattleModeTest1
-      resultStatus: 1
-      duration: 16.031572
-      messages: 
+      resultStatus: 2
+      duration: 1.043765
+      messages: One or more child tests had errors
       output: 
       stacktrace: 
       notRunnable: 0
@@ -847,11 +847,14 @@ MonoBehaviour:
     - id: '[Assembly-CSharp][BattleModeTest1.B0StartBattle]'
       name: B0StartBattle
       fullName: BattleModeTest1.B0StartBattle
-      resultStatus: 1
-      duration: 3.3023746
-      messages: 
-      output: 
-      stacktrace: 
+      resultStatus: 2
+      duration: 0.5968023
+      messages: 'Unhandled log message: ''[Exception] NullReferenceException: Object
+        reference not set to an instance of an object''. Use UnityEngine.TestTools.LogAssert.Expect'
+      output: "NullReferenceException: Object reference not set to an instance of
+        an object\r\n"
+      stacktrace: "BattleModeTest1+<Setup>c__Iterator0.MoveNext () (at Assets/PlayTests/Resources/BattleModeTest1.cs:32)\r\nUnityEngine.SetupCoroutine.InvokeMoveNext
+        (IEnumerator enumerator, IntPtr returnValueAddress) (at C:/buildslave/unity/build/Runtime/Export/Coroutines.cs:17)\r\n\r\n"
       notRunnable: 0
       ignoredOrSkipped: 0
       description: 
@@ -859,11 +862,15 @@ MonoBehaviour:
     - id: '[Assembly-CSharp][BattleModeTest1.B1AttackButton]'
       name: B1AttackButton
       fullName: BattleModeTest1.B1AttackButton
-      resultStatus: 1
-      duration: 0.0501226
-      messages: 
-      output: 
-      stacktrace: 
+      resultStatus: 2
+      duration: 0.0340307
+      messages: 'Unhandled log message: ''[Exception] NullReferenceException: Object
+        reference not set to an instance of an object''. Use UnityEngine.TestTools.LogAssert.Expect'
+      output: "NullReferenceException: Object reference not set to an instance of
+        an object\r\n"
+      stacktrace: "BattleModeTest1+<B1AttackButton>c__Iterator2.MoveNext () (at Assets/PlayTests/Resources/BattleModeTest1.cs:77)\r\nUnityEngine.SetupCoroutine.InvokeMoveNext
+        (IEnumerator enumerator, IntPtr returnValueAddress) (at C:/buildslave/unity/build/Runtime/Export/Coroutines.cs:17)\r\nUnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator,
+        IntPtr)\r\n\r\n"
       notRunnable: 0
       ignoredOrSkipped: 0
       description: 
@@ -871,11 +878,16 @@ MonoBehaviour:
     - id: '[Assembly-CSharp][BattleModeTest1.B2AttackPanelDisplay]'
       name: B2AttackPanelDisplay
       fullName: BattleModeTest1.B2AttackPanelDisplay
-      resultStatus: 1
-      duration: 0.0334445
-      messages: 
-      output: 
-      stacktrace: 
+      resultStatus: 2
+      duration: 0.0333476
+      messages: 'Unhandled log message: ''[Exception] NullReferenceException: Object
+        reference not set to an instance of an object''. Use UnityEngine.TestTools.LogAssert.Expect'
+      output: "NullReferenceException: Object reference not set to an instance of
+        an object\r\n"
+      stacktrace: "BattleModeTest1+<B2AttackPanelDisplay>c__Iterator3.MoveNext ()
+        (at Assets/PlayTests/Resources/BattleModeTest1.cs:88)\r\nUnityEngine.SetupCoroutine.InvokeMoveNext
+        (IEnumerator enumerator, IntPtr returnValueAddress) (at C:/buildslave/unity/build/Runtime/Export/Coroutines.cs:17)\r\nUnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator,
+        IntPtr)\r\n\r\n"
       notRunnable: 0
       ignoredOrSkipped: 0
       description: 
@@ -883,11 +895,15 @@ MonoBehaviour:
     - id: '[Assembly-CSharp][BattleModeTest1.B3AttackMove]'
       name: B3AttackMove
       fullName: BattleModeTest1.B3AttackMove
-      resultStatus: 1
-      duration: 3.0482128
-      messages: 
-      output: "George\r\n"
-      stacktrace: 
+      resultStatus: 2
+      duration: 0.0330929
+      messages: 'Unhandled log message: ''[Exception] NullReferenceException: Object
+        reference not set to an instance of an object''. Use UnityEngine.TestTools.LogAssert.Expect'
+      output: "NullReferenceException: Object reference not set to an instance of
+        an object\r\n"
+      stacktrace: "BattleModeTest1+<B3AttackMove>c__Iterator4.MoveNext () (at Assets/PlayTests/Resources/BattleModeTest1.cs:105)\r\nUnityEngine.SetupCoroutine.InvokeMoveNext
+        (IEnumerator enumerator, IntPtr returnValueAddress) (at C:/buildslave/unity/build/Runtime/Export/Coroutines.cs:17)\r\nUnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator,
+        IntPtr)\r\n\r\n"
       notRunnable: 0
       ignoredOrSkipped: 0
       description: 
@@ -895,11 +911,15 @@ MonoBehaviour:
     - id: '[Assembly-CSharp][BattleModeTest1.B4MagicMove]'
       name: B4MagicMove
       fullName: BattleModeTest1.B4MagicMove
-      resultStatus: 1
-      duration: 3.048587
-      messages: 
-      output: "George\r\n"
-      stacktrace: 
+      resultStatus: 2
+      duration: 0.0333624
+      messages: 'Unhandled log message: ''[Exception] NullReferenceException: Object
+        reference not set to an instance of an object''. Use UnityEngine.TestTools.LogAssert.Expect'
+      output: "NullReferenceException: Object reference not set to an instance of
+        an object\r\n"
+      stacktrace: "BattleModeTest1+<B4MagicMove>c__Iterator5.MoveNext () (at Assets/PlayTests/Resources/BattleModeTest1.cs:116)\r\nUnityEngine.SetupCoroutine.InvokeMoveNext
+        (IEnumerator enumerator, IntPtr returnValueAddress) (at C:/buildslave/unity/build/Runtime/Export/Coroutines.cs:17)\r\nUnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator,
+        IntPtr)\r\n\r\n"
       notRunnable: 0
       ignoredOrSkipped: 0
       description: 
@@ -907,11 +927,15 @@ MonoBehaviour:
     - id: '[Assembly-CSharp][BattleModeTest1.B5WinBattle]'
       name: B5WinBattle
       fullName: BattleModeTest1.B5WinBattle
-      resultStatus: 1
-      duration: 6.3506217
-      messages: 
-      output: "100\r\nMoney: 50\r\n"
-      stacktrace: 
+      resultStatus: 2
+      duration: 0.0336436
+      messages: 'Unhandled log message: ''[Exception] NullReferenceException: Object
+        reference not set to an instance of an object''. Use UnityEngine.TestTools.LogAssert.Expect'
+      output: "NullReferenceException: Object reference not set to an instance of
+        an object\r\n"
+      stacktrace: "BattleModeTest1+<B5WinBattle>c__Iterator6.MoveNext () (at Assets/PlayTests/Resources/BattleModeTest1.cs:134)\r\nUnityEngine.SetupCoroutine.InvokeMoveNext
+        (IEnumerator enumerator, IntPtr returnValueAddress) (at C:/buildslave/unity/build/Runtime/Export/Coroutines.cs:17)\r\nUnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator,
+        IntPtr)\r\n\r\n"
       notRunnable: 0
       ignoredOrSkipped: 0
       description: 
@@ -919,9 +943,9 @@ MonoBehaviour:
     - id: '[Assembly-CSharp][BattleModeTest2][suite]'
       name: BattleModeTest2
       fullName: BattleModeTest2
-      resultStatus: 1
-      duration: 21.669077
-      messages: 
+      resultStatus: 2
+      duration: 1.4938772
+      messages: One or more child tests had errors
       output: 
       stacktrace: 
       notRunnable: 0
@@ -931,11 +955,13 @@ MonoBehaviour:
     - id: '[Assembly-CSharp][BattleModeTest2.B6StartNextBattle]'
       name: B6StartNextBattle
       fullName: BattleModeTest2.B6StartNextBattle
-      resultStatus: 1
-      duration: 4.644481
-      messages: 
-      output: 
-      stacktrace: 
+      resultStatus: 2
+      duration: 1.2073953
+      messages: 'Unhandled log message: ''[Exception] NullReferenceException: Object
+        reference not set to an instance of an object''. Use UnityEngine.TestTools.LogAssert.Expect'
+      output: "NullReferenceException: Object reference not set to an instance of
+        an object\r\n"
+      stacktrace: "MainBattle.Start () (at Assets/Battle/Scripts/MainBattle.cs:76)\r\n\r\n"
       notRunnable: 0
       ignoredOrSkipped: 0
       description: 
@@ -943,11 +969,16 @@ MonoBehaviour:
     - id: '[Assembly-CSharp][BattleModeTest2.B7ChangePlayerMenu]'
       name: B7ChangePlayerMenu
       fullName: BattleModeTest2.B7ChangePlayerMenu
-      resultStatus: 1
-      duration: 6.405211
-      messages: 
-      output: "Hannah\r\nHannah\r\nHannah\r\n"
-      stacktrace: 
+      resultStatus: 2
+      duration: 0.0337513
+      messages: 'Unhandled log message: ''[Exception] NullReferenceException: Object
+        reference not set to an instance of an object''. Use UnityEngine.TestTools.LogAssert.Expect'
+      output: "NullReferenceException: Object reference not set to an instance of
+        an object\r\n"
+      stacktrace: "BattleModeTest2+<B7ChangePlayerMenu>c__Iterator2.MoveNext () (at
+        Assets/PlayTests/Resources/BattleModeTest2.cs:73)\r\nUnityEngine.SetupCoroutine.InvokeMoveNext
+        (IEnumerator enumerator, IntPtr returnValueAddress) (at C:/buildslave/unity/build/Runtime/Export/Coroutines.cs:17)\r\nUnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator,
+        IntPtr)\r\n\r\n"
       notRunnable: 0
       ignoredOrSkipped: 0
       description: 
@@ -955,11 +986,16 @@ MonoBehaviour:
     - id: '[Assembly-CSharp][BattleModeTest2.B8ChangePlayerOnceFainted]'
       name: B8ChangePlayerOnceFainted
       fullName: BattleModeTest2.B8ChangePlayerOnceFainted
-      resultStatus: 1
-      duration: 4.058702
-      messages: 
-      output: "George\r\nGeorge\r\n"
-      stacktrace: 
+      resultStatus: 2
+      duration: 0.0336736
+      messages: 'Unhandled log message: ''[Exception] NullReferenceException: Object
+        reference not set to an instance of an object''. Use UnityEngine.TestTools.LogAssert.Expect'
+      output: "NullReferenceException: Object reference not set to an instance of
+        an object\r\n"
+      stacktrace: "BattleModeTest2+<B8ChangePlayerOnceFainted>c__Iterator3.MoveNext
+        () (at Assets/PlayTests/Resources/BattleModeTest2.cs:92)\r\nUnityEngine.SetupCoroutine.InvokeMoveNext
+        (IEnumerator enumerator, IntPtr returnValueAddress) (at C:/buildslave/unity/build/Runtime/Export/Coroutines.cs:17)\r\nUnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator,
+        IntPtr)\r\n\r\n"
       notRunnable: 0
       ignoredOrSkipped: 0
       description: 
@@ -967,11 +1003,16 @@ MonoBehaviour:
     - id: '[Assembly-CSharp][BattleModeTest2.B9CheckWhenGameOver]'
       name: B9CheckWhenGameOver
       fullName: BattleModeTest2.B9CheckWhenGameOver
-      resultStatus: 1
-      duration: 6.4267826
-      messages: 
-      output: "George\r\n"
-      stacktrace: 
+      resultStatus: 2
+      duration: 0.0330971
+      messages: 'Unhandled log message: ''[Exception] NullReferenceException: Object
+        reference not set to an instance of an object''. Use UnityEngine.TestTools.LogAssert.Expect'
+      output: "NullReferenceException: Object reference not set to an instance of
+        an object\r\n"
+      stacktrace: "BattleModeTest2+<B9CheckWhenGameOver>c__Iterator4.MoveNext () (at
+        Assets/PlayTests/Resources/BattleModeTest2.cs:102)\r\nUnityEngine.SetupCoroutine.InvokeMoveNext
+        (IEnumerator enumerator, IntPtr returnValueAddress) (at C:/buildslave/unity/build/Runtime/Export/Coroutines.cs:17)\r\nUnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator,
+        IntPtr)\r\n\r\n"
       notRunnable: 0
       ignoredOrSkipped: 0
       description: 
@@ -979,9 +1020,9 @@ MonoBehaviour:
     - id: '[Assembly-CSharp][ExplorationTest][suite]'
       name: ExplorationTest
       fullName: ExplorationTest
-      resultStatus: 1
-      duration: 13.772407
-      messages: 
+      resultStatus: 2
+      duration: 1.7936562
+      messages: One or more child tests had errors
       output: 
       stacktrace: 
       notRunnable: 0
@@ -991,11 +1032,22 @@ MonoBehaviour:
     - id: '[Assembly-CSharp][ExplorationTest.CameraMovement]'
       name: CameraMovement
       fullName: ExplorationTest.CameraMovement
-      resultStatus: 1
-      duration: 0.2679994
-      messages: 
-      output: 
-      stacktrace: 
+      resultStatus: 2
+      duration: 0.1632435
+      messages: 'Unhandled log message: ''[Exception] MissingReferenceException: The
+        object of type ''GameObject'' has been destroyed but you are still trying
+        to access it.
+
+        Your script should either check if it is null or you should not destroy the
+        object.''. Use UnityEngine.TestTools.LogAssert.Expect'
+      output: "MissingReferenceException: The object of type 'GameObject' has been
+        destroyed but you are still trying to access it.\nYour script should either
+        check if it is null or you should not destroy the object.\r\nNullReferenceException:
+        Object reference not set to an instance of an object\r\nMissingReferenceException:
+        The object of type 'GameObject' has been destroyed but you are still trying
+        to access it.\nYour script should either check if it is null or you should
+        not destroy the object.\r\n"
+      stacktrace: "CameraController.Update () (at Assets/Exploration/Scripts/CameraController.cs:19)\r\n\r\n"
       notRunnable: 0
       ignoredOrSkipped: 0
       description: 
@@ -1003,11 +1055,16 @@ MonoBehaviour:
     - id: '[Assembly-CSharp][ExplorationTest.DialogueBox]'
       name: DialogueBox
       fullName: ExplorationTest.DialogueBox
-      resultStatus: 1
-      duration: 1.4171401
-      messages: 
-      output: 
-      stacktrace: 
+      resultStatus: 2
+      duration: 0.1404758
+      messages: 'Unhandled log message: ''[Exception] NullReferenceException: Object
+        reference not set to an instance of an object''. Use UnityEngine.TestTools.LogAssert.Expect'
+      output: "NullReferenceException: Object reference not set to an instance of
+        an object\r\nMissingReferenceException: The object of type 'GameObject' has
+        been destroyed but you are still trying to access it.\nYour script should
+        either check if it is null or you should not destroy the object.\r\n"
+      stacktrace: "ExplorationTest+<Setup>c__Iterator0.MoveNext () (at Assets/PlayTests/Resources/ExplorationTest.cs:22)\r\nUnityEngine.SetupCoroutine.InvokeMoveNext
+        (IEnumerator enumerator, IntPtr returnValueAddress) (at C:/buildslave/unity/build/Runtime/Export/Coroutines.cs:17)\r\n\r\n"
       notRunnable: 0
       ignoredOrSkipped: 0
       description: 
@@ -1015,11 +1072,22 @@ MonoBehaviour:
     - id: '[Assembly-CSharp][ExplorationTest.HealingStation]'
       name: HealingStation
       fullName: ExplorationTest.HealingStation
-      resultStatus: 1
-      duration: 1.6559814
-      messages: 
-      output: 
-      stacktrace: 
+      resultStatus: 2
+      duration: 0.1398157
+      messages: 'Unhandled log message: ''[Exception] MissingReferenceException: The
+        object of type ''GameObject'' has been destroyed but you are still trying
+        to access it.
+
+        Your script should either check if it is null or you should not destroy the
+        object.''. Use UnityEngine.TestTools.LogAssert.Expect'
+      output: "MissingReferenceException: The object of type 'GameObject' has been
+        destroyed but you are still trying to access it.\nYour script should either
+        check if it is null or you should not destroy the object.\r\nNullReferenceException:
+        Object reference not set to an instance of an object\r\nMissingReferenceException:
+        The object of type 'GameObject' has been destroyed but you are still trying
+        to access it.\nYour script should either check if it is null or you should
+        not destroy the object.\r\n"
+      stacktrace: "CameraController.Update () (at Assets/Exploration/Scripts/CameraController.cs:19)\r\n\r\n"
       notRunnable: 0
       ignoredOrSkipped: 0
       description: 
@@ -1027,11 +1095,22 @@ MonoBehaviour:
     - id: '[Assembly-CSharp][ExplorationTest.ItemObtain]'
       name: ItemObtain
       fullName: ExplorationTest.ItemObtain
-      resultStatus: 1
-      duration: 0.1368747
-      messages: 
-      output: 
-      stacktrace: 
+      resultStatus: 2
+      duration: 0.1435181
+      messages: 'Unhandled log message: ''[Exception] MissingReferenceException: The
+        object of type ''GameObject'' has been destroyed but you are still trying
+        to access it.
+
+        Your script should either check if it is null or you should not destroy the
+        object.''. Use UnityEngine.TestTools.LogAssert.Expect'
+      output: "MissingReferenceException: The object of type 'GameObject' has been
+        destroyed but you are still trying to access it.\nYour script should either
+        check if it is null or you should not destroy the object.\r\nNullReferenceException:
+        Object reference not set to an instance of an object\r\nMissingReferenceException:
+        The object of type 'GameObject' has been destroyed but you are still trying
+        to access it.\nYour script should either check if it is null or you should
+        not destroy the object.\r\n"
+      stacktrace: "CameraController.Update () (at Assets/Exploration/Scripts/CameraController.cs:19)\r\n\r\n"
       notRunnable: 0
       ignoredOrSkipped: 0
       description: 
@@ -1039,11 +1118,16 @@ MonoBehaviour:
     - id: '[Assembly-CSharp][ExplorationTest.ObjectCollision]'
       name: ObjectCollision
       fullName: ExplorationTest.ObjectCollision
-      resultStatus: 1
-      duration: 2.438998
-      messages: 
-      output: 
-      stacktrace: 
+      resultStatus: 2
+      duration: 0.1417061
+      messages: 'Unhandled log message: ''[Exception] NullReferenceException: Object
+        reference not set to an instance of an object''. Use UnityEngine.TestTools.LogAssert.Expect'
+      output: "NullReferenceException: Object reference not set to an instance of
+        an object\r\nMissingReferenceException: The object of type 'GameObject' has
+        been destroyed but you are still trying to access it.\nYour script should
+        either check if it is null or you should not destroy the object.\r\n"
+      stacktrace: "ExplorationTest+<Setup>c__Iterator0.MoveNext () (at Assets/PlayTests/Resources/ExplorationTest.cs:22)\r\nUnityEngine.SetupCoroutine.InvokeMoveNext
+        (IEnumerator enumerator, IntPtr returnValueAddress) (at C:/buildslave/unity/build/Runtime/Export/Coroutines.cs:17)\r\n\r\n"
       notRunnable: 0
       ignoredOrSkipped: 0
       description: 
@@ -1051,11 +1135,22 @@ MonoBehaviour:
     - id: '[Assembly-CSharp][ExplorationTest.PlayerAnimation]'
       name: PlayerAnimation
       fullName: ExplorationTest.PlayerAnimation
-      resultStatus: 1
-      duration: 0.2319729
-      messages: 
-      output: 
-      stacktrace: 
+      resultStatus: 2
+      duration: 0.1394543
+      messages: 'Unhandled log message: ''[Exception] MissingReferenceException: The
+        object of type ''GameObject'' has been destroyed but you are still trying
+        to access it.
+
+        Your script should either check if it is null or you should not destroy the
+        object.''. Use UnityEngine.TestTools.LogAssert.Expect'
+      output: "MissingReferenceException: The object of type 'GameObject' has been
+        destroyed but you are still trying to access it.\nYour script should either
+        check if it is null or you should not destroy the object.\r\nNullReferenceException:
+        Object reference not set to an instance of an object\r\nMissingReferenceException:
+        The object of type 'GameObject' has been destroyed but you are still trying
+        to access it.\nYour script should either check if it is null or you should
+        not destroy the object.\r\n"
+      stacktrace: "CameraController.Update () (at Assets/Exploration/Scripts/CameraController.cs:19)\r\n\r\n"
       notRunnable: 0
       ignoredOrSkipped: 0
       description: 
@@ -1063,11 +1158,22 @@ MonoBehaviour:
     - id: '[Assembly-CSharp][ExplorationTest.PlayerMovement]'
       name: PlayerMovement
       fullName: ExplorationTest.PlayerMovement
-      resultStatus: 1
-      duration: 4.8209696
-      messages: 
-      output: 
-      stacktrace: 
+      resultStatus: 2
+      duration: 0.1392631
+      messages: 'Unhandled log message: ''[Exception] MissingReferenceException: The
+        object of type ''GameObject'' has been destroyed but you are still trying
+        to access it.
+
+        Your script should either check if it is null or you should not destroy the
+        object.''. Use UnityEngine.TestTools.LogAssert.Expect'
+      output: "MissingReferenceException: The object of type 'GameObject' has been
+        destroyed but you are still trying to access it.\nYour script should either
+        check if it is null or you should not destroy the object.\r\nNullReferenceException:
+        Object reference not set to an instance of an object\r\nMissingReferenceException:
+        The object of type 'GameObject' has been destroyed but you are still trying
+        to access it.\nYour script should either check if it is null or you should
+        not destroy the object.\r\n"
+      stacktrace: "CameraController.Update () (at Assets/Exploration/Scripts/CameraController.cs:19)\r\n\r\n"
       notRunnable: 0
       ignoredOrSkipped: 0
       description: 
@@ -1075,11 +1181,16 @@ MonoBehaviour:
     - id: '[Assembly-CSharp][ExplorationTest.Portal]'
       name: Portal
       fullName: ExplorationTest.Portal
-      resultStatus: 1
-      duration: 2.5460987
-      messages: 
-      output: 
-      stacktrace: 
+      resultStatus: 2
+      duration: 0.1416841
+      messages: 'Unhandled log message: ''[Exception] NullReferenceException: Object
+        reference not set to an instance of an object''. Use UnityEngine.TestTools.LogAssert.Expect'
+      output: "NullReferenceException: Object reference not set to an instance of
+        an object\r\nMissingReferenceException: The object of type 'GameObject' has
+        been destroyed but you are still trying to access it.\nYour script should
+        either check if it is null or you should not destroy the object.\r\n"
+      stacktrace: "ExplorationTest+<Setup>c__Iterator0.MoveNext () (at Assets/PlayTests/Resources/ExplorationTest.cs:22)\r\nUnityEngine.SetupCoroutine.InvokeMoveNext
+        (IEnumerator enumerator, IntPtr returnValueAddress) (at C:/buildslave/unity/build/Runtime/Export/Coroutines.cs:17)\r\n\r\n"
       notRunnable: 0
       ignoredOrSkipped: 0
       description: 
@@ -1087,10 +1198,12 @@ MonoBehaviour:
     - id: '[Assembly-CSharp][MenuTest][suite]'
       name: MenuTest
       fullName: MenuTest
-      resultStatus: 1
-      duration: 7.24292
-      messages: 
-      output: 
+      resultStatus: 2
+      duration: 0.5864024
+      messages: One or more child tests had errors
+      output: "MissingReferenceException: The object of type 'GameObject' has been
+        destroyed but you are still trying to access it.\nYour script should either
+        check if it is null or you should not destroy the object.\r\n"
       stacktrace: 
       notRunnable: 0
       ignoredOrSkipped: 0
@@ -1099,11 +1212,22 @@ MonoBehaviour:
     - id: '[Assembly-CSharp][MenuTest.M0OpenAndCloseMenu]'
       name: M0OpenAndCloseMenu
       fullName: MenuTest.M0OpenAndCloseMenu
-      resultStatus: 1
-      duration: 2.02668
-      messages: 
-      output: "Close\r\n"
-      stacktrace: 
+      resultStatus: 2
+      duration: 0.1378225
+      messages: 'Unhandled log message: ''[Exception] MissingReferenceException: The
+        object of type ''GameObject'' has been destroyed but you are still trying
+        to access it.
+
+        Your script should either check if it is null or you should not destroy the
+        object.''. Use UnityEngine.TestTools.LogAssert.Expect'
+      output: "MissingReferenceException: The object of type 'GameObject' has been
+        destroyed but you are still trying to access it.\nYour script should either
+        check if it is null or you should not destroy the object.\r\nNullReferenceException:
+        Object reference not set to an instance of an object\r\nMissingReferenceException:
+        The object of type 'GameObject' has been destroyed but you are still trying
+        to access it.\nYour script should either check if it is null or you should
+        not destroy the object.\r\n"
+      stacktrace: "CameraController.Update () (at Assets/Exploration/Scripts/CameraController.cs:19)\r\n\r\n"
       notRunnable: 0
       ignoredOrSkipped: 0
       description: 
@@ -1111,11 +1235,20 @@ MonoBehaviour:
     - id: '[Assembly-CSharp][MenuTest.M1OpenItemMenu]'
       name: M1OpenItemMenu
       fullName: MenuTest.M1OpenItemMenu
-      resultStatus: 1
-      duration: 1.3933614
-      messages: 
-      output: 
-      stacktrace: 
+      resultStatus: 2
+      duration: 0.033869
+      messages: 'Unhandled log message: ''[Exception] NullReferenceException: Object
+        reference not set to an instance of an object''. Use UnityEngine.TestTools.LogAssert.Expect'
+      output: "NullReferenceException: Object reference not set to an instance of
+        an object\r\nMissingReferenceException: The object of type 'GameObject' has
+        been destroyed but you are still trying to access it.\nYour script should
+        either check if it is null or you should not destroy the object.\r\nMissingReferenceException:
+        The object of type 'GameObject' has been destroyed but you are still trying
+        to access it.\nYour script should either check if it is null or you should
+        not destroy the object.\r\n"
+      stacktrace: "MenuTest+<M1OpenItemMenu>c__Iterator2.MoveNext () (at Assets/PlayTests/Resources/MenuTest.cs:60)\r\nUnityEngine.SetupCoroutine.InvokeMoveNext
+        (IEnumerator enumerator, IntPtr returnValueAddress) (at C:/buildslave/unity/build/Runtime/Export/Coroutines.cs:17)\r\nUnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator,
+        IntPtr)\r\n\r\n"
       notRunnable: 0
       ignoredOrSkipped: 0
       description: 
@@ -1123,12 +1256,19 @@ MonoBehaviour:
     - id: '[Assembly-CSharp][MenuTest.M2SwapItems]'
       name: M2SwapItems
       fullName: MenuTest.M2SwapItems
-      resultStatus: 1
-      duration: 0.034603
-      messages: 
-      output: "Source: Item\r\nDestination: Item\r\nSource: Item\r\nDestination: Player\r\nSource:
-        Player\r\nDestination: Player\r\nSource: Player\r\nDestination: Item\r\n"
-      stacktrace: 
+      resultStatus: 2
+      duration: 0.0195305
+      messages: 'System.NullReferenceException : Object reference not set to an instance
+        of an object'
+      output: "MissingReferenceException: The object of type 'GameObject' has been
+        destroyed but you are still trying to access it.\nYour script should either
+        check if it is null or you should not destroy the object.\r\n"
+      stacktrace: "  at MenuTest.M2SwapItems () [0x0000b] in C:\\Users\\Toby\\Documents\\SEPRGame\\Coffee-more\\Assets\\PlayTests\\Resources\\MenuTest.cs:87
+        \r\n  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke
+        (object,object[],System.Exception&)\r\n  at System.Reflection.MonoMethod.Invoke
+        (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder,
+        System.Object[] parameters, System.Globalization.CultureInfo culture) [0x000d0]
+        in /Users/builduser/buildslave/mono/build/mcs/class/corlib/System.Reflection/MonoMethod.cs:222 "
       notRunnable: 0
       ignoredOrSkipped: 0
       description: 
@@ -1136,11 +1276,20 @@ MonoBehaviour:
     - id: '[Assembly-CSharp][MenuTest.M3ItemBackButton]'
       name: M3ItemBackButton
       fullName: MenuTest.M3ItemBackButton
-      resultStatus: 1
-      duration: 1.1896667
-      messages: 
-      output: 
-      stacktrace: 
+      resultStatus: 2
+      duration: 0.033066
+      messages: 'Unhandled log message: ''[Exception] NullReferenceException: Object
+        reference not set to an instance of an object''. Use UnityEngine.TestTools.LogAssert.Expect'
+      output: "NullReferenceException: Object reference not set to an instance of
+        an object\r\nMissingReferenceException: The object of type 'GameObject' has
+        been destroyed but you are still trying to access it.\nYour script should
+        either check if it is null or you should not destroy the object.\r\nMissingReferenceException:
+        The object of type 'GameObject' has been destroyed but you are still trying
+        to access it.\nYour script should either check if it is null or you should
+        not destroy the object.\r\n"
+      stacktrace: "MenuTest+<M3ItemBackButton>c__Iterator3.MoveNext () (at Assets/PlayTests/Resources/MenuTest.cs:123)\r\nUnityEngine.SetupCoroutine.InvokeMoveNext
+        (IEnumerator enumerator, IntPtr returnValueAddress) (at C:/buildslave/unity/build/Runtime/Export/Coroutines.cs:17)\r\nUnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator,
+        IntPtr)\r\n\r\n"
       notRunnable: 0
       ignoredOrSkipped: 0
       description: 
@@ -1148,11 +1297,20 @@ MonoBehaviour:
     - id: '[Assembly-CSharp][MenuTest.M4OpenPlayerMenu]'
       name: M4OpenPlayerMenu
       fullName: MenuTest.M4OpenPlayerMenu
-      resultStatus: 1
-      duration: 1.1772124
-      messages: 
-      output: "PartyCanvas (PlayerMenu)\r\n"
-      stacktrace: 
+      resultStatus: 2
+      duration: 0.0337104
+      messages: 'Unhandled log message: ''[Exception] NullReferenceException: Object
+        reference not set to an instance of an object''. Use UnityEngine.TestTools.LogAssert.Expect'
+      output: "NullReferenceException: Object reference not set to an instance of
+        an object\r\nMissingReferenceException: The object of type 'GameObject' has
+        been destroyed but you are still trying to access it.\nYour script should
+        either check if it is null or you should not destroy the object.\r\nMissingReferenceException:
+        The object of type 'GameObject' has been destroyed but you are still trying
+        to access it.\nYour script should either check if it is null or you should
+        not destroy the object.\r\n"
+      stacktrace: "MenuTest+<M4OpenPlayerMenu>c__Iterator4.MoveNext () (at Assets/PlayTests/Resources/MenuTest.cs:133)\r\nUnityEngine.SetupCoroutine.InvokeMoveNext
+        (IEnumerator enumerator, IntPtr returnValueAddress) (at C:/buildslave/unity/build/Runtime/Export/Coroutines.cs:17)\r\nUnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator,
+        IntPtr)\r\n\r\n"
       notRunnable: 0
       ignoredOrSkipped: 0
       description: 
@@ -1160,12 +1318,19 @@ MonoBehaviour:
     - id: '[Assembly-CSharp][MenuTest.M5SwitchPlayers]'
       name: M5SwitchPlayers
       fullName: MenuTest.M5SwitchPlayers
-      resultStatus: 1
-      duration: 0.0232095
-      messages: 
-      output: "Source: Player\r\nDestination: Player\r\nSource: Player\r\nDestination:
-        Player\r\n"
-      stacktrace: 
+      resultStatus: 2
+      duration: 0.0171652
+      messages: 'System.NullReferenceException : Object reference not set to an instance
+        of an object'
+      output: "MissingReferenceException: The object of type 'GameObject' has been
+        destroyed but you are still trying to access it.\nYour script should either
+        check if it is null or you should not destroy the object.\r\n"
+      stacktrace: "  at MenuTest.M5SwitchPlayers () [0x0000b] in C:\\Users\\Toby\\Documents\\SEPRGame\\Coffee-more\\Assets\\PlayTests\\Resources\\MenuTest.cs:149
+        \r\n  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke
+        (object,object[],System.Exception&)\r\n  at System.Reflection.MonoMethod.Invoke
+        (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder,
+        System.Object[] parameters, System.Globalization.CultureInfo culture) [0x000d0]
+        in /Users/builduser/buildslave/mono/build/mcs/class/corlib/System.Reflection/MonoMethod.cs:222 "
       notRunnable: 0
       ignoredOrSkipped: 0
       description: 
@@ -1173,11 +1338,20 @@ MonoBehaviour:
     - id: '[Assembly-CSharp][MenuTest.M6PartyBackButton]'
       name: M6PartyBackButton
       fullName: MenuTest.M6PartyBackButton
-      resultStatus: 1
-      duration: 1.1903261
-      messages: 
-      output: "Close\r\n"
-      stacktrace: 
+      resultStatus: 2
+      duration: 0.0334602
+      messages: 'Unhandled log message: ''[Exception] NullReferenceException: Object
+        reference not set to an instance of an object''. Use UnityEngine.TestTools.LogAssert.Expect'
+      output: "NullReferenceException: Object reference not set to an instance of
+        an object\r\nMissingReferenceException: The object of type 'GameObject' has
+        been destroyed but you are still trying to access it.\nYour script should
+        either check if it is null or you should not destroy the object.\r\nMissingReferenceException:
+        The object of type 'GameObject' has been destroyed but you are still trying
+        to access it.\nYour script should either check if it is null or you should
+        not destroy the object.\r\n"
+      stacktrace: "MenuTest+<M6PartyBackButton>c__Iterator5.MoveNext () (at Assets/PlayTests/Resources/MenuTest.cs:173)\r\nUnityEngine.SetupCoroutine.InvokeMoveNext
+        (IEnumerator enumerator, IntPtr returnValueAddress) (at C:/buildslave/unity/build/Runtime/Export/Coroutines.cs:17)\r\nUnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator,
+        IntPtr)\r\n\r\n"
       notRunnable: 0
       ignoredOrSkipped: 0
       description: 
@@ -1185,10 +1359,12 @@ MonoBehaviour:
     - id: '[Assembly-CSharp][WorldMapTest][suite]'
       name: WorldMapTest
       fullName: WorldMapTest
-      resultStatus: 1
-      duration: 8.091235
-      messages: 
-      output: 
+      resultStatus: 2
+      duration: 0.6631444
+      messages: One or more child tests had errors
+      output: "MissingReferenceException: The object of type 'GameObject' has been
+        destroyed but you are still trying to access it.\nYour script should either
+        check if it is null or you should not destroy the object.\r\n"
       stacktrace: 
       notRunnable: 0
       ignoredOrSkipped: 0
@@ -1197,11 +1373,18 @@ MonoBehaviour:
     - id: '[Assembly-CSharp][WorldMapTest.W0DepartmentColouring]'
       name: W0DepartmentColouring
       fullName: WorldMapTest.W0DepartmentColouring
-      resultStatus: 1
-      duration: 0.8004378
-      messages: 
-      output: 
-      stacktrace: 
+      resultStatus: 2
+      duration: 0.1954509
+      messages: 'Unhandled log message: ''[Exception] MissingReferenceException: The
+        object of type ''GameObject'' has been destroyed but you are still trying
+        to access it.
+
+        Your script should either check if it is null or you should not destroy the
+        object.''. Use UnityEngine.TestTools.LogAssert.Expect'
+      output: "MissingReferenceException: The object of type 'GameObject' has been
+        destroyed but you are still trying to access it.\nYour script should either
+        check if it is null or you should not destroy the object.\r\n"
+      stacktrace: "CameraController.Update () (at Assets/Exploration/Scripts/CameraController.cs:19)\r\n\r\n"
       notRunnable: 0
       ignoredOrSkipped: 0
       description: 
@@ -1209,11 +1392,20 @@ MonoBehaviour:
     - id: '[Assembly-CSharp][WorldMapTest.W1CantEnterPreviousDepartments]'
       name: W1CantEnterPreviousDepartments
       fullName: WorldMapTest.W1CantEnterPreviousDepartments
-      resultStatus: 1
-      duration: 0.4134661
-      messages: 
-      output: 
-      stacktrace: 
+      resultStatus: 2
+      duration: 0.0330307
+      messages: 'Unhandled log message: ''[Exception] NullReferenceException: Object
+        reference not set to an instance of an object''. Use UnityEngine.TestTools.LogAssert.Expect'
+      output: "NullReferenceException: Object reference not set to an instance of
+        an object\r\nMissingReferenceException: The object of type 'GameObject' has
+        been destroyed but you are still trying to access it.\nYour script should
+        either check if it is null or you should not destroy the object.\r\nMissingReferenceException:
+        The object of type 'GameObject' has been destroyed but you are still trying
+        to access it.\nYour script should either check if it is null or you should
+        not destroy the object.\r\n"
+      stacktrace: "WorldMapTest+<moveForFrames>c__Iterator6.MoveNext () (at Assets/PlayTests/Resources/WorldMapTest.cs:85)\r\nUnityEngine.SetupCoroutine.InvokeMoveNext
+        (IEnumerator enumerator, IntPtr returnValueAddress) (at C:/buildslave/unity/build/Runtime/Export/Coroutines.cs:17)\r\nUnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator,
+        IntPtr)\r\n\r\n"
       notRunnable: 0
       ignoredOrSkipped: 0
       description: 
@@ -1221,11 +1413,21 @@ MonoBehaviour:
     - id: '[Assembly-CSharp][WorldMapTest.W2CantEnterFutureDepartments]'
       name: W2CantEnterFutureDepartments
       fullName: WorldMapTest.W2CantEnterFutureDepartments
-      resultStatus: 1
-      duration: 0.4310359
-      messages: 
-      output: 
-      stacktrace: 
+      resultStatus: 2
+      duration: 0.0334179
+      messages: 'Unhandled log message: ''[Exception] NullReferenceException: Object
+        reference not set to an instance of an object''. Use UnityEngine.TestTools.LogAssert.Expect'
+      output: "NullReferenceException: Object reference not set to an instance of
+        an object\r\nMissingReferenceException: The object of type 'GameObject' has
+        been destroyed but you are still trying to access it.\nYour script should
+        either check if it is null or you should not destroy the object.\r\nMissingReferenceException:
+        The object of type 'GameObject' has been destroyed but you are still trying
+        to access it.\nYour script should either check if it is null or you should
+        not destroy the object.\r\n"
+      stacktrace: "WorldMapTest+<W2CantEnterFutureDepartments>c__Iterator3.MoveNext
+        () (at Assets/PlayTests/Resources/WorldMapTest.cs:51)\r\nUnityEngine.SetupCoroutine.InvokeMoveNext
+        (IEnumerator enumerator, IntPtr returnValueAddress) (at C:/buildslave/unity/build/Runtime/Export/Coroutines.cs:17)\r\nUnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator,
+        IntPtr)\r\n\r\n"
       notRunnable: 0
       ignoredOrSkipped: 0
       description: 
@@ -1233,11 +1435,20 @@ MonoBehaviour:
     - id: '[Assembly-CSharp][WorldMapTest.W3BusStop]'
       name: W3BusStop
       fullName: WorldMapTest.W3BusStop
-      resultStatus: 1
-      duration: 3.0320487
-      messages: 
-      output: 
-      stacktrace: 
+      resultStatus: 2
+      duration: 0.0335932
+      messages: 'Unhandled log message: ''[Exception] NullReferenceException: Object
+        reference not set to an instance of an object''. Use UnityEngine.TestTools.LogAssert.Expect'
+      output: "NullReferenceException: Object reference not set to an instance of
+        an object\r\nMissingReferenceException: The object of type 'GameObject' has
+        been destroyed but you are still trying to access it.\nYour script should
+        either check if it is null or you should not destroy the object.\r\nMissingReferenceException:
+        The object of type 'GameObject' has been destroyed but you are still trying
+        to access it.\nYour script should either check if it is null or you should
+        not destroy the object.\r\n"
+      stacktrace: "WorldMapTest+<W3BusStop>c__Iterator4.MoveNext () (at Assets/PlayTests/Resources/WorldMapTest.cs:59)\r\nUnityEngine.SetupCoroutine.InvokeMoveNext
+        (IEnumerator enumerator, IntPtr returnValueAddress) (at C:/buildslave/unity/build/Runtime/Export/Coroutines.cs:17)\r\nUnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator,
+        IntPtr)\r\n\r\n"
       notRunnable: 0
       ignoredOrSkipped: 0
       description: 
@@ -1245,22 +1456,36 @@ MonoBehaviour:
     - id: '[Assembly-CSharp][WorldMapTest.W4CanEnterAndReturnFromCurrentLevel]'
       name: W4CanEnterAndReturnFromCurrentLevel
       fullName: WorldMapTest.W4CanEnterAndReturnFromCurrentLevel
-      resultStatus: 1
-      duration: 3.2348337
-      messages: 
-      output: 
-      stacktrace: 
+      resultStatus: 2
+      duration: 0.0334336
+      messages: 'Unhandled log message: ''[Exception] NullReferenceException: Object
+        reference not set to an instance of an object''. Use UnityEngine.TestTools.LogAssert.Expect'
+      output: "NullReferenceException: Object reference not set to an instance of
+        an object\r\nMissingReferenceException: The object of type 'GameObject' has
+        been destroyed but you are still trying to access it.\nYour script should
+        either check if it is null or you should not destroy the object.\r\nMissingReferenceException:
+        The object of type 'GameObject' has been destroyed but you are still trying
+        to access it.\nYour script should either check if it is null or you should
+        not destroy the object.\r\n"
+      stacktrace: "WorldMapTest+<W4CanEnterAndReturnFromCurrentLevel>c__Iterator5.MoveNext
+        () (at Assets/PlayTests/Resources/WorldMapTest.cs:74)\r\nUnityEngine.SetupCoroutine.InvokeMoveNext
+        (IEnumerator enumerator, IntPtr returnValueAddress) (at C:/buildslave/unity/build/Runtime/Export/Coroutines.cs:17)\r\nUnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator,
+        IntPtr)\r\n\r\n"
       notRunnable: 0
       ignoredOrSkipped: 0
       description: 
       isSuite: 0
-    m_ResultText: WorldMapTest (8.091s)
+    m_ResultText: 'BattleModeTest2 (1.494s)
+
+      ---
+
+      One or more child tests had errors'
     m_ResultStacktrace: 
     m_TestListState:
-      scrollPos: {x: 0, y: 183}
-      m_SelectedIDs: 70c743c5
-      m_LastClickedID: -985413776
-      m_ExpandedIDs: 36faac8e70c743c529caabc87cf13ee265154d1c3769f12267c6ec2c101c9c4ea46c015ac1574275ffffff7f
+      scrollPos: {x: 0, y: 0}
+      m_SelectedIDs: 3769f122
+      m_LastClickedID: 586246455
+      m_ExpandedIDs: 36faac8e70c743c529caabc87cf13ee28d3385f465154d1c3769f12267c6ec2c101c9c4ea46c015ac1574275ffffff7f
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1288,9 +1513,9 @@ MonoBehaviour:
   m_EditModeTestListGUI:
     m_Window: {fileID: 21}
     newResultList:
-    - id: '[Test][suite]'
-      name: Test
-      fullName: Test
+    - id: "[Da\xE9mons_ York Edition][suite]"
+      name: "Da\xE9mons_ York Edition"
+      fullName: "Da\xE9mons_ York Edition"
       resultStatus: 0
       duration: 0
       messages: 
@@ -1299,13 +1524,13 @@ MonoBehaviour:
       notRunnable: 0
       ignoredOrSkipped: 0
       description: 
-      isSuite: 0
-    - id: '[C:/Users/CyberGW/Documents/Unity/SEPRPhase2/Library/ScriptAssemblies/Assembly-CSharp-Editor.dll][suite]'
+      isSuite: 1
+    - id: '[C:/Users/Toby/Documents/SEPRGame/Coffee-more/Library/ScriptAssemblies/Assembly-CSharp-Editor.dll][suite]'
       name: Assembly-CSharp-Editor.dll
-      fullName: C:/Users/CyberGW/Documents/Unity/SEPRPhase2/Library/ScriptAssemblies/Assembly-CSharp-Editor.dll
-      resultStatus: 1
-      duration: 1.7410713
-      messages: One or more child tests were ignored
+      fullName: C:/Users/Toby/Documents/SEPRGame/Coffee-more/Library/ScriptAssemblies/Assembly-CSharp-Editor.dll
+      resultStatus: 2
+      duration: 0.0457108
+      messages: One or more child tests had errors
       output: 
       stacktrace: 
       notRunnable: 0
@@ -1316,7 +1541,7 @@ MonoBehaviour:
       name: BattleScriptTest
       fullName: BattleScriptTest
       resultStatus: 1
-      duration: 0.5468134
+      duration: 0.2410557
       messages: One or more child tests were ignored
       output: 
       stacktrace: 
@@ -1328,7 +1553,7 @@ MonoBehaviour:
       name: BattleWon
       fullName: BattleScriptTest.BattleWon
       resultStatus: 1
-      duration: 0.0365721
+      duration: 0.0146392
       messages: 
       output: 
       stacktrace: 
@@ -1340,7 +1565,7 @@ MonoBehaviour:
       name: ChangePlayer
       fullName: BattleScriptTest.ChangePlayer
       resultStatus: 1
-      duration: 0.0420024
+      duration: 0.0191892
       messages: 
       output: "Second Player\r\nSecond Player\r\n"
       stacktrace: 
@@ -1352,7 +1577,7 @@ MonoBehaviour:
       name: CharacterFainted
       fullName: BattleScriptTest.CharacterFainted
       resultStatus: 1
-      duration: 0.0310095
+      duration: 0.0132304
       messages: 
       output: 
       stacktrace: 
@@ -1364,7 +1589,7 @@ MonoBehaviour:
       name: Constructor
       fullName: BattleScriptTest.Constructor
       resultStatus: 1
-      duration: 0.030468
+      duration: 0.0106717
       messages: 
       output: 
       stacktrace: 
@@ -1376,7 +1601,7 @@ MonoBehaviour:
       name: CriticalHitCalculation
       fullName: BattleScriptTest.CriticalHitCalculation
       resultStatus: 1
-      duration: 0.0190988
+      duration: 0.010637
       messages: 
       output: 
       stacktrace: 
@@ -1388,7 +1613,7 @@ MonoBehaviour:
       name: CriticalHitGeneration
       fullName: BattleScriptTest.CriticalHitGeneration
       resultStatus: 4
-      duration: 0.000516
+      duration: 0.0003508
       messages: Manual Probability Test
       output: 
       stacktrace: 
@@ -1400,7 +1625,7 @@ MonoBehaviour:
       name: EnemySpecialMoveAI
       fullName: BattleScriptTest.EnemySpecialMoveAI
       resultStatus: 1
-      duration: 0.0373258
+      duration: 0.0147055
       messages: 
       output: 
       stacktrace: 
@@ -1412,7 +1637,7 @@ MonoBehaviour:
       name: Items
       fullName: BattleScriptTest.Items
       resultStatus: 1
-      duration: 0.0317916
+      duration: 0.0101628
       messages: 
       output: 
       stacktrace: 
@@ -1424,7 +1649,7 @@ MonoBehaviour:
       name: PlayerSpecialMove
       fullName: BattleScriptTest.PlayerSpecialMove
       resultStatus: 1
-      duration: 0.0275843
+      duration: 0.0101712
       messages: 
       output: 
       stacktrace: 
@@ -1436,7 +1661,7 @@ MonoBehaviour:
       name: StandardAttack
       fullName: BattleScriptTest.StandardAttack
       resultStatus: 1
-      duration: 0.0311816
+      duration: 0.0104957
       messages: 
       output: 
       stacktrace: 
@@ -1448,7 +1673,7 @@ MonoBehaviour:
       name: TurnOrder
       fullName: BattleScriptTest.TurnOrder
       resultStatus: 1
-      duration: 0.0318716
+      duration: 0.0098311
       messages: 
       output: 
       stacktrace: 
@@ -1460,7 +1685,7 @@ MonoBehaviour:
       name: EnemyTest
       fullName: EnemyTest
       resultStatus: 1
-      duration: 0.0981474
+      duration: 0.0554086
       messages: 
       output: 
       stacktrace: 
@@ -1472,7 +1697,7 @@ MonoBehaviour:
       name: Attributes
       fullName: EnemyTest.Attributes
       resultStatus: 1
-      duration: 0.0160537
+      duration: 0.0056546
       messages: 
       output: 
       stacktrace: 
@@ -1484,7 +1709,7 @@ MonoBehaviour:
       name: Setters
       fullName: EnemyTest.Setters
       resultStatus: 1
-      duration: 0.0093892
+      duration: 0.0046632
       messages: 
       output: 
       stacktrace: 
@@ -1496,7 +1721,7 @@ MonoBehaviour:
       name: ItemTest
       fullName: ItemTest
       resultStatus: 1
-      duration: 0.1029413
+      duration: 0.045634
       messages: 
       output: 
       stacktrace: 
@@ -1508,7 +1733,7 @@ MonoBehaviour:
       name: ApplyBuffs
       fullName: ItemTest.ApplyBuffs
       resultStatus: 1
-      duration: 0.0164084
+      duration: 0.0098533
       messages: 
       output: 
       stacktrace: 
@@ -1520,7 +1745,7 @@ MonoBehaviour:
       name: Attributes
       fullName: ItemTest.Attributes
       resultStatus: 1
-      duration: 0.0246456
+      duration: 0.0089559
       messages: 
       output: 
       stacktrace: 
@@ -1531,9 +1756,9 @@ MonoBehaviour:
     - id: '[Assembly-CSharp-Editor][PlayerDataTest][suite]'
       name: PlayerDataTest
       fullName: PlayerDataTest
-      resultStatus: 1
-      duration: 0.3727515
-      messages: 
+      resultStatus: 2
+      duration: 0.0275682
+      messages: One or more child tests had errors
       output: 
       stacktrace: 
       notRunnable: 0
@@ -1544,7 +1769,7 @@ MonoBehaviour:
       name: AddItem
       fullName: PlayerDataTest.AddItem
       resultStatus: 1
-      duration: 0.0317707
+      duration: 0.0102682
       messages: 
       output: 
       stacktrace: 
@@ -1556,7 +1781,7 @@ MonoBehaviour:
       name: AddPlayer
       fullName: PlayerDataTest.AddPlayer
       resultStatus: 1
-      duration: 0.0296079
+      duration: 0.0114943
       messages: 
       output: 
       stacktrace: 
@@ -1567,11 +1792,11 @@ MonoBehaviour:
     - id: '[Assembly-CSharp-Editor][PlayerDataTest.Constructor]'
       name: Constructor
       fullName: PlayerDataTest.Constructor
-      resultStatus: 1
-      duration: 0.0305354
-      messages: 
+      resultStatus: 2
+      duration: 0.0119918
+      messages: "  Expected: 0\r\n  But was:  100\r\n"
       output: 
-      stacktrace: 
+      stacktrace: "at PlayerDataTest.Constructor () [0x0004a] in C:\\Users\\Toby\\Documents\\SEPRGame\\Coffee-more\\Assets\\Editor\\PlayerDataTest.cs:23\r\n"
       notRunnable: 0
       ignoredOrSkipped: 0
       description: 
@@ -1580,7 +1805,7 @@ MonoBehaviour:
       name: CountItems
       fullName: PlayerDataTest.CountItems
       resultStatus: 1
-      duration: 0.0304081
+      duration: 0.0102791
       messages: 
       output: 
       stacktrace: 
@@ -1592,7 +1817,7 @@ MonoBehaviour:
       name: GetFirstPlayer
       fullName: PlayerDataTest.GetFirstPlayer
       resultStatus: 1
-      duration: 0.0288858
+      duration: 0.010139
       messages: 
       output: 
       stacktrace: 
@@ -1604,7 +1829,7 @@ MonoBehaviour:
       name: PlayersAlive
       fullName: PlayerDataTest.PlayersAlive
       resultStatus: 1
-      duration: 0.0262489
+      duration: 0.010447
       messages: 
       output: 
       stacktrace: 
@@ -1616,7 +1841,7 @@ MonoBehaviour:
       name: SwapPlayers
       fullName: PlayerDataTest.SwapPlayers
       resultStatus: 1
-      duration: 0.0264549
+      duration: 0.0105217
       messages: 
       output: 
       stacktrace: 
@@ -1628,7 +1853,7 @@ MonoBehaviour:
       name: PlayerTest
       fullName: PlayerTest
       resultStatus: 1
-      duration: 0.2049798
+      duration: 0.0962194
       messages: 
       output: 
       stacktrace: 
@@ -1640,7 +1865,7 @@ MonoBehaviour:
       name: Attributes
       fullName: PlayerTest.Attributes
       resultStatus: 1
-      duration: 0.0310334
+      duration: 0.0130315
       messages: 
       output: 
       stacktrace: 
@@ -1652,7 +1877,7 @@ MonoBehaviour:
       name: expToNextLevel
       fullName: PlayerTest.expToNextLevel
       resultStatus: 1
-      duration: 0.0267505
+      duration: 0.0104716
       messages: 
       output: 
       stacktrace: 
@@ -1664,7 +1889,7 @@ MonoBehaviour:
       name: gainExp
       fullName: PlayerTest.gainExp
       resultStatus: 1
-      duration: 0.0316065
+      duration: 0.0158253
       messages: 
       output: "Levelled Up!\r\nLevelled Up!\r\nLevelled Up!\r\nLevelled Up!\r\n"
       stacktrace: 
@@ -1676,7 +1901,7 @@ MonoBehaviour:
       name: levelUp
       fullName: PlayerTest.levelUp
       resultStatus: 1
-      duration: 0.0234899
+      duration: 0.0111539
       messages: 
       output: "Levelled Up!\r\n"
       stacktrace: 
@@ -1688,7 +1913,7 @@ MonoBehaviour:
       name: SpecialMoveTest
       fullName: SpecialMoveTest
       resultStatus: 1
-      duration: 0.3115277
+      duration: 0.1485494
       messages: 
       output: 
       stacktrace: 
@@ -1700,7 +1925,7 @@ MonoBehaviour:
       name: LowerDefence
       fullName: SpecialMoveTest.LowerDefence
       resultStatus: 1
-      duration: 0.0308092
+      duration: 0.0119848
       messages: 
       output: 
       stacktrace: 
@@ -1712,7 +1937,7 @@ MonoBehaviour:
       name: LowerSpeed
       fullName: SpecialMoveTest.LowerSpeed
       resultStatus: 1
-      duration: 0.0323446
+      duration: 0.0111629
       messages: 
       output: 
       stacktrace: 
@@ -1724,7 +1949,7 @@ MonoBehaviour:
       name: MagicAttack
       fullName: SpecialMoveTest.MagicAttack
       resultStatus: 1
-      duration: 0.026739
+      duration: 0.0102814
       messages: 
       output: 
       stacktrace: 
@@ -1736,7 +1961,7 @@ MonoBehaviour:
       name: MoneyIncrease
       fullName: SpecialMoveTest.MoneyIncrease
       resultStatus: 1
-      duration: 0.0316085
+      duration: 0.0121813
       messages: 
       output: 
       stacktrace: 
@@ -1748,7 +1973,7 @@ MonoBehaviour:
       name: RaiseAttack
       fullName: SpecialMoveTest.RaiseAttack
       resultStatus: 1
-      duration: 0.0214105
+      duration: 0.0107844
       messages: 
       output: 
       stacktrace: 
@@ -1760,7 +1985,7 @@ MonoBehaviour:
       name: RaiseDefence
       fullName: SpecialMoveTest.RaiseDefence
       resultStatus: 1
-      duration: 0.0263757
+      duration: 0.0115165
       messages: 
       output: 
       stacktrace: 
@@ -1768,17 +1993,14 @@ MonoBehaviour:
       ignoredOrSkipped: 0
       description: 
       isSuite: 0
-    m_ResultText: 'BattleScriptTest (0.547s)
-
-      ---
-
-      One or more child tests were ignored'
-    m_ResultStacktrace: 
+    m_ResultText: "Constructor (0.012s)\n---\nExpected: 0\r\n  But was:  100\n---\nat
+      PlayerDataTest.Constructor () [0x0004a] in C:\\Users\\Toby\\Documents\\SEPRGame\\Coffee-more\\Assets\\Editor\\PlayerDataTest.cs:23"
+    m_ResultStacktrace: "at PlayerDataTest.Constructor () [0x0004a] in C:\\Users\\Toby\\Documents\\SEPRGame\\Coffee-more\\Assets\\Editor\\PlayerDataTest.cs:23\r\n"
     m_TestListState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 9d8d08d7
-      m_LastClickedID: -687305315
-      m_ExpandedIDs: d33c63859bef5c9018e98f9e51a899a87a729ab09d8d08d765d137e8431375fbe888c91b101c9c4e0df8175b0dd2fd5bffffff7f
+      m_SelectedIDs: 4fd80c18
+      m_LastClickedID: 403494991
+      m_ExpandedIDs: d33c63859bef5c9018e98f9e51a899a87a729ab029caabc89d8d08d765d137e8dfd98cec431375fbe888c91b101c9c4e0df8175b0dd2fd5bffffff7f
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1824,10 +2046,10 @@ MonoBehaviour:
   m_DepthBufferBits: 0
   m_Pos:
     serializedVersion: 2
-    x: 889
+    x: 1466
     y: 92
-    width: 477
-    height: 614
+    width: 454
+    height: 926
   m_PersistentViewDataDictionary: {fileID: 0}
   m_InitialOpenURL: https://public-cdn.cloud.unity3d.com/editor/production/cloud/hub
   m_GlobalObjectTypeName: 
@@ -1861,10 +2083,10 @@ MonoBehaviour:
   m_DepthBufferBits: 0
   m_Pos:
     serializedVersion: 2
-    x: 890
+    x: 1466
     y: 92
-    width: 476
-    height: 614
+    width: 454
+    height: 926
   m_PersistentViewDataDictionary: {fileID: 0}
   m_AnimEditor: {fileID: 0}
   m_Locked: 0

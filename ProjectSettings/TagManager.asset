@@ -9,6 +9,11 @@ TagManager:
   - RCH
   - PHY
   - LIB
+  - LAW
+  - CENHALL
+  - MUS
+  - BIO
+  - HESHALL
   layers:
   - Default
   - TransparentFX

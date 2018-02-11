@@ -2,10 +2,10 @@
 # Wavefront file for 'WorldMap_mesh_0018.obj'
 
 # Vertices (Count = 4)
-v -36.26667 -42.66667 0
-v -44.8 -42.66667 0
-v -44.8 -38.33334 0
-v -36.26667 -38.33334 0
+v -28.8 -75.2 0
+v -35.2 -75.2 0
+v -35.2 -68.8 0
+v -28.8 -68.8 0
 
 # Texture cooridinates (Count = 4)
 vt 0 0

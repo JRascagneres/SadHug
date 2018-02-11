@@ -313,7 +313,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bossObjectName: Boss
-  worldMapExitPosition: {x: -44.39, y: 28.54}
+  worldMapExitPosition: {x: -24, y: 8}
 --- !u!4 &1107079801
 Transform:
   m_ObjectHideFlags: 0
