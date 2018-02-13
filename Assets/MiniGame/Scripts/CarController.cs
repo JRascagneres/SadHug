@@ -25,9 +25,7 @@ public class CarController : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.P))
         {
-            Debug.Log("LOAD CORRECT LEVEL");
-            SoundManager.instance.playSFX("transition");
-            sceneChanger.loadLevel("WorldMap", new Vector2(-46, -3));
+            level += 1;
         }
 
         if (Mathf.Round(tick)/spd == Mathf.Round(10/spd))
@@ -57,6 +55,12 @@ public class CarController : MonoBehaviour
             tick = 0;
         }
 
+    }
+
+    public void OnGUI()
+    {
+        Rect bounds = new Rect(40,40,140,140);
+        GUI.Label(bounds, "Level: " + level + " /3");
     }
 
     public void ChangeSpeed(float amount)

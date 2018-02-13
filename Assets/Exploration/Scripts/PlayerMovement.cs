@@ -69,23 +69,47 @@ public class PlayerMovement : MonoBehaviour {
 			explorationMenu ();
 		}
 
-		if (Input.GetKey (KeyCode.UpArrow)) {
+        if (Input.GetKey(KeyCode.UpArrow) && Input.GetKey(KeyCode.RightArrow))
+        {
+            player.Translate(Vector2.right*speed);
+            move("Up");
+        }
+        else
+        if (Input.GetKey(KeyCode.UpArrow) && Input.GetKey(KeyCode.LeftArrow))
+        {
+            player.Translate(Vector2.left * speed);
+            move("Up");
+        }
+        else
+        if (Input.GetKey(KeyCode.DownArrow) && Input.GetKey(KeyCode.RightArrow))
+        {
+            player.Translate(Vector2.right * speed);
+            move("Down");
+        }
+        else
+        if (Input.GetKey(KeyCode.DownArrow) && Input.GetKey(KeyCode.LeftArrow))
+        {
+            player.Translate(Vector2.left * speed);
+            move("Down");
+        }
+        else
+            if (Input.GetKey (KeyCode.UpArrow)) {
 			move ("Up");
-		} else {
+		} else 
 			if (Input.GetKey (KeyCode.DownArrow)) {
 				move ("Down");
-			} else {
+			} else 
 				if (Input.GetKey (KeyCode.LeftArrow)) {
 					move ("Left");
-				} else {
+				} else 
 					if (Input.GetKey (KeyCode.RightArrow)) {
 						move ("Right");
-					} else {
+					} else 
 						setIdle ();
-					}
-				}
-			}
-		}
+					
+				
+			
+		
 	}
 
 	/// <summary>

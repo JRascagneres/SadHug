@@ -10,6 +10,7 @@ public class MiniMove : MonoBehaviour {
     private float xstart;
     private float ystart;
     private GameObject controller;
+    
     private int lives = 3;
 
     // Use this for initialization
@@ -54,6 +55,13 @@ public class MiniMove : MonoBehaviour {
             levleup();
 
     }
+
+    public void OnGUI()
+    {
+        Rect bounds = new Rect(240, 40, 340, 140);
+        GUI.Label(bounds, "Lives: " + lives + " /3");
+    }
+
     public void move(string direction)
 
 
