@@ -36,7 +36,7 @@ public class WorldMapScript : MonoBehaviour {
 		GameObject image = building.transform.Find(buildingName).gameObject; //Get the image part
 		image.GetComponent<MeshRenderer> ().material.color = colour; //Set mesh colour
 		GameObject collider = building.transform.Find ("Collision").gameObject; //Get collider element
-		collider.GetComponent<PolygonCollider2D> ().isTrigger = !removeCollider;
+		collider.GetComponent<Collider2D> ().isTrigger = !removeCollider;
 	}
 
 }

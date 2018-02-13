@@ -1,4 +1,7 @@
 sceneSetups:
-- path: Assets/PlayTests/BattleTestInitialScene.unity
+- path: Assets/Menus/MainMenu/mainmenu1.unity
   isLoaded: 1
   isActive: 1
+- path: Assets/WorldMap/Scenes/WorldMap.unity
+  isLoaded: 0
+  isActive: 0

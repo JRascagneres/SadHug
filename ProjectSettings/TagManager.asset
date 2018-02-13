@@ -9,6 +9,11 @@ TagManager:
   - RCH
   - PHY
   - LIB
+  - LAW
+  - CHALL
+  - DER
+  - MUS
+  - HES
   layers:
   - Default
   - TransparentFX
