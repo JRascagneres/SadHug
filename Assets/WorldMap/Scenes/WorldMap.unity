@@ -1422,7 +1422,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   newScene: Biology
-  newPosition: {x: 4, y: 1}
+  newPosition: {x: 0, y: 0}
 --- !u!114 &1084306541
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1435,7 +1435,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   newScene: Music
-  newPosition: {x: 0, y: 0}
+  newPosition: {x: 0, y: -0.75}
 --- !u!114 &1084306542
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1448,7 +1448,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   newScene: Central-Hall
-  newPosition: {x: 0, y: 2}
+  newPosition: {x: -0.7, y: 12}
 --- !u!114 &1084306543
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1461,7 +1461,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   newScene: Law
-  newPosition: {x: 1, y: 0.5}
+  newPosition: {x: 0, y: -0.75}
 --- !u!1 &1191828938
 GameObject:
   m_ObjectHideFlags: 0

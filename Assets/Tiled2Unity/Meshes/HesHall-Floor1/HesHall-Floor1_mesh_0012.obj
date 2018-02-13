@@ -1,0 +1,24 @@
+﻿# Tiled2Unity generated file. Do not modify by hand.
+# Wavefront file for 'HesHall-Floor1_mesh_0012.obj'
+
+# Vertices (Count = 4)
+v -87.46667 -40.53334 0
+v -88.53334 -40.53334 0
+v -88.53334 -39.46667 0
+v -87.46667 -39.46667 0
+
+# Texture cooridinates (Count = 4)
+vt 0.6322314 0.3878327
+vt 0.6487603 0.3878327
+vt 0.6487603 0.418251
+vt 0.6322314 0.418251
+
+# Normal
+vn 0 0 -1
+
+# Mesh description
+g HesHall-Floor1_mesh_0012
+
+# Faces
+f 1/1/1 2/2/1 3/3/1 4/4/1
+

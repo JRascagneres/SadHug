@@ -1,0 +1,24 @@
+﻿# Tiled2Unity generated file. Do not modify by hand.
+# Wavefront file for 'Biology_mesh_0002.obj'
+
+# Vertices (Count = 4)
+v -66.13334 -27.73334 0
+v -67.2 -27.73334 0
+v -67.2 -26.66667 0
+v -66.13334 -26.66667 0
+
+# Texture cooridinates (Count = 4)
+vt 0.5971074 0.3878327
+vt 0.6136364 0.3878327
+vt 0.6136364 0.418251
+vt 0.5971074 0.418251
+
+# Normal
+vn 0 0 -1
+
+# Mesh description
+g Biology_mesh_0002
+
+# Faces
+f 1/1/1 2/2/1 3/3/1 4/4/1
+
