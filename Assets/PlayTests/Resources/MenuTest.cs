@@ -23,13 +23,17 @@ public class MenuTest {
 			movementScript = playableCharacter.GetComponent<PlayerMovement> ();
 			sceneLoaded = true;
 
-			DataManager data = PlayerData.instance.data;
-//			data.addPlayer (new Player ("Hannah", 5, 100, 5, 5, 5, 5, 5, 5, 0, null,
-//				new IncreaseMoney ("stole money from", "Increase money returns by 50%", 2, 0.5f),
-//				new MagicAttack ("threw wine battles at", "Thorw wine bottles with damage 15", 2, 15),
-//				(Texture2D)Resources.Load ("Character2", typeof(Texture2D))));
-			data.addItem (new Hammer ());
-			data.addItem (new RabbitFoot ());
+            PlayerData.instance.data = new DataManager(new Player("George", 1, 100, 30, 5, 5, 5, 5, 5, 0, null,
+            new MagicAttack("hi-jump kicked", "Kick with power 15", 3, 15),
+            new RaiseDefence("buffed up against", "Increase your defence by 10%", 2, 0.1f),
+            (Texture2D)Resources.Load("Character1", typeof(Texture2D))));
+
+            PlayerData.instance.data.addPlayer (new Player ("Hannah", 5, 100, 5, 5, 5, 5, 5, 5, 0, null,
+                new IncreaseMoney ("stole money from", "Increase money returns by 50%", 2, 0.5f),
+                new MagicAttack ("threw wine battles at", "Thorw wine bottles with damage 15", 2, 15),
+                (Texture2D)Resources.Load ("Character2", typeof(Texture2D))));
+            PlayerData.instance.data.addItem (new Hammer ());
+            PlayerData.instance.data.addItem (new RabbitFoot ());
 		}
 		playableCharacter.transform.position = new Vector2 (0, 0);
 		yield return null;

@@ -43,15 +43,18 @@ public class BattleModeTest2 {
 	[UnityTest]
 	public IEnumerator B6StartNextBattle() {
 		yield return Setup ();
-		//Add new player for testing
-//		DataManager data = PlayerData.instance.data;
-//		data.addPlayer (new Player ("Hannah", 5, 100, 5, 5, 5, 5, 5, 5, 0, null,
-//			new IncreaseMoney ("stole money from", "Increase money returns by 50%", 2, 0.5f),
-//			new MagicAttack ("threw wine battles at", "Thorw wine bottles with damage 15", 2, 15),
-//			(Texture2D)Resources.Load ("Character2", typeof(Texture2D))));
+        PlayerData.instance.data = new DataManager(new Player("George", 1, 100, 30, 5, 5, 5, 5, 5, 0, null,
+            new MagicAttack("hi-jump kicked", "Kick with power 15", 3, 15),
+            new RaiseDefence("buffed up against", "Increase your defence by 10%", 2, 0.1f),
+            (Texture2D)Resources.Load("Character1", typeof(Texture2D))));
 
-		//Move to next fight
-		yield return moveForFrames(20, "Left");
+        PlayerData.instance.data.addPlayer (new Player ("Hannah", 5, 100, 5, 5, 5, 5, 5, 5, 0, null,
+       		new IncreaseMoney ("stole money from", "Increase money returns by 50%", 2, 0.5f),
+        	new MagicAttack ("threw wine battles at", "Thorw wine bottles with damage 15", 2, 15),
+        	(Texture2D)Resources.Load ("Character2", typeof(Texture2D))));
+
+        //Move to next fight
+        yield return moveForFrames(20, "Left");
 
 		ObjectInteraction objectScript = GameObject.Find ("Character").GetComponentInChildren<ObjectInteraction> ();
 		dialogueScript = GameObject.Find ("Dialogue Manager").GetComponent<DialogueScript> ();
@@ -104,6 +107,7 @@ public class BattleModeTest2 {
 		mainBattle.standardAttack ();
 		yield return new WaitForSeconds (6);
 		Assert.AreEqual ("mainmenu1", SceneManager.GetActiveScene ().name);
+        playableCharacter.SetActive(true);
 	}
 
 	public IEnumerator WaitForFrames(int frames) {
