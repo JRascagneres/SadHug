@@ -7,7 +7,7 @@ public class CarController : MonoBehaviour
 {
     public GameObject[] Spawners;
     private float tick;
-    private float spd = 1f;
+    private float spd = 0.5f;
     private int level = 0;
 
     private SceneChanger sceneChanger;

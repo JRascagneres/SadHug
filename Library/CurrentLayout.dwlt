@@ -20,7 +20,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 2}
-  m_MinSize: {x: 950, y: 521}
+  m_MinSize: {x: 950, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -43,7 +43,7 @@ MonoBehaviour:
     y: 0
     width: 1920
     height: 997
-  m_MinSize: {x: 950, y: 521}
+  m_MinSize: {x: 950, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &3
 MonoBehaviour:
@@ -105,10 +105,10 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 947
-  m_MinSize: {x: 406, y: 471}
+  m_MinSize: {x: 583, y: 492}
   m_MaxSize: {x: 14004, y: 14042}
   vertical: 1
-  controlID: 126
+  controlID: 11
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -129,10 +129,10 @@ MonoBehaviour:
     y: 0
     width: 1920
     height: 947
-  m_MinSize: {x: 406, y: 471}
+  m_MinSize: {x: 583, y: 492}
   m_MaxSize: {x: 14004, y: 14042}
   vertical: 0
-  controlID: 127
+  controlID: 12
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -153,10 +153,10 @@ MonoBehaviour:
     y: 0
     width: 1230
     height: 947
-  m_MinSize: {x: 304, y: 471}
+  m_MinSize: {x: 306, y: 492}
   m_MaxSize: {x: 10002, y: 14042}
   vertical: 1
-  controlID: 13
+  controlID: 70
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -177,10 +177,10 @@ MonoBehaviour:
     y: 0
     width: 1230
     height: 520
-  m_MinSize: {x: 304, y: 200}
-  m_MaxSize: {x: 8004, y: 4021}
+  m_MinSize: {x: 306, y: 221}
+  m_MaxSize: {x: 8006, y: 4021}
   vertical: 0
-  controlID: 14
+  controlID: 71
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -259,7 +259,7 @@ MonoBehaviour:
   - {fileID: 18}
   - {fileID: 19}
   m_Selected: 0
-  m_LastSelected: 1
+  m_LastSelected: 2
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -278,16 +278,16 @@ MonoBehaviour:
     y: 0
     width: 690
     height: 947
-  m_MinSize: {x: 102, y: 121}
+  m_MinSize: {x: 277, y: 71}
   m_MaxSize: {x: 4002, y: 4021}
-  m_ActualView: {fileID: 21}
+  m_ActualView: {fileID: 20}
   m_Panes:
   - {fileID: 20}
   - {fileID: 21}
   - {fileID: 22}
   - {fileID: 23}
-  m_Selected: 1
-  m_LastSelected: 0
+  m_Selected: 0
+  m_LastSelected: 1
 --- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -394,27 +394,28 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 
+    m_SelectedIDs: e63b0000
     m_LastClickedID: 0
-    m_ExpandedIDs: 36acf9fff4b0f9ff20c4f9ff4ec4f9ff70c7f9ffa0d2f9ff84d6f9ff88e9f9ff8ae9f9ff9ee9f9ffb0e9f9ffb2e9f9ff88eaf9ff8aeaf9ff8ceaf9ff8eeaf9ff90eaf9ffaaeaf9ffaef4f9ff34f8f9ff0cfdf9ff78fff9ff3a05faff300ffaffe613faff3017faffe81bfaffd623faff903cfaffa24dfafff04efaff8e55faff985cfaff228bfaff10f8faffde0efbfff00efbff5612fbff7218fbffa021fbffd628fbff3c39fbff3e39fbff9a3dfbff6c43fbff2a47fbfff060fbfff661fbff1aa2fbffde06fdffd818fdff2219fdff684efdff8e65fdffc465fdff827cfdff209afdff569afdff9ca6fdff48c5fdff7ec5fdffccd1fdfff2ddfdff0afdfdff4efdfdffc02afeffc8b7feffcab7feffa0befeff36cdfeffc2e4feff72eafeff1eedfeffd80bfffff6bcffff86fbfffff4ffffff00000000d6330000f6330000f23500001c360000483600004c42000076420000a24200001a4300003a43000044da0000
+    m_ExpandedIDs: 2cd0e3ff64e6e3ff94ece3ff1a6ce4ffb0cbe4ffaebae6ff06d9e6ff4ccbe7ffc0d9e7ff249ee8ff4ca5e8ffae96e9ffc662eaff0a38ebff509cebffc6a2ebffeaa9ebff86b9ebff42f1ecffccf1ecff44f2ecff64f2ecff66f2ecffd4f8ecff3661eeff88abeeffc8aeeeff98b5eeffaac0eefffc3cefffc65defff8c8aeffff88aeffffa8aefffc6a3efffaabaefff1619f0fffa16f1ffee1bf1ff385ef1ff9a0df2ffe6c1f2ff52c8f2ffecd9f2ff52daf2ff6cdaf2ffbcdaf2ff4ce8f2ffbae8f2ffe255f3ff8c60f3ff9260f3ffa660f3fff660f3ffce64f3ffec6cf3ff5cadf3ffc4caf4fff8b0f5ff7acbf5ff720bf6ffd0b7f6ffcc38f7ffce38f7fff238f7ff7241f7ff3849f7ff0a69f7ff18a2f7ff1aa2f7ffa8a3f7ffa6a9f7ff18cdf7ff9a76f8ff307cf8ff747ef8ffd4c5f8ff1015fbff72d1fbffa0edfbffa2edfbff36eefbffc2eefbff9aeefcff5845fdff8a73fdffb873fdffd073fdff0089fdff0289fdffd6a0fdffe6a0fdfff6a0fdff04a1fdff26a2fdff36a2fdff50a2fdff52a2fdff1eb8fdff64b8fdff10c2fdff12c2fdff72e4fdffb8e4fdfff2ecfdff00edfdff06eefdff9e48feff9688feffb6d6feff62e6feffd402ffffc803ffff3204ffff0c12ffff0e12ffff3e12ffff5c14ffff9816ffff5423ffffee28fffff028ffff1a2fffff1c2fffff2c2fffffd23affff4a3fffffae46ffff3e4fffff00000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: DialogueBox
-      m_OriginalName: DialogueBox
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: -313028
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 0
       m_ClientGUIView: {fileID: 9}
     m_SearchString: 
-  m_ExpandedScenes: []
+  m_ExpandedScenes:
+  - mainmenu1
   m_CurrenRootInstanceID: 0
   m_Locked: 0
   m_CurrentSortingName: TransformSorting
@@ -446,14 +447,14 @@ MonoBehaviour:
     height: 499
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SceneLighting: 1
-  lastFramingTime: 7056.203846948888
+  lastFramingTime: 27974.093504410255
   m_2DMode: 1
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -13.362949, y: -21.385618, z: -0.796875}
+    m_Target: {x: 122.07974, y: -94.02019, z: -0.5248332}
     speed: 2
-    m_Value: {x: -13.362949, y: -21.385618, z: -0.796875}
+    m_Value: {x: 122.07974, y: -94.02019, z: -0.5248332}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -481,9 +482,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 83.14111
+    m_Target: 59.48918
     speed: 2
-    m_Value: 83.14111
+    m_Value: 59.48918
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -561,33 +562,33 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Exploration/Scenes/Ass3 Scenes
+    - Assets/Menus/MainMenu
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Exploration/Scenes/Ass3 Scenes
+  - Assets/Menus/MainMenu
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: C:\Users\Toby\Documents\SEPRGame\Coffee-more
+  m_LastProjectPath: C:\Users\tsbaj\Documents\Coffe-less\Coffee-test
   m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 79}
-    m_SelectedIDs: 3e300000
-    m_LastClickedID: 12350
-    m_ExpandedIDs: 000000001e28000038280000a6280000e2280000122900003e290000342a00000e2c0000362c0000982c0000c22d0000162e00008e2e0000882f0000e02f000046300000da3000002c3300005e3300007c330000ae340000b0340000b2340000b4340000b634000000ca9a3bffffff7f
+    scrollPos: {x: 0, y: 319}
+    m_SelectedIDs: d63b0000
+    m_LastClickedID: 15318
+    m_ExpandedIDs: 00000000123a0000143a0000463a00004c3a0000563a0000723a0000a43a0000a63a0000823b00008c3b0000be3b0000c03b0000d63b0000f23b0000f83b0000263c00002c3c0000323c0000403c00008c4300008a450000324a0000344a0000364a0000384a00003a4a000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
+      m_Name: Scenes
+      m_OriginalName: Scenes
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 0
+      m_UserData: 14962
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 11
+      m_OriginalEventType: 0
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 11}
     m_SearchString: 
@@ -601,7 +602,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000001e28000038280000a6280000e2280000122900003e290000342a00000e2c0000362c0000982c0000c22d0000162e00008e2e0000882f0000e02f000046300000da3000002c3300005e3300007c330000ae340000b0340000b2340000b4340000b6340000
+    m_ExpandedIDs: 00000000123a0000143a0000463a00004c3a0000723a0000a43a0000a63a0000823b00008c3b0000be3b0000c03b0000d63b0000f23b0000f83b0000263c00002c3c0000323c0000403c00008c4300008a450000324a0000344a0000364a0000384a00003a4a0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -819,12 +820,12 @@ MonoBehaviour:
       ignoredOrSkipped: 0
       description: 
       isSuite: 1
-    - id: '[C:/Users/Toby/Documents/SEPRGame/Coffee-more/Library/ScriptAssemblies/Assembly-CSharp.dll][suite]'
+    - id: '[C:/Users/tsbaj/Documents/Coffe-less/Coffee-test/Library/ScriptAssemblies/Assembly-CSharp.dll][suite]'
       name: Assembly-CSharp.dll
-      fullName: C:/Users/Toby/Documents/SEPRGame/Coffee-more/Library/ScriptAssemblies/Assembly-CSharp.dll
-      resultStatus: 2
-      duration: 104.033
-      messages: One or more child tests had errors
+      fullName: C:/Users/tsbaj/Documents/Coffe-less/Coffee-test/Library/ScriptAssemblies/Assembly-CSharp.dll
+      resultStatus: 0
+      duration: 0
+      messages: 
       output: 
       stacktrace: 
       notRunnable: 0

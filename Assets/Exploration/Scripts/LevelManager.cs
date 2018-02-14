@@ -19,6 +19,7 @@ public class LevelManager : MonoBehaviour {
 	/// </summary>
 	private Player newPlayer;
 	private string playerDesc;
+    private bool addPlayer = false;
 	[SerializeField]
 	private Vector2 worldMapExitPosition;
 
@@ -30,7 +31,8 @@ public class LevelManager : MonoBehaviour {
 	void Start () {
 		switch (GlobalFunctions.instance.currentLevel) {
 		case (0):
-			newPlayer = new Player ("Jamie", 3, 100, 10, 10, 5, 5, 5, 5, 0, null,
+                addPlayer = true;
+                newPlayer = new Player ("Jamie", 3, 100, 10, 10, 5, 5, 5, 5, 0, null,
 				new LowerDefence ("sung Langwith chants at", "Decrease enemy defence by 30%", 3, 0.3f),
 				new MagicAttack ("used the power of 2 for 1 cocktails against", "Use 2 for 1 cocktails to attack at power 15", 4, 15),
 				(Texture2D) Resources.Load("Character3", typeof(Texture2D)));
@@ -38,7 +40,8 @@ public class LevelManager : MonoBehaviour {
 				" but low magic points. His specials can decrease the enemy's defence or attack using 2 for 1 cocktails";
 			break;
 		case (1):
-			newPlayer = new Player ("Alice", 3, 100, 15, 12, 10, 10, 15, 25, 0, null,
+                addPlayer = true;
+                newPlayer = new Player ("Alice", 3, 100, 15, 12, 10, 10, 15, 25, 0, null,
 				new LowerSpeed ("tripped", "Decrease enemy speed by 30%", 3, 0.3f),
 				new MagicAttack ("charged at", "Charge at the enemy with damage 18", 5, 18),
 				(Texture2D) Resources.Load("Character4", typeof(Texture2D)));
@@ -46,7 +49,8 @@ public class LevelManager : MonoBehaviour {
 				" defence. Her specials can slow the enemy and attack by charging straight at them";
 			break;
 		case (2):
-			newPlayer = new Player ("Josh", 4, 100, 15, 25, 10, 10, 15, 5, 0, null,
+                addPlayer = true;
+                newPlayer = new Player ("Josh", 4, 100, 15, 25, 10, 10, 15, 5, 0, null,
 				new RaiseAttack ("strengthened up against", "Increase attack by 20%", 6, 0.2f),
 				new MagicAttack ("gave asbestos poisoning to", "Use asbestos to damage with power 15", 3, 15),
 				(Texture2D) Resources.Load("Character5", typeof(Texture2D)));
@@ -54,7 +58,8 @@ public class LevelManager : MonoBehaviour {
 				" but low speed. His specials can raise his attack or give asbestos poison to the enemy";
 			break;
 		case (3):
-			newPlayer = new Player ("Lucy", 5, 100, 13, 18, 15, 15, 23, 18, 0, null,
+                addPlayer = true;
+                newPlayer = new Player ("Lucy", 5, 100, 13, 18, 15, 15, 23, 18, 0, null,
 				new MagicAttack ("outsmarted", "Attack with power 13", 4, 13),
 				new MagicAttack ("threw their dissertation at", "Use dissertation to attack with power 20", 6, 20),
 				(Texture2D) Resources.Load("Character6", typeof(Texture2D)));
@@ -80,6 +85,7 @@ public class LevelManager : MonoBehaviour {
 	/// </summary>
 	/// <returns>The then load.</returns>
 	private IEnumerator WaitThenLoad() {
+        if(addPlayer)
 		PlayerData.instance.data.addPlayer (newPlayer);
 		GameObject dialogueBox = GameObject.Find ("Dialogue Manager").transform.Find ("DialogueBox").gameObject;
 		dialogueBox.SetActive (true);
