@@ -48,7 +48,7 @@ public class GlobalFunctions : MonoBehaviour {
 			instance = this;
 			DontDestroyOnLoad (gameObject);
 			objectsActive = new Dictionary <string, bool> ();
-			currentLevel = 0;
+			currentLevel = 6;
 		} else if (instance != this) {
 			Destroy (gameObject);
 		}

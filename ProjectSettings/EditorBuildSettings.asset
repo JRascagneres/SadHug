@@ -45,6 +45,9 @@ EditorBuildSettings:
     path: Assets/Exploration/Scenes/TFTV-Floor3.unity
     guid: 7982107ce71252e4eb48fe8246561318
   - enabled: 1
+    path: Assets/Exploration/Scenes/Law.unity
+    guid: b640c4275b6d6684cb1cd9558dba222a
+  - enabled: 1
     path: Assets/Menus/ExplorationMenu/ItemMenu.unity
     guid: 48505b1b792ae544992122802d6fd914
   - enabled: 1
