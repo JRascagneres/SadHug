@@ -29,6 +29,7 @@ public class Portal : MonoBehaviour {
 		if (other.gameObject.name == "Player" || other.gameObject.name == "MiniPlayer") {
 			SoundManager.instance.playSFX ("transition");
 			sceneChanger.loadLevel (newScene, newPosition);
-		}
-	}
+		    PlayerData.instance.data.Save();
+        }
+    }
 }

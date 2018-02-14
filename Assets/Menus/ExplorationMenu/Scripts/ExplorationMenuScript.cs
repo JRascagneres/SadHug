@@ -52,8 +52,8 @@ public class ExplorationMenuScript : MonoBehaviour {
 	/// Placeholder function for when the save button is pressed, to be implemented in later builds
 	/// </summary>
 	public void savePressed() {
-		//UnityEngine.SceneManagement.SceneManager.LoadScene ();
-	}
+	    PlayerData.instance.data.Save();
+    }
 
 	/// <summary>
 	/// Placeholder function for when the option button is pressed, to be implemented in later builds

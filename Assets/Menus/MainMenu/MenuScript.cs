@@ -83,10 +83,20 @@ public class MenuScript : MonoBehaviour {
 		SceneChanger.instance.loadLevel ("CS-Jail", new Vector2 (0, 0));
 	}
 
-	/// <summary>
-	/// Closes application
-	/// </summary>
-	public void ExitGame() {
+    /// <summary>
+    /// Calls Load from DataManager. Similar behaviour to StartLevel, but will read iniitialisation data from save file.
+    /// </summary>
+    public void LoadPress()
+    {
+        PlayerData.instance.data = new DataManager();
+        PlayerData.instance.data.Load();
+        player.SetActive(true);
+    }
+
+    /// <summary>
+    /// Closes application
+    /// </summary>
+    public void ExitGame() {
 		Application.Quit ();
 	}
 
