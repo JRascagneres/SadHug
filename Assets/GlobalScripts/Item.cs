@@ -47,6 +47,8 @@ public abstract class Item
     abstract public void revertBuffs(Player player);
 }
 
+//ADDED 7 more items for Assment 3
+
 /// <summary>
 /// An item that increases a player's attack stat by 5
 /// </summary>
@@ -105,7 +107,7 @@ public class MagicSword : Item
     public MagicSword()
     {
         this.name = "Magic Sword";
-        this.desc = "Increases user's attack power by 10";
+        this.desc = "Increases user's attack power by 25";
     }
 
     //Increase user's attack by 5

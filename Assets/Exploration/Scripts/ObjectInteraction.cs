@@ -29,7 +29,10 @@ public class ObjectInteraction : MonoBehaviour {
 	/// </summary>
 	[Header("If true, requires a BattleDescriptor component")]
 	public bool createBattle = false;
-
+    //vender and all things vender related are ADDITIONS to assesment 3
+    /// <summary>
+    /// if <c>true</c> create at start of dialogue, requiring a <see cref="Vender"/> component
+    /// </summary>
     [Header("If true, requires a Vender component")]
     public bool vender = false;
 
@@ -59,6 +62,8 @@ public class ObjectInteraction : MonoBehaviour {
 
 	/// <summary>
 	/// When player is within collider, check if key is pressed and open dialogue if so
+    /// starts dialogue 
+    /// starts vender as appropriate
 	/// </summary>
 	/// <param name="other">The object that has been collided with, checked to see if "Player"</param>
 	void OnTriggerStay2D(Collider2D other) {
@@ -90,6 +95,7 @@ public class ObjectInteraction : MonoBehaviour {
 	/// <summary>
 	/// Called by <see cref="DialogueScript"/> once all dialogue lines have been read, giving the user an item and/or
 	/// starting a battle as appropiate
+    /// closes shop as appropriate
 	/// </summary>
 	public void endOfDialogue() {
 		if (treasure != GlobalFunctions.ItemTypes.None) {

@@ -36,7 +36,7 @@ public class GlobalFunctions : MonoBehaviour
     [System.NonSerialized]
     public int currentLevel;
 
-
+    //ADDED 7 More items for assesment 3 
     /// <summary>
     /// An enum type representing items so that they can be selected from within the Unity Editor
     /// </summary>
@@ -109,6 +109,7 @@ public class GlobalFunctions : MonoBehaviour
         player.SetActive(true);
     }
 
+    //ADDED 7 More items for assesment 3 
     /// <summary>
     /// Converts an enum type of <see cref="ItemTypes"/> to an <see cref="Item"/> instance </summary>
     /// <returns>An item instance</returns>

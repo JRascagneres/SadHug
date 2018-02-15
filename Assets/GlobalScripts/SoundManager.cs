@@ -57,4 +57,9 @@ public class SoundManager : MonoBehaviour {
 		SFXSource.mute = !val;
 	}
 
+    public bool isSoundOn()
+    {
+        return !BGMSource.mute;
+    }
+
 }

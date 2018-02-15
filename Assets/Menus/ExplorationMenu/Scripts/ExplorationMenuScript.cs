@@ -55,12 +55,26 @@ public class ExplorationMenuScript : MonoBehaviour {
 	    PlayerData.instance.data.Save();
     }
 
+    ///THIS IS AN ASSESMENT 3 CHANGE
 	/// <summary>
-	/// Placeholder function for when the option button is pressed, to be implemented in later builds
+	///Now a toggle mute button 
 	/// </summary>
 	public void optionPressed() {
-		//UnityEngine.SceneManagement.SceneManager.LoadScene ();
-	}
+        bool soundOn = SoundManager.instance.isSoundOn();
+        
+        if (soundOn)
+            {
+                SoundManager.instance.soundOn(false);
+                
+            }
+            else
+            {
+                SoundManager.instance.soundOn(true);
+                
+            }
+        
+        
+    }
 
 	/// <summary>
 	/// When the exit button is pressed, update <see cref="SceneChanger"/> to show that <see cref="SceneChanger.menuOpen"/>

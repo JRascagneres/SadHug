@@ -78,7 +78,7 @@ public class LevelManager : MonoBehaviour {
 			}
 		}
 	}
-
+    //added "addplayer" to fix bugs present from assessment 2 in assessment 3
 	/// <summary>
 	/// Function called by <see cref="Start"/> once boss has been beaten
 	/// Applies all functions along with waiting 5 seconds for user to read dialogue about new player

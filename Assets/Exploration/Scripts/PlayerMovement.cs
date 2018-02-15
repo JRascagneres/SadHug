@@ -65,31 +65,36 @@ public class PlayerMovement : MonoBehaviour {
 //				50, null, false);
 //		}
 
+
 		if (Input.GetKeyDown (KeyCode.Escape) || pseudoEscapeKeyPress) {
 			explorationMenu ();
 		}
-
+        //CHANGED for Assessment 3 movement now allows for diagonal, makes transition into the mini game easier and navigation as a whole
         if (Input.GetKey(KeyCode.UpArrow) && Input.GetKey(KeyCode.RightArrow))
         {
-            player.Translate(Vector2.right*speed);
+            if (canMove)
+                player.Translate(Vector2.right*speed);
             move("Up");
         }
         else
         if (Input.GetKey(KeyCode.UpArrow) && Input.GetKey(KeyCode.LeftArrow))
         {
-            player.Translate(Vector2.left * speed);
+            if (canMove)
+              player.Translate(Vector2.left * speed);
             move("Up");
         }
         else
         if (Input.GetKey(KeyCode.DownArrow) && Input.GetKey(KeyCode.RightArrow))
         {
-            player.Translate(Vector2.right * speed);
+            if (canMove)
+                player.Translate(Vector2.right * speed);
             move("Down");
         }
         else
         if (Input.GetKey(KeyCode.DownArrow) && Input.GetKey(KeyCode.LeftArrow))
         {
-            player.Translate(Vector2.left * speed);
+            if (canMove)
+                player.Translate(Vector2.left * speed);
             move("Down");
         }
         else
