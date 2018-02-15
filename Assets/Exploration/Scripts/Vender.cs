@@ -5,7 +5,7 @@ using UnityEngine;
 public class Vender : MonoBehaviour
 {
 
-    private Camera c;
+
     private int numberOfItems = 6;
     private int numberOfItemsPerRow = 3;
     private float cellWidth = Screen.width / 4;
@@ -15,11 +15,7 @@ public class Vender : MonoBehaviour
     public GlobalFunctions.ItemTypes[] items;
     private bool draw = false;
 
-    // Use this for initialization
-    void Start()
-    {
-        c = Camera.main;
-    }
+
 
     // Update is called once per frame
     void FixedUpdate()

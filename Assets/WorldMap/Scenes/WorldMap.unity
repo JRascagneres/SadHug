@@ -122,11 +122,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4020902869462268, guid: d688fff3233adf54494034131c0b29c4, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 41.87
+      value: 30.2
       objectReference: {fileID: 0}
     - target: {fileID: 4020902869462268, guid: d688fff3233adf54494034131c0b29c4, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -38.08
+      value: -24.8
       objectReference: {fileID: 0}
     - target: {fileID: 4020902869462268, guid: d688fff3233adf54494034131c0b29c4, type: 2}
       propertyPath: m_LocalPosition.z
@@ -1408,7 +1408,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f17759d8c0e6704cbc0d9ff507a876c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  newScene: Hes-Hall
+  newScene: HesHall
   newPosition: {x: 0, y: 0}
 --- !u!114 &1084306540
 MonoBehaviour:
@@ -1434,7 +1434,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f17759d8c0e6704cbc0d9ff507a876c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  newScene: Music
+  newScene: Music-Entrance
   newPosition: {x: 0, y: -0.75}
 --- !u!114 &1084306542
 MonoBehaviour:
@@ -1447,7 +1447,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f17759d8c0e6704cbc0d9ff507a876c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  newScene: Central-Hall
+  newScene: CentralHall
   newPosition: {x: -0.7, y: 12}
 --- !u!114 &1084306543
 MonoBehaviour:

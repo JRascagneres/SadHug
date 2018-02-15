@@ -101,3 +101,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Exploration/Scenes/Ass3 Scenes/Biology-Floor1.unity
     guid: 7cd2d47fcaba7384aa6b5f3005987f8c
+  - enabled: 1
+    path: Assets/Exploration/Scenes/Ass3 Scenes/HesHall-Floor1.unity
+    guid: 11cd1f53b40e6314ea693d4fa437a147

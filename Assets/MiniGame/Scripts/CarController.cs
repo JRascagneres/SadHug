@@ -78,9 +78,9 @@ public class CarController : MonoBehaviour
             Debug.Log("LOAD CORRECT LEVEL");
             SoundManager.instance.playSFX("transition");
             if(SceneManager.GetActiveScene().name=="MiniGame")
-                sceneChanger.loadLevel("WorldMap", new Vector2(-46,-3));
+                sceneChanger.loadLevel("WorldMap", new Vector2(-27,-42));
             else
-                sceneChanger.loadLevel("WorldMap", new Vector2(-13, -7));
+                sceneChanger.loadLevel("WorldMap", new Vector2(23, -45));
 
         }
 
