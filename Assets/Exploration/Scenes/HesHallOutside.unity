@@ -192,7 +192,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4020902869462268, guid: d688fff3233adf54494034131c0b29c4, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1308028989398732, guid: d688fff3233adf54494034131c0b29c4, type: 2}
       propertyPath: m_Name
@@ -238,7 +238,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4877416950172522, guid: 39c6f442aa2174047910f10f0c6b8e8f, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 20784022718258468, guid: 39c6f442aa2174047910f10f0c6b8e8f,
         type: 2}
@@ -328,7 +328,7 @@ Transform:
   m_LocalScale: {x: 3, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1456234966
 GameObject:
@@ -390,8 +390,149 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1801709892
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 114521012189186300, guid: d92f8f756b8cadf478825a8a6808674d,
+        type: 2}
+      propertyPath: dialogue.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4412286959588550, guid: d92f8f756b8cadf478825a8a6808674d, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 36.762268
+      objectReference: {fileID: 0}
+    - target: {fileID: 4412286959588550, guid: d92f8f756b8cadf478825a8a6808674d, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -63.380566
+      objectReference: {fileID: 0}
+    - target: {fileID: 4412286959588550, guid: d92f8f756b8cadf478825a8a6808674d, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4412286959588550, guid: d92f8f756b8cadf478825a8a6808674d, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4412286959588550, guid: d92f8f756b8cadf478825a8a6808674d, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4412286959588550, guid: d92f8f756b8cadf478825a8a6808674d, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4412286959588550, guid: d92f8f756b8cadf478825a8a6808674d, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4412286959588550, guid: d92f8f756b8cadf478825a8a6808674d, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212791348369588002, guid: d92f8f756b8cadf478825a8a6808674d,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 1d69228c70d5ca845af3c1ed47e1374f,
+        type: 3}
+    - target: {fileID: 114521012189186300, guid: d92f8f756b8cadf478825a8a6808674d,
+        type: 2}
+      propertyPath: dialogue.Array.data[0]
+      value: Heres some armour, protect yourself!
+      objectReference: {fileID: 0}
+    - target: {fileID: 114521012189186300, guid: d92f8f756b8cadf478825a8a6808674d,
+        type: 2}
+      propertyPath: dialogue.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114521012189186300, guid: d92f8f756b8cadf478825a8a6808674d,
+        type: 2}
+      propertyPath: dialogue.Array.data[2]
+      value: Similary, you drag and drop items on the item menu to equip or de-equip
+        them.
+      objectReference: {fileID: 0}
+    - target: {fileID: 114521012189186300, guid: d92f8f756b8cadf478825a8a6808674d,
+        type: 2}
+      propertyPath: treasure
+      value: 6
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: d92f8f756b8cadf478825a8a6808674d, type: 2}
+  m_IsPrefabParent: 0
+--- !u!1001 &1919350830
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 114521012189186300, guid: d92f8f756b8cadf478825a8a6808674d,
+        type: 2}
+      propertyPath: dialogue.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4412286959588550, guid: d92f8f756b8cadf478825a8a6808674d, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 26.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4412286959588550, guid: d92f8f756b8cadf478825a8a6808674d, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -40.56
+      objectReference: {fileID: 0}
+    - target: {fileID: 4412286959588550, guid: d92f8f756b8cadf478825a8a6808674d, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4412286959588550, guid: d92f8f756b8cadf478825a8a6808674d, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4412286959588550, guid: d92f8f756b8cadf478825a8a6808674d, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4412286959588550, guid: d92f8f756b8cadf478825a8a6808674d, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4412286959588550, guid: d92f8f756b8cadf478825a8a6808674d, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4412286959588550, guid: d92f8f756b8cadf478825a8a6808674d, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1565476631828994, guid: d92f8f756b8cadf478825a8a6808674d, type: 2}
+      propertyPath: m_Name
+      value: Character (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114521012189186300, guid: d92f8f756b8cadf478825a8a6808674d,
+        type: 2}
+      propertyPath: dialogue.Array.data[1]
+      value: Players in the top left will go into battle first.
+      objectReference: {fileID: 0}
+    - target: {fileID: 114521012189186300, guid: d92f8f756b8cadf478825a8a6808674d,
+        type: 2}
+      propertyPath: dialogue.Array.data[2]
+      value: Similarly, you drag and drop items on the item menu to equip or de-equip
+        them.
+      objectReference: {fileID: 0}
+    - target: {fileID: 114521012189186300, guid: d92f8f756b8cadf478825a8a6808674d,
+        type: 2}
+      propertyPath: dialogue.Array.data[0]
+      value: Stop him, He's in there!
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: d92f8f756b8cadf478825a8a6808674d, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1926033629
 GameObject:
   m_ObjectHideFlags: 0
@@ -458,7 +599,7 @@ Transform:
   m_LocalScale: {x: 10, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2037957372
 GameObject:
@@ -531,5 +672,5 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

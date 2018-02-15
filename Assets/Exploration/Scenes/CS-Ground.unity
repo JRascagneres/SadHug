@@ -155,7 +155,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4704459060425080, guid: 029c17544fabbde43bb73a9f1d1359b7, type: 2}
       propertyPath: m_RootOrder
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 114485212689137276, guid: 029c17544fabbde43bb73a9f1d1359b7,
         type: 2}
@@ -215,7 +215,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4908452959411584, guid: 6fca40b0222e5b343b10fa93841d8d25, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6fca40b0222e5b343b10fa93841d8d25, type: 2}
@@ -227,72 +227,40 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 114485212689137276, guid: 029c17544fabbde43bb73a9f1d1359b7,
-        type: 2}
-      propertyPath: dialogue.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4704459060425080, guid: 029c17544fabbde43bb73a9f1d1359b7, type: 2}
+    - target: {fileID: 4412286959588550, guid: d92f8f756b8cadf478825a8a6808674d, type: 2}
       propertyPath: m_LocalPosition.x
       value: 101.24146
       objectReference: {fileID: 0}
-    - target: {fileID: 4704459060425080, guid: 029c17544fabbde43bb73a9f1d1359b7, type: 2}
+    - target: {fileID: 4412286959588550, guid: d92f8f756b8cadf478825a8a6808674d, type: 2}
       propertyPath: m_LocalPosition.y
       value: -126.89706
       objectReference: {fileID: 0}
-    - target: {fileID: 4704459060425080, guid: 029c17544fabbde43bb73a9f1d1359b7, type: 2}
+    - target: {fileID: 4412286959588550, guid: d92f8f756b8cadf478825a8a6808674d, type: 2}
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4704459060425080, guid: 029c17544fabbde43bb73a9f1d1359b7, type: 2}
+    - target: {fileID: 4412286959588550, guid: d92f8f756b8cadf478825a8a6808674d, type: 2}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4704459060425080, guid: 029c17544fabbde43bb73a9f1d1359b7, type: 2}
+    - target: {fileID: 4412286959588550, guid: d92f8f756b8cadf478825a8a6808674d, type: 2}
       propertyPath: m_LocalRotation.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4704459060425080, guid: 029c17544fabbde43bb73a9f1d1359b7, type: 2}
+    - target: {fileID: 4412286959588550, guid: d92f8f756b8cadf478825a8a6808674d, type: 2}
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4704459060425080, guid: 029c17544fabbde43bb73a9f1d1359b7, type: 2}
+    - target: {fileID: 4412286959588550, guid: d92f8f756b8cadf478825a8a6808674d, type: 2}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 4704459060425080, guid: 029c17544fabbde43bb73a9f1d1359b7, type: 2}
+    - target: {fileID: 4412286959588550, guid: d92f8f756b8cadf478825a8a6808674d, type: 2}
       propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1344385287322598, guid: 029c17544fabbde43bb73a9f1d1359b7, type: 2}
-      propertyPath: m_Name
-      value: Character (5)
-      objectReference: {fileID: 0}
-    - target: {fileID: 212996946334501392, guid: 029c17544fabbde43bb73a9f1d1359b7,
-        type: 2}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 54132e496b1ddbd489b4010dadaa64bc,
-        type: 3}
-    - target: {fileID: 114485212689137276, guid: 029c17544fabbde43bb73a9f1d1359b7,
-        type: 2}
-      propertyPath: dialogue.Array.data[0]
-      value: When you open the Party menu, you can drag and drop players to change
-        their order!
-      objectReference: {fileID: 0}
-    - target: {fileID: 114485212689137276, guid: 029c17544fabbde43bb73a9f1d1359b7,
-        type: 2}
-      propertyPath: dialogue.Array.data[1]
-      value: Players in the top left will go into battle first.
-      objectReference: {fileID: 0}
-    - target: {fileID: 114485212689137276, guid: 029c17544fabbde43bb73a9f1d1359b7,
-        type: 2}
-      propertyPath: dialogue.Array.data[2]
-      value: Similarly, you drag and drop items on the item menu to equip or de-equip
-        them.
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 029c17544fabbde43bb73a9f1d1359b7, type: 2}
+  m_ParentPrefab: {fileID: 100100000, guid: d92f8f756b8cadf478825a8a6808674d, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &461074437
 GameObject:
@@ -404,7 +372,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4704459060425080, guid: 029c17544fabbde43bb73a9f1d1359b7, type: 2}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 1344385287322598, guid: 029c17544fabbde43bb73a9f1d1359b7, type: 2}
       propertyPath: m_Name
@@ -524,7 +492,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4443281249315648, guid: ef34c28da35356246a58710155dc0e3d, type: 2}
       propertyPath: m_RootOrder
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ef34c28da35356246a58710155dc0e3d, type: 2}
@@ -644,118 +612,41 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4704459060425080, guid: 029c17544fabbde43bb73a9f1d1359b7, type: 2}
+    - target: {fileID: 4159980375573550, guid: 9c1f9c0dd1a2dc7449deb6740c1cceca, type: 2}
       propertyPath: m_LocalPosition.x
       value: 90.679306
       objectReference: {fileID: 0}
-    - target: {fileID: 4704459060425080, guid: 029c17544fabbde43bb73a9f1d1359b7, type: 2}
+    - target: {fileID: 4159980375573550, guid: 9c1f9c0dd1a2dc7449deb6740c1cceca, type: 2}
       propertyPath: m_LocalPosition.y
       value: -159.48108
       objectReference: {fileID: 0}
-    - target: {fileID: 4704459060425080, guid: 029c17544fabbde43bb73a9f1d1359b7, type: 2}
+    - target: {fileID: 4159980375573550, guid: 9c1f9c0dd1a2dc7449deb6740c1cceca, type: 2}
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4704459060425080, guid: 029c17544fabbde43bb73a9f1d1359b7, type: 2}
+    - target: {fileID: 4159980375573550, guid: 9c1f9c0dd1a2dc7449deb6740c1cceca, type: 2}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4704459060425080, guid: 029c17544fabbde43bb73a9f1d1359b7, type: 2}
+    - target: {fileID: 4159980375573550, guid: 9c1f9c0dd1a2dc7449deb6740c1cceca, type: 2}
       propertyPath: m_LocalRotation.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4704459060425080, guid: 029c17544fabbde43bb73a9f1d1359b7, type: 2}
+    - target: {fileID: 4159980375573550, guid: 9c1f9c0dd1a2dc7449deb6740c1cceca, type: 2}
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4704459060425080, guid: 029c17544fabbde43bb73a9f1d1359b7, type: 2}
+    - target: {fileID: 4159980375573550, guid: 9c1f9c0dd1a2dc7449deb6740c1cceca, type: 2}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 4704459060425080, guid: 029c17544fabbde43bb73a9f1d1359b7, type: 2}
+    - target: {fileID: 4159980375573550, guid: 9c1f9c0dd1a2dc7449deb6740c1cceca, type: 2}
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 1344385287322598, guid: 029c17544fabbde43bb73a9f1d1359b7, type: 2}
-      propertyPath: m_Name
-      value: Boss
-      objectReference: {fileID: 0}
-    - target: {fileID: 61449539767269810, guid: 029c17544fabbde43bb73a9f1d1359b7,
-        type: 2}
-      propertyPath: m_Offset.x
-      value: 0.11882579
-      objectReference: {fileID: 0}
-    - target: {fileID: 61449539767269810, guid: 029c17544fabbde43bb73a9f1d1359b7,
-        type: 2}
-      propertyPath: m_Size.x
-      value: 3.478552
-      objectReference: {fileID: 0}
-    - target: {fileID: 61449539767269810, guid: 029c17544fabbde43bb73a9f1d1359b7,
-        type: 2}
-      propertyPath: m_Offset.y
-      value: -0.33952367
-      objectReference: {fileID: 0}
-    - target: {fileID: 61449539767269810, guid: 029c17544fabbde43bb73a9f1d1359b7,
-        type: 2}
-      propertyPath: m_Size.y
-      value: 2.2222779
-      objectReference: {fileID: 0}
-    - target: {fileID: 212996946334501392, guid: 029c17544fabbde43bb73a9f1d1359b7,
-        type: 2}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 2175299a9b3acce4eb3227b798ca7e2a,
-        type: 3}
-    - target: {fileID: 114485212689137276, guid: 029c17544fabbde43bb73a9f1d1359b7,
-        type: 2}
-      propertyPath: dialogue.Array.data[0]
-      value: I see you're trying to escape. I'm afraid that is Academic Misconduct,
-        and therefore I must stop you!
-      objectReference: {fileID: 0}
-    - target: {fileID: 114485212689137276, guid: 029c17544fabbde43bb73a9f1d1359b7,
-        type: 2}
-      propertyPath: createBattle
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 029c17544fabbde43bb73a9f1d1359b7, type: 2}
+  m_ParentPrefab: {fileID: 100100000, guid: 9c1f9c0dd1a2dc7449deb6740c1cceca, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &864115902 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1060671026712308, guid: 029c17544fabbde43bb73a9f1d1359b7,
-    type: 2}
-  m_PrefabInternal: {fileID: 864115901}
---- !u!114 &864115903
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 864115902}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9f2ada571bbfb0448a34a040c72af284, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  battleMoney: 50
-  battleItem: 0
-  canRunAway: 0
-  name: CS Boss
-  sprite: {fileID: 2800000, guid: 0f68722fa6b3ebb4093e4c8d9a5969f7, type: 3}
-  level: 5
-  health: 100
-  attack: 2
-  defence: 2
-  maximumMagic: 2
-  luck: 2
-  speed: 2
-  special1: 3
-  special1Text: buffed up against
-  special1Magic: 1
-  special1Value: 0.5
-  special2: 4
-  special2Text: buffed up against
-  special2Magic: 1
-  special2Value: 0.5
 --- !u!1 &893006269
 GameObject:
   m_ObjectHideFlags: 0
@@ -923,7 +814,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4704459060425080, guid: 029c17544fabbde43bb73a9f1d1359b7, type: 2}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1344385287322598, guid: 029c17544fabbde43bb73a9f1d1359b7, type: 2}
       propertyPath: m_Name
@@ -1091,7 +982,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4704459060425080, guid: 029c17544fabbde43bb73a9f1d1359b7, type: 2}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1344385287322598, guid: 029c17544fabbde43bb73a9f1d1359b7, type: 2}
       propertyPath: m_Name
@@ -1202,7 +1093,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4704459060425080, guid: 029c17544fabbde43bb73a9f1d1359b7, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1344385287322598, guid: 029c17544fabbde43bb73a9f1d1359b7, type: 2}
       propertyPath: m_Name
