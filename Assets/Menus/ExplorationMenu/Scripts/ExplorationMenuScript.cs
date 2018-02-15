@@ -61,8 +61,6 @@ public class ExplorationMenuScript : MonoBehaviour {
 	/// </summary>
 	public void tradePressed() {
         SceneChanger.instance.menuOpen = false;
-        PlayerData.instance.data.Items[0] = new Hammer();
-        PlayerData.instance.data.Items[2] = new MagicAmulet();
         SceneManager.LoadScene("TownMode", LoadSceneMode.Additive);
 	}
 

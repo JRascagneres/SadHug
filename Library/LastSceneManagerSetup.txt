@@ -1,7 +1,19 @@
 sceneSetups:
 - path: Assets/Menus/MainMenu/mainmenu1.unity
+  isLoaded: 0
+  isActive: 0
+- path: Assets/TownMode/TownMode.unity
+  isLoaded: 0
+  isActive: 0
+- path: Assets/Exploration/Scenes/Law.unity
+  isLoaded: 0
+  isActive: 0
+- path: Assets/WorldMap/Scenes/WorldMap.unity
   isLoaded: 1
   isActive: 1
-- path: Assets/TownMode/TownMode.unity
+- path: Assets/Exploration/Scenes/Derwent.unity
+  isLoaded: 0
+  isActive: 0
+- path: Assets/Exploration/Scenes/JackLyons.unity
   isLoaded: 0
   isActive: 0
