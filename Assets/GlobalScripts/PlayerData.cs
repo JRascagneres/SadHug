@@ -132,11 +132,30 @@ public class DataManager {
 		}
 	}
 
-	/// <summary>
-	/// Counts all items in <see cref="items"/> which are not null
+    /// <summary>
+	/// Removes an item to <see cref="items"/> 
 	/// </summary>
-	/// <returns>The number of non-null elements in the array</returns>
-	public int countItems() {
+	/// <param name="item">The item to remove</param>
+	public void removeItem(Item item)
+    {
+        for (int i = 0; i < items.Length; i++)
+        {
+            if (items[i] != null)
+            {
+                if (items[i].GetType() == item.GetType())
+                {
+                    items[i] = null;
+                    break;
+                }
+            }
+        }
+    }
+
+    /// <summary>
+    /// Counts all items in <see cref="items"/> which are not null
+    /// </summary>
+    /// <returns>The number of non-null elements in the array</returns>
+    public int countItems() {
 		int count = 0;
 		for (int i = 0; i < items.Length; i++) {
 			if (items [i] != null) {

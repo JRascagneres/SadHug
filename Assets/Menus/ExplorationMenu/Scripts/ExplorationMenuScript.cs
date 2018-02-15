@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 /// <summary>
@@ -56,10 +57,13 @@ public class ExplorationMenuScript : MonoBehaviour {
     }
 
 	/// <summary>
-	/// Placeholder function for when the option button is pressed, to be implemented in later builds
+    ///
 	/// </summary>
-	public void optionPressed() {
-		//UnityEngine.SceneManagement.SceneManager.LoadScene ();
+	public void tradePressed() {
+        SceneChanger.instance.menuOpen = false;
+        PlayerData.instance.data.Items[0] = new Hammer();
+        PlayerData.instance.data.Items[2] = new MagicAmulet();
+        SceneManager.LoadScene("TownMode", LoadSceneMode.Additive);
 	}
 
 	/// <summary>

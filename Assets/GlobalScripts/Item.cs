@@ -9,6 +9,7 @@ public abstract class Item {
 
 	protected string name;
 	protected string desc;
+    protected int cost;
 
 	public string Name {
 		get {
@@ -27,6 +28,18 @@ public abstract class Item {
 			desc = value;
 		}
 	}
+
+    public int Cost
+    {
+        get
+        {
+            return this.cost;
+        }
+        set
+        {
+            cost = value;
+        }
+    }
 
 	/// <summary>
 	/// A function that applies to specific stat increases for this item
@@ -48,6 +61,7 @@ public class Hammer : Item {
 	public Hammer () {
 		this.name = "Hammer";
 		this.desc = "Increases user's attack power by 5";
+        this.cost = 10;
 	}
 
 	//Increase user's attack by 5
@@ -69,7 +83,8 @@ public class Trainers : Item {
 	public Trainers () {
 		this.name = "Trainers";
 		this.desc = "Increases user's speed by 5";
-	}
+        this.cost = 10;
+    }
 
 	public override void applyBuffs(Player player) {
 		player.Speed += 5;
@@ -88,7 +103,8 @@ public class RabbitFoot : Item {
 	public RabbitFoot () {
 		this.name = "Rabbit Foot";
 		this.desc = "Increases user's luck by 5";
-	}
+        this.cost = 10;
+    }
 
 	public override void applyBuffs(Player player) {
 		player.Luck += 5;
@@ -108,7 +124,8 @@ public class MagicAmulet : Item {
 	public MagicAmulet () {
 		this.name = "Magic Amulet";
 		this.desc = "Increases user's maximum magic points by 3";
-	}
+        this.cost = 10;
+    }
 
 	public override void applyBuffs(Player player) {
 		player.MaximumMagic += 3;
@@ -132,7 +149,8 @@ public class Shield : Item {
 	public Shield () {
 		this.name = "Shield";
 		this.desc = "Increases user's defence by 5";
-	}
+        this.cost = 10;
+    }
 
 	public override void applyBuffs(Player player) {
 		player.Defence += 5;
@@ -152,7 +170,8 @@ public class Armour : Item {
 	public Armour () {
 		this.name = "Armour";
 		this.desc = "Increase attack by 2 and defence by 3";
-	}
+        this.cost = 10;
+    }
 
 	public override void applyBuffs(Player player) {
 		player.Attack += 3;
