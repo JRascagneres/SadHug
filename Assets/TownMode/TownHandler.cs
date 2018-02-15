@@ -9,7 +9,10 @@ public class TownHandler : MonoBehaviour {
     {
     }
 
-   public void goBack()
+    /// <summary>
+    /// Simple command used by the town mode to exit back out
+    /// </summary>
+    public void goBack()
     {
         SceneChanger.instance.loadLevel(SceneManager.GetSceneAt(0).name);
     }

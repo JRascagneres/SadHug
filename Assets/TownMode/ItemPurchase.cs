@@ -5,6 +5,9 @@ using UnityEngine.UI;
 
 public class ItemPurchase : MonoBehaviour {
 
+    /// <summary>
+	/// Enum storing different items so they can be chosen from the editor
+	/// </summary>
     public enum Items{Hammer, Trainers, RabbitFoot, MagicAmulet, Shield, Armour};
 
     public Items item;
@@ -15,9 +18,11 @@ public class ItemPurchase : MonoBehaviour {
     private Text sellButtonText;
     private Text itemName;
     private Item thisItem;
-    
-	// Use this for initialization
-	void Start () {
+
+    /// <summary>
+    /// Start method sets references to all GameObjects required
+    /// </summary>
+    void Start () {
         thisCanvas = gameObject.GetComponent<Canvas>();
         buyButton = thisCanvas.transform.GetChild(0).GetComponent<Button>();
         buyButtonText = thisCanvas.transform.GetChild(0).GetChild(0).GetComponent<Text>();
@@ -53,26 +58,40 @@ public class ItemPurchase : MonoBehaviour {
 
         buyButtonText.text = "$" + thisItem.Cost;
         sellButtonText.text = "$" + (thisItem.Cost - 2);
+
         checkItems();
     }
-	
+
+    /// <summary>
+    /// Deducts money from player and gives them the item
+    /// </summary>
+    /// <param name="item">The item being bought</param>
     void buyItem(Item item)
     {
         PlayerData.instance.data.Money -= item.Cost;
         PlayerData.instance.data.addItem(item);
     }
 
+    /// <summary>
+    /// Credits money to the player and removes the item
+    /// </summary>
+    /// <param name="item">The item being sold</param>
     void sellItem(Item item)
     {
         PlayerData.instance.data.Money += (item.Cost - 2);
         PlayerData.instance.data.removeItem(item);
     }
 
-	// Update is called once per frame
-	void Update () {
+    /// <summary>
+    /// Runs the checkItems function every frame <see cref="checkItems"/>
+    /// </summary>
+    void Update () {
         checkItems();
 	}
 
+    /// <summary>
+    /// Updates the buy&sell buttons and the item name in town mode
+    /// </summary>
     void checkItems()
     {
 

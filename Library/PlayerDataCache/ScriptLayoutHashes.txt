@@ -2,17 +2,25 @@ WindowsStandalone
 SceneListBegin?
 Assets/Menus/MainMenu/mainmenu1.unity
 Assets/Exploration/Scenes/CS-Jail.unity
+Assets/TownMode/TownMode.unity
 Assets/WorldMap/Scenes/WorldMap.unity
 Assets/Exploration/Scenes/Main.unity
 Assets/Exploration/Scenes/Alternate.unity
 Assets/Battle/Battle.unity
 Assets/PlayTests/ExplorationTestScene.unity
 Assets/Exploration/Scenes/CS-Ground.unity
+Assets/Exploration/Scenes/CentralHall.unity
+Assets/Exploration/Scenes/Derwent.unity
+Assets/Exploration/Scenes/HesHallInside.unity
+Assets/Exploration/Scenes/HesHallOutside.unity
+Assets/Exploration/Scenes/JackLyons.unity
+Assets/Exploration/Scenes/TiledTesting.unity
 Assets/Exploration/Scenes/CS-Floor1.unity
 Assets/Exploration/Scenes/TFTV-Ground.unity
 Assets/Exploration/Scenes/TFTV-Floor1.unity
 Assets/Exploration/Scenes/TFTV-Floor2.unity
 Assets/Exploration/Scenes/TFTV-Floor3.unity
+Assets/Exploration/Scenes/Law.unity
 Assets/Menus/ExplorationMenu/ItemMenu.unity
 Assets/Exploration/Scenes/RCH.unity
 Assets/Exploration/Scenes/Library-Floor1.unity
@@ -104,6 +112,7 @@ c63db43c730fa2cbb8ca07de15898cb6 UnityEngine.UI.dll:UnityEngine.UI.Toggle
 f61c0793411f10cf5fbfa1473fef5ef2 UnityEngine.UI.dll:UnityEngine.UI.ToggleGroup
 86d36c43c53541d667100dc90b89cfba UnityEngine.UI.dll:UnityEngine.EventSystems.TouchInputModule
 1b8c02d0aa82fbf036a2b9b2d713eec3 UnityEngine.UI.dll:UnityEngine.UI.VerticalLayoutGroup
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.TownHandler
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationPlayableAsset
 970a95104359198fe1a98ef48655de8c UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationTrack
 8144169769d51429c4aedc8b0f92d47b UnityEngine.Timeline.dll:UnityEngine.Timeline.AnimationPlayableAsset
@@ -176,6 +185,7 @@ e9bdabf9265d758d56f01bb188916fa8 UnityEngine.Networking.dll:UnityEngine.Networki
 73843688b51256aed059f049c540bca8 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformChild
 528ea1fd7c01796fc60c4e2f172ea229 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformVisualizer
 4d3c7d40a3cf7bf7bd413d6eb67665b0 Assembly-CSharp.dll:.DialogueScript
+9027353db2a64064d12fde78deb2282b Assembly-CSharp.dll:.ItemPurchase
 7b2d2c2a55e04afd5272f2579a88a0b9 Assembly-CSharp.dll:.Fader
 329bcbf88b3c0197d230f5b9ceb88333 Assembly-CSharp.dll:Tiled2Unity.PolygonObject
 329bcbf88b3c0197d230f5b9ceb88333 Assembly-CSharp.dll:Tiled2Unity.CircleObject

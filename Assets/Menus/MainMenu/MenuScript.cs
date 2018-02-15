@@ -84,6 +84,10 @@ public class MenuScript : MonoBehaviour {
 		SceneChanger.instance.loadLevel ("CS-Jail", new Vector2 (0, 0));
 	}
 
+
+    /// <summary>
+	/// If save file exists then disable the button and do nothing, otherwise run the load function <see cref="PlayerData.instance.data.Load"/>
+	/// </summary>
     public void loadGame(GameObject buttonObj)
     {
         if (!File.Exists(Application.persistentDataPath + "/saveFile.dat"))

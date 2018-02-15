@@ -165,6 +165,9 @@ public class DataManager {
 		return count;
 	}
 
+    /// <summary>
+    /// Collects all of the data and maps it to my own serializable classes and then puts them into the savefile
+    /// </summary>
     public void Save()
     {
         BinaryFormatter binaryFormatter = new BinaryFormatter();
@@ -236,8 +239,10 @@ public class DataManager {
         file.Close();
     }
 
-    
 
+    /// <summary>
+    /// Gets all saved data mapped to my classes and loads it into the game
+    /// </summary>
     public void Load()
     {
         BinaryFormatter binaryFormatter = new BinaryFormatter();
@@ -282,6 +287,10 @@ public class DataManager {
 
     }
 
+
+    /// <summary>
+    /// Serializable classes storing save data
+    /// </summary>
     [Serializable]
     public class StoredData
     {
@@ -381,6 +390,10 @@ public class DataManager {
 
     }
 
+    /// <summary>
+    /// Takes the saved data move and returns the correct method needed for the game
+    /// </summary>
+    /// <param name="specialMove">The stored move</param>
     public SpecialMove getMoveFromStored(StoredData.SpecialMove specialMove)
     {
         if(specialMove is StoredData.MagicAttack)
@@ -421,6 +434,10 @@ public class DataManager {
         return null;
     }
 
+    /// <summary>
+    /// Gets the move in the game and returns a move that is able to be saved
+    /// </summary>
+    /// <param name="specialMove">The special move from the player to convert it to be stored</param>
     public StoredData.SpecialMove getMoveFromPlayer(SpecialMove specialMove)
     {
         if (specialMove is MagicAttack)
