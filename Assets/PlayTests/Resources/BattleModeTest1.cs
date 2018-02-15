@@ -5,6 +5,9 @@ using System.Collections;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
+// ASSESSMENT 3 UPDATES, tests were broken before, fixed by using correct constructor. 
+// BattleModeTest2 was dependent on BattleModeTest1, so they have been merged, as no real benefit gained from having them seperate.
+
 [TestFixture]
 public class BattleModeTest1
 {

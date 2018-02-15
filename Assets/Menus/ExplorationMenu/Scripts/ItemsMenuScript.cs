@@ -100,7 +100,18 @@ public class ItemsMenuScript : MonoBehaviour {
 				players [source.Index].Item = items [dest.Index];
 				items [dest.Index] = temp;
 			}
-		} else { //if dest.type == "Player"
+		} else if (dest.type == "Delete") //  THIS ELSE IF ADDED ASSESSMENT 3
+		{
+		    if (source.type == "Item")
+		    {
+		        items[source.Index] = null;
+		    }
+		    else 
+		    { //if source.type == "Player"
+		        players[source.Index].Item = null;
+		    }
+		}
+        else  { //if dest.type == "Player"
 			if (source.type == "Item") {
 				temp = items [source.Index];
 				items [source.Index] = players [dest.Index].Item;
@@ -111,6 +122,11 @@ public class ItemsMenuScript : MonoBehaviour {
 				players [dest.Index].Item = temp;
 			}
 		}
+	    for (var i =0; i <= 5; i++)
+	    {
+	        Debug.Log(PlayerData.instance.data.Items[i]);
+        }
+        
 		Debug.Log ("Source: " + source.Type);
 		Debug.Log ("Destination: " + dest.Type);
 		//Debug.Log ("Item Name: " + desc.item.GetComponent<ItemData> ().Item.Name);

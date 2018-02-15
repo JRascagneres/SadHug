@@ -52,7 +52,7 @@ public abstract class SpecialMove : CharacterMove
 
     protected string desc;
     protected int magic;
-    protected float special;
+    protected float special; // ADDED IN ASSESSMNENT 3 to faciliate saving. Changes are made below to accomodate this, i.e, children class now use this property instead.
 
     /// <param name="text"> The text to display when the move is executed.</param>
     /// <param name="desc"> Description of the move's effect.</param>

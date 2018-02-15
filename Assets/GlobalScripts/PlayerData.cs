@@ -49,10 +49,12 @@ public class DataManager {
 		money = 0;
 	}
 
+
+
     /// <summary>
     /// Constructor for loading, no player need be defined as it will be loaded from the save file.
     /// </summary>
-    public DataManager()
+    public DataManager()     // NEW FOR ASSESSMENT 3
     {
         players = new Player[6];
         items = new Item[6];
@@ -160,6 +162,9 @@ public class DataManager {
 		}
 		return count;
 	}
+
+    // ALL METHODS BELOW ARE NEW FOR ASSESSMENT 3
+
     /// <summary>
     /// Saves data necessary to restore game state to a <see cref="SaveData"/> instance and exports this to a file with a binary formatter.  
     /// </summary>

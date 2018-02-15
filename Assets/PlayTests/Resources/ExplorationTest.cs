@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System;
 using UnityEngine.SceneManagement;
 
+// ASSESSMENT 3 UPDATES, correct constructor now used.
 [TestFixture]
 public class ExplorationTest
 {

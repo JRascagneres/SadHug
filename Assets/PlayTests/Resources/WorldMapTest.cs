@@ -4,6 +4,8 @@ using NUnit.Framework;
 using System.Collections;
 using UnityEngine.SceneManagement;
 
+// ASSESSMENT 3 UPDATES, W3BusStop removed as now redundant (no longer go directly from one bus stop to next).
+// Assertion updated to reflect co-ordinate changes cause by map updates.
 [TestFixture]
 public class WorldMapTest
 {
@@ -57,22 +59,6 @@ public class WorldMapTest
         yield return null;
         yield return moveForFrames(20, "Right");
         Assert.AreEqual("WorldMap", SceneManager.GetActiveScene().name); //Check active scene is still WorldMap
-    }
-
-    [UnityTest]
-    public IEnumerator W3BusStop()
-    {
-        player.transform.position = new Vector2(-23, -47); //Line up with bus stop
-        yield return moveForFrames(20, "Down");
-        yield return new WaitForSeconds(1); //Wait for transition
-                                            //Check on Hes West site now
-        Assert.AreEqual(-46, (int)player.transform.position.x);
-        Assert.AreEqual(-3, (int)player.transform.position.y);
-        yield return moveForFrames(20, "Down");
-        yield return new WaitForSeconds(1); //Wait for transition
-                                            //Check back on Hes East site now
-        Assert.AreEqual(-13, Mathf.RoundToInt(player.transform.position.x));
-        Assert.AreEqual(-7, Mathf.RoundToInt(player.transform.position.y));
     }
 
     [UnityTest]

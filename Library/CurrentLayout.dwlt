@@ -43,7 +43,7 @@ MonoBehaviour:
     y: 0
     width: 1920
     height: 997
-  m_MinSize: {x: 950, y: 542}
+  m_MinSize: {x: 950, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &3
 MonoBehaviour:
@@ -105,10 +105,10 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 947
-  m_MinSize: {x: 583, y: 492}
+  m_MinSize: {x: 408, y: 492}
   m_MaxSize: {x: 14004, y: 14042}
   vertical: 1
-  controlID: 11
+  controlID: 126
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -129,10 +129,10 @@ MonoBehaviour:
     y: 0
     width: 1920
     height: 947
-  m_MinSize: {x: 583, y: 492}
+  m_MinSize: {x: 408, y: 492}
   m_MaxSize: {x: 14004, y: 14042}
   vertical: 0
-  controlID: 12
+  controlID: 127
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -156,7 +156,7 @@ MonoBehaviour:
   m_MinSize: {x: 306, y: 492}
   m_MaxSize: {x: 10002, y: 14042}
   vertical: 1
-  controlID: 70
+  controlID: 13
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -180,7 +180,7 @@ MonoBehaviour:
   m_MinSize: {x: 306, y: 221}
   m_MaxSize: {x: 8006, y: 4021}
   vertical: 0
-  controlID: 71
+  controlID: 14
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -278,16 +278,16 @@ MonoBehaviour:
     y: 0
     width: 690
     height: 947
-  m_MinSize: {x: 277, y: 71}
-  m_MaxSize: {x: 4002, y: 4021}
-  m_ActualView: {fileID: 20}
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_ActualView: {fileID: 21}
   m_Panes:
   - {fileID: 20}
   - {fileID: 21}
   - {fileID: 22}
   - {fileID: 23}
-  m_Selected: 0
-  m_LastSelected: 1
+  m_Selected: 1
+  m_LastSelected: 0
 --- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -394,9 +394,9 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: e63b0000
+    m_SelectedIDs: f4070000
     m_LastClickedID: 0
-    m_ExpandedIDs: 2cd0e3ff64e6e3ff94ece3ff1a6ce4ffb0cbe4ffaebae6ff06d9e6ff4ccbe7ffc0d9e7ff249ee8ff4ca5e8ffae96e9ffc662eaff0a38ebff509cebffc6a2ebffeaa9ebff86b9ebff42f1ecffccf1ecff44f2ecff64f2ecff66f2ecffd4f8ecff3661eeff88abeeffc8aeeeff98b5eeffaac0eefffc3cefffc65defff8c8aeffff88aeffffa8aefffc6a3efffaabaefff1619f0fffa16f1ffee1bf1ff385ef1ff9a0df2ffe6c1f2ff52c8f2ffecd9f2ff52daf2ff6cdaf2ffbcdaf2ff4ce8f2ffbae8f2ffe255f3ff8c60f3ff9260f3ffa660f3fff660f3ffce64f3ffec6cf3ff5cadf3ffc4caf4fff8b0f5ff7acbf5ff720bf6ffd0b7f6ffcc38f7ffce38f7fff238f7ff7241f7ff3849f7ff0a69f7ff18a2f7ff1aa2f7ffa8a3f7ffa6a9f7ff18cdf7ff9a76f8ff307cf8ff747ef8ffd4c5f8ff1015fbff72d1fbffa0edfbffa2edfbff36eefbffc2eefbff9aeefcff5845fdff8a73fdffb873fdffd073fdff0089fdff0289fdffd6a0fdffe6a0fdfff6a0fdff04a1fdff26a2fdff36a2fdff50a2fdff52a2fdff1eb8fdff64b8fdff10c2fdff12c2fdff72e4fdffb8e4fdfff2ecfdff00edfdff06eefdff9e48feff9688feffb6d6feff62e6feffd402ffffc803ffff3204ffff0c12ffff0e12ffff3e12ffff5c14ffff9816ffff5423ffffee28fffff028ffff1a2fffff1c2fffff2c2fffffd23affff4a3fffffae46ffff3e4fffff00000000
+    m_ExpandedIDs: 62e3ffff7efbffff00000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -414,8 +414,7 @@ MonoBehaviour:
       m_IsRenamingFilename: 0
       m_ClientGUIView: {fileID: 9}
     m_SearchString: 
-  m_ExpandedScenes:
-  - mainmenu1
+  m_ExpandedScenes: []
   m_CurrenRootInstanceID: 0
   m_Locked: 0
   m_CurrentSortingName: TransformSorting
@@ -562,33 +561,33 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Menus/MainMenu
+    - Assets/PlayTests/Resources
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Menus/MainMenu
+  - Assets/PlayTests/Resources
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: C:\Users\tsbaj\Documents\Coffe-less\Coffee-test
+  m_LastProjectPath: C:\Users\Toby\Documents\SEPRGame\Coffee-more
   m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 319}
-    m_SelectedIDs: d63b0000
-    m_LastClickedID: 15318
-    m_ExpandedIDs: 00000000123a0000143a0000463a00004c3a0000563a0000723a0000a43a0000a63a0000823b00008c3b0000be3b0000c03b0000d63b0000f23b0000f83b0000263c00002c3c0000323c0000403c00008c4300008a450000324a0000344a0000364a0000384a00003a4a000000ca9a3bffffff7f
+    scrollPos: {x: 0, y: 171}
+    m_SelectedIDs: 84330000
+    m_LastClickedID: 13188
+    m_ExpandedIDs: 000000002628000040280000ae280000ea2800001a290000462900003c2a0000162c00003e2c0000a02c0000ca2d00001e2e0000962e0000902f0000e82f0000103000004e300000e2300000343300006633000084330000383500003a3500003c3500003e3500004035000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: Scenes
-      m_OriginalName: Scenes
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 14962
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 11}
     m_SearchString: 
@@ -602,7 +601,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000123a0000143a0000463a00004c3a0000723a0000a43a0000a63a0000823b00008c3b0000be3b0000c03b0000d63b0000f23b0000f83b0000263c00002c3c0000323c0000403c00008c4300008a450000324a0000344a0000364a0000384a00003a4a0000
+    m_ExpandedIDs: 000000002628000040280000ae280000ea2800001a290000462900003c2a0000162c00003e2c0000a02c0000ca2d00001e2e0000962e0000902f0000e82f0000103000004e300000e2300000343300006633000084330000383500003a3500003c3500003e35000040350000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -820,9 +819,9 @@ MonoBehaviour:
       ignoredOrSkipped: 0
       description: 
       isSuite: 1
-    - id: '[C:/Users/tsbaj/Documents/Coffe-less/Coffee-test/Library/ScriptAssemblies/Assembly-CSharp.dll][suite]'
+    - id: '[C:/Users/Toby/Documents/SEPRGame/Coffee-more/Library/ScriptAssemblies/Assembly-CSharp.dll][suite]'
       name: Assembly-CSharp.dll
-      fullName: C:/Users/tsbaj/Documents/Coffe-less/Coffee-test/Library/ScriptAssemblies/Assembly-CSharp.dll
+      fullName: C:/Users/Toby/Documents/SEPRGame/Coffee-more/Library/ScriptAssemblies/Assembly-CSharp.dll
       resultStatus: 0
       duration: 0
       messages: 
@@ -1218,23 +1217,6 @@ MonoBehaviour:
       ignoredOrSkipped: 0
       description: 
       isSuite: 0
-    - id: '[Assembly-CSharp][WorldMapTest.W3BusStop]'
-      name: W3BusStop
-      fullName: WorldMapTest.W3BusStop
-      resultStatus: 2
-      duration: 1.4735631
-      messages: "Unhandled log message: '[Exception] AssertionException:   Expected:
-        -46\r\n  But was:  -23\r\n'. Use UnityEngine.TestTools.LogAssert.Expect"
-      output: "AssertionException:   Expected: -46\r\n  But was:  -23\r\n\r\n"
-      stacktrace: "NUnit.Framework.Assert.That[Object] (System.Object actual, IResolveConstraint
-        expression, System.String message, System.Object[] args)\r\nNUnit.Framework.Assert.AreEqual
-        (System.Object expected, System.Object actual)\r\nWorldMapTest+<W3BusStop>c__Iterator4.MoveNext
-        () (at Assets/PlayTests/Resources/WorldMapTest.cs:69)\r\nUnityEngine.SetupCoroutine.InvokeMoveNext
-        (IEnumerator enumerator, IntPtr returnValueAddress) (at C:/buildslave/unity/build/Runtime/Export/Coroutines.cs:17)\r\n\r\n"
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
     - id: '[Assembly-CSharp][WorldMapTest.W4CanEnterAndReturnFromCurrentLevel]'
       name: W4CanEnterAndReturnFromCurrentLevel
       fullName: WorldMapTest.W4CanEnterAndReturnFromCurrentLevel
@@ -1297,8 +1279,8 @@ MonoBehaviour:
       name: Assembly-CSharp-Editor.dll
       fullName: C:/Users/Toby/Documents/SEPRGame/Coffee-more/Library/ScriptAssemblies/Assembly-CSharp-Editor.dll
       resultStatus: 1
-      duration: 0.052172
-      messages: 
+      duration: 0.971951
+      messages: One or more child tests were ignored
       output: 
       stacktrace: 
       notRunnable: 0
@@ -1309,7 +1291,7 @@ MonoBehaviour:
       name: BattleScriptTest
       fullName: BattleScriptTest
       resultStatus: 1
-      duration: 0.0197996
+      duration: 0.254726
       messages: One or more child tests were ignored
       output: 
       stacktrace: 
@@ -1321,7 +1303,7 @@ MonoBehaviour:
       name: BattleWon
       fullName: BattleScriptTest.BattleWon
       resultStatus: 1
-      duration: 0.0146392
+      duration: 0.0137932
       messages: 
       output: 
       stacktrace: 
@@ -1333,7 +1315,7 @@ MonoBehaviour:
       name: ChangePlayer
       fullName: BattleScriptTest.ChangePlayer
       resultStatus: 1
-      duration: 0.0191892
+      duration: 0.0272977
       messages: 
       output: "Second Player\r\nSecond Player\r\n"
       stacktrace: 
@@ -1345,7 +1327,7 @@ MonoBehaviour:
       name: CharacterFainted
       fullName: BattleScriptTest.CharacterFainted
       resultStatus: 1
-      duration: 0.0132304
+      duration: 0.0103578
       messages: 
       output: 
       stacktrace: 
@@ -1357,7 +1339,7 @@ MonoBehaviour:
       name: Constructor
       fullName: BattleScriptTest.Constructor
       resultStatus: 1
-      duration: 0.0106717
+      duration: 0.0097913
       messages: 
       output: 
       stacktrace: 
@@ -1369,7 +1351,7 @@ MonoBehaviour:
       name: CriticalHitCalculation
       fullName: BattleScriptTest.CriticalHitCalculation
       resultStatus: 1
-      duration: 0.010637
+      duration: 0.0112503
       messages: 
       output: 
       stacktrace: 
@@ -1381,7 +1363,7 @@ MonoBehaviour:
       name: CriticalHitGeneration
       fullName: BattleScriptTest.CriticalHitGeneration
       resultStatus: 4
-      duration: 0.0009832
+      duration: 0.0003648
       messages: Manual Probability Test
       output: 
       stacktrace: 
@@ -1393,7 +1375,7 @@ MonoBehaviour:
       name: EnemySpecialMoveAI
       fullName: BattleScriptTest.EnemySpecialMoveAI
       resultStatus: 1
-      duration: 0.0147055
+      duration: 0.014578
       messages: 
       output: 
       stacktrace: 
@@ -1405,7 +1387,7 @@ MonoBehaviour:
       name: Items
       fullName: BattleScriptTest.Items
       resultStatus: 1
-      duration: 0.0101628
+      duration: 0.0106136
       messages: 
       output: 
       stacktrace: 
@@ -1417,7 +1399,7 @@ MonoBehaviour:
       name: PlayerSpecialMove
       fullName: BattleScriptTest.PlayerSpecialMove
       resultStatus: 1
-      duration: 0.0101712
+      duration: 0.0106789
       messages: 
       output: 
       stacktrace: 
@@ -1429,7 +1411,7 @@ MonoBehaviour:
       name: StandardAttack
       fullName: BattleScriptTest.StandardAttack
       resultStatus: 1
-      duration: 0.0104957
+      duration: 0.0104285
       messages: 
       output: 
       stacktrace: 
@@ -1441,7 +1423,7 @@ MonoBehaviour:
       name: TurnOrder
       fullName: BattleScriptTest.TurnOrder
       resultStatus: 1
-      duration: 0.0098311
+      duration: 0.0090178
       messages: 
       output: 
       stacktrace: 
@@ -1453,7 +1435,7 @@ MonoBehaviour:
       name: EnemyTest
       fullName: EnemyTest
       resultStatus: 1
-      duration: 0.0554086
+      duration: 0.0431134
       messages: 
       output: 
       stacktrace: 
@@ -1465,7 +1447,7 @@ MonoBehaviour:
       name: Attributes
       fullName: EnemyTest.Attributes
       resultStatus: 1
-      duration: 0.0056546
+      duration: 0.0048368
       messages: 
       output: 
       stacktrace: 
@@ -1477,7 +1459,7 @@ MonoBehaviour:
       name: Setters
       fullName: EnemyTest.Setters
       resultStatus: 1
-      duration: 0.0046632
+      duration: 0.0047926
       messages: 
       output: 
       stacktrace: 
@@ -1489,7 +1471,7 @@ MonoBehaviour:
       name: ItemTest
       fullName: ItemTest
       resultStatus: 1
-      duration: 0.045634
+      duration: 0.040007
       messages: 
       output: 
       stacktrace: 
@@ -1501,7 +1483,7 @@ MonoBehaviour:
       name: ApplyBuffs
       fullName: ItemTest.ApplyBuffs
       resultStatus: 1
-      duration: 0.0098533
+      duration: 0.010427
       messages: 
       output: 
       stacktrace: 
@@ -1513,7 +1495,7 @@ MonoBehaviour:
       name: Attributes
       fullName: ItemTest.Attributes
       resultStatus: 1
-      duration: 0.0089559
+      duration: 0.0106122
       messages: 
       output: 
       stacktrace: 
@@ -1525,7 +1507,7 @@ MonoBehaviour:
       name: PlayerDataTest
       fullName: PlayerDataTest
       resultStatus: 1
-      duration: 0.033982
+      duration: 0.1534104
       messages: 
       output: 
       stacktrace: 
@@ -1537,7 +1519,7 @@ MonoBehaviour:
       name: AddItem
       fullName: PlayerDataTest.AddItem
       resultStatus: 1
-      duration: 0.0102682
+      duration: 0.0107726
       messages: 
       output: 
       stacktrace: 
@@ -1549,7 +1531,7 @@ MonoBehaviour:
       name: AddPlayer
       fullName: PlayerDataTest.AddPlayer
       resultStatus: 1
-      duration: 0.0114943
+      duration: 0.0110783
       messages: 
       output: 
       stacktrace: 
@@ -1561,7 +1543,7 @@ MonoBehaviour:
       name: Constructor
       fullName: PlayerDataTest.Constructor
       resultStatus: 1
-      duration: 0.0168981
+      duration: 0.0098818
       messages: 
       output: 
       stacktrace: 
@@ -1573,7 +1555,7 @@ MonoBehaviour:
       name: CountItems
       fullName: PlayerDataTest.CountItems
       resultStatus: 1
-      duration: 0.0102791
+      duration: 0.0119665
       messages: 
       output: 
       stacktrace: 
@@ -1585,7 +1567,7 @@ MonoBehaviour:
       name: GetFirstPlayer
       fullName: PlayerDataTest.GetFirstPlayer
       resultStatus: 1
-      duration: 0.010139
+      duration: 0.0096967
       messages: 
       output: 
       stacktrace: 
@@ -1597,7 +1579,7 @@ MonoBehaviour:
       name: PlayersAlive
       fullName: PlayerDataTest.PlayersAlive
       resultStatus: 1
-      duration: 0.010447
+      duration: 0.0105395
       messages: 
       output: 
       stacktrace: 
@@ -1609,7 +1591,7 @@ MonoBehaviour:
       name: SwapPlayers
       fullName: PlayerDataTest.SwapPlayers
       resultStatus: 1
-      duration: 0.0105217
+      duration: 0.0098024
       messages: 
       output: 
       stacktrace: 
@@ -1621,7 +1603,7 @@ MonoBehaviour:
       name: PlayerTest
       fullName: PlayerTest
       resultStatus: 1
-      duration: 0.0962194
+      duration: 0.0935967
       messages: 
       output: 
       stacktrace: 
@@ -1633,7 +1615,7 @@ MonoBehaviour:
       name: Attributes
       fullName: PlayerTest.Attributes
       resultStatus: 1
-      duration: 0.0130315
+      duration: 0.010715
       messages: 
       output: 
       stacktrace: 
@@ -1645,7 +1627,7 @@ MonoBehaviour:
       name: expToNextLevel
       fullName: PlayerTest.expToNextLevel
       resultStatus: 1
-      duration: 0.0104716
+      duration: 0.0105928
       messages: 
       output: 
       stacktrace: 
@@ -1657,7 +1639,7 @@ MonoBehaviour:
       name: gainExp
       fullName: PlayerTest.gainExp
       resultStatus: 1
-      duration: 0.0158253
+      duration: 0.0148317
       messages: 
       output: "Levelled Up!\r\nLevelled Up!\r\nLevelled Up!\r\nLevelled Up!\r\n"
       stacktrace: 
@@ -1669,9 +1651,107 @@ MonoBehaviour:
       name: levelUp
       fullName: PlayerTest.levelUp
       resultStatus: 1
-      duration: 0.0111539
+      duration: 0.011681
       messages: 
       output: "Levelled Up!\r\n"
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+    - id: '[Assembly-CSharp-Editor][SavingLoadingTest][suite]'
+      name: SavingLoadingTest
+      fullName: SavingLoadingTest
+      resultStatus: 1
+      duration: 0.1589826
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+    - id: '[Assembly-CSharp-Editor][SavingLoadingTest.ObjectsActiveSaveLoad]'
+      name: ObjectsActiveSaveLoad
+      fullName: SavingLoadingTest.ObjectsActiveSaveLoad
+      resultStatus: 1
+      duration: 0.0144563
+      messages: 
+      output: "You are trying to create a MonoBehaviour using the 'new' keyword.  This
+        is not allowed.  MonoBehaviours can only be added using AddComponent().  Alternatively,
+        your script can inherit from ScriptableObject or no base class at all\r\n"
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+    - id: '[Assembly-CSharp-Editor][SavingLoadingTest.SaveLoadItem]'
+      name: SaveLoadItem
+      fullName: SavingLoadingTest.SaveLoadItem
+      resultStatus: 1
+      duration: 0.0172889
+      messages: 
+      output: "You are trying to create a MonoBehaviour using the 'new' keyword.  This
+        is not allowed.  MonoBehaviours can only be added using AddComponent().  Alternatively,
+        your script can inherit from ScriptableObject or no base class at all\r\nHammer\r\nIncreases
+        user's attack power by 5\r\nHammer\r\n"
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+    - id: '[Assembly-CSharp-Editor][SavingLoadingTest.SaveLoadPlayer]'
+      name: SaveLoadPlayer
+      fullName: SavingLoadingTest.SaveLoadPlayer
+      resultStatus: 1
+      duration: 0.0192571
+      messages: 
+      output: "You are trying to create a MonoBehaviour using the 'new' keyword.  This
+        is not allowed.  MonoBehaviours can only be added using AddComponent().  Alternatively,
+        your script can inherit from ScriptableObject or no base class at all\r\nHammer\r\nIncreases
+        user's attack power by 5\r\nHammer\r\n"
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+    - id: '[Assembly-CSharp-Editor][SavingLoadingTest.SpecialMoveSaveLoad]'
+      name: SpecialMoveSaveLoad
+      fullName: SavingLoadingTest.SpecialMoveSaveLoad
+      resultStatus: 1
+      duration: 0.012449
+      messages: 
+      output: "You are trying to create a MonoBehaviour using the 'new' keyword.  This
+        is not allowed.  MonoBehaviours can only be added using AddComponent().  Alternatively,
+        your script can inherit from ScriptableObject or no base class at all\r\n"
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+    - id: '[Assembly-CSharp-Editor][SavingLoadingTest.TextureSaveLoad]'
+      name: TextureSaveLoad
+      fullName: SavingLoadingTest.TextureSaveLoad
+      resultStatus: 1
+      duration: 0.0142702
+      messages: 
+      output: "You are trying to create a MonoBehaviour using the 'new' keyword.  This
+        is not allowed.  MonoBehaviours can only be added using AddComponent().  Alternatively,
+        your script can inherit from ScriptableObject or no base class at all\r\n"
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+    - id: '[Assembly-CSharp-Editor][SavingLoadingTest.VectorSaveLoad]'
+      name: VectorSaveLoad
+      fullName: SavingLoadingTest.VectorSaveLoad
+      resultStatus: 1
+      duration: 0.013295
+      messages: 
+      output: "You are trying to create a MonoBehaviour using the 'new' keyword.  This
+        is not allowed.  MonoBehaviours can only be added using AddComponent().  Alternatively,
+        your script can inherit from ScriptableObject or no base class at all\r\n"
       stacktrace: 
       notRunnable: 0
       ignoredOrSkipped: 0
@@ -1681,7 +1761,7 @@ MonoBehaviour:
       name: SpecialMoveTest
       fullName: SpecialMoveTest
       resultStatus: 1
-      duration: 0.1485494
+      duration: 0.1351966
       messages: 
       output: 
       stacktrace: 
@@ -1693,7 +1773,7 @@ MonoBehaviour:
       name: LowerDefence
       fullName: SpecialMoveTest.LowerDefence
       resultStatus: 1
-      duration: 0.0119848
+      duration: 0.0099533
       messages: 
       output: 
       stacktrace: 
@@ -1705,7 +1785,7 @@ MonoBehaviour:
       name: LowerSpeed
       fullName: SpecialMoveTest.LowerSpeed
       resultStatus: 1
-      duration: 0.0111629
+      duration: 0.0112848
       messages: 
       output: 
       stacktrace: 
@@ -1717,7 +1797,7 @@ MonoBehaviour:
       name: MagicAttack
       fullName: SpecialMoveTest.MagicAttack
       resultStatus: 1
-      duration: 0.0102814
+      duration: 0.0100069
       messages: 
       output: 
       stacktrace: 
@@ -1729,7 +1809,7 @@ MonoBehaviour:
       name: MoneyIncrease
       fullName: SpecialMoveTest.MoneyIncrease
       resultStatus: 1
-      duration: 0.0121813
+      duration: 0.0092472
       messages: 
       output: 
       stacktrace: 
@@ -1741,7 +1821,7 @@ MonoBehaviour:
       name: RaiseAttack
       fullName: SpecialMoveTest.RaiseAttack
       resultStatus: 1
-      duration: 0.0107844
+      duration: 0.0100426
       messages: 
       output: 
       stacktrace: 
@@ -1753,7 +1833,7 @@ MonoBehaviour:
       name: RaiseDefence
       fullName: SpecialMoveTest.RaiseDefence
       resultStatus: 1
-      duration: 0.0115165
+      duration: 0.0101749
       messages: 
       output: 
       stacktrace: 
@@ -1761,13 +1841,13 @@ MonoBehaviour:
       ignoredOrSkipped: 0
       description: 
       isSuite: 0
-    m_ResultText: Constructor (0.017s)
+    m_ResultText: Constructor (0.010s)
     m_ResultStacktrace: 
     m_TestListState:
-      scrollPos: {x: 0, y: 0}
+      scrollPos: {x: 0, y: 109}
       m_SelectedIDs: 4fd80c18
       m_LastClickedID: 403494991
-      m_ExpandedIDs: d33c63859bef5c9018e98f9e51a899a87a729ab029caabc89d8d08d765d137e8dfd98cec431375fbe888c91b101c9c4e0df8175b0dd2fd5bffffff7f
+      m_ExpandedIDs: d33c63859bef5c9018e98f9e51a899a87a729ab029caabc89d8d08d772f0e1db65d137e8dfd98cec431375fbe888c91b101c9c4e0df8175b0dd2fd5bffffff7f
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 

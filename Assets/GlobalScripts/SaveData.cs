@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 
+// NEW CLASS FOR ASSESSMENT 3
+
 /// <summary>
 /// Fully serializable class with variables for the data required to save and restore game states. Contains nested classes for each non-primitive type that needs to be serialized.
 /// </summary>
