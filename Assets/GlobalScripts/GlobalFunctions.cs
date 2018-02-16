@@ -35,6 +35,9 @@ public class GlobalFunctions : MonoBehaviour
     /// <summary>The current level that the player is up to</summary>
     [System.NonSerialized]
     public int currentLevel;
+    /// <summary>The last level of the game </summary>
+    [System.NonSerialized]
+    public int lastLevel=9;
 
     //ADDED 7 More items for assesment 3 
     /// <summary>

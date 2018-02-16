@@ -104,3 +104,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Exploration/Scenes/Ass3 Scenes/HesHall-Floor1.unity
     guid: 11cd1f53b40e6314ea693d4fa437a147
+  - enabled: 1
+    path: Assets/Exploration/Scenes/Ass3 Scenes/EndScene.unity
+    guid: 7a0fd583485b26c40b110fc5c9bffc41

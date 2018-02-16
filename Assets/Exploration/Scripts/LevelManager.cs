@@ -98,7 +98,10 @@ public class LevelManager : MonoBehaviour {
 			yield return null;
 		}
 		dialogueBox.SetActive (false);
-		SceneChanger.instance.loadLevel ("WorldMap", worldMapExitPosition);
+        if(GlobalFunctions.instance.currentLevel== GlobalFunctions.instance.lastLevel)
+            SceneChanger.instance.loadLevel("EndScene", worldMapExitPosition);
+        else
+            SceneChanger.instance.loadLevel ("WorldMap", worldMapExitPosition);
 	}
 
 }
