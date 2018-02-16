@@ -57,18 +57,28 @@ public class ExplorationMenuScript : MonoBehaviour {
     }
 
 	/// <summary>
-    ///
+    /// Initiates town mode scene
 	/// </summary>
 	public void tradePressed() {
         SceneChanger.instance.menuOpen = false;
         SceneManager.LoadScene("TownMode", LoadSceneMode.Additive);
 	}
 
-	/// <summary>
-	/// When the exit button is pressed, update <see cref="SceneChanger"/> to show that <see cref="SceneChanger.menuOpen"/>
-	/// is now false, and go back to the main menu
+    /// <summary>
+    /// Initiates miniGame
 	/// </summary>
-	public void exitPressed() {
+	public void miniGamePressed()
+    {
+        SceneChanger.instance.menuOpen = false;
+        //SceneManager.LoadScene("MiniGame", LoadSceneMode.Additive);
+        SceneChanger.instance.loadLevel("MiniGame", new Vector2(0, 0));
+    }
+
+    /// <summary>
+    /// When the exit button is pressed, update <see cref="SceneChanger"/> to show that <see cref="SceneChanger.menuOpen"/>
+    /// is now false, and go back to the main menu
+    /// </summary>
+    public void exitPressed() {
 		SceneChanger.instance.menuOpen = false;
 		SceneChanger.instance.loadLevel ("mainmenu1");
 	}
