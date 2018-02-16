@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Menus/MainMenu/mainmenu1.unity
     guid: 8d411f211734a45a98ebaeb652359071
   - enabled: 1
+    path: Assets/MiniGame/Scene/MiniGame.unity
+    guid: 43da0758f85b20249ad5aee3f43f1422
+  - enabled: 1
     path: Assets/Exploration/Scenes/CS-Jail.unity
     guid: ddde2769e35159e4f8c1ec698a7da5f3
   - enabled: 1
@@ -23,9 +26,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Exploration/Scenes/Alternate.unity
     guid: 4793657b033918b42a49956f7c112329
-  - enabled: 1
-    path: Assets/MiniGame/Scene/MiniGame.unity
-    guid: 43da0758f85b20249ad5aee3f43f1422
   - enabled: 1
     path: Assets/Battle/Battle.unity
     guid: 4ecfa394df50c7c46acec1e25e1219ca

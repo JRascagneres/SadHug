@@ -70,8 +70,7 @@ public class ExplorationMenuScript : MonoBehaviour {
 	public void miniGamePressed()
     {
         SceneChanger.instance.menuOpen = false;
-        //SceneManager.LoadScene("MiniGame", LoadSceneMode.Additive);
-        SceneChanger.instance.loadLevel("MiniGame", new Vector2(0, 0));
+        SceneManager.LoadScene("MiniGame");
     }
 
     /// <summary>
