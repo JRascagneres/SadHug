@@ -195,10 +195,10 @@ public class RabbitFoot : Item
 /// <summary>
 /// An item that increases a player's luck stat by 10
 /// </summary>
-public class RabbitCarcas : Item
+public class RabbitCarcass : Item
 {
 
-    public RabbitCarcas()
+    public RabbitCarcass()
     {
         this.name = "Rabbit carcas";
         this.desc = "Increases user's luck by 10";

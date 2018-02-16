@@ -40,7 +40,7 @@ public class GlobalFunctions : MonoBehaviour
     /// <summary>
     /// An enum type representing items so that they can be selected from within the Unity Editor
     /// </summary>
-    public enum ItemTypes { None, Hammer, Trainers, RabbitFoot, MagicAmulet, Shield, Armour, Sword, NikesPremiumShoes, RabbitCarcas, DiamondShield, GoldenArmour, MagicHat, MagicSword };
+    public enum ItemTypes { None, Hammer, Trainers, RabbitFoot, MagicAmulet, Shield, Armour, Sword, NikesPremiumShoes, RabbitCarcass, DiamondShield, GoldenArmour, MagicHat, MagicSword };
     [System.NonSerialized]
     public string[] levelOrder = new string[] { "CS", "TFTV", "RCH", "PHY", "LIB", "LAW", "CENHALL", "MUS", "BIO", "HESHALL" };
 
@@ -137,8 +137,8 @@ public class GlobalFunctions : MonoBehaviour
             case ItemTypes.RabbitFoot:
                 item = new RabbitFoot();
                 break;
-            case ItemTypes.RabbitCarcas:
-                item = new RabbitCarcas();
+            case ItemTypes.RabbitCarcass:
+                item = new RabbitCarcass();
                 break;
             case ItemTypes.MagicAmulet:
                 item = new MagicAmulet();

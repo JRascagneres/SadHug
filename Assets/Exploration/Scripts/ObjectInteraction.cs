@@ -29,12 +29,12 @@ public class ObjectInteraction : MonoBehaviour {
 	/// </summary>
 	[Header("If true, requires a BattleDescriptor component")]
 	public bool createBattle = false;
-    //vender and all things vender related are ADDITIONS to assesment 3
+    //vendor and all things vendor related are ADDITIONS to assesment 3
     /// <summary>
-    /// if <c>true</c> create at start of dialogue, requiring a <see cref="Vender"/> component
+    /// if <c>true</c> create at start of dialogue, requiring a <see cref="Vendor"/> component
     /// </summary>
-    [Header("If true, requires a Vender component")]
-    public bool vender = false;
+    [Header("If true, requires a Vendor component")]
+    public bool vendor = false;
 
 	//Script References
 	private DialogueScript dManager;
@@ -63,7 +63,7 @@ public class ObjectInteraction : MonoBehaviour {
 	/// <summary>
 	/// When player is within collider, check if key is pressed and open dialogue if so
     /// starts dialogue 
-    /// starts vender as appropriate
+    /// starts vendor as appropriate
 	/// </summary>
 	/// <param name="other">The object that has been collided with, checked to see if "Player"</param>
 	void OnTriggerStay2D(Collider2D other) {
@@ -75,9 +75,9 @@ public class ObjectInteraction : MonoBehaviour {
 			SoundManager.instance.playSFX ("interact");
 			dManager.showDialogue (dialogue, this);
 			movementScript.setCanMove (false);
-            if (vender)
+            if (vendor)
             {
-                gameObject.GetComponent<Vender>().setDraw(true);
+                gameObject.GetComponent<Vendor>().setDraw(true);
             }
         }
 	}
@@ -108,9 +108,9 @@ public class ObjectInteraction : MonoBehaviour {
 			GlobalFunctions.instance.objectsActive [id] = false;
 			gameObject.GetComponent<BattleDescriptor> ().createBattle ();
 		}
-        if (vender)
+        if (vendor)
         {
-            gameObject.GetComponent<Vender>().setDraw(false);
+            gameObject.GetComponent<Vendor>().setDraw(false);
         }
     }
 			
