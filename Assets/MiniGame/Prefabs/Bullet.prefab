@@ -21,7 +21,6 @@ GameObject:
   - component: {fileID: 4065551538383792}
   - component: {fileID: 212897901025114028}
   - component: {fileID: 50593291991438586}
-  - component: {fileID: 114028890129875408}
   - component: {fileID: 58796050850155498}
   - component: {fileID: 114582238896500582}
   m_Layer: 0
@@ -38,8 +37,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1688079970158466}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.3117855, y: 0.879813, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_LocalPosition: {x: -6.121266, y: -3.7063382, z: 0}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -79,18 +78,6 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.2
---- !u!114 &114028890129875408
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1688079970158466}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e4023984d49aae343b9501d150d89b83, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  score: 0
 --- !u!114 &114582238896500582
 MonoBehaviour:
   m_ObjectHideFlags: 1

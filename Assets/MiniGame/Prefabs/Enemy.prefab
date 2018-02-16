@@ -20,7 +20,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4713587420808828}
   - component: {fileID: 212395354126193420}
-  - component: {fileID: 114849965444601058}
   - component: {fileID: 58752558019694408}
   - component: {fileID: 114272606492526644}
   m_Layer: 0
@@ -37,7 +36,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1648500203806730}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.1373076, y: -2.8217692, z: 0}
+  m_LocalPosition: {x: -6.215349, y: -3.110475, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -57,7 +56,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 3.5
+  m_Radius: 0.5
 --- !u!114 &114272606492526644
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -67,22 +66,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 75a54e7a03adf774d81449d86008b486, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  smoothTimeX: 2
-  smoothTimeY: 2
-  speed: 4
-  displacement: 0
-  player: {fileID: 0}
---- !u!114 &114849965444601058
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1648500203806730}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 471b223f4552db447942f16c224254e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   smoothTimeX: 2
