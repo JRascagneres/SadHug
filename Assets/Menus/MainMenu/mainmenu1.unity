@@ -599,7 +599,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1308028989398732, guid: d688fff3233adf54494034131c0b29c4, type: 2}
       propertyPath: m_TagString
-      value: Untagged
+      value: Player
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d688fff3233adf54494034131c0b29c4, type: 2}
@@ -1291,6 +1291,25 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1106233472}
+--- !u!1 &1245874942 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1308028989398732, guid: d688fff3233adf54494034131c0b29c4,
+    type: 2}
+  m_PrefabInternal: {fileID: 602840227}
+--- !u!114 &1245874949
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1245874942}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6bbe9018629c8541afbe1eb836481fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletVelocity: 5
+  bullet: {fileID: 1688079970158466, guid: d56ad5503b43b8343a4b1edd0fa879a8, type: 2}
+  bullet1: {fileID: 1688079970158466, guid: d56ad5503b43b8343a4b1edd0fa879a8, type: 2}
 --- !u!1 &1449329193
 GameObject:
   m_ObjectHideFlags: 0
