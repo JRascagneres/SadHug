@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Exploration/Scenes/CentralHall.unity
+- path: Assets/Minigame/minigame.unity
   isLoaded: 1
   isActive: 1

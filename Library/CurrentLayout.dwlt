@@ -13,14 +13,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_PixelRect:
     serializedVersion: 2
-    x: 0
-    y: 43
+    x: 8
+    y: 51
     width: 1536
     height: 781
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 2}
-  m_MinSize: {x: 950, y: 542}
+  m_MinSize: {x: 950, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -43,7 +43,7 @@ MonoBehaviour:
     y: 0
     width: 1536
     height: 781
-  m_MinSize: {x: 950, y: 542}
+  m_MinSize: {x: 950, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &3
 MonoBehaviour:
@@ -156,7 +156,7 @@ MonoBehaviour:
   m_MinSize: {x: 306, y: 492}
   m_MaxSize: {x: 10002, y: 14042}
   vertical: 1
-  controlID: 75
+  controlID: 115
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -180,7 +180,7 @@ MonoBehaviour:
   m_MinSize: {x: 306, y: 221}
   m_MaxSize: {x: 8006, y: 4021}
   vertical: 0
-  controlID: 76
+  controlID: 116
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -309,8 +309,8 @@ MonoBehaviour:
   m_DepthBufferBits: 0
   m_Pos:
     serializedVersion: 2
-    x: 453
-    y: 92
+    x: 461
+    y: 100
     width: 758
     height: 373
   m_PersistentViewDataDictionary: {fileID: 0}
@@ -386,35 +386,35 @@ MonoBehaviour:
   m_DepthBufferBits: 0
   m_Pos:
     serializedVersion: 2
-    x: 0
-    y: 92
+    x: 8
+    y: 100
     width: 449
     height: 373
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 1441faff
-    m_LastClickedID: -376556
-    m_ExpandedIDs: 9841fafff442faff6844faffe647faffd24afaff124efaff8850faffca52faffca55fafffe58faffa05efaffc679faff66bafaffeac0faff4cecfaff64f2faffe614fbff8a46fbff324afbffa893fbffd49afbffa8b8fbffaeb8fbff5ebcfbfff4bdfbff18c1fbff68c3fbff52c5fbff2ec9fbffbccdfbff16d0fbfff6d2fbff40d6fbff40d9fbff90e2fbffcce2fbff42e6fbffe2e7fbffa8ebfbfff8f9fbfffaf9fbff2efcfbff38fefbff6600fcff1a03fcff4205fcffdc07fcff820afcff940dfcff4210fcff5013fcffc21efcff1420fcff4e6ffcfff099fcfff699fcffb8b4fcfff4b4fcff8eb7fcff42bafcff8ec7fcff1acbfcffc0d8fcff2ee4fcff3e01fdff4001fdffe409fdff520bfdff540bfdffb417fdffd017fdffe017fdff9218fdff9418fdffe03dfdff3043fdff286afdff346afdff526afdff6e6afdff6aa4fdffc6adfdff36cffdff84d0fdffc2e7fdff90effdffa6fbfdff38fefdff5200feff5605feffcc08feff8c0cfeff020ffeff9811feff0a15feffb417feff9c21feffae36fefffa37fefffc37feffa245feffb245feffb445feff9449feff8a4cfeff904dfeff5459feffcc5ffeff0485feff0a86feff2acefeff72d5feff8ed5feffaad5feff32dcfeff34dcfeff98e6feff06edfeff70f5feff30f8feff80fafeff54fcfeff54fefeff2000ffff5002ffff9604ffffe806ffffc00cffffb00ffffffa13fffff015ffff041affff223bffff3e3bffff4e3bffff023cffff0440ffff7c43fffff26afffff46afffff86afffffa6afffffc6afffffe6affff00000000
+    m_SelectedIDs: 124f0000
+    m_LastClickedID: 0
+    m_ExpandedIDs: d448feff944ffeff00000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: RandomEncounter
-      m_OriginalName: RandomEncounter
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: -203776
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 0
       m_ClientGUIView: {fileID: 9}
     m_SearchString: 
   m_ExpandedScenes:
-  - CentralHall
+  - minigame
   m_CurrenRootInstanceID: 0
   m_Locked: 0
   m_CurrentSortingName: TransformSorting
@@ -440,8 +440,8 @@ MonoBehaviour:
   m_DepthBufferBits: 0
   m_Pos:
     serializedVersion: 2
-    x: 453
-    y: 92
+    x: 461
+    y: 100
     width: 758
     height: 373
   m_PersistentViewDataDictionary: {fileID: 0}
@@ -604,8 +604,8 @@ MonoBehaviour:
   m_DepthBufferBits: 0
   m_Pos:
     serializedVersion: 2
-    x: 0
-    y: 486
+    x: 8
+    y: 494
     width: 1211
     height: 316
   m_PersistentViewDataDictionary: {fileID: 0}
@@ -621,19 +621,19 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Exploration/Scenes
+    - Assets/Minigame
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Exploration/Scenes
+  - Assets/Minigame
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: C:\Users\micha_000\Documents\Unity\SadHugAss3\SadHug
+  m_LastProjectPath: D:\Marko Marsenic\Documents\SEPR\Game2\SadHug
   m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 60}
-    m_SelectedIDs: 38390000
-    m_LastClickedID: 14648
-    m_ExpandedIDs: 00000000da380000dc3800000e390000143900006239000064390000323a0000643a0000663a00007c3a0000983a00009e3a0000a43a0000b23a0000d83f0000aa450000ac450000ae450000b0450000b245000000ca9a3bffffff7f
+    scrollPos: {x: 0, y: 149}
+    m_SelectedIDs: de4e0000
+    m_LastClickedID: 20190
+    m_ExpandedIDs: 00000000864d0000884d0000b84d0000ca4d0000fe4d0000004e00008a4e0000b44e0000b64e0000c24e0000de4e0000144f00001a4f00001c4f00002a4f0000086000006461000066610000686100006a6100006c61000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -661,7 +661,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000da380000dc3800000e390000143900006239000064390000323a0000643a0000663a00007c3a0000983a00009e3a0000a43a0000b23a0000d83f0000aa450000ac450000ae450000b0450000b2450000
+    m_ExpandedIDs: 00000000864d0000884d0000b84d0000ca4d0000fe4d0000004e00008a4e0000b44e0000b64e0000c24e0000144f00001a4f00001c4f00002a4f0000086000006461000066610000686100006a6100006c610000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -765,8 +765,8 @@ MonoBehaviour:
   m_DepthBufferBits: 0
   m_Pos:
     serializedVersion: 2
-    x: 1215
-    y: 92
+    x: 1223
+    y: 100
     width: 321
     height: 710
   m_PersistentViewDataDictionary: {fileID: 0}
