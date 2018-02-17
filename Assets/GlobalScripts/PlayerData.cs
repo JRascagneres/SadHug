@@ -194,7 +194,6 @@ public class DataManager {
                 {
                     storedData.players[i].item = new StoredData.Item();
                     storedData.players[i].item.name = players[i].Item.Name;
-                    storedData.players[i].item.desc = players[i].Item.Desc;
                 }
                 storedData.players[i].special1 = getMoveFromPlayer(players[i].Special1);
                 storedData.players[i].special2 = getMoveFromPlayer(players[i].Special2);
@@ -215,7 +214,6 @@ public class DataManager {
             {
                 storedData.items[i] = new StoredData.Item();
                 storedData.items[i].name = items[i].Name;
-                storedData.items[i].desc = items[i].Desc;
             }
         }
 
@@ -256,7 +254,14 @@ public class DataManager {
             {
                 Texture2D image = new Texture2D(player.imageDims[0], player.imageDims[1]);
                 image.LoadImage(player.textureArray);
-                addPlayer(new Player(player.name, player.level, player.health, player.attack, player.defence, player.maximumMagic, player.magic, player.luck, player.speed, player.exp, null, getMoveFromStored(player.special1), getMoveFromStored(player.special2), image));
+                if (player.item != null)
+                {
+                    addPlayer(new Player(player.name, player.level, player.health, player.attack, player.defence, player.maximumMagic, player.magic, player.luck, player.speed, player.exp, getItemFromName(player.item.name), getMoveFromStored(player.special1), getMoveFromStored(player.special2), image));
+                }
+                else
+                {
+                    addPlayer(new Player(player.name, player.level, player.health, player.attack, player.defence, player.maximumMagic, player.magic, player.luck, player.speed, player.exp, null, getMoveFromStored(player.special1), getMoveFromStored(player.special2), image));
+                }
             }
         }
 
@@ -265,8 +270,7 @@ public class DataManager {
             StoredData.Item item = storedData.items[i];
             if(item != null)
             {
-                items[i].Name = storedData.items[i].name;
-                items[i].Desc = storedData.items[i].desc;
+                items[i] = getItemFromName(item.name);
             }
         }
 
@@ -351,7 +355,6 @@ public class DataManager {
         public class Item
         {
             public string name;
-            public string desc;
         }
 
         [Serializable]
@@ -394,6 +397,7 @@ public class DataManager {
     /// Takes the saved data move and returns the correct method needed for the game
     /// </summary>
     /// <param name="specialMove">The stored move</param>
+    /// <returns>Move used for game</returns>
     public SpecialMove getMoveFromStored(StoredData.SpecialMove specialMove)
     {
         if(specialMove is StoredData.MagicAttack)
@@ -438,6 +442,7 @@ public class DataManager {
     /// Gets the move in the game and returns a move that is able to be saved
     /// </summary>
     /// <param name="specialMove">The special move from the player to convert it to be stored</param>
+    /// <returns>Storable item</returns>
     public StoredData.SpecialMove getMoveFromPlayer(SpecialMove specialMove)
     {
         if (specialMove is MagicAttack)
@@ -502,6 +507,31 @@ public class DataManager {
             move.increase = ((HealingSpell)specialMove).increase;
             move.text = specialMove.Text;
             return move;
+        }
+        return null;
+    }
+
+    /// <summary>
+    /// Gets item from name
+    /// </summary>
+    /// <param name="itemName">The item name</param>
+    /// <returns>An item instance</returns>
+    public Item getItemFromName(string name)
+    {
+        switch (name)
+        {
+            case "Hammer":
+                return new Hammer();
+            case "Trainers":
+                return new Trainers();
+            case "Rabbit Foot":
+                return new RabbitFoot();
+            case "Magic Amulet":
+                return new MagicAmulet();
+            case "Shield":
+                return new Shield();
+            case "Armour":
+                return new Armour();
         }
         return null;
     }

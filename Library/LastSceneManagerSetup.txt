@@ -2,3 +2,6 @@ sceneSetups:
 - path: Assets/Menus/MainMenu/mainmenu1.unity
   isLoaded: 1
   isActive: 1
+- path: Assets/Exploration/Scenes/HesHallInside.unity
+  isLoaded: 0
+  isActive: 0

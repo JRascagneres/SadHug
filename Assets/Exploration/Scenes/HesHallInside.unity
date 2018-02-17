@@ -419,6 +419,48 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1867883973
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1867883975}
+  - component: {fileID: 1867883974}
+  m_Layer: 0
+  m_Name: LevelManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1867883974
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1867883973}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 624e1d15444340a47a68c179a49beee2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bossObjectName: Boss
+  worldMapExitPosition: {x: -33.24, y: -4.32}
+--- !u!4 &1867883975
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1867883973}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 113.65721, y: -98.16893, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2034722334
 Prefab:
   m_ObjectHideFlags: 0
@@ -461,32 +503,32 @@ Prefab:
     - target: {fileID: 114385662174133680, guid: 9c1f9c0dd1a2dc7449deb6740c1cceca,
         type: 2}
       propertyPath: level
-      value: 35
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 114385662174133680, guid: 9c1f9c0dd1a2dc7449deb6740c1cceca,
         type: 2}
       propertyPath: attack
-      value: 50
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 114385662174133680, guid: 9c1f9c0dd1a2dc7449deb6740c1cceca,
         type: 2}
       propertyPath: defence
-      value: 20
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 114385662174133680, guid: 9c1f9c0dd1a2dc7449deb6740c1cceca,
         type: 2}
       propertyPath: maximumMagic
-      value: 15
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 114385662174133680, guid: 9c1f9c0dd1a2dc7449deb6740c1cceca,
         type: 2}
       propertyPath: luck
-      value: 8
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 114385662174133680, guid: 9c1f9c0dd1a2dc7449deb6740c1cceca,
         type: 2}
       propertyPath: speed
-      value: 4
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 114385662174133680, guid: 9c1f9c0dd1a2dc7449deb6740c1cceca,
         type: 2}
@@ -496,14 +538,80 @@ Prefab:
     - target: {fileID: 114952688526256120, guid: 9c1f9c0dd1a2dc7449deb6740c1cceca,
         type: 2}
       propertyPath: dialogue.Array.data[0]
-      value: There's no ecape!
+      value: Aha! It was me, Mike all along, I'm the Vice Chancellor! You dare to
+        beat the master!?
       objectReference: {fileID: 0}
     - target: {fileID: 212793152256735916, guid: 9c1f9c0dd1a2dc7449deb6740c1cceca,
         type: 2}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: e6627fd4f0ec3454dbf2b3c5b3981df0,
+      objectReference: {fileID: 21300000, guid: 794630ca5ec10c34dabd248b00a4f870,
         type: 3}
+    - target: {fileID: 61851030795359140, guid: 9c1f9c0dd1a2dc7449deb6740c1cceca,
+        type: 2}
+      propertyPath: m_Offset.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 61851030795359140, guid: 9c1f9c0dd1a2dc7449deb6740c1cceca,
+        type: 2}
+      propertyPath: m_Offset.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 61851030795359140, guid: 9c1f9c0dd1a2dc7449deb6740c1cceca,
+        type: 2}
+      propertyPath: m_Size.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 61851030795359140, guid: 9c1f9c0dd1a2dc7449deb6740c1cceca,
+        type: 2}
+      propertyPath: m_Size.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114385662174133680, guid: 9c1f9c0dd1a2dc7449deb6740c1cceca,
+        type: 2}
+      propertyPath: health
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 114385662174133680, guid: 9c1f9c0dd1a2dc7449deb6740c1cceca,
+        type: 2}
+      propertyPath: special1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114385662174133680, guid: 9c1f9c0dd1a2dc7449deb6740c1cceca,
+        type: 2}
+      propertyPath: special2
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114385662174133680, guid: 9c1f9c0dd1a2dc7449deb6740c1cceca,
+        type: 2}
+      propertyPath: special2Magic
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114385662174133680, guid: 9c1f9c0dd1a2dc7449deb6740c1cceca,
+        type: 2}
+      propertyPath: special1Magic
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114385662174133680, guid: 9c1f9c0dd1a2dc7449deb6740c1cceca,
+        type: 2}
+      propertyPath: special1Value
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114385662174133680, guid: 9c1f9c0dd1a2dc7449deb6740c1cceca,
+        type: 2}
+      propertyPath: special2Value
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114385662174133680, guid: 9c1f9c0dd1a2dc7449deb6740c1cceca,
+        type: 2}
+      propertyPath: special1Text
+      value: used magic attack against
+      objectReference: {fileID: 0}
+    - target: {fileID: 114385662174133680, guid: 9c1f9c0dd1a2dc7449deb6740c1cceca,
+        type: 2}
+      propertyPath: special2Text
+      value: used strong magic attack against
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9c1f9c0dd1a2dc7449deb6740c1cceca, type: 2}
   m_IsPrefabParent: 0

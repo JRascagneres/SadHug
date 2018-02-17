@@ -223,7 +223,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4412286959588550, guid: d92f8f756b8cadf478825a8a6808674d, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 212791348369588002, guid: d92f8f756b8cadf478825a8a6808674d,
         type: 2}
@@ -291,7 +291,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4877416950172522, guid: 39c6f442aa2174047910f10f0c6b8e8f, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 20784022718258468, guid: 39c6f442aa2174047910f10f0c6b8e8f,
         type: 2}
@@ -315,6 +315,48 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 39c6f442aa2174047910f10f0c6b8e8f, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &409460619
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 409460621}
+  - component: {fileID: 409460620}
+  m_Layer: 0
+  m_Name: LevelManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &409460620
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 409460619}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 624e1d15444340a47a68c179a49beee2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bossObjectName: Boss
+  worldMapExitPosition: {x: -42, y: 11.52}
+--- !u!4 &409460621
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 409460619}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 113.65721, y: -98.16893, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &746894909
 GameObject:
   m_ObjectHideFlags: 0
@@ -467,7 +509,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4038236790872436, guid: 3386e72cc20f1f04c96ec1944dcde719, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3386e72cc20f1f04c96ec1944dcde719, type: 2}
@@ -798,6 +840,51 @@ Prefab:
       propertyPath: sprite
       value: 
       objectReference: {fileID: 2800000, guid: b719094e8d564a74d9c4d09098f3cb3a, type: 3}
+    - target: {fileID: 61851030795359140, guid: 9c1f9c0dd1a2dc7449deb6740c1cceca,
+        type: 2}
+      propertyPath: m_Offset.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 61851030795359140, guid: 9c1f9c0dd1a2dc7449deb6740c1cceca,
+        type: 2}
+      propertyPath: m_Size.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 61851030795359140, guid: 9c1f9c0dd1a2dc7449deb6740c1cceca,
+        type: 2}
+      propertyPath: m_Size.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 61851030795359140, guid: 9c1f9c0dd1a2dc7449deb6740c1cceca,
+        type: 2}
+      propertyPath: m_Offset.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114385662174133680, guid: 9c1f9c0dd1a2dc7449deb6740c1cceca,
+        type: 2}
+      propertyPath: special1Value
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114385662174133680, guid: 9c1f9c0dd1a2dc7449deb6740c1cceca,
+        type: 2}
+      propertyPath: special2Value
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114385662174133680, guid: 9c1f9c0dd1a2dc7449deb6740c1cceca,
+        type: 2}
+      propertyPath: special2Magic
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114385662174133680, guid: 9c1f9c0dd1a2dc7449deb6740c1cceca,
+        type: 2}
+      propertyPath: maximumMagic
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 114385662174133680, guid: 9c1f9c0dd1a2dc7449deb6740c1cceca,
+        type: 2}
+      propertyPath: level
+      value: 45
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9c1f9c0dd1a2dc7449deb6740c1cceca, type: 2}
   m_IsPrefabParent: 0
