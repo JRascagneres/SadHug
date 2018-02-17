@@ -570,7 +570,7 @@ Prefab:
     - target: {fileID: 114385662174133680, guid: 9c1f9c0dd1a2dc7449deb6740c1cceca,
         type: 2}
       propertyPath: health
-      value: 300
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 114385662174133680, guid: 9c1f9c0dd1a2dc7449deb6740c1cceca,
         type: 2}
@@ -611,6 +611,11 @@ Prefab:
         type: 2}
       propertyPath: special2Text
       value: used strong magic attack against
+      objectReference: {fileID: 0}
+    - target: {fileID: 114385662174133680, guid: 9c1f9c0dd1a2dc7449deb6740c1cceca,
+        type: 2}
+      propertyPath: name
+      value: Vice Chancellor
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9c1f9c0dd1a2dc7449deb6740c1cceca, type: 2}

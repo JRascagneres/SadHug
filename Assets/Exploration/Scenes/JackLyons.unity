@@ -254,7 +254,7 @@ Prefab:
     - target: {fileID: 114385662174133680, guid: 9c1f9c0dd1a2dc7449deb6740c1cceca,
         type: 2}
       propertyPath: health
-      value: 175
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 114385662174133680, guid: 9c1f9c0dd1a2dc7449deb6740c1cceca,
         type: 2}
@@ -320,6 +320,11 @@ Prefab:
         type: 2}
       propertyPath: special1Value
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114385662174133680, guid: 9c1f9c0dd1a2dc7449deb6740c1cceca,
+        type: 2}
+      propertyPath: name
+      value: Music Boss
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9c1f9c0dd1a2dc7449deb6740c1cceca, type: 2}

@@ -5,3 +5,24 @@ sceneSetups:
 - path: Assets/Exploration/Scenes/HesHallInside.unity
   isLoaded: 0
   isActive: 0
+- path: Assets/Exploration/Scenes/Law.unity
+  isLoaded: 0
+  isActive: 0
+- path: Assets/Exploration/Scenes/CentralHall.unity
+  isLoaded: 0
+  isActive: 0
+- path: Assets/Exploration/Scenes/CS-Ground.unity
+  isLoaded: 0
+  isActive: 0
+- path: Assets/Exploration/Scenes/Derwent.unity
+  isLoaded: 0
+  isActive: 0
+- path: Assets/Exploration/Scenes/JackLyons.unity
+  isLoaded: 0
+  isActive: 0
+- path: Assets/Exploration/Scenes/Library-Ground.unity
+  isLoaded: 0
+  isActive: 0
+- path: Assets/Exploration/Scenes/Physics.unity
+  isLoaded: 0
+  isActive: 0
