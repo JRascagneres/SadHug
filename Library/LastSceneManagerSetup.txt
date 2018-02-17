@@ -1,4 +1,16 @@
 sceneSetups:
 - path: Assets/MiniGame/Scene/MiniGame.unity
+  isLoaded: 0
+  isActive: 0
+- path: Assets/Menus/ExplorationMenu/GameMenu.unity
+  isLoaded: 0
+  isActive: 0
+- path: Assets/TownMode/TownMode.unity
+  isLoaded: 0
+  isActive: 0
+- path: Assets/MiniGame/Scene/EndGameScene.unity
+  isLoaded: 0
+  isActive: 0
+- path: Assets/Menus/MainMenu/mainmenu1.unity
   isLoaded: 1
   isActive: 1

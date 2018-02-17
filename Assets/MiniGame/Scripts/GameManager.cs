@@ -6,15 +6,21 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour {
 
     bool gameHasEnded = false;
+    public GameObject player;
 
-	public void GameOver()
+    void Start()
+    {
+        player = GameObject.FindGameObjectWithTag("Player");
+    }
+
+    public void GameOver()
     {
         if(gameHasEnded == false)
         {
             gameHasEnded = true;
+            player.SetActive(false);
             Debug.Log("Game Over");
-            Invoke("Restart", 2f);
-            
+            SceneManager.LoadScene("EndGameScene");
         }
       
     }
