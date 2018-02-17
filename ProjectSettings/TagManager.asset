@@ -16,6 +16,7 @@ TagManager:
   - HES
   - Enemy
   - MiniGameEndCanvas
+  - MiniGameEnter
   layers:
   - Default
   - TransparentFX

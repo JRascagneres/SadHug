@@ -673,7 +673,7 @@ GameObject:
   - component: {fileID: 1074249324}
   m_Layer: 5
   m_Name: Mini Game
-  m_TagString: Untagged
+  m_TagString: MiniGameEnter
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

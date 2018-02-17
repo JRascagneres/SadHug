@@ -20,6 +20,14 @@ public class ExplorationMenuScript : MonoBehaviour {
 		//menuBox = gameObject.transform.Find ("MenuScript").gameObject;
 		SceneChanger.instance.menuOpen = true;
 		//setInactive ();
+        if(GlobalFunctions.instance.currentLevel == 0)
+        {
+            GameObject.FindGameObjectWithTag("MiniGameEnter").GetComponent<Button>().interactable = false;
+        }
+        else
+        {
+            GameObject.FindGameObjectWithTag("MiniGameEnter").GetComponent<Button>().interactable = true;
+        }
 	}
 
 	/// <summary>
@@ -69,6 +77,7 @@ public class ExplorationMenuScript : MonoBehaviour {
 	/// </summary>
 	public void miniGamePressed()
     {
+        
         SceneChanger.instance.menuOpen = false;
         GlobalFunctions.instance.player.SetActive(false);
         SceneManager.LoadScene("MiniGame");
