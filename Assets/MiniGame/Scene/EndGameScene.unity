@@ -383,7 +383,7 @@ GameObject:
   - component: {fileID: 594986367}
   - component: {fileID: 594986366}
   m_Layer: 0
-  m_Name: Text
+  m_Name: Score
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -457,7 +457,7 @@ GameObject:
   - component: {fileID: 756951750}
   - component: {fileID: 756951749}
   m_Layer: 0
-  m_Name: EventSystem (1)
+  m_Name: EventSystem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -519,7 +519,7 @@ GameObject:
   - component: {fileID: 863065503}
   - component: {fileID: 863065502}
   m_Layer: 0
-  m_Name: Image
+  m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -588,7 +588,7 @@ GameObject:
   - component: {fileID: 927197127}
   - component: {fileID: 927197126}
   m_Layer: 0
-  m_Name: Button (2)
+  m_Name: Play Again
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -610,7 +610,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 70, y: -58.000015}
+  m_AnchoredPosition: {x: -70, y: -58.000015}
   m_SizeDelta: {x: 100, y: 30}
   m_Pivot: {x: 0.49999997, y: 0.5}
 --- !u!114 &927197126
@@ -709,7 +709,7 @@ GameObject:
   - component: {fileID: 970980394}
   - component: {fileID: 970980393}
   m_Layer: 0
-  m_Name: Text
+  m_Name: Game Over Title
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -784,7 +784,7 @@ GameObject:
   - component: {fileID: 1203973875}
   - component: {fileID: 1203973874}
   m_Layer: 0
-  m_Name: Button (1)
+  m_Name: Quit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -806,7 +806,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -70, y: -58.000015}
+  m_AnchoredPosition: {x: 70, y: -58.000015}
   m_SizeDelta: {x: 100, y: 30}
   m_Pivot: {x: 0.49999997, y: 0.5}
 --- !u!114 &1203973874
@@ -994,7 +994,7 @@ GameObject:
   - component: {fileID: 2107427663}
   - component: {fileID: 2107427662}
   m_Layer: 0
-  m_Name: Image
+  m_Name: Menu Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
