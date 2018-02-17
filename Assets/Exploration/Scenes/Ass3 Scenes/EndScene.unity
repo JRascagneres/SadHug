@@ -255,7 +255,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Tom Banks\nToby Wilds \nand Coffe-less people"
+  m_Text: "Tom Banks\nToby Wilds \nand Coffee-less crew"
 --- !u!222 &359665913
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -329,7 +329,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Ask Coffe-less people they know\nbut a little bit by \nTom Banks"
+  m_Text: "Ask Coffe-less crew they know...\nBut a little bit by: \nTom Banks"
 --- !u!222 &447553768
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -701,7 +701,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Tom Banks \nAnd Coffe-less people"
+  m_Text: "Tom Banks \nAnd Coffee-less crew"
 --- !u!222 &934215939
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1298,7 +1298,7 @@ MonoBehaviour:
 
     Toby Wilds
 
-    and Coffe-less people'
+    and Coffee-less people'
 --- !u!222 &1484938589
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1405,8 +1405,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 8.2, y: 137.05}
-  m_SizeDelta: {x: 321.4, y: 144.4}
+  m_AnchoredPosition: {x: 8.7, y: 129.2}
+  m_SizeDelta: {x: 322.5, y: 160.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1588125174
 MonoBehaviour:
@@ -1440,9 +1440,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "You did it, you brought an end to the vice chancelors reign of tyranny
+  m_Text: "You did it, you brought an end to the vice chancelors reign of tyranny,
     but what did it cost you? \nThink of everything else you could have done with
-    your time, well hope you have better luck next time..."
+    your time. Well, hope you have better luck next time..."
 --- !u!222 &1588125175
 CanvasRenderer:
   m_ObjectHideFlags: 0

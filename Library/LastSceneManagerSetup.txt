@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Exploration/Scenes/Ass3 Scenes/EndScene.unity
+- path: Assets/Exploration/Scenes/Ass3 Scenes/CentralHall.unity
   isLoaded: 1
   isActive: 1
