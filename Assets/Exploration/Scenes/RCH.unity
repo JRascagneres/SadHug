@@ -1022,6 +1022,11 @@ Prefab:
       propertyPath: vender
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114485212689137276, guid: 029c17544fabbde43bb73a9f1d1359b7,
+        type: 2}
+      propertyPath: vendor
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 029c17544fabbde43bb73a9f1d1359b7, type: 2}
   m_IsPrefabParent: 0
@@ -1041,6 +1046,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e84f6f847f6339458bcd3a47653cf12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  numberOfItems: 6
+  numberOfItemsPerRow: 3
   tex:
   - {fileID: 2800000, guid: 604f3b600d30c4242b8fa3e51a039cc6, type: 3}
   - {fileID: 2800000, guid: 580563eb9719ae94e97f8d5eda2a72c6, type: 3}

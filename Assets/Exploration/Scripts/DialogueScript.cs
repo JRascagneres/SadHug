@@ -24,8 +24,10 @@ public class DialogueScript : MonoBehaviour {
 	/// </summary>
 	private ObjectInteraction caller;
 
-	// Use this for initialization
-	void Start () {
+   
+
+    // Use this for initialization
+    void Start () {
 		movementScript = FindObjectOfType<PlayerMovement> ();
 		dialogueBox = gameObject.transform.Find ("DialogueBox").gameObject;
 		dialogueText = dialogueBox.transform.Find ("DialogueText").GetComponent<Text> ();
@@ -81,11 +83,13 @@ public class DialogueScript : MonoBehaviour {
 	/// Will also call <see cref="ObjectInteraction.endOfDialogue"/> afterwards to add an item or start a battle as appropiate 
 	/// </summary>
 	private void setInactive() {
-		dialogueBox.SetActive (false);
+        if(dialogueBox)
+		    dialogueBox.SetActive (false);
 		if (movementScript == null) {
 			movementScript = FindObjectOfType<PlayerMovement> ();
 		}
-		movementScript.setCanMove (true);
+        if(movementScript)
+		    movementScript.setCanMove (true);
 		dialogueActive = false;
 		if (caller != null) {
 			caller.endOfDialogue ();

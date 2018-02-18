@@ -22,6 +22,18 @@ Assets/PlayTests/BattleTestInitialScene.unity
 Assets/Menus/ExplorationMenu/GameMenu.unity
 Assets/Menus/ExplorationMenu/Party.unity
 Assets/Battle/SwitchPlayer.unity
+Assets/MiniGame/MiniGame.unity
+Assets/MiniGame/MiniGameR.unity
+Assets/Exploration/Scenes/Ass3 Scenes/Biology.unity
+Assets/Exploration/Scenes/Ass3 Scenes/CentralHall.unity
+Assets/Exploration/Scenes/Ass3 Scenes/HesHall.unity
+Assets/Exploration/Scenes/Ass3 Scenes/Law.unity
+Assets/Exploration/Scenes/Ass3 Scenes/Music-Entrance.unity
+Assets/Exploration/Scenes/Ass3 Scenes/CentralHall-Floor1.unity
+Assets/Exploration/Scenes/Ass3 Scenes/Music-Main.unity
+Assets/Exploration/Scenes/Ass3 Scenes/Biology-Floor1.unity
+Assets/Exploration/Scenes/Ass3 Scenes/HesHall-Floor1.unity
+Assets/Exploration/Scenes/Ass3 Scenes/EndScene.unity
 SceneListEnd?
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationPlayableAsset
 970a95104359198fe1a98ef48655de8c UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationTrack
@@ -68,7 +80,7 @@ c63db43c730fa2cbb8ca07de15898cb6 UnityEngine.UI.dll:UnityEngine.UI.Toggle
 f61c0793411f10cf5fbfa1473fef5ef2 UnityEngine.UI.dll:UnityEngine.UI.ToggleGroup
 86d36c43c53541d667100dc90b89cfba UnityEngine.UI.dll:UnityEngine.EventSystems.TouchInputModule
 1b8c02d0aa82fbf036a2b9b2d713eec3 UnityEngine.UI.dll:UnityEngine.UI.VerticalLayoutGroup
-93c23b37e02e2f963cd76bb09ef964c2 Assembly-CSharp.dll:.ObjectInteraction
+4ded3cd8868ea496ad01f41c65ff012f Assembly-CSharp.dll:.ObjectInteraction
 8ff8e4f2fdfb53cf0cef85f24f6f7740 Assembly-CSharp.dll:Tiled2Unity.GroupLayer
 329bcbf88b3c0197d230f5b9ceb88333 Assembly-CSharp.dll:Tiled2Unity.RectangleObject
 329bcbf88b3c0197d230f5b9ceb88333 Assembly-CSharp.dll:Tiled2Unity.PolylineObject
@@ -148,7 +160,9 @@ c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.Spa
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.CanvasScript
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.ItemsMenuScript
 2e649fffe44a155c6fb68f4e24b8b30b Assembly-CSharp.dll:.SceneChanger
+94cd5bbe45e8f734fc252d197c762057 Assembly-CSharp.dll:.CarController
 c5b77decb97ffc0c36e810b155d27dde Assembly-CSharp.dll:Tiled2Unity.TiledMap
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.MiniMove
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.DragAndDropItem
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.HealingStation
 951d0d1d38b7a18ad467fd1e1a5535af Assembly-CSharp.dll:.MainBattle
@@ -161,6 +175,8 @@ c5b77decb97ffc0c36e810b155d27dde Assembly-CSharp.dll:Tiled2Unity.TiledMap
 975fb4c67257cdd701ae946a4bb0c9d6 Assembly-CSharp.dll:.StatsScript
 f149f24230a6358c2804c5fae71459a2 Assembly-CSharp.dll:Tiled2Unity.TileAnimator
 539bd6c3664682b3278a3903a5433cf5 Assembly-CSharp.dll:.GlobalFunctions
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.EndScript
+08cce6f8c9263dd133872d5da1022703 Assembly-CSharp.dll:.Vendor
 fc1e0f4d8439d9928083474691511a13 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkAnimator
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Networking.dll:UnityEngine.Networking.NetworkBehaviour
 60b2bb652410a5867a5ab9a01cd38461 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkDiscovery
@@ -199,6 +215,9 @@ b6a4e0f46582e1b4ea27adb53405c4c7 Assembly-CSharp.dll:Tiled2Unity.SpriteDepthInMa
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.WorldMapScript
 d290070ecf091336e70150a7db25d112 Assembly-CSharp.dll:Tiled2Unity.ObjectLayer
 1847b18ab859efbea73d19c64fb7bbd9 Assembly-CSharp.dll:.Portal
+50a7eb85f4e92f10d5e4f1d26c32259d Assembly-CSharp.dll:.CarSpawner
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.RandomTest
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.CarScript
 329bcbf88b3c0197d230f5b9ceb88333 Assembly-CSharp.dll:Tiled2Unity.TmxObject
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.PlayerMenu
 0de0904091429df8d1356b142a37d2bb Assembly-CSharp.dll:.PlayerMovement
