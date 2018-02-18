@@ -68,10 +68,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75a54e7a03adf774d81449d86008b486, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  smoothTimeX: 2
-  smoothTimeY: 2
-  speed: 4
-  displacement: 0
+  smoothTimeX: 0.2
+  smoothTimeY: 0.2
+  speed: 6.5
   player: {fileID: 0}
 --- !u!212 &212395354126193420
 SpriteRenderer:
