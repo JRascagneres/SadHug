@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+//-- This whole class was added for Assessment 3
 public class toMouse : MonoBehaviour
 {
 
@@ -10,7 +11,9 @@ public class toMouse : MonoBehaviour
 
 
 
-    // Update is called once per frame
+    /// <summary>
+    /// Monitors mouse location and initiates a bullet when clicked
+    /// </summary>
     void Update()
     {
         if (Input.GetButtonDown("Fire1"))

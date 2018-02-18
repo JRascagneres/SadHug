@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+//-- This whole class was added for Assessment 3
 /// <summary>
 /// Class that handles when the game ends and handles restarting the game after game over
 /// </summary>

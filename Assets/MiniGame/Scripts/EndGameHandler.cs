@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
+//-- This whole class was added for Assessment 3
 public class EndGameHandler : MonoBehaviour {
 
     private Canvas thisCanvas;
@@ -25,7 +26,7 @@ public class EndGameHandler : MonoBehaviour {
     void Update ()
     {
         score = ScoreScript.scoreValue;
-        scoreText.text = "Score: " + score;
+        scoreText.text = "Money Won: " + score;
     }
 
     /// <summary>

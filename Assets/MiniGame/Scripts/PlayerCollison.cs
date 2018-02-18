@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//-- This whole class was added for Assessment 3
 /// <summary>
 /// Script that handles collision between main player and enemies
 /// </summary>

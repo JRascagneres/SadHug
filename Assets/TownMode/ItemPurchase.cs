@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+//-- This whole class was added for Assessment 3
 public class ItemPurchase : MonoBehaviour {
 
     /// <summary>

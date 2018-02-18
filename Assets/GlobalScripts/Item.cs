@@ -9,6 +9,8 @@ public abstract class Item {
 
 	protected string name;
 	protected string desc;
+
+    //Cost variable was added for Assessment 3
     protected int cost;
 
 	public string Name {

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//-- This whole class was added for Assessment 3
 /// <summary>
 /// Class that make enemies target the main player, and move towards it 
 /// </summary>

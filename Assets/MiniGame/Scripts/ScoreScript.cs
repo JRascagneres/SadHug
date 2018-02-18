@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+//-- This whole class was added for Assessment 3
 /// <summary>
 /// Script that handles displaying the correct score in the mingame
 /// </summary>

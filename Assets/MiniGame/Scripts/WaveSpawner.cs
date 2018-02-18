@@ -1,6 +1,8 @@
 using UnityEngine;
 using System.Collections;
 
+//-- This whole class was added for Assessment 3
+
 /// <summary>
 /// Script that spawns the waves of enemies
 /// </summary>

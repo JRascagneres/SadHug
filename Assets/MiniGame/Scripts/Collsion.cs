@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//-- This whole class was added for Assessment 3
 /// <summary>
 /// Class that detects when a bullet hits an enemy, then increments the score 
 /// </summary>
