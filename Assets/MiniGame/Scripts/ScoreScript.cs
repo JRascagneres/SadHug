@@ -3,21 +3,25 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/// <summary>
+/// Script that handles displaying the correct score in the mingame
+/// </summary>
 public class ScoreScript : MonoBehaviour {
 
-    //Score Value is set to 0 at start of game
     public static int scoreValue = 0;
-
-    //Text to display score
     Text score;
 
-	// Use this for initialization
-	void Start () {
-        score = GetComponent<Text>(); //Get text component to display score
+    /// <summary>
+    /// Get text component to display score
+    /// </summary>
+    void Start () {
+        score = GetComponent<Text>(); 
 	}
-	
-	// Update is called once per frame
-	void Update () {
-        score.text = "Score: " + scoreValue;  //Displays the current score
+
+    /// <summary>
+    /// Displays the current score
+    /// </summary>
+    void Update () {
+        score.text = "Score: " + scoreValue;  
 	}
 }

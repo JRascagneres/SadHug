@@ -1,41 +1,49 @@
 using UnityEngine;
 using System.Collections;
 
+/// <summary>
+/// Script that spawns the waves of enemies
+/// </summary>
 public class WaveSpawner : MonoBehaviour {
-
 
     //different states within the game
 	public enum SpawnState { SPAWNING, WAITING, COUNTING };
 
 	[System.Serializable]
-	public class Wave
+    /// <summary>
+    /// Class that has parameters for each wave
+    /// </summary>
+    public class Wave
 	{
-        //Parameters for each wave
 		public string name;
 		public Transform enemy;
 		public int count;
 		public float rate;
 	}
 
-    //Array for waves
 	public Wave[] waves;
 	private int nextWave = 0;
 
-    //Returns int of next wave
-	public int NextWave
+    /// <summary>
+    /// Returns int for the next wave
+    /// </summary>
+    public int NextWave
 	{
 		get { return nextWave + 1; }
 	}
 
-    //Array of spawn points in the scene
-	public Transform[] spawnPoints;
-
-    //Wait between the different waves defaulted to 5 secs
+    /// <summary>
+    /// Array of spawn points in the scene
+    /// Wait between the different waves defaulted to 5 secs
+    /// </summary>
+    public Transform[] spawnPoints;
 	public float timeBetweenWaves = 5f;
 	private float waveCountdown;
 
-    //returns the float time for the wave countdown
-	public float WaveCountdown
+    /// <summary>
+    /// returns the float time for the wave countdown
+    /// </summary>
+    public float WaveCountdown
 	{
 		get { return waveCountdown; }
 	}
@@ -51,9 +59,11 @@ public class WaveSpawner : MonoBehaviour {
 		get { return state; }
 	}
 
+    /// <summary>
+    /// Checks If there are no spawn point referenced then logs an error
+    /// </summary>
 	void Start()
 	{
-        //If there are no spawn point referenced
 		if (spawnPoints.Length == 0)
 		{
 			Debug.LogError("No spawn points referenced.");
@@ -62,11 +72,14 @@ public class WaveSpawner : MonoBehaviour {
 		waveCountdown = timeBetweenWaves;
 	}
 
+    /// <summary>
+    /// Checks If no enemy is alive by calling <see cref="WaveSpawner.EnemyIsAlive"/> 
+    /// then calls the wave completed method <see cref="WaveSpawner.WaveCompleted"/>
+    /// </summary>
 	void Update()
 	{
 		if (state == SpawnState.WAITING)
 		{
-            //If no enemy is alive calls the wave completed method
 			if (!EnemyIsAlive())
 			{
 				WaveCompleted();
@@ -91,8 +104,10 @@ public class WaveSpawner : MonoBehaviour {
 		}
 	}
 
-    //Method when wave is completed 
-	void WaveCompleted()
+    /// <summary>
+    /// Method when wave is completed 
+    /// </summary>
+    void WaveCompleted()
 	{
 		Debug.Log("Wave Completed!");
 
@@ -110,7 +125,9 @@ public class WaveSpawner : MonoBehaviour {
 		}
 	}
 
-    //Test whether there is an enemy alive in the scene view
+    /// <summary>
+    /// Test whether there is an enemy alive in the scene view
+    /// </summary>
 	bool EnemyIsAlive()
 	{
 		searchCountdown -= Time.deltaTime;
@@ -125,8 +142,10 @@ public class WaveSpawner : MonoBehaviour {
 		return true;
 	}
 
-    //Spawn wave function
-	IEnumerator SpawnWave(Wave _wave)
+    /// <summary>
+    /// Spawn wave function
+    /// </summary>
+    IEnumerator SpawnWave(Wave _wave)
 	{
 		Debug.Log("Spawning Wave: " + _wave.name);
 		state = SpawnState.SPAWNING;
@@ -142,8 +161,10 @@ public class WaveSpawner : MonoBehaviour {
 		yield break;
 	}
 
-    //Spawn enemy function
-	void SpawnEnemy(Transform _enemy)
+    /// <summary>
+    /// Spawn enemy function
+    /// </summary>
+    void SpawnEnemy(Transform _enemy)
 	{
 		Debug.Log("Spawning Enemy: " + _enemy.name);
 

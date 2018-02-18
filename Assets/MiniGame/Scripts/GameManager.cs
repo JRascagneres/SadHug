@@ -3,37 +3,44 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+/// <summary>
+/// Class that handles when the game ends and handles restarting the game after game over
+/// </summary>
 public class GameManager : MonoBehaviour {
 
-
-    //Boolean value to signal if the game has ended or not
     bool gameHasEnded = false;
-
-    //Main player game object
     public GameObject player;
 
+    /// <summary>
+    /// Assigns the player to the game object with tag "Player"
+    /// </summary>
     void Start()
     {
-        //Assigns the player to the game object with tag "Player"
         player = GameObject.FindGameObjectWithTag("Player");
     }
 
+    /// <summary>
+    /// When GameOver function is called from <see cref="PlayerCollison.OnTriggerEnter2D(Collider2D)"/>,
+    /// assigns true to the variable to signal the game has ended, Prints game over to console and loads the end game scene
+    /// </summary>
     public void GameOver()
     {
         if(gameHasEnded == false)
         {
-            gameHasEnded = true;                            //assigns true to the variable to signal the game has ended
-            player.SetActive(false);                        //Player is switched to false
-            Debug.Log("Game Over");                         //Prints game over to console
-            SceneManager.LoadScene("EndGameScene");         //Loads the end game scene
-        }
-      
+            gameHasEnded = true;                            
+            player.SetActive(false);                        
+            Debug.Log("Game Over");                         
+            SceneManager.LoadScene("EndGameScene");         
+        }      
     }
 
+    /// <summary>
+    /// Function that restarts the game, Score is reset to 0 then Reloads scene to restart
+    /// </summary>
     void Restart()
     {
-        ScoreScript.scoreValue = 0;                                     //Score is reset to 0
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);     //Reloads scene to restart
+        ScoreScript.scoreValue = 0;                                     
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);     
     }
 
 }
