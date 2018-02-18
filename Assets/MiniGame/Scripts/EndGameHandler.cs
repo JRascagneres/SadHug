@@ -45,7 +45,9 @@ public class EndGameHandler : MonoBehaviour {
     {
         SceneManager.LoadScene("WorldMap");
         GlobalFunctions.instance.player.SetActive(true);
+        SceneChanger.instance.loadLevel("WorldMap", new Vector2(0,0));
         PlayerData.instance.data.Money += score;
+        ScoreScript.scoreValue = 0;
     }
 
 }
