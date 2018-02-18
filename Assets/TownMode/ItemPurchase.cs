@@ -4,6 +4,10 @@ using UnityEngine;
 using UnityEngine.UI;
 
 //-- This whole class was added for Assessment 3
+
+/// <summary>
+/// Script to handle item purchases for town mode
+/// </summary>
 public class ItemPurchase : MonoBehaviour {
 
     /// <summary>

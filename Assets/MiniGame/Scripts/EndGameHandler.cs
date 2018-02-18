@@ -5,6 +5,10 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 //-- This whole class was added for Assessment 3
+
+/// <summary>
+/// Handles the menu at the end of the minigame
+/// </summary>
 public class EndGameHandler : MonoBehaviour {
 
     private Canvas thisCanvas;

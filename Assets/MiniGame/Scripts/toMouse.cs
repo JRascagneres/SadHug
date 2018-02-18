@@ -2,6 +2,10 @@
 using System.Collections;
 
 //-- This whole class was added for Assessment 3
+
+/// <summary>
+/// Monitors mouse location and initiates a bullet when clicked
+/// </summary>
 public class toMouse : MonoBehaviour
 {
 
@@ -11,9 +15,7 @@ public class toMouse : MonoBehaviour
 
 
 
-    /// <summary>
-    /// Monitors mouse location and initiates a bullet when clicked
-    /// </summary>
+    
     void Update()
     {
         if (Input.GetButtonDown("Fire1"))

@@ -4,6 +4,10 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 //-- This whole class was added for Assessment 3
+
+/// <summary>
+/// Simple to exit back out of town mode
+/// </summary>
 public class TownHandler : MonoBehaviour {
 
     /// <summary>
