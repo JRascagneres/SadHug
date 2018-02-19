@@ -106,7 +106,7 @@ public class DataManager {
 			}
 		}
 		if (!added) {
-			throw new System.InvalidOperationException("Player Array is full");
+			Debug.Log("Player Array is full");
 		}
 	}
 

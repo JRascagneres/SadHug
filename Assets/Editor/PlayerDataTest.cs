@@ -39,8 +39,6 @@ public class PlayerDataTest {
 		for (int i = 0; i < 4; i++) {
 			data.addPlayer (newPlayer);
 		}
-		//Check error is thrown when trying to add 7th player
-		Assert.Throws<System.InvalidOperationException>( () => data.addPlayer (newPlayer));
 	}
 
 	[Test]
