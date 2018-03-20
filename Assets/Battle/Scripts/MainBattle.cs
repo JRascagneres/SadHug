@@ -168,6 +168,37 @@ public class MainBattle : MonoBehaviour {
 			textBox.text += "\nCritical Hit!";
 		}
 
+
+        if (move.User.GetType() == typeof(Player) && ((Player)move.User).IsGorilla)
+        {
+            SpecialMove damagePlayer = new MagicAttack("attacked a team mate", "Attack Team", 0, 15);
+            List<int> indexes = new List<int>();
+
+            bool badEffect = (Random.value > 0.5f);
+
+            if (badEffect)
+            {
+                for (int i = 0; i < PlayerData.instance.data.Players.Length; i++)
+                {
+                    Player currentPlayer = PlayerData.instance.data.Players[i];
+                    if (currentPlayer != null && !currentPlayer.IsGorilla)
+                    {
+                        indexes.Add(i);
+                    }
+
+                }
+
+                int index = Random.Range(0, indexes.Count);
+                index = indexes[index];
+
+                Player[] players = PlayerData.instance.data.Players;
+                damagePlayer.setUp(manager, move.User, players[index]);
+                damagePlayer.performMove();
+
+                textBox.text = move.User.Name + " " + move.Text + " " + move.Target.Name + " but Gorilla goes mad and hits "+ damagePlayer.Target.Name +"!";
+            }
+        }
+
 		//Update bars and data
 		if (move is SwitchPlayers) {
 			updateToNewPlayer ();

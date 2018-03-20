@@ -11,15 +11,30 @@ public class Player : Character {
 	private int expToNextLevel;
 	/// <summary>The item that the player has equipped</summary>
 	private Item item;
+    /// <summary>isGorilla</summary>
+    private bool isGorilla;
 
-	public Player (string name, int level, int health, int attack, int defence, int maximumMagic, int magic,
+    public Player (string name, int level, int health, int attack, int defence, int maximumMagic, int magic,
 		int luck, int speed, int exp, Item item, SpecialMove special1, SpecialMove special2, Texture2D image = null)
 		   : base(name, level, health, attack, defence, maximumMagic, magic, luck, speed, special1, special2, image)
 	{
 		this.exp = exp;
 		setExpToNextLevel ();
 		this.item = item;
+        this.isGorilla = false;
 	}
+
+    public bool IsGorilla
+    {
+        get
+        {
+            return this.isGorilla;
+        }
+        set
+        {
+            isGorilla = value;
+        }
+    }
 
 	public int Exp {
 		get {
@@ -89,7 +104,7 @@ public class Player : Character {
 	}
 
 	/// <summary> Defines the exp points to the next level as current <see cref="level"/> * 200</summary>
-	private void setExpToNextLevel() {
+	protected void setExpToNextLevel() {
 		expToNextLevel = level * 200;
 	}
 

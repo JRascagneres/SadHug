@@ -63,6 +63,7 @@ public class SaveData
         public int magic;
         public int luck;
         public int speed;
+        public bool isGorilla;
         public SpecialMoveSaveData special1;
         public SpecialMoveSaveData special2;
         public TextureData image;

@@ -275,6 +275,7 @@ public class DataManager {
             playerToSave.magic = player.Magic;
             playerToSave.luck = player.Luck;
             playerToSave.speed = player.Speed;
+            playerToSave.isGorilla = player.IsGorilla;
             playerToSave.special1 = SpecialMoveToSerializable(player.Special1);
             playerToSave.special2 = SpecialMoveToSerializable(player.Special2);
             playerToSave.image = Texture2DToSerializable(player.Image);
@@ -316,6 +317,11 @@ public class DataManager {
                 SerializableToSpecialMove(serializedPlayer.special1),
                 SerializableToSpecialMove(serializedPlayer.special2),
                 SerializableToTexture2D(serializedPlayer.image));
+
+            if (serializedPlayer.isGorilla)
+            {
+                playerToLoad.IsGorilla = true;
+            }
 
             return playerToLoad;
         }

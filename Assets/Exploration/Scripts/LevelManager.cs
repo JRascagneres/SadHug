@@ -32,12 +32,13 @@ public class LevelManager : MonoBehaviour {
 		switch (GlobalFunctions.instance.currentLevel) {
 		case (0):
                 addPlayer = true;
-                newPlayer = new Player ("Jamie", 3, 100, 10, 10, 5, 5, 5, 5, 0, null,
-				new LowerDefence ("sung Langwith chants at", "Decrease enemy defence by 30%", 3, 0.3f),
-				new MagicAttack ("used the power of 2 for 1 cocktails against", "Use 2 for 1 cocktails to attack at power 15", 4, 15),
-				(Texture2D) Resources.Load("Character3", typeof(Texture2D)));
-			playerDesc = "You got a new team member, Jamie! He's from Langwith and has high attack and defence" +
-				" but low magic points. His specials can decrease the enemy's defence or attack using 2 for 1 cocktails";
+                newPlayer = new Player("Gorilla", 3, 100, 10, 10, 5, 5, 5, 5, 0, null,
+                new LowerDefence("sung Langwith chants at", "Decrease enemy defence by 30%", 3, 0.3f),
+                new MagicAttack("used the power of 2 for 1 cocktails against", "Use 2 for 1 cocktails to attack at power 15", 4, 15),
+                (Texture2D)Resources.Load("Character3", typeof(Texture2D)));
+                newPlayer.IsGorilla = true;
+			playerDesc = "Whats this?! A Gorilla joined your team! He seems like he could be a powerful addition to your team but be careful! " +
+                    "Gorilla's are unpredictable!";
 			break;
 		case (1):
                 addPlayer = true;
