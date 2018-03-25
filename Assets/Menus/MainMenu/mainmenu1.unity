@@ -1154,7 +1154,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   quitMenu: {fileID: 1449329196}
-  exitText: {fileID: 547703093}
+  exitText: {fileID: 1479799800}
   startText: {fileID: 1950763790}
 --- !u!1 &1103442697
 GameObject:

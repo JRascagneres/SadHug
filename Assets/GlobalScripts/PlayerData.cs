@@ -37,6 +37,7 @@ public class DataManager {
 	private Player[] players;
 	private Item[] items;
 	private int money;
+    private Quest[] quests;
 
     /// <summary>
     /// Normal constructor, for use when a new game is started, an initial player is needed.
@@ -58,6 +59,7 @@ public class DataManager {
     {
         players = new Player[6];
         items = new Item[6];
+        quests = new Quest[3];
         money = 0;
     }
 
@@ -84,6 +86,18 @@ public class DataManager {
 			money = value;
 		}
 	}
+
+    public Quest[] Quests
+    {
+        get
+        {
+            return this.quests;
+        }
+        set
+        {
+            quests = value;
+        }
+    }
 
 	/// <summary>
 	/// Gets the first player.

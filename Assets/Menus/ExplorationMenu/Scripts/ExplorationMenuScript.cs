@@ -48,6 +48,14 @@ public class ExplorationMenuScript : MonoBehaviour {
 		SceneChanger.instance.loadLevel ("Party");
 	}
 
+    public void questPressed()
+    {
+        for(int i = 0; i < PlayerData.instance.data.Quests.Length; i++)
+        {
+            Debug.Log(PlayerData.instance.data.Quests[i].Name);
+        }
+    }
+
 	/// <summary>
 	/// Placeholder function for when the save button is pressed, to be implemented in later builds
 	/// </summary>

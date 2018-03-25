@@ -1,7 +1,13 @@
 sceneSetups:
+- path: Assets/Quests/Quests.unity
+  isLoaded: 0
+  isActive: 0
 - path: Assets/Menus/MainMenu/mainmenu1.unity
   isLoaded: 1
   isActive: 1
-- path: Assets/Battle/Battle.unity
+- path: Assets/Exploration/Scenes/CS-Jail.unity
+  isLoaded: 0
+  isActive: 0
+- path: Assets/Menus/ExplorationMenu/GameMenu.unity
   isLoaded: 0
   isActive: 0
