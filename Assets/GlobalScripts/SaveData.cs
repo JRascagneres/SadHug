@@ -16,6 +16,7 @@ public class SaveData
     public ObjectsActiveData serializedObjectsActive = new ObjectsActiveData();
     public string currentSceneName;
     public int currentLevel;
+    public QuestSaveData[] serializedQuests = new QuestSaveData[3];
 
     /// <summary>
     /// A serialzable class to represent 2D vector information.
@@ -94,5 +95,17 @@ public class SaveData
         public string desc;
         public int magic;
         public float special;
+    }
+
+    /// <summary>
+    /// A serializable class to represent a <see cref="Quest"/>.
+    /// </summary>
+    [Serializable]
+    public class QuestSaveData
+    {
+        public string name;
+        public QuestType questType;
+        public bool complete;
+        public int value;
     }
 }

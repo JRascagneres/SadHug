@@ -83,7 +83,7 @@ public class MenuScript : MonoBehaviour {
         //player.SetActive (true);
         //SceneChanger.instance.loadLevel ("CS-Jail", new Vector2 (0, 0));
         player.SetActive(true);
-        SceneChanger.instance.loadLevel("Quests", new Vector2(0, 0));
+        SceneChanger.instance.loadLevel("CreateQuests", new Vector2(0, 0));
 	}
 
     /// <summary>

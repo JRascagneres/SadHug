@@ -195,6 +195,12 @@ public class DataManager {
             savedData.serializedPlayers[i] = PlayerToSerializable(players[i]);
         }
 
+        // Save Quests
+        for (var i = 0; i < quests.Length; i++)
+        {
+            savedData.serializedQuests[i] = QuestToSerializable(quests[i]);
+        }
+
         // Save inventory items.
         for (var i = 0; i < items.Length; i++)
         {
@@ -247,6 +253,12 @@ public class DataManager {
             for (var i = 0; i < players.Length; i++)
             {
                 players[i] = SerializableToPLayer(savedGame.serializedPlayers[i]);
+            }
+
+            // Restore Quests
+            for (var i = 0; i < quests.Length; i++)
+            {
+                quests[i] = SerializableToQuest(savedGame.serializedQuests[i]);
             }
 
             // Restore items.
@@ -502,5 +514,24 @@ public class DataManager {
     {
         Vector2 vectorToLoad = new Vector2(serializedVector.xcoord, serializedVector.ycoord);
         return vectorToLoad;
+    }
+
+    public SaveData.QuestSaveData QuestToSerializable(Quest quest)
+    {
+        SaveData.QuestSaveData questSaveData = new SaveData.QuestSaveData();
+        questSaveData.name = quest.Name;
+        questSaveData.questType = quest.QuestType;
+        questSaveData.complete = quest.Complete;
+        questSaveData.value = quest.Value;
+
+        return questSaveData;
+    }
+
+    public Quest SerializableToQuest(SaveData.QuestSaveData questSaveData)
+    {
+        Quest quest = new Quest(questSaveData.questType, questSaveData.name, questSaveData.value);
+        quest.Complete = questSaveData.complete;
+
+        return quest;
     }
 }

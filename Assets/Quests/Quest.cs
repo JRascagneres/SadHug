@@ -18,9 +18,28 @@ public class Quest {
         this.value = value;
     }
 
-    public void setComplete()
+    public bool Complete
     {
-        this.complete = true;
+        get
+        {
+            return this.complete;
+        }
+        set
+        {
+            this.complete = value;
+        }
+    }
+
+    public QuestType QuestType
+    {
+        get
+        {
+            return this.questType;
+        }
+        set
+        {
+            this.questType = value;
+        }
     }
 
     public string Name
@@ -32,6 +51,18 @@ public class Quest {
         set
         {
             this.name = value;
+        }
+    }
+
+    public int Value
+    {
+        get
+        {
+            return this.value;
+        }
+        set
+        {
+            this.value = value;
         }
     }
 

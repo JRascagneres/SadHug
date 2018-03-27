@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 /// <summary>
@@ -50,10 +51,8 @@ public class ExplorationMenuScript : MonoBehaviour {
 
     public void questPressed()
     {
-        for(int i = 0; i < PlayerData.instance.data.Quests.Length; i++)
-        {
-            Debug.Log(PlayerData.instance.data.Quests[i].Name);
-        }
+        SceneChanger.instance.menuOpen = false;
+        SceneManager.LoadScene("Quests", LoadSceneMode.Additive);
     }
 
 	/// <summary>
