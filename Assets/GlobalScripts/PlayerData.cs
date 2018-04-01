@@ -543,6 +543,7 @@ public class DataManager {
         questSaveData.questType = quest.QuestType;
         questSaveData.complete = quest.Complete;
         questSaveData.value = quest.Value;
+        questSaveData.otherData = quest.OtherData;
 
         return questSaveData;
     }
@@ -551,6 +552,7 @@ public class DataManager {
     {
         Quest quest = new Quest(questSaveData.questType, questSaveData.name, questSaveData.value);
         quest.Complete = questSaveData.complete;
+        quest.OtherData = questSaveData.otherData;
 
         return quest;
     }

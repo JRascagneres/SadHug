@@ -54,6 +54,16 @@ public class QuestMenuHandler : MonoBehaviour {
                         quests[i].Complete = true;
                     }
                     break;
+                case QuestType.playerLevel:
+                    int playerIndex = getPlayerIndexFromName(quests[i].OtherData);
+                    if(playerIndex != -1)
+                    {
+                        if (PlayerData.instance.data.Players[playerIndex].Level >= quests[i].Value)
+                        {
+                            quests[i].Complete = true;
+                        }
+                    }
+                    break;
             }
 
             if (!quests[i].Complete)
@@ -85,6 +95,23 @@ public class QuestMenuHandler : MonoBehaviour {
     void giveReward()
     {
         Debug.Log("Reward!");
+    }
+
+    int getPlayerIndexFromName(string name)
+    {
+        Player[] players = PlayerData.instance.data.Players;
+        for(int i = 0; i < players.Length; i++)
+        {
+            Player player = players[i];
+            if(player != null)
+            {
+                if(player.Name == name)
+                {
+                    return i;
+                }
+            }
+        }
+        return -1;
     }
 
     void closeMenu()

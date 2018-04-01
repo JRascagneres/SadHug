@@ -1,4 +1,7 @@
 sceneSetups:
+- path: Assets/Quests/CreateQuests.unity
+  isLoaded: 0
+  isActive: 0
 - path: Assets/Quests/Quests.unity
   isLoaded: 0
   isActive: 0

@@ -108,5 +108,6 @@ public class SaveData
         public QuestType questType;
         public bool complete;
         public int value;
+        public string otherData;
     }
 }

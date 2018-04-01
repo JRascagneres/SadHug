@@ -2,13 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum QuestType { money, level };
+public enum QuestType { money, level, playerLevel};
 
 public class Quest {
     private string name;
     private QuestType questType;
     private bool complete;
     private int value;
+    private string otherData;
 
     public Quest( QuestType questType, string name, int value)
     {
@@ -16,6 +17,15 @@ public class Quest {
         this.complete = false;
         this.name = name;
         this.value = value;
+    }
+
+    public Quest (QuestType questType, string name, int value, string otherData)
+    {
+        this.questType = questType;
+        this.complete = false;
+        this.name = name;
+        this.value = value;
+        this.otherData = otherData;
     }
 
     public bool Complete
@@ -63,6 +73,18 @@ public class Quest {
         set
         {
             this.value = value;
+        }
+    }
+
+    public string OtherData
+    {
+        get
+        {
+            return this.otherData;
+        }
+        set
+        {
+            this.otherData = value;
         }
     }
 
