@@ -10,6 +10,7 @@ using System.Collections.Generic;
 public class SaveData
 {
     public int Money;
+    public bool completedQuests;
     public VectorData playerPosition;
     public PlayerSaveData[] serializedPlayers = new PlayerSaveData[PlayerData.instance.data.Players.Length];
     public ItemSaveData[] serializedItems = new ItemSaveData[PlayerData.instance.data.Items.Length];

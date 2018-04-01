@@ -37,6 +37,7 @@ public class DataManager {
 	private Player[] players;
 	private Item[] items;
 	private int money;
+    private bool completedQuests;
     private Quest[] quests;
 
     /// <summary>
@@ -48,6 +49,7 @@ public class DataManager {
 		players [0] = initialPlayer;
 		items = new Item[6];
 		money = 0;
+        completedQuests = false;
 	}
 
 
@@ -96,6 +98,18 @@ public class DataManager {
         set
         {
             quests = value;
+        }
+    }
+
+    public bool CompletedQuests
+    {
+        get
+        {
+            return this.completedQuests;
+        }
+        set
+        {
+            completedQuests = value;
         }
     }
 
@@ -189,6 +203,9 @@ public class DataManager {
         // Save money.
         savedData.Money = Money;
 
+        // Save completed quest.
+        savedData.completedQuests = completedQuests;
+
         // Save players.
         for (var i = 0; i < players.Length; i++)
         {
@@ -248,6 +265,9 @@ public class DataManager {
 
             // Money.
             money = savedGame.Money;
+
+            // Completed Quests
+            completedQuests = savedGame.completedQuests;
 
             // Restore players.
             for (var i = 0; i < players.Length; i++)
