@@ -14,7 +14,7 @@ public class Quests{
             case QuestsEnum.Level10:
                 return new Quest(QuestType.level, "Level 1", 1);
             case QuestsEnum.GeorgeLevel2:
-                return new Quest(QuestType.playerLevel, "George Level 2", 2, "Gorilla");
+                return new Quest(QuestType.playerLevel, "George Level 2", 2, "George");
         }
 
         return null;

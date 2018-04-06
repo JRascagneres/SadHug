@@ -94,7 +94,7 @@ public class QuestMenuHandler : MonoBehaviour {
 
     void giveReward()
     {
-        Debug.Log("Reward!");
+        PlayerData.instance.data.Money += 1000;
     }
 
     int getPlayerIndexFromName(string name)

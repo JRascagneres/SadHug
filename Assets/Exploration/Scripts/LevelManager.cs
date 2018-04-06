@@ -35,7 +35,7 @@ public class LevelManager : MonoBehaviour {
                 newPlayer = new Player("Gorilla", 3, 100, 10, 10, 5, 5, 5, 5, 0, null,
                 new LowerDefence("sung Langwith chants at", "Decrease enemy defence by 30%", 3, 0.3f),
                 new MagicAttack("used the power of 2 for 1 cocktails against", "Use 2 for 1 cocktails to attack at power 15", 4, 15),
-                (Texture2D)Resources.Load("Character3", typeof(Texture2D)));
+                (Texture2D)Resources.Load("Gorilla", typeof(Texture2D)));
                 newPlayer.IsGorilla = true;
 			playerDesc = "Whats this?! A Gorilla joined your team! He seems like he could be a powerful addition to your team but be careful! " +
                     "Gorilla's are unpredictable!";
