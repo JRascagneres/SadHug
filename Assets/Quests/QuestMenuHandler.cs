@@ -4,13 +4,17 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
+
+/// <summary>
+/// A monobehaviour object to handle the quest progress menu
+/// </summary>
 public class QuestMenuHandler : MonoBehaviour {
 
     public Canvas[] questCanvasArray;
     public Text completionStatus;
     public Button closeQuestsButton;
 
-	// Use this for initialization
+	// Updates quest completeness
 	void Start () {
         updateQuests();
 
@@ -26,12 +30,10 @@ public class QuestMenuHandler : MonoBehaviour {
         Button btn = closeQuestsButton.GetComponent<Button>();
         btn.onClick.AddListener(closeMenu);
     }
-	
-	// Update is called once per frame
-	void Update () {
 
-    }
-
+    /// <summary>
+    /// A function to check whether the quests are complete and updates the status. If they all are the reward is given
+    /// </summary>
     void checkQuests()
     {
         Quest[] quests = PlayerData.instance.data.Quests;
@@ -75,6 +77,9 @@ public class QuestMenuHandler : MonoBehaviour {
         giveReward();
     }
 
+    /// <summary>
+    /// Updates the quest UI to show if they are complete
+    /// </summary>
     void updateQuests()
     {
         if (!PlayerData.instance.data.CompletedQuests)
@@ -92,11 +97,19 @@ public class QuestMenuHandler : MonoBehaviour {
         }
     }
 
+    /// <summary>
+    /// Gives winning reward
+    /// </summary>
     void giveReward()
     {
         PlayerData.instance.data.Money += 1000;
     }
 
+
+    /// <summary>
+	/// Gets player from the name of the player. Used to check player level in one of the possible quests.
+	/// </summary>
+	/// <returns>Player index</returns>
     int getPlayerIndexFromName(string name)
     {
         Player[] players = PlayerData.instance.data.Players;
@@ -114,6 +127,9 @@ public class QuestMenuHandler : MonoBehaviour {
         return -1;
     }
 
+    /// <summary>
+	/// Closes quest menu
+	/// </summary>
     void closeMenu()
     {
         SceneChanger.instance.loadLevel(SceneManager.GetSceneAt(0).name);

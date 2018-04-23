@@ -2,8 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//All possible Quest Types
 public enum QuestType { money, level, playerLevel};
 
+/// <summary>
+/// Quest object with all its attributes and getters and setters
+/// </summary>
 public class Quest {
     private string name;
     private QuestType questType;

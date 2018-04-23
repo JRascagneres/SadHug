@@ -168,10 +168,10 @@ public class MainBattle : MonoBehaviour {
 			textBox.text += "\nCritical Hit!";
 		}
 
-
+        //If the player is a Gorilla it has a 50/50 chance of performing its move or attacking a team mate
         if (move.User.GetType() == typeof(Player) && ((Player)move.User).IsGorilla)
         {
-            SpecialMove damagePlayer = new MagicAttack("attacked a team mate", "Attack Team", 0, 15);
+            SpecialMove damagePlayer = new MagicAttack("attacked a team mate", "Attack Team", 0, 30);
             List<int> indexes = new List<int>();
 
             bool badEffect = (Random.value > 0.5f);

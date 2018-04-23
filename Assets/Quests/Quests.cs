@@ -2,8 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//Enum of different quests
 public enum QuestsEnum {Quest10, Level10, GeorgeLevel2};
 
+/// <summary>
+/// Defines class of quests and their components
+/// </summary>
 public class Quests{
     public static Quest GetQuests(QuestsEnum quests)
     {

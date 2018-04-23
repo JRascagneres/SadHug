@@ -5,8 +5,9 @@ using UnityEngine;
 using UnityEngine.Experimental.UIElements;
 using UnityEngine.UI;
 
-
-
+/// <summary>
+/// A monobehaviour object to handle the quest creation and start game setup
+/// </summary>
 public class QuestManager : MonoBehaviour {
     List<Quest> quests = new List<Quest>();
 
@@ -16,6 +17,9 @@ public class QuestManager : MonoBehaviour {
 
     GameObject player;
 
+    /// <summary>
+    /// Populates dropdowns and sets up memu
+    /// </summary>
     void Start()
     {
 
@@ -38,13 +42,17 @@ public class QuestManager : MonoBehaviour {
 
     }
 
-
-
-	public void setQuests()
+    /// <summary>
+    /// Set locally decided quests to the player quests
+    /// </summary>
+    public void setQuests()
     {
         PlayerData.instance.data.Quests = quests.ToArray();
     }
 
+    /// <summary>
+    /// Ensure all quests are unqiue and then load main level
+    /// </summary>
     public void startGame()
     {
 
