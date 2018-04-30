@@ -13,9 +13,10 @@ public class QuestMenuHandler : MonoBehaviour {
     public Canvas[] questCanvasArray;
     public Text completionStatus;
     public Button closeQuestsButton;
+    public Image testBar;
 
-	// Updates quest completeness
-	void Start () {
+    // Updates quest completeness
+    void Start () {
         updateQuests();
 
         if (PlayerData.instance.data.CompletedQuests)
@@ -73,6 +74,19 @@ public class QuestMenuHandler : MonoBehaviour {
                 completedAll = false;
             }
         }
+
+        int numberComplete = 0;
+
+        for (int i = 0; i <quests.Length; i++)
+        {
+            if (quests[i].Complete)
+            {
+                numberComplete++;
+            }
+        }
+
+        testBar.fillAmount = ((float)numberComplete/(float)3);
+
         PlayerData.instance.data.CompletedQuests = completedAll;
         giveReward();
     }
