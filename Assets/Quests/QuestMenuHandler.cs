@@ -107,7 +107,14 @@ public class QuestMenuHandler : MonoBehaviour {
             Text name = thisCanvas.GetComponentsInChildren<Text>()[0];
             Text complete = thisCanvas.GetComponentsInChildren<Text>()[1];
             name.text = PlayerData.instance.data.Quests[i].Name;
-            complete.text = PlayerData.instance.data.Quests[i].Complete.ToString();
+            if (PlayerData.instance.data.Quests[i].Complete)
+            {
+                complete.text = "Complete";
+            }
+            else
+            {
+                complete.text = "Not Complete";
+            }
         }
     }
 
