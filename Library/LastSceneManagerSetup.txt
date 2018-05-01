@@ -1,16 +1,13 @@
 sceneSetups:
-- path: Assets/Quests/CreateQuests.unity
+- path: Assets/WorldMap/Scenes/WorldMap.unity
   isLoaded: 0
   isActive: 0
-- path: Assets/Quests/Quests.unity
-  isLoaded: 0
-  isActive: 0
-- path: Assets/Exploration/Scenes/CS-Ground.unity
+- path: Assets/Exploration/Scenes/Physics.unity
   isLoaded: 0
   isActive: 0
 - path: Assets/Menus/MainMenu/mainmenu1.unity
-  isLoaded: 1
-  isActive: 1
-- path: Assets/Battle/Battle.unity
   isLoaded: 0
   isActive: 0
+- path: Assets/Exploration/Scenes/Ass3 Scenes/CentralHall.unity
+  isLoaded: 1
+  isActive: 1
