@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
+//CLASS ADDED FOR ASSESSMENT 4
 
 /// <summary>
 /// A monobehaviour object to handle the quest progress menu

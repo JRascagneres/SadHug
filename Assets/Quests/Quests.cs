@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//CLASS ADDED FOR ASSESSMENT 4
+
 //Enum of different quests
 public enum QuestsEnum { Money10, Money20, Money30, Level1, Level2, Level3, GeorgeLevel2 };
 

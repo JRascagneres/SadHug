@@ -9,5 +9,11 @@ sceneSetups:
   isLoaded: 0
   isActive: 0
 - path: Assets/Exploration/Scenes/Ass3 Scenes/CentralHall.unity
+  isLoaded: 0
+  isActive: 0
+- path: Assets/Quests/CreateQuests.unity
   isLoaded: 1
   isActive: 1
+- path: Assets/Battle/Battle.unity
+  isLoaded: 0
+  isActive: 0

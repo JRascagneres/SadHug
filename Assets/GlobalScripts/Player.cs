@@ -12,6 +12,7 @@ public class Player : Character {
 	/// <summary>The item that the player has equipped</summary>
 	private Item item;
     /// <summary>isGorilla</summary>
+    /// ADDED FOR ASSESSMENT 4
     private bool isGorilla;
 
     public Player (string name, int level, int health, int attack, int defence, int maximumMagic, int magic,

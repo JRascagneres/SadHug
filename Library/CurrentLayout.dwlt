@@ -108,7 +108,7 @@ MonoBehaviour:
   m_MinSize: {x: 579, y: 471}
   m_MaxSize: {x: 14002, y: 14042}
   vertical: 1
-  controlID: 127
+  controlID: 129
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -132,7 +132,7 @@ MonoBehaviour:
   m_MinSize: {x: 579, y: 471}
   m_MaxSize: {x: 14002, y: 14042}
   vertical: 0
-  controlID: 128
+  controlID: 130
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -156,7 +156,7 @@ MonoBehaviour:
   m_MinSize: {x: 304, y: 471}
   m_MaxSize: {x: 10002, y: 14042}
   vertical: 1
-  controlID: 77
+  controlID: 63
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -180,7 +180,7 @@ MonoBehaviour:
   m_MinSize: {x: 304, y: 200}
   m_MaxSize: {x: 8004, y: 4021}
   vertical: 0
-  controlID: 78
+  controlID: 64
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -224,8 +224,8 @@ MonoBehaviour:
     y: 0
     width: 735
     height: 346
-  m_MinSize: {x: 104, y: 121}
-  m_MaxSize: {x: 4004, y: 4021}
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 16}
   m_Panes:
   - {fileID: 16}
@@ -423,20 +423,20 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: bc22ffff
-    m_LastClickedID: -56644
-    m_ExpandedIDs: bc22ffffaa80ffff98fbffff9efbffff00000000fe5400001e550000
+    m_SelectedIDs: b8070000
+    m_LastClickedID: 0
+    m_ExpandedIDs: 7e44feff6845feff9446feff9846feffa246feffc647feffbc48feffa049feff704bfeff924cfeffe04dfeffc44efeffd250feffe451feff1252feff4652feff4c52feff5452feff5a52feff9852feff1054feff6855feff7256fefffe57feff0a58feff1459feff405afeff285bfeff645cfeff685dfeff045ffeff3e5ffeff485ffeff625ffeff985ffeffca61feffa862feff0c63feffc069feff4a6afeff766bfeff7a6bfeff846bfeffa86cfeff9e6dfeff826efeff5270feff7471feffc272feffa673feffb475feffc676fefff476feff2877feff2e77feff3677feff3c77feff7a77fefff278feff4a7afeff547bfeffe07cfeffec7cfefff67dfeff227ffeff0a80feff4681feff4a82feffe683feff2084feff2a84feff4484feff7a84feffac86feff8a87feffee87fefff08affff0694ffffe494ffff1496ffff2e96ffff3c96ffff6497ffff5e98ffff4699ffff1a9bffff409cffff929dffff7a9effff8ca0ffffa2a1ffffd4a1ffff0ca2ffff16a2ffff22a2ffff2ca2ffff6ea2ffffeaa3ffff46a5ffff54a6ffffe4a7fffff4a7ffff02a9ffff32aaffff1eabffff5eacffff66adffff06afffff44afffff4cafffff6aafffffa4afffffdab1ffffbcb2ffff24b3ffff50e5ffff98fbffff9afbffff00000000703e00009c6a00001074000038740000f4740000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: RawImage
-      m_OriginalName: RawImage
+      m_Name: Image
+      m_OriginalName: Image
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 21770
+      m_UserData: 27410
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
       m_OriginalEventType: 0
@@ -444,7 +444,10 @@ MonoBehaviour:
       m_ClientGUIView: {fileID: 9}
     m_SearchString: 
   m_ExpandedScenes:
+  - mainmenu1
   - CentralHall
+  - CreateQuests
+  - Battle
   m_CurrenRootInstanceID: 0
   m_Locked: 0
   m_CurrentSortingName: TransformSorting
@@ -476,14 +479,14 @@ MonoBehaviour:
     height: 325
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SceneLighting: 1
-  lastFramingTime: 1520.277188549166
+  lastFramingTime: 182.26769940727328
   m_2DMode: 1
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 1.4441738, y: -0.48100197, z: 0.09434608}
+    m_Target: {x: 279.21802, y: 103.60443, z: -15.629191}
     speed: 2
-    m_Value: {x: 1.4441738, y: -0.48100197, z: 0.09434608}
+    m_Value: {x: 279.21802, y: 103.60443, z: -15.629191}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -511,9 +514,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 11.547019
+    m_Target: 585.0052
     speed: 2
-    m_Value: 11.547019
+    m_Value: 585.0052
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -591,19 +594,19 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Exploration/Scenes/Ass3 Scenes
+    - Assets/GlobalScripts
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Exploration/Scenes/Ass3 Scenes
+  - Assets/GlobalScripts
   m_LastFoldersGridSize: -1
   m_LastProjectPath: D:\Documents\Programming\Coffee-more
   m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 79}
-    m_SelectedIDs: 8e300000
-    m_LastClickedID: 12430
-    m_ExpandedIDs: 00000000242800003e280000b4280000f0280000202900004c290000422a0000322c00005e2c0000fa2d00004e2e0000ca2e0000cc2f000028300000543000009a3000003a3100009e330000d0330000ee330000ae350000b0350000b2350000b4350000b635000000ca9a3bffffff7f
+    scrollPos: {x: 0, y: 101}
+    m_SelectedIDs: fa2d0000
+    m_LastClickedID: 11770
+    m_ExpandedIDs: 00000000242800003e280000b4280000f0280000202900004c290000422a0000322c00005e2c0000fa2d00004e2e0000ca2e0000cc2f000028300000543000009a3000003a3100009e330000d0330000ee330000c4360000c6360000c8360000ca360000cc36000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -631,7 +634,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000242800003e280000b4280000f0280000202900004c290000422a0000322c00005e2c0000fa2d00004e2e0000ca2e0000cc2f000028300000543000009a3000003a3100009e330000d0330000ee330000ae350000b0350000b2350000b4350000b6350000
+    m_ExpandedIDs: 00000000242800003e280000b4280000f0280000202900004c290000422a0000322c00005e2c0000fa2d00004e2e0000ca2e0000cc2f000028300000543000009a3000003a3100009e330000d0330000ee330000c4360000c6360000c8360000ca360000cc360000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 

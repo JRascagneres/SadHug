@@ -34,6 +34,8 @@ Assets/Exploration/Scenes/Ass3 Scenes/Music-Main.unity
 Assets/Exploration/Scenes/Ass3 Scenes/Biology-Floor1.unity
 Assets/Exploration/Scenes/Ass3 Scenes/HesHall-Floor1.unity
 Assets/Exploration/Scenes/Ass3 Scenes/EndScene.unity
+Assets/Quests/CreateQuests.unity
+Assets/Quests/Quests.unity
 SceneListEnd?
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationPlayableAsset
 970a95104359198fe1a98ef48655de8c UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationTrack
@@ -47,6 +49,7 @@ ff05dcdf90651c3d98a9cad3df5e471e UnityEngine.Timeline.dll:UnityEngine.Timeline.C
 6af7378a45ad6da4992a71ef50ddc2eb UnityEngine.Timeline.dll:UnityEngine.Timeline.GroupTrack
 6af7378a45ad6da4992a71ef50ddc2eb UnityEngine.Timeline.dll:UnityEngine.Timeline.PlayableTrack
 9ca6347af5ceb6b0d1c105af31b6722e UnityEngine.Timeline.dll:UnityEngine.Timeline.TimelineAsset
+858b55d550bf8fef2f4b177d08bed238 Assembly-CSharp.dll:.QuestMenuHandler
 76b67c157fc78f887e635d573c3b4839 Assembly-CSharp.dll:Tiled2Unity.GPUInstancing
 a35dc9cca2faebc5f5f1aeb9e8e47bbe UnityEngine.UI.dll:UnityEngine.UI.AspectRatioFitter
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.UI.dll:UnityEngine.EventSystems.BaseInput
@@ -172,6 +175,7 @@ c5b77decb97ffc0c36e810b155d27dde Assembly-CSharp.dll:Tiled2Unity.TiledMap
 8a51b5e030520c7f2b63abd3a84a99bf Assembly-CSharp.dll:.ExplorationMenuScript
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Advertisements.dll:UnityEngine.Advertisements.CallbackExecutor
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Advertisements.dll:UnityEngine.Advertisements.Editor.Placeholder
+e6a87e36ef74f76eaded9303c2094a00 Assembly-CSharp.dll:.QuestManager
 975fb4c67257cdd701ae946a4bb0c9d6 Assembly-CSharp.dll:.StatsScript
 f149f24230a6358c2804c5fae71459a2 Assembly-CSharp.dll:Tiled2Unity.TileAnimator
 539bd6c3664682b3278a3903a5433cf5 Assembly-CSharp.dll:.GlobalFunctions

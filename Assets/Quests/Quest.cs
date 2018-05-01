@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//CLASS ADDED FOR ASSESSMENT 4
+
 //All possible Quest Types
 public enum QuestType { money, level, playerLevel};
 

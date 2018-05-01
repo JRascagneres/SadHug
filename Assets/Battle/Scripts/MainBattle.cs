@@ -169,6 +169,7 @@ public class MainBattle : MonoBehaviour {
 		}
 
         //If the player is a Gorilla it has a 50/50 chance of performing its move or attacking a team mate
+        // ALL ADDED FOR ASSESSMENT 4
         if (move.User.GetType() == typeof(Player) && ((Player)move.User).IsGorilla)
         {
             SpecialMove damagePlayer = new MagicAttack("attacked a team mate", "Attack Team", 0, 30);
